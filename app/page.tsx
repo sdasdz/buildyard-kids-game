@@ -71,6 +71,15 @@ const PARTS: PartDef[] = [
   { id: "tank", name: "圆圆水箱", icon: "◉", category: "body", tags: ["body", "water"], w: 150, h: 82 },
   { id: "bucketbody", name: "翻斗车厢", icon: "▱", category: "body", tags: ["body", "carry"], w: 165, h: 86 },
   { id: "cargo", name: "防滑货台", icon: "▰", category: "body", tags: ["body", "carry"], w: 178, h: 70 },
+  { id: "rescuebody", name: "雪白救援车身", icon: "▰", category: "body", tags: ["body", "rescue"], w: 190, h: 76 },
+  { id: "excavatorbase", name: "旋转挖机底座", icon: "◉", category: "body", tags: ["body", "rough"], w: 178, h: 78 },
+  { id: "cranebody", name: "起重机承载车身", icon: "▰", category: "body", tags: ["body", "lift"], w: 205, h: 78 },
+  { id: "firebody", name: "消防装备车身", icon: "▰", category: "body", tags: ["body", "fire"], w: 195, h: 78 },
+  { id: "tractorbody", name: "农场动力车身", icon: "▰", category: "body", tags: ["body", "farm"], w: 186, h: 76 },
+  { id: "amphibody", name: "水陆两用车身", icon: "▰", category: "body", tags: ["body", "water"], w: 200, h: 82 },
+  { id: "snowbody", name: "极地保温车身", icon: "▰", category: "body", tags: ["body", "snow"], w: 194, h: 78 },
+  { id: "fantasybody", name: "紫色奇想车身", icon: "▰", category: "body", tags: ["body"], w: 190, h: 78 },
+  { id: "citybody", name: "城市维护车身", icon: "▰", category: "body", tags: ["body", "clean"], w: 188, h: 76 },
   { id: "wheel", name: "大轮胎", icon: "●", category: "move", tags: ["move"], w: 78, h: 78 },
   { id: "smallwheel", name: "小轮胎", icon: "●", category: "move", tags: ["move"], w: 58, h: 58 },
   { id: "track", name: "履带", icon: "⬭", category: "move", tags: ["move", "rough"], w: 180, h: 66 },
@@ -78,9 +87,22 @@ const PARTS: PartDef[] = [
   { id: "cab", name: "驾驶室", icon: "▣", category: "cab", tags: ["cab"], w: 116, h: 112 },
   { id: "bubblecab", name: "泡泡驾驶舱", icon: "◒", category: "cab", tags: ["cab"], w: 126, h: 104 },
   { id: "lampcab", name: "探险驾驶室", icon: "▥", category: "cab", tags: ["cab", "light"], w: 122, h: 116 },
-  { id: "engine", name: "轰隆动力机", icon: "⚙", category: "cab", tags: ["power"], w: 125, h: 105 },
-  { id: "battery", name: "闪电电池箱", icon: "⚡", category: "cab", tags: ["power"], w: 122, h: 102 },
-  { id: "suspension", name: "弹簧减震器", icon: "〽", category: "cab", tags: ["rough"], w: 118, h: 92 },
+  { id: "engine", name: "轰隆动力机", icon: "⚙", category: "help", tags: ["power"], w: 125, h: 105 },
+  { id: "battery", name: "闪电电池箱", icon: "⚡", category: "help", tags: ["power"], w: 122, h: 102 },
+  { id: "suspension", name: "弹簧减震器", icon: "〽", category: "help", tags: ["rough"], w: 118, h: 92 },
+  { id: "firecab", name: "红色消防车头", icon: "▣", category: "cab", tags: ["cab", "fire"], w: 126, h: 122 },
+  { id: "farmcab", name: "绿色农场车头", icon: "▣", category: "cab", tags: ["cab", "farm"], w: 122, h: 120 },
+  { id: "rescuecab", name: "白色救援车头", icon: "▣", category: "cab", tags: ["cab", "rescue"], w: 124, h: 120 },
+  { id: "bulldozercab", name: "推土机车头", icon: "▣", category: "cab", tags: ["cab"], w: 122, h: 116 },
+  { id: "cranecab", name: "高视野吊车头", icon: "▣", category: "cab", tags: ["cab", "lift"], w: 122, h: 122 },
+  { id: "miningcab", name: "防护矿山车头", icon: "▣", category: "cab", tags: ["cab", "rough"], w: 128, h: 122 },
+  { id: "forkcab", name: "紧凑叉车车头", icon: "▣", category: "cab", tags: ["cab", "carry"], w: 118, h: 118 },
+  { id: "amphicab", name: "泡泡水陆车头", icon: "◒", category: "cab", tags: ["cab", "water"], w: 126, h: 118 },
+  { id: "citycab", name: "红色城市车头", icon: "▣", category: "cab", tags: ["cab", "clean"], w: 124, h: 120 },
+  { id: "farmcab2", name: "圆窗农场车头", icon: "▣", category: "cab", tags: ["cab", "farm"], w: 124, h: 120 },
+  { id: "amphicab2", name: "蓝色水陆车头", icon: "◒", category: "cab", tags: ["cab", "water"], w: 126, h: 118 },
+  { id: "snowcab", name: "暖暖雪地车头", icon: "▣", category: "cab", tags: ["cab", "snow"], w: 122, h: 120 },
+  { id: "fantasycab", name: "紫色魔法车头", icon: "▣", category: "cab", tags: ["cab"], w: 124, h: 120 },
   { id: "shovel", name: "挖掘斗", icon: "⤵", category: "tool", tags: ["dig", "clear"], w: 130, h: 86 },
   { id: "blade", name: "推土铲", icon: "◢", category: "tool", tags: ["push", "clear", "snow"], w: 145, h: 76 },
   { id: "crane", name: "起重吊臂", icon: "⌝", category: "tool", tags: ["lift"], w: 150, h: 180 },
@@ -106,16 +128,22 @@ const PARTS: PartDef[] = [
   { id: "pipe", name: "彩虹排气管", icon: "♨", category: "decor", tags: [], w: 70, h: 92 },
 ];
 
-const SPRITES: Record<string, [0 | 1, number]> = {
-  frame:[0,0], orangeframe:[0,1], heavyframe:[0,2], bubblecab:[0,3],
-  cab:[0,4], lampcab:[0,5], wheel:[0,6], smallwheel:[0,7],
-  track:[0,8], snowtrack:[0,9], tank:[0,10], bucketbody:[0,11],
-  cargo:[0,12], engine:[0,13], battery:[0,14], suspension:[0,15],
+const SPRITES: Record<string, [0 | 1 | 2 | 3 | 4, number]> = {
+  frame:[2,0], longframe:[2,1], orangeframe:[2,3], heavyframe:[2,2],
+  tractorbody:[2,4], rescuebody:[2,5], excavatorbase:[2,6], cranebody:[2,7],
+  tank:[2,8], firebody:[2,9], bucketbody:[2,10], cargo:[2,11],
+  citybody:[2,12], amphibody:[2,13], snowbody:[2,14], fantasybody:[2,15],
+  cab:[3,0], bubblecab:[3,1], lampcab:[3,2], firecab:[3,3],
+  farmcab:[3,4], rescuecab:[3,5], bulldozercab:[3,6], cranecab:[3,7],
+  amphicab:[3,8], citycab:[3,9], miningcab:[3,10], forkcab:[3,11],
+  farmcab2:[3,12], amphicab2:[3,13], snowcab:[3,14], fantasycab:[3,15],
+  wheel:[4,0], smallwheel:[4,4],
+  track:[4,8], snowtrack:[4,12],
+  engine:[0,13], battery:[0,14], suspension:[0,15],
   shovel:[1,0], blade:[1,1], crane:[1,2], fork:[1,3],
   drill:[1,4], roller:[1,5], plow:[1,6], hose:[1,7],
   tow:[1,8], brush:[1,9], snowblade:[1,10], grabber:[1,11],
   mixer:[1,12], hammer:[1,13], bridge:[1,14], liftplatform:[1,15],
-  longframe:[0,1],
 };
 
 function spriteStyle(id: string): React.CSSProperties | undefined {
@@ -125,7 +153,7 @@ function spriteStyle(id: string): React.CSSProperties | undefined {
   const col = index % 4;
   const row = Math.floor(index / 4);
   return {
-    backgroundImage: `url(/assets/${sprite[0] === 0 ? "vehicle-base-sheet.png" : "vehicle-tools-sheet.png"})`,
+    backgroundImage: `url(/assets/${sprite[0] === 0 ? "vehicle-base-sheet.png" : sprite[0] === 1 ? "flat-tools.png" : sprite[0] === 2 ? "flat-bodies.png" : sprite[0] === 3 ? "flat-cabs.png" : "flat-movement.png"})`,
     backgroundPosition: `${col * 33.333}% ${row * 33.333}%`,
   };
 }
@@ -244,23 +272,12 @@ function safeLoad(): SaveData {
   }
 }
 
-function speak(text: string, enabled = true) {
-  if (!enabled || typeof window === "undefined" || !("speechSynthesis" in window)) return;
-  window.speechSynthesis.cancel();
-  const voices = window.speechSynthesis.getVoices();
-  const chinese = voices.filter((v) => /zh|Chinese|Xiaoxiao|Yunxi|晓晓|云希/i.test(`${v.lang} ${v.name}`));
-  const preferred = chinese.find((v) => /Xiaoxiao|晓晓|natural|neural|premium/i.test(v.name)) || chinese[0];
-  const phrases = text.match(/[^，。！？…]+[，。！？…]?/g) || [text];
-  phrases.forEach((phrase, index) => {
-    const line = new SpeechSynthesisUtterance(phrase.trim());
-    line.lang = "zh-CN";
-    if (preferred) line.voice = preferred;
-    const excited = /太棒|快|出发|啦|！/.test(phrase);
-    const gentle = /轻轻|温柔|别担心|想喝|等候/.test(phrase);
-    line.rate = excited ? .95 : gentle ? .76 : .84;
-    line.pitch = excited ? 1.28 : gentle ? 1.08 : 1.18 + (index % 2) * .05;
-    line.volume = 1;
-    window.speechSynthesis.speak(line);
+function playNarration(id: string, enabled = true) {
+  if (!enabled || typeof Audio === "undefined") return;
+  const audio = new Audio(`/audio/${id}.wav`);
+  audio.volume = .92;
+  void audio.play().catch(() => {
+    // Browsers may require the child to tap the microphone button first.
   });
 }
 
@@ -275,6 +292,61 @@ function newPart(def: PartDef, index: number): Part {
     flip: false,
     z: Date.now(),
   };
+}
+
+function assembleParts(input: Part[], width = 900, height = 600): Part[] {
+  const bodySize = Math.max(170, Math.min(250, width * .3, height * .52));
+  const bodyX = Math.max(155, width * .53 - bodySize / 2);
+  const bodyY = Math.max(40, height * .57 - bodySize * .48);
+  const counts: Partial<Record<Category, number>> = {};
+  return input.map((part) => {
+    const n = counts[part.category] || 0;
+    counts[part.category] = n + 1;
+    let x = bodyX;
+    let y = bodyY;
+    let rotate = 0;
+    let size = bodySize;
+    if (part.category === "body") {
+      x = bodyX;
+      y = bodyY;
+    } else if (part.category === "move") {
+      const isTrack = part.id.includes("track");
+      size = bodySize * (isTrack ? .92 : .34);
+      if (isTrack) {
+        x = bodyX + (bodySize - size) / 2;
+        y = bodyY + bodySize * .69 - size * .39;
+      } else {
+        const wheelCenter = bodyX + bodySize * (n === 0 ? .34 : .68);
+        x = wheelCenter - size / 2;
+        y = bodyY + bodySize * .66 - size / 2;
+      }
+    } else if (part.category === "cab") {
+      size = bodySize * .58;
+      x = bodyX + bodySize * .47;
+      y = bodyY + bodySize * .39 - size * .84 + 8;
+    } else if (part.category === "tool") {
+      const frontTool = ["shovel","blade","drill","roller","plow","fork","snowblade","hammer"].includes(part.id);
+      if (frontTool) {
+        size = bodySize * .78;
+        x = bodyX + bodySize * .12 - size * .9 + 16;
+        y = bodyY + bodySize * .48 - size * .52;
+      } else {
+        size = bodySize * .72;
+        x = bodyX + bodySize * .19;
+        y = bodyY - size * .35;
+      }
+    } else if (part.category === "help") {
+      size = bodySize * .34;
+      x = bodyX + bodySize * (.2 + n * .26);
+      y = bodyY - size * .42;
+    } else {
+      size = bodySize * .3;
+      x = bodyX + bodySize * (.18 + n * .24);
+      y = bodyY - size * .55;
+    }
+    const layer = part.category === "move" ? 10 : part.category === "tool" ? 20 : part.category === "body" ? 30 : part.category === "cab" ? 40 : part.category === "help" ? 50 : 60;
+    return { ...part, x, y, w: size, h: size, rotate, scale: 1, z: layer + n };
+  });
 }
 
 export default function Home() {
@@ -292,7 +364,7 @@ export default function Home() {
   const [result, setResult] = useState<null | { ok: boolean; missing: string[]; reason?: string }>(null);
   const [showPaint, setShowPaint] = useState(false);
   const [showParent, setShowParent] = useState(false);
-  const [voice, setVoice] = useState(true);
+  const [voice] = useState(true);
   const [toast, setToast] = useState("");
   const [tutorial, setTutorial] = useState(0);
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -322,7 +394,7 @@ export default function Home() {
     setMission(chosen);
     setSave((s) => ({ ...s, recent: [...s.recent.slice(-4), chosen.id] }));
     setScreen("mission");
-    setTimeout(() => speak(`${chosen.character}说：${chosen.story}`, voice), 250);
+    setTimeout(() => playNarration(chosen.id, voice), 250);
   };
 
   const startBuild = (kind: "mission" | "free") => {
@@ -337,10 +409,47 @@ export default function Home() {
 
   const addPart = (def: PartDef) => {
     pushHistory();
-    const item = newPart(def, parts.length);
-    setParts((p) => [...p, item]);
+    let compatible = [...parts];
+    if (def.category === "body") compatible = compatible.filter((p) => p.category !== "body");
+    if (def.tags.includes("cab")) compatible = compatible.filter((p) => !p.tags.includes("cab"));
+    if (def.category === "move") {
+      const isTrack = def.id.includes("track");
+      compatible = compatible.filter((p) => p.category !== "move" || (!isTrack && !p.id.includes("track")));
+      if (!isTrack && compatible.filter((p) => p.category === "move").length >= 2) {
+        const oldestWheel = compatible.find((p) => p.category === "move");
+        compatible = compatible.filter((p) => p.uid !== oldestWheel?.uid);
+      }
+      if (isTrack) compatible = compatible.filter((p) => p.category !== "move");
+    }
+    if (def.category === "tool") {
+      const frontTools = new Set(["shovel","blade","drill","roller","plow","fork","snowblade","hammer"]);
+      const slotIsFront = frontTools.has(def.id);
+      compatible = compatible.filter((p) =>
+        p.category !== "tool" || frontTools.has(p.id) !== slotIsFront
+      );
+    }
+    if (def.category === "help" && compatible.filter((p) => p.category === "help").length >= 2) {
+      const oldestHelp = compatible.find((p) => p.category === "help");
+      compatible = compatible.filter((p) => p.uid !== oldestHelp?.uid);
+    }
+    const needsFrame = def.category !== "body" && !compatible.some((p) => p.tags.includes("body"));
+    const frame = needsFrame ? newPart(PARTS.find((p) => p.id === "frame")!, compatible.length) : null;
+    const item = newPart(def, compatible.length + (frame ? 1 : 0));
+    const next = [...compatible, ...(frame ? [frame] : []), item];
+    const rect = canvasRef.current?.getBoundingClientRect();
+    setParts(assembleParts(next, rect?.width, rect?.height));
     setSelected(item.uid);
     if (tutorial === 1) setTutorial(2);
+  };
+
+  const autoAssemble = () => {
+    if (!parts.length) return;
+    pushHistory();
+    const rect = canvasRef.current?.getBoundingClientRect();
+    setParts(assembleParts(parts, rect?.width, rect?.height));
+    setSelected(null);
+    setToast("咔嗒！零件连接好啦");
+    setTimeout(() => setToast(""), 1600);
   };
 
   const updateSelected = (patch: Partial<Part>) => {
@@ -398,7 +507,19 @@ export default function Home() {
     } : p));
   };
   const onPointerUp = () => {
+    const released = dragging.current?.uid;
     dragging.current = null;
+    if (snap && released) {
+      const rect = canvasRef.current?.getBoundingClientRect();
+      const arranged = assembleParts(parts, rect?.width, rect?.height);
+      const target = arranged.find((p) => p.uid === released);
+      const current = parts.find((p) => p.uid === released);
+      if (target && current && Math.hypot(target.x - current.x, target.y - current.y) < 140) {
+        setParts((all) => all.map((p) => p.uid === released ? { ...p, x: target.x, y: target.y, rotate: target.rotate } : p));
+        setToast("咔嗒！");
+        setTimeout(() => setToast(""), 700);
+      }
+    }
     if (tutorial === 2) setTutorial(3);
   };
 
@@ -411,7 +532,13 @@ export default function Home() {
     const missing = (mission?.needs || []).filter((n) => !tags.has(n));
     if (!tags.has("body")) return setResult({ ok: false, missing, reason: "还需要一个结实的车身，让零件们有地方坐好。" });
     if (!tags.has("move")) return setResult({ ok: false, missing, reason: "车车还没有会走路的轮子或履带呢！" });
+    if (!tags.has("cab")) return setResult({ ok: false, missing, reason: "装上一间驾驶室，工程师才能安全地开车。" });
     if (missing.length) return setResult({ ok: false, missing, reason: mission?.hint });
+    const body = parts.find((p) => p.tags.includes("body"))!;
+    const bodyCenter = { x: body.x + body.w / 2, y: body.y + body.h / 2 };
+    const connected = parts.filter((p) => p.uid !== body.uid && (p.category === "move" || p.tags.some((t) => mission?.needs.includes(t))))
+      .every((p) => Math.hypot(p.x + p.w / 2 - bodyCenter.x, p.y + p.h / 2 - bodyCenter.y) < 330);
+    if (!connected) return setResult({ ok: false, missing, reason: "有零件离车身太远啦，点一下“自动拼好”，让连接座咔嗒扣上。" });
     setResult({ ok: true, missing: [] });
     const wasNew = mission && !save.completed.includes(mission.id);
     if (mission) {
@@ -489,7 +616,7 @@ export default function Home() {
       <div className="sun">☀</div>
       <header className="topbar">
         <div className="brand"><span className="brand-mark">🔩</span><div><b>工程车创造营</b><small>BUILD & GO!</small></div></div>
-        <div className="top-actions"><span className="star-count">⭐ {save.stars}</span><button className="round-btn" onClick={() => setVoice(!voice)} aria-label="声音">{voice ? "🔊" : "🔇"}</button></div>
+        <div className="top-actions"><span className="voice-status">🎙️ 只用真人感配音</span><span className="star-count">⭐ {save.stars}</span></div>
       </header>
       <section className="hero">
         <div className="hero-copy">
@@ -511,7 +638,7 @@ export default function Home() {
         <div className="themes-strip"><b>已探索</b>{THEMES.map((t, i) => <span key={t.name} className={i < save.unlocked ? "" : "locked"} title={t.name}>{i < save.unlocked ? t.icon : "🔒"}</span>)}</div>
         <button className="parent-link" onPointerDown={() => { parentTimer.current = setTimeout(() => setShowParent(true), 900); }} onPointerUp={() => parentTimer.current && clearTimeout(parentTimer.current)} onPointerLeave={() => parentTimer.current && clearTimeout(parentTimer.current)}>家长长按进入</button>
       </section>
-      {showParent && <div className="modal-shade"><div className="parent-panel"><button className="close" onClick={() => setShowParent(false)}>×</button><h2>家长设置</h2><p>游戏只在这台设备保存数据，不收集孩子的信息。</p><label className="setting"><span>故事语音</span><input type="checkbox" checked={voice} onChange={(e) => setVoice(e.target.checked)}/></label><div className="parent-stats"><span><b>{save.completed.length}</b>完成任务</span><span><b>{save.garage.length}</b>收藏作品</span><span><b>{save.unlocked}</b>解锁主题</span></div><button className="danger" onClick={resetProgress}>重置全部进度</button></div></div>}
+      {showParent && <div className="modal-shade"><div className="parent-panel"><button className="close" onClick={() => setShowParent(false)}>×</button><h2>家长设置</h2><p>游戏只在这台设备保存数据，不收集孩子的信息。</p><div className="setting"><span>🎙️ 系统机械朗读已永久关闭，仅接收真人感配音。</span></div><div className="parent-stats"><span><b>{save.completed.length}</b>完成任务</span><span><b>{save.garage.length}</b>收藏作品</span><span><b>{save.unlocked}</b>解锁主题</span></div><button className="danger" onClick={resetProgress}>重置全部进度</button></div></div>}
     </main>
   );
 
@@ -521,7 +648,7 @@ export default function Home() {
       <header className="simple-header"><button onClick={() => setScreen("home")}>‹ 回家</button><span>随机任务</span><span className="star-count">⭐ {save.stars}</span></header>
       <section className="story-card">
         <div className="story-scene"><span className="scene-icon">{theme.icon}</span><div className="character">{mission.icon}</div><div className="help-bubble">帮帮忙！</div></div>
-        <div className="story-copy"><span className="theme-pill">{theme.icon} {mission.theme}</span><h1>{mission.title}</h1><p>{mission.story}</p><div className="speaker"><span>{mission.icon}</span><div><b>{mission.character}</b><small>正在请求你的帮助</small></div><button onClick={() => speak(`${mission.character}说：${mission.story}`, voice)}>🔊 再听一次</button></div>
+        <div className="story-copy"><span className="theme-pill">{theme.icon} {mission.theme}</span><h1>{mission.title}</h1><p>{mission.story}</p><div className="speaker"><span>{mission.icon}</span><div><b>{mission.character}</b><small>正在请求你的帮助</small></div><button onClick={() => playNarration(mission.id, true)}>🎙️ 再听一遍</button></div>
           <div className="mission-hint"><span>💡</span><div><small>小提示</small><b>{mission.hint}</b></div></div>
           <button className="primary story-start" onClick={() => startBuild("mission")}>去仓库造车 <span>→</span></button>
           <button className="text-btn" onClick={pickMission}>🎲 换一个故事</button>
@@ -544,7 +671,7 @@ export default function Home() {
     <header className="build-header">
       <button className="back-btn" onClick={() => setScreen("home")}>‹</button>
       <div className="build-title"><small>{mode === "mission" ? `${mission?.icon} ${mission?.title}` : "🌈 想怎么拼都可以"}</small><b>{mode === "mission" ? "任务工程车" : "自由创造工坊"}</b></div>
-      <div className="build-actions"><button onClick={undo} disabled={!history.length}>↶<small>撤销</small></button><button onClick={redo} disabled={!future.length}>↷<small>重做</small></button><button onClick={() => setSnap(!snap)} className={snap ? "active" : ""}>🧲<small>吸附</small></button><button onClick={() => setShowPaint(true)}>🎨<small>涂装</small></button></div>
+      <div className="build-actions"><button onClick={undo} disabled={!history.length}>↶<small>撤销</small></button><button onClick={redo} disabled={!future.length}>↷<small>重做</small></button><button onClick={() => setSnap(!snap)} className={snap ? "active" : ""}>🧲<small>吸附</small></button><button onClick={autoAssemble}>🧩<small>自动拼好</small></button><button onClick={() => setShowPaint(true)}>🎨<small>涂装</small></button></div>
       <button className="go-btn" onClick={evaluate}>出发！<span>➜</span></button>
     </header>
     <div className="work-area">
