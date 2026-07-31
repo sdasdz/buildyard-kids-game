@@ -44,3 +44,4 @@ next-env.d.ts
 /build/
 /dev-output.log
 /dev-error.log
+/public/assets/*-source.png

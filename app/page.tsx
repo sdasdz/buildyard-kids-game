@@ -66,8 +66,11 @@ const THEMES = [
 const PARTS: PartDef[] = [
   { id: "frame", name: "结实车架", icon: "▰", category: "body", tags: ["body"], w: 180, h: 58 },
   { id: "longframe", name: "长长底盘", icon: "▬", category: "body", tags: ["body", "carry"], w: 240, h: 52 },
+  { id: "orangeframe", name: "灵活双轴车架", icon: "▰", category: "body", tags: ["body"], w: 210, h: 72 },
+  { id: "heavyframe", name: "重型三轴车架", icon: "▰", category: "body", tags: ["body", "carry", "rough"], w: 245, h: 78 },
   { id: "tank", name: "圆圆水箱", icon: "◉", category: "body", tags: ["body", "water"], w: 150, h: 82 },
   { id: "bucketbody", name: "翻斗车厢", icon: "▱", category: "body", tags: ["body", "carry"], w: 165, h: 86 },
+  { id: "cargo", name: "防滑货台", icon: "▰", category: "body", tags: ["body", "carry"], w: 178, h: 70 },
   { id: "wheel", name: "大轮胎", icon: "●", category: "move", tags: ["move"], w: 78, h: 78 },
   { id: "smallwheel", name: "小轮胎", icon: "●", category: "move", tags: ["move"], w: 58, h: 58 },
   { id: "track", name: "履带", icon: "⬭", category: "move", tags: ["move", "rough"], w: 180, h: 66 },
@@ -75,6 +78,9 @@ const PARTS: PartDef[] = [
   { id: "cab", name: "驾驶室", icon: "▣", category: "cab", tags: ["cab"], w: 116, h: 112 },
   { id: "bubblecab", name: "泡泡驾驶舱", icon: "◒", category: "cab", tags: ["cab"], w: 126, h: 104 },
   { id: "lampcab", name: "探险驾驶室", icon: "▥", category: "cab", tags: ["cab", "light"], w: 122, h: 116 },
+  { id: "engine", name: "轰隆动力机", icon: "⚙", category: "cab", tags: ["power"], w: 125, h: 105 },
+  { id: "battery", name: "闪电电池箱", icon: "⚡", category: "cab", tags: ["power"], w: 122, h: 102 },
+  { id: "suspension", name: "弹簧减震器", icon: "〽", category: "cab", tags: ["rough"], w: 118, h: 92 },
   { id: "shovel", name: "挖掘斗", icon: "⤵", category: "tool", tags: ["dig", "clear"], w: 130, h: 86 },
   { id: "blade", name: "推土铲", icon: "◢", category: "tool", tags: ["push", "clear", "snow"], w: 145, h: 76 },
   { id: "crane", name: "起重吊臂", icon: "⌝", category: "tool", tags: ["lift"], w: 150, h: 180 },
@@ -85,6 +91,11 @@ const PARTS: PartDef[] = [
   { id: "hose", name: "喷水炮", icon: "➹", category: "tool", tags: ["water", "fire"], w: 140, h: 76 },
   { id: "tow", name: "救援拖钩", icon: "⛓", category: "tool", tags: ["tow", "rescue"], w: 125, h: 64 },
   { id: "brush", name: "清扫刷", icon: "✺", category: "tool", tags: ["clean"], w: 112, h: 112 },
+  { id: "snowblade", name: "弧形扫雪铲", icon: "❄", category: "tool", tags: ["snow", "push"], w: 148, h: 91 },
+  { id: "grabber", name: "液压抓木爪", icon: "♆", category: "tool", tags: ["lift", "clear"], w: 128, h: 128 },
+  { id: "mixer", name: "水泥搅拌筒", icon: "◒", category: "tool", tags: ["mix"], w: 148, h: 118 },
+  { id: "hammer", name: "破碎锤", icon: "⇣", category: "tool", tags: ["drill", "clear"], w: 104, h: 142 },
+  { id: "liftplatform", name: "高空作业篮", icon: "♜", category: "tool", tags: ["lift", "rescue"], w: 148, h: 158 },
   { id: "lamp", name: "亮亮探照灯", icon: "🔦", category: "help", tags: ["light", "rescue"], w: 86, h: 70 },
   { id: "siren", name: "安全警示灯", icon: "🚨", category: "help", tags: ["rescue", "fire"], w: 74, h: 62 },
   { id: "bridge", name: "折叠小桥", icon: "〰", category: "help", tags: ["bridge", "carry"], w: 176, h: 62 },
@@ -94,6 +105,30 @@ const PARTS: PartDef[] = [
   { id: "eyes", name: "笑脸眼睛", icon: "◕‿◕", category: "decor", tags: [], w: 108, h: 54 },
   { id: "pipe", name: "彩虹排气管", icon: "♨", category: "decor", tags: [], w: 70, h: 92 },
 ];
+
+const SPRITES: Record<string, [0 | 1, number]> = {
+  frame:[0,0], orangeframe:[0,1], heavyframe:[0,2], bubblecab:[0,3],
+  cab:[0,4], lampcab:[0,5], wheel:[0,6], smallwheel:[0,7],
+  track:[0,8], snowtrack:[0,9], tank:[0,10], bucketbody:[0,11],
+  cargo:[0,12], engine:[0,13], battery:[0,14], suspension:[0,15],
+  shovel:[1,0], blade:[1,1], crane:[1,2], fork:[1,3],
+  drill:[1,4], roller:[1,5], plow:[1,6], hose:[1,7],
+  tow:[1,8], brush:[1,9], snowblade:[1,10], grabber:[1,11],
+  mixer:[1,12], hammer:[1,13], bridge:[1,14], liftplatform:[1,15],
+  longframe:[0,1],
+};
+
+function spriteStyle(id: string): React.CSSProperties | undefined {
+  const sprite = SPRITES[id];
+  if (!sprite) return undefined;
+  const index = sprite[1];
+  const col = index % 4;
+  const row = Math.floor(index / 4);
+  return {
+    backgroundImage: `url(/assets/${sprite[0] === 0 ? "vehicle-base-sheet.png" : "vehicle-tools-sheet.png"})`,
+    backgroundPosition: `${col * 33.333}% ${row * 33.333}%`,
+  };
+}
 
 const EVENT_SEEDS = [
   ["建筑工地", "地基里的硬土", "小河狸", "🦫", "新图书馆要开工啦，可是地面硬邦邦的。帮小河狸挖出整齐的地基吧！", "dig", "装上会挖土的工具"],
@@ -212,11 +247,21 @@ function safeLoad(): SaveData {
 function speak(text: string, enabled = true) {
   if (!enabled || typeof window === "undefined" || !("speechSynthesis" in window)) return;
   window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "zh-CN";
-  utterance.rate = 0.86;
-  utterance.pitch = 1.12;
-  window.speechSynthesis.speak(utterance);
+  const voices = window.speechSynthesis.getVoices();
+  const chinese = voices.filter((v) => /zh|Chinese|Xiaoxiao|Yunxi|晓晓|云希/i.test(`${v.lang} ${v.name}`));
+  const preferred = chinese.find((v) => /Xiaoxiao|晓晓|natural|neural|premium/i.test(v.name)) || chinese[0];
+  const phrases = text.match(/[^，。！？…]+[，。！？…]?/g) || [text];
+  phrases.forEach((phrase, index) => {
+    const line = new SpeechSynthesisUtterance(phrase.trim());
+    line.lang = "zh-CN";
+    if (preferred) line.voice = preferred;
+    const excited = /太棒|快|出发|啦|！/.test(phrase);
+    const gentle = /轻轻|温柔|别担心|想喝|等候/.test(phrase);
+    line.rate = excited ? .95 : gentle ? .76 : .84;
+    line.pitch = excited ? 1.28 : gentle ? 1.08 : 1.18 + (index % 2) * .05;
+    line.volume = 1;
+    window.speechSynthesis.speak(line);
+  });
 }
 
 function newPart(def: PartDef, index: number): Part {
@@ -425,7 +470,7 @@ export default function Home() {
     const minY = Math.min(...carParts.map((p) => p.y));
     const scale = small ? .27 : 1;
     return carParts.slice(0, 16).map((p) => (
-      <div key={p.uid} className={`part part-${p.category}`} style={{
+      <div key={p.uid} className={`part part-${p.category} ${SPRITES[p.id] ? "with-art" : ""}`} style={{
         left: (p.x - minX) * scale + (small ? 12 : 0),
         top: (p.y - minY) * scale + (small ? 15 : 0),
         width: p.w * p.scale * scale,
@@ -434,7 +479,7 @@ export default function Home() {
         zIndex: p.z,
         "--part-color": p.category === "move" ? carPaint.wheels : carPaint.primary,
         "--part-accent": carPaint.secondary,
-      } as React.CSSProperties}>{p.icon}</div>
+      } as React.CSSProperties}>{SPRITES[p.id] ? <span className="part-art" style={spriteStyle(p.id)}/> : p.icon}</div>
     ));
   };
 
@@ -506,19 +551,19 @@ export default function Home() {
       <aside className="warehouse">
         <div className="warehouse-head"><span>🧰</span><div><b>零件仓库</b><small>点一下放进工地</small></div></div>
         <div className="category-tabs">{(Object.keys(CATEGORY_LABELS) as Category[]).map((c) => <button key={c} className={category === c ? "active" : ""} onClick={() => setCategory(c)}><span>{CATEGORY_LABELS[c][1]}</span>{CATEGORY_LABELS[c][0]}</button>)}</div>
-        <div className="parts-grid">{PARTS.filter((p) => p.category === category).map((p) => <button key={p.id} className="part-card" onClick={() => addPart(p)}><span className={`mini-part part-${p.category}`}>{p.icon}</span><b>{p.name}</b><i>＋</i></button>)}</div>
+        <div className="parts-grid">{PARTS.filter((p) => p.category === category).map((p) => <button key={p.id} className="part-card" onClick={() => addPart(p)}><span className={`mini-part ${SPRITES[p.id] ? "has-art" : `part-${p.category}`}`}>{SPRITES[p.id] ? <span className="part-art" style={spriteStyle(p.id)}/> : p.icon}</span><b>{p.name}</b><i>＋</i></button>)}</div>
       </aside>
       <section className="canvas-wrap">
         <div className="canvas-info"><span>拖动零件 · 滚轮缩放</span><span>{parts.length} 个零件</span></div>
         <div className={`build-canvas pattern-${paint.pattern} finish-${paint.finish}`} ref={canvasRef} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp} onWheel={wheel}>
           <div className="horizon"><span>☁</span><span>☁</span></div><div className="ground-line"/>
           {!parts.length && <div className="canvas-empty"><span>👇</span><b>从左边选一个车身吧</b><small>零件会出现在这里</small></div>}
-          {parts.map((p) => <div key={p.uid} onPointerDown={(e) => onPointerDown(e, p)} className={`part part-${p.category} ${selected === p.uid ? "selected" : ""}`} style={{
+          {parts.map((p) => <div key={p.uid} onPointerDown={(e) => onPointerDown(e, p)} className={`part part-${p.category} ${SPRITES[p.id] ? "with-art" : ""} ${selected === p.uid ? "selected" : ""}`} style={{
             left: p.x, top: p.y, width: p.w * p.scale, height: p.h * p.scale,
             transform: `rotate(${p.rotate}deg) scaleX(${p.flip ? -1 : 1})`, zIndex: p.z,
             "--part-color": p.category === "move" ? paint.wheels : paint.primary,
             "--part-accent": paint.secondary,
-          } as React.CSSProperties}><span>{p.icon}</span>{paint.sticker && p.category === "body" && <i className="part-sticker">{paint.sticker}</i>}</div>)}
+          } as React.CSSProperties}><span className={SPRITES[p.id] ? "part-art" : ""} style={spriteStyle(p.id)}>{SPRITES[p.id] ? "" : p.icon}</span>{paint.sticker && p.category === "body" && <i className="part-sticker">{paint.sticker}</i>}</div>)}
           {selectedPart && <div className="selection-tools">
             <button onClick={() => updateSelected({ rotate: selectedPart.rotate - 15 })}>↶</button>
             <button onClick={() => updateSelected({ rotate: selectedPart.rotate + 15 })}>↷</button>
