@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-type Category = "body" | "move" | "cab" | "tool" | "help" | "decor";
+type Category = "chassis" | "body" | "move" | "cab" | "tool" | "help" | "decor";
 type PartDef = {
   id: string;
   name: string;
@@ -64,26 +64,54 @@ const THEMES = [
 ];
 
 const PARTS: PartDef[] = [
-  { id: "frame", name: "结实车架", icon: "▰", category: "body", tags: ["body"], w: 180, h: 58 },
-  { id: "longframe", name: "长长底盘", icon: "▬", category: "body", tags: ["body", "carry"], w: 240, h: 52 },
-  { id: "orangeframe", name: "灵活双轴车架", icon: "▰", category: "body", tags: ["body"], w: 210, h: 72 },
-  { id: "heavyframe", name: "重型三轴车架", icon: "▰", category: "body", tags: ["body", "carry", "rough"], w: 245, h: 78 },
-  { id: "tank", name: "圆圆水箱", icon: "◉", category: "body", tags: ["body", "water"], w: 150, h: 82 },
-  { id: "bucketbody", name: "翻斗车厢", icon: "▱", category: "body", tags: ["body", "carry"], w: 165, h: 86 },
-  { id: "cargo", name: "防滑货台", icon: "▰", category: "body", tags: ["body", "carry"], w: 178, h: 70 },
-  { id: "rescuebody", name: "雪白救援车身", icon: "▰", category: "body", tags: ["body", "rescue"], w: 190, h: 76 },
-  { id: "excavatorbase", name: "旋转挖机底座", icon: "◉", category: "body", tags: ["body", "rough"], w: 178, h: 78 },
-  { id: "cranebody", name: "起重机承载车身", icon: "▰", category: "body", tags: ["body", "lift"], w: 205, h: 78 },
-  { id: "firebody", name: "消防装备车身", icon: "▰", category: "body", tags: ["body", "fire"], w: 195, h: 78 },
-  { id: "tractorbody", name: "农场动力车身", icon: "▰", category: "body", tags: ["body", "farm"], w: 186, h: 76 },
-  { id: "amphibody", name: "水陆两用车身", icon: "▰", category: "body", tags: ["body", "water"], w: 200, h: 82 },
-  { id: "snowbody", name: "极地保温车身", icon: "▰", category: "body", tags: ["body", "snow"], w: 194, h: 78 },
-  { id: "fantasybody", name: "紫色奇想车身", icon: "▰", category: "body", tags: ["body"], w: 190, h: 78 },
-  { id: "citybody", name: "城市维护车身", icon: "▰", category: "body", tags: ["body", "clean"], w: 188, h: 76 },
-  { id: "wheel", name: "大轮胎", icon: "●", category: "move", tags: ["move"], w: 78, h: 78 },
-  { id: "smallwheel", name: "小轮胎", icon: "●", category: "move", tags: ["move"], w: 58, h: 58 },
-  { id: "track", name: "履带", icon: "⬭", category: "move", tags: ["move", "rough"], w: 180, h: 66 },
-  { id: "snowtrack", name: "雪地履带", icon: "❄", category: "move", tags: ["move", "snow"], w: 170, h: 62 },
+  { id: "frame", name: "短轴基础底盘", icon: "▬", category: "chassis", tags: ["chassis"], w: 220, h: 70 },
+  { id: "longframe", name: "三轴加长底盘", icon: "▬", category: "chassis", tags: ["chassis", "carry"], w: 270, h: 70 },
+  { id: "heavyframe", name: "四轴重载底盘", icon: "▬", category: "chassis", tags: ["chassis", "carry", "rough"], w: 300, h: 76 },
+  { id: "compactchassis", name: "叉车紧凑底盘", icon: "▬", category: "chassis", tags: ["chassis"], w: 190, h: 70 },
+  { id: "excavatorchassis", name: "挖机旋转底盘", icon: "▬", category: "chassis", tags: ["chassis", "rough"], w: 230, h: 75 },
+  { id: "bulldozerchassis", name: "推土强化底盘", icon: "▬", category: "chassis", tags: ["chassis", "rough"], w: 250, h: 75 },
+  { id: "cranechassis", name: "起重支腿底盘", icon: "▬", category: "chassis", tags: ["chassis", "lift"], w: 270, h: 78 },
+  { id: "dumpchassis", name: "翻斗承载底盘", icon: "▬", category: "chassis", tags: ["chassis", "carry"], w: 270, h: 74 },
+  { id: "firechassis", name: "消防红色底盘", icon: "▬", category: "chassis", tags: ["chassis"], w: 250, h: 74 },
+  { id: "farmchassis", name: "农场绿色底盘", icon: "▬", category: "chassis", tags: ["chassis", "rough"], w: 245, h: 74 },
+  { id: "snowchassis", name: "雪地蓝色底盘", icon: "▬", category: "chassis", tags: ["chassis", "snow"], w: 250, h: 74 },
+  { id: "miningchassis", name: "矿山防护底盘", icon: "▬", category: "chassis", tags: ["chassis", "rough"], w: 265, h: 76 },
+  { id: "amphichassis", name: "水陆密封底盘", icon: "▬", category: "chassis", tags: ["chassis", "water"], w: 255, h: 76 },
+  { id: "citychassis", name: "城市维护底盘", icon: "▬", category: "chassis", tags: ["chassis", "clean"], w: 245, h: 72 },
+  { id: "rescuechassis", name: "白色救援底盘", icon: "▬", category: "chassis", tags: ["chassis", "rescue"], w: 255, h: 74 },
+  { id: "fantasychassis", name: "紫色能量底盘", icon: "▬", category: "chassis", tags: ["chassis"], w: 255, h: 74 },
+  { id: "utilitybody", name: "实体工具车身", icon: "▰", category: "body", tags: ["body"], w: 180, h: 100 },
+  { id: "cargo", name: "加长货运车身", icon: "▰", category: "body", tags: ["body", "carry"], w: 210, h: 105 },
+  { id: "miningdumpbody", name: "黑色重载车厢", icon: "▰", category: "body", tags: ["body", "carry", "rough"], w: 210, h: 110 },
+  { id: "forkliftbody", name: "叉车配重车身", icon: "▰", category: "body", tags: ["body", "carry"], w: 170, h: 110 },
+  { id: "excavatorbase", name: "挖机实体机身", icon: "▰", category: "body", tags: ["body", "rough"], w: 190, h: 110 },
+  { id: "bulldozerbody", name: "推土动力车身", icon: "▰", category: "body", tags: ["body", "push"], w: 190, h: 110 },
+  { id: "cranebody", name: "起重动力车身", icon: "▰", category: "body", tags: ["body"], w: 195, h: 110 },
+  { id: "bucketbody", name: "实体翻斗车厢", icon: "▰", category: "body", tags: ["body", "carry"], w: 205, h: 110 },
+  { id: "firebody", name: "消防装备车身", icon: "▰", category: "body", tags: ["body", "fire", "water"], w: 195, h: 112 },
+  { id: "tractorbody", name: "农场动力车身", icon: "▰", category: "body", tags: ["body", "farm"], w: 190, h: 108 },
+  { id: "snowbody", name: "扫雪动力车身", icon: "▰", category: "body", tags: ["body", "snow"], w: 195, h: 110 },
+  { id: "miningbody", name: "矿山防护车身", icon: "▰", category: "body", tags: ["body", "rough"], w: 195, h: 110 },
+  { id: "tank", name: "密封水箱车身", icon: "▰", category: "body", tags: ["body", "water"], w: 195, h: 108 },
+  { id: "citybody", name: "城市维护车身", icon: "▰", category: "body", tags: ["body", "clean"], w: 190, h: 108 },
+  { id: "rescuebody", name: "白色救援车身", icon: "▰", category: "body", tags: ["body", "rescue"], w: 195, h: 110 },
+  { id: "fantasybody", name: "紫色奇想车身", icon: "▰", category: "body", tags: ["body"], w: 195, h: 110 },
+  { id: "wheel", name: "黄心越野轮", icon: "●", category: "move", tags: ["move"], w: 78, h: 78 },
+  { id: "orangewheel", name: "橙心工程轮", icon: "●", category: "move", tags: ["move"], w: 78, h: 78 },
+  { id: "bluewheel", name: "蓝心救援轮", icon: "●", category: "move", tags: ["move"], w: 78, h: 78 },
+  { id: "redwheel", name: "红心消防轮", icon: "●", category: "move", tags: ["move"], w: 78, h: 78 },
+  { id: "smallwheel", name: "黄色小轮", icon: "●", category: "move", tags: ["move"], w: 58, h: 58 },
+  { id: "farmwheel", name: "绿色农场轮", icon: "●", category: "move", tags: ["move", "rough"], w: 64, h: 64 },
+  { id: "citywheel", name: "蓝色城市轮", icon: "●", category: "move", tags: ["move"], w: 60, h: 60 },
+  { id: "fantasywheel", name: "紫色星星轮", icon: "●", category: "move", tags: ["move"], w: 68, h: 68 },
+  { id: "track", name: "黄色工程履带", icon: "⬭", category: "move", tags: ["move", "rough"], w: 180, h: 66 },
+  { id: "miningtrack", name: "黑色矿山履带", icon: "⬭", category: "move", tags: ["move", "rough"], w: 180, h: 66 },
+  { id: "snowtrack", name: "蓝色雪地履带", icon: "⬭", category: "move", tags: ["move", "snow"], w: 180, h: 66 },
+  { id: "greentrack", name: "绿色越野履带", icon: "⬭", category: "move", tags: ["move", "rough"], w: 180, h: 66 },
+  { id: "rollerwheel", name: "宽幅压路滚筒", icon: "●", category: "move", tags: ["move", "roll"], w: 110, h: 110 },
+  { id: "paddlewheel", name: "水陆桨轮", icon: "●", category: "move", tags: ["move", "water"], w: 100, h: 100 },
+  { id: "ski", name: "雪地滑橇", icon: "⌣", category: "move", tags: ["move", "snow"], w: 150, h: 60 },
+  { id: "hover", name: "紫色悬浮垫", icon: "◉", category: "move", tags: ["move"], w: 140, h: 70 },
   { id: "cab", name: "驾驶室", icon: "▣", category: "cab", tags: ["cab"], w: 116, h: 112 },
   { id: "bubblecab", name: "泡泡驾驶舱", icon: "◒", category: "cab", tags: ["cab"], w: 126, h: 104 },
   { id: "lampcab", name: "探险驾驶室", icon: "▥", category: "cab", tags: ["cab", "light"], w: 122, h: 116 },
@@ -118,32 +146,47 @@ const PARTS: PartDef[] = [
   { id: "mixer", name: "水泥搅拌筒", icon: "◒", category: "tool", tags: ["mix"], w: 148, h: 118 },
   { id: "hammer", name: "破碎锤", icon: "⇣", category: "tool", tags: ["drill", "clear"], w: 104, h: 142 },
   { id: "liftplatform", name: "高空作业篮", icon: "♜", category: "tool", tags: ["lift", "rescue"], w: 148, h: 158 },
+  { id: "conveyor", name: "装卸传送臂", icon: "↗", category: "tool", tags: ["carry", "lift"], w: 160, h: 110 },
   { id: "lamp", name: "亮亮探照灯", icon: "🔦", category: "help", tags: ["light", "rescue"], w: 86, h: 70 },
   { id: "siren", name: "安全警示灯", icon: "🚨", category: "help", tags: ["rescue", "fire"], w: 74, h: 62 },
   { id: "bridge", name: "折叠小桥", icon: "〰", category: "help", tags: ["bridge", "carry"], w: 176, h: 62 },
-  { id: "balloon", name: "动力气球", icon: "🎈", category: "help", tags: ["lift"], w: 88, h: 118 },
+  { id: "rescuebox", name: "蓝色救援物资箱", icon: "✚", category: "help", tags: ["rescue", "carry"], w: 110, h: 90 },
+  { id: "toolbox", name: "红色随车工具箱", icon: "▰", category: "help", tags: ["rescue"], w: 105, h: 80 },
+  { id: "aidkit", name: "白色急救箱", icon: "✚", category: "help", tags: ["rescue"], w: 95, h: 88 },
+  { id: "cones", name: "安全路锥架", icon: "▲", category: "help", tags: ["rescue"], w: 125, h: 82 },
+  { id: "step", name: "防滑侧踏板", icon: "▬", category: "help", tags: [], w: 105, h: 60 },
+  { id: "spare", name: "随车备用轮", icon: "●", category: "help", tags: ["rough"], w: 88, h: 88 },
   { id: "flag", name: "小旗子", icon: "🚩", category: "decor", tags: [], w: 65, h: 82 },
   { id: "star", name: "大星星", icon: "★", category: "decor", tags: [], w: 72, h: 72 },
   { id: "eyes", name: "笑脸眼睛", icon: "◕‿◕", category: "decor", tags: [], w: 108, h: 54 },
   { id: "pipe", name: "彩虹排气管", icon: "♨", category: "decor", tags: [], w: 70, h: 92 },
 ];
 
-const SPRITES: Record<string, [0 | 1 | 2 | 3 | 4, number]> = {
-  frame:[2,0], longframe:[2,1], orangeframe:[2,3], heavyframe:[2,2],
-  tractorbody:[2,4], rescuebody:[2,5], excavatorbase:[2,6], cranebody:[2,7],
-  tank:[2,8], firebody:[2,9], bucketbody:[2,10], cargo:[2,11],
-  citybody:[2,12], amphibody:[2,13], snowbody:[2,14], fantasybody:[2,15],
-  cab:[3,0], bubblecab:[3,1], lampcab:[3,2], firecab:[3,3],
-  farmcab:[3,4], rescuecab:[3,5], bulldozercab:[3,6], cranecab:[3,7],
-  amphicab:[3,8], citycab:[3,9], miningcab:[3,10], forkcab:[3,11],
-  farmcab2:[3,12], amphicab2:[3,13], snowcab:[3,14], fantasycab:[3,15],
-  wheel:[4,0], smallwheel:[4,4],
-  track:[4,8], snowtrack:[4,12],
-  engine:[0,13], battery:[0,14], suspension:[0,15],
-  shovel:[1,0], blade:[1,1], crane:[1,2], fork:[1,3],
-  drill:[1,4], roller:[1,5], plow:[1,6], hose:[1,7],
-  tow:[1,8], brush:[1,9], snowblade:[1,10], grabber:[1,11],
-  mixer:[1,12], hammer:[1,13], bridge:[1,14], liftplatform:[1,15],
+const SPRITES: Record<string, [number, number]> = {
+  frame:[6,0], longframe:[6,1], heavyframe:[6,2], compactchassis:[6,3],
+  excavatorchassis:[6,4], bulldozerchassis:[6,5], cranechassis:[6,6], dumpchassis:[6,7],
+  firechassis:[6,8], farmchassis:[6,9], snowchassis:[6,10], miningchassis:[6,11],
+  amphichassis:[6,12], citychassis:[6,13], rescuechassis:[6,14], fantasychassis:[6,15],
+  utilitybody:[7,0], cargo:[7,1], miningdumpbody:[7,2], forkliftbody:[7,3],
+  excavatorbase:[7,4], bulldozerbody:[7,5], cranebody:[7,6], bucketbody:[7,7],
+  firebody:[7,8], tractorbody:[7,9], snowbody:[7,10], miningbody:[7,11],
+  tank:[7,12], citybody:[7,13], rescuebody:[7,14], fantasybody:[7,15],
+  cab:[8,0], bubblecab:[8,1], lampcab:[8,2], firecab:[8,3],
+  farmcab:[8,4], rescuecab:[8,5], bulldozercab:[8,6], cranecab:[8,7],
+  miningcab:[8,8], forkcab:[8,9], amphicab:[8,10], citycab:[8,11],
+  farmcab2:[8,12], amphicab2:[8,13], snowcab:[8,14], fantasycab:[8,15],
+  shovel:[9,0], blade:[9,1], crane:[9,2], fork:[9,3],
+  drill:[9,4], roller:[9,5], plow:[9,6], hose:[9,7],
+  tow:[9,8], brush:[9,9], snowblade:[9,10], grabber:[9,11],
+  mixer:[9,12], hammer:[9,13], liftplatform:[9,14], conveyor:[9,15],
+  wheel:[10,0], orangewheel:[10,1], bluewheel:[10,2], redwheel:[10,3],
+  smallwheel:[10,4], farmwheel:[10,5], citywheel:[10,6], fantasywheel:[10,7],
+  track:[10,8], miningtrack:[10,9], snowtrack:[10,10], greentrack:[10,11],
+  rollerwheel:[10,12], paddlewheel:[10,13], ski:[10,14], hover:[10,15],
+  engine:[11,0], battery:[11,1], suspension:[11,2], lamp:[11,3],
+  siren:[11,4], bridge:[11,5], rescuebox:[11,6], flag:[11,7],
+  star:[11,8], eyes:[11,9], pipe:[11,10], toolbox:[11,11],
+  aidkit:[11,12], cones:[11,13], step:[11,14], spare:[11,15],
 };
 
 function spriteStyle(id: string): React.CSSProperties | undefined {
@@ -152,11 +195,56 @@ function spriteStyle(id: string): React.CSSProperties | undefined {
   const index = sprite[1];
   const col = index % 4;
   const row = Math.floor(index / 4);
+  const sheets: Record<number, string> = {
+    6: "v2-chassis.png",
+    7: "v2-bodies.png",
+    8: "v2-cabs.png",
+    9: "v2-tools.png",
+    10: "v2-movement.png",
+    11: "v2-extras.png",
+  };
   return {
-    backgroundImage: `url(/assets/${sprite[0] === 0 ? "vehicle-base-sheet.png" : sprite[0] === 1 ? "flat-tools.png" : sprite[0] === 2 ? "flat-bodies.png" : sprite[0] === 3 ? "flat-cabs.png" : "flat-movement.png"})`,
+    backgroundImage: `url(/assets/${sheets[sprite[0]]})`,
     backgroundPosition: `${col * 33.333}% ${row * 33.333}%`,
   };
 }
+
+function spriteMaskStyle(id: string): React.CSSProperties | undefined {
+  const style = spriteStyle(id);
+  if (!style?.backgroundImage) return undefined;
+  return {
+    WebkitMaskImage: style.backgroundImage,
+    maskImage: style.backgroundImage,
+    WebkitMaskPosition: style.backgroundPosition,
+    maskPosition: style.backgroundPosition,
+    WebkitMaskSize: "400% 400%",
+    maskSize: "400% 400%",
+    WebkitMaskRepeat: "no-repeat",
+    maskRepeat: "no-repeat",
+  };
+}
+
+const ACTION_EFFECT: Record<string, { scene: string; label: string }> = {
+  dig: { scene: "🟫🪨", label: "挖斗一铲一铲挖开泥土" },
+  lift: { scene: "📦⬆️", label: "吊臂稳稳举起重物" },
+  carry: { scene: "📦📦", label: "车厢装好物资送到目的地" },
+  drill: { scene: "🪨✨", label: "钻头转起来打开通道" },
+  roll: { scene: "〰️➡️", label: "滚筒把路面压得平平整整" },
+  push: { scene: "🧱➡️", label: "推土铲把障碍推到一边" },
+  tow: { scene: "🚙〰️", label: "拖钩拉着受困车辆前进" },
+  farm: { scene: "🌱🌱", label: "农具翻开泥土种下希望" },
+  clear: { scene: "🍂💨", label: "工具把道路清理干净" },
+  water: { scene: "💦🌳", label: "水炮喷出清凉的水花" },
+  clean: { scene: "🍃✨", label: "刷子旋转着扫走杂物" },
+  snow: { scene: "❄️💨", label: "雪铲推开厚厚的积雪" },
+  rough: { scene: "⛰️➡️", label: "履带稳稳越过崎岖道路" },
+  bridge: { scene: "🌉✅", label: "折叠桥展开连接两边" },
+  light: { scene: "🔦✨", label: "探照灯照亮前面的路" },
+  fire: { scene: "💦🔥", label: "水炮安全地浇灭小火苗" },
+  mix: { scene: "🌀🏗️", label: "搅拌筒转动准备好水泥" },
+  rescue: { scene: "🛟💪", label: "救援设备把伙伴带回安全处" },
+  fork: { scene: "📦⬆️", label: "货叉稳稳托起箱子送上货架" },
+};
 
 const EVENT_SEEDS = [
   ["建筑工地", "地基里的硬土", "小河狸", "🦫", "新图书馆要开工啦，可是地面硬邦邦的。帮小河狸挖出整齐的地基吧！", "dig", "装上会挖土的工具"],
@@ -235,6 +323,7 @@ const MISSIONS: Mission[] = EVENT_SEEDS.map((e, i) => ({
 }));
 
 const CATEGORY_LABELS: Record<Category, [string, string]> = {
+  chassis: ["底盘", "🛤️"],
   body: ["车身", "🟨"],
   move: ["轮子", "🛞"],
   cab: ["驾驶室", "🪟"],
@@ -246,7 +335,7 @@ const CATEGORY_LABELS: Record<Category, [string, string]> = {
 const DEFAULT_PAINT: Paint = {
   primary: "#ffc52f",
   secondary: "#ff7b3e",
-  wheels: "#314154",
+  wheels: "#f5b52b",
   pattern: "none",
   sticker: "",
   finish: "clean",
@@ -272,10 +361,14 @@ function safeLoad(): SaveData {
   }
 }
 
+let currentNarration: HTMLAudioElement | null = null;
+
 function playNarration(id: string, enabled = true) {
   if (!enabled || typeof Audio === "undefined") return;
+  currentNarration?.pause();
   const audio = new Audio(`/audio/${id}.wav`);
   audio.volume = .92;
+  currentNarration = audio;
   void audio.play().catch(() => {
     // Browsers may require the child to tap the microphone button first.
   });
@@ -294,57 +387,105 @@ function newPart(def: PartDef, index: number): Part {
   };
 }
 
-function assembleParts(input: Part[], width = 900, height = 600): Part[] {
-  const bodySize = Math.max(170, Math.min(250, width * .3, height * .52));
-  const bodyX = Math.max(155, width * .53 - bodySize / 2);
-  const bodyY = Math.max(40, height * .57 - bodySize * .48);
+type AssemblyAnchor = { x: number; y: number; size: number };
+
+function assembleParts(input: Part[], width = 900, height = 600, anchor?: AssemblyAnchor): Part[] {
+  const defaultSize = Math.max(210, Math.min(320, width * .38, height * .52));
+  const currentRoot = input.find((p) => p.category === "chassis");
+  const hasPlacedRoot = Boolean(currentRoot && currentRoot.w >= 190 && Math.abs(currentRoot.w - currentRoot.h) < 4);
+  const rootSize = anchor?.size || (hasPlacedRoot ? currentRoot!.w : defaultSize);
+  const rootX = anchor?.x ?? (hasPlacedRoot ? currentRoot!.x : Math.max(35, width * .43 - rootSize / 2));
+  const rootY = anchor?.y ?? (hasPlacedRoot ? currentRoot!.y : Math.max(25, height * .72 - rootSize * .82));
   const counts: Partial<Record<Category, number>> = {};
+  const wideMoveIds = new Set(["track", "miningtrack", "snowtrack", "greentrack", "ski", "hover"]);
+  const wheelCount = Math.max(1, input.filter((p) => p.category === "move" && !wideMoveIds.has(p.id)).length);
+  let wheelNo = 0;
+  let wideMoveNo = 0;
+  let frontNo = 0;
+  let upperNo = 0;
   return input.map((part) => {
     const n = counts[part.category] || 0;
     counts[part.category] = n + 1;
-    let x = bodyX;
-    let y = bodyY;
+    let x = rootX;
+    let y = rootY;
     let rotate = 0;
-    let size = bodySize;
-    if (part.category === "body") {
-      x = bodyX;
-      y = bodyY;
+    let size = rootSize;
+    if (part.category === "chassis") {
+      x = rootX;
+      y = rootY;
+    } else if (part.category === "body") {
+      size = rootSize * .68;
+      x = rootX + rootSize * .03;
+      y = rootY + rootSize * .02;
     } else if (part.category === "move") {
-      const isTrack = part.id.includes("track");
-      size = bodySize * (isTrack ? .92 : .34);
-      if (isTrack) {
-        x = bodyX + (bodySize - size) / 2;
-        y = bodyY + bodySize * .69 - size * .39;
+      const isWide = wideMoveIds.has(part.id);
+      size = rootSize * (isWide ? .9 : wheelCount >= 4 ? .24 : wheelCount === 3 ? .27 : .31);
+      if (isWide) {
+        x = rootX + (rootSize - size) / 2 + wideMoveNo * 8;
+        y = rootY + rootSize * .2 + wideMoveNo * 7;
+        wideMoveNo += 1;
       } else {
-        const wheelCenter = bodyX + bodySize * (n === 0 ? .34 : .68);
+        const ratio = wheelCount === 1 ? .5 : .16 + wheelNo * (.68 / (wheelCount - 1));
+        const wheelCenter = rootX + rootSize * ratio;
         x = wheelCenter - size / 2;
-        y = bodyY + bodySize * .66 - size / 2;
+        y = rootY + rootSize * .55;
+        wheelNo += 1;
       }
     } else if (part.category === "cab") {
-      size = bodySize * .58;
-      x = bodyX + bodySize * .47;
-      y = bodyY + bodySize * .39 - size * .84 + 8;
+      size = rootSize * .5;
+      x = rootX + rootSize * .55;
+      y = rootY + rootSize * .18;
     } else if (part.category === "tool") {
-      const frontTool = ["shovel","blade","drill","roller","plow","fork","snowblade","hammer"].includes(part.id);
+      const frontTool = !["crane", "mixer", "liftplatform", "conveyor"].includes(part.id);
       if (frontTool) {
-        size = bodySize * .78;
-        x = bodyX + bodySize * .12 - size * .9 + 16;
-        y = bodyY + bodySize * .48 - size * .52;
+        size = rootSize * (.7 - Math.min(frontNo, 2) * .06);
+        x = rootX + rootSize * (.74 + frontNo * .08);
+        y = rootY + rootSize * (.2 + frontNo * .08);
+        frontNo += 1;
       } else {
-        size = bodySize * .72;
-        x = bodyX + bodySize * .19;
-        y = bodyY - size * .35;
+        size = rootSize * (.68 - Math.min(upperNo, 2) * .06);
+        x = rootX + rootSize * (.18 + upperNo * .15);
+        y = rootY - rootSize * (.2 + upperNo * .06);
+        upperNo += 1;
       }
     } else if (part.category === "help") {
-      size = bodySize * .34;
-      x = bodyX + bodySize * (.2 + n * .26);
-      y = bodyY - size * .42;
+      if (["engine", "battery"].includes(part.id)) {
+        size = rootSize * .28;
+        x = rootX + rootSize * (.08 + (n % 2) * .28);
+        y = rootY + rootSize * .3;
+      } else if (["suspension", "step"].includes(part.id)) {
+        size = rootSize * .22;
+        x = rootX + rootSize * .36;
+        y = rootY + rootSize * .53;
+      } else if (["lamp", "siren"].includes(part.id)) {
+        size = rootSize * .17;
+        x = rootX + rootSize * (.66 + (n % 2) * .16);
+        y = rootY + rootSize * .1;
+      } else if (part.id === "bridge") {
+        size = rootSize * .46;
+        x = rootX + rootSize * .2;
+        y = rootY - rootSize * .04;
+      } else {
+        size = rootSize * .25;
+        x = rootX + rootSize * (.12 + (n % 3) * .22);
+        y = rootY + rootSize * .28;
+      }
     } else {
-      size = bodySize * .3;
-      x = bodyX + bodySize * (.18 + n * .24);
-      y = bodyY - size * .55;
+      if (part.id === "flag") {
+        size = rootSize * .22;
+        x = rootX + rootSize * .79;
+        y = rootY + rootSize * .06;
+      } else if (part.id === "pipe") {
+        size = rootSize * .19;
+        x = rootX + rootSize * .04;
+        y = rootY + rootSize * .23;
+      } else {
+        size = rootSize * .17;
+        x = rootX + rootSize * (.22 + (n % 2) * .28);
+        y = rootY + rootSize * .34;
+      }
     }
-    const layer = part.category === "move" ? 10 : part.category === "tool" ? 20 : part.category === "body" ? 30 : part.category === "cab" ? 40 : part.category === "help" ? 50 : 60;
+    const layer = part.category === "chassis" ? 20 : part.category === "body" ? 30 : part.category === "move" ? 40 : part.category === "tool" ? 50 : part.category === "cab" ? 60 : part.category === "help" ? 70 : 80;
     return { ...part, x, y, w: size, h: size, rotate, scale: 1, z: layer + n };
   });
 }
@@ -355,9 +496,10 @@ export default function Home() {
   const [mission, setMission] = useState<Mission | null>(null);
   const [parts, setParts] = useState<Part[]>([]);
   const [selected, setSelected] = useState<string | null>(null);
-  const [category, setCategory] = useState<Category>("body");
+  const [category, setCategory] = useState<Category>("chassis");
   const [paint, setPaint] = useState<Paint>(DEFAULT_PAINT);
   const [snap, setSnap] = useState(true);
+  const [moveWhole, setMoveWhole] = useState(false);
   const [mode, setMode] = useState<"mission" | "free">("mission");
   const [history, setHistory] = useState<Part[][]>([]);
   const [future, setFuture] = useState<Part[][]>([]);
@@ -368,7 +510,7 @@ export default function Home() {
   const [toast, setToast] = useState("");
   const [tutorial, setTutorial] = useState(0);
   const canvasRef = useRef<HTMLDivElement>(null);
-  const dragging = useRef<{ uid: string; dx: number; dy: number } | null>(null);
+  const dragging = useRef<{ uid: string; dx: number; dy: number; group: boolean; lastX: number; lastY: number } | null>(null);
   const parentTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => setSave(safeLoad()), []);
@@ -401,43 +543,39 @@ export default function Home() {
     setMode(kind);
     setParts([]);
     setSelected(null);
+    setCategory("chassis");
+    setPaint(DEFAULT_PAINT);
+    setHistory([]);
+    setFuture([]);
     setResult(null);
     setShowPaint(false);
+    setMoveWhole(false);
     setScreen("build");
     if (!save.tutorialSeen) setTutorial(1);
   };
 
   const addPart = (def: PartDef) => {
     pushHistory();
-    let compatible = [...parts];
-    if (def.category === "body") compatible = compatible.filter((p) => p.category !== "body");
-    if (def.tags.includes("cab")) compatible = compatible.filter((p) => !p.tags.includes("cab"));
-    if (def.category === "move") {
-      const isTrack = def.id.includes("track");
-      compatible = compatible.filter((p) => p.category !== "move" || (!isTrack && !p.id.includes("track")));
-      if (!isTrack && compatible.filter((p) => p.category === "move").length >= 2) {
-        const oldestWheel = compatible.find((p) => p.category === "move");
-        compatible = compatible.filter((p) => p.uid !== oldestWheel?.uid);
-      }
-      if (isTrack) compatible = compatible.filter((p) => p.category !== "move");
-    }
-    if (def.category === "tool") {
-      const frontTools = new Set(["shovel","blade","drill","roller","plow","fork","snowblade","hammer"]);
-      const slotIsFront = frontTools.has(def.id);
-      compatible = compatible.filter((p) =>
-        p.category !== "tool" || frontTools.has(p.id) !== slotIsFront
-      );
-    }
-    if (def.category === "help" && compatible.filter((p) => p.category === "help").length >= 2) {
-      const oldestHelp = compatible.find((p) => p.category === "help");
-      compatible = compatible.filter((p) => p.uid !== oldestHelp?.uid);
-    }
-    const needsFrame = def.category !== "body" && !compatible.some((p) => p.tags.includes("body"));
-    const frame = needsFrame ? newPart(PARTS.find((p) => p.id === "frame")!, compatible.length) : null;
-    const item = newPart(def, compatible.length + (frame ? 1 : 0));
-    const next = [...compatible, ...(frame ? [frame] : []), item];
     const rect = canvasRef.current?.getBoundingClientRect();
-    setParts(assembleParts(next, rect?.width, rect?.height));
+    const item = newPart(def, 0);
+    setParts((current) => {
+      const oldRoot = current.find((p) => p.category === "chassis");
+      let compatible = [...current];
+      if (def.category === "chassis") compatible = compatible.filter((p) => p.category !== "chassis");
+      if (def.category === "body") compatible = compatible.filter((p) => p.category !== "body");
+      if (def.category === "cab") compatible = compatible.filter((p) => p.category !== "cab");
+      const needsFrame = def.category !== "chassis" && !compatible.some((p) => p.category === "chassis");
+      const frame = needsFrame ? newPart(PARTS.find((p) => p.id === "frame")!, compatible.length) : null;
+      const next = [...compatible, ...(frame ? [frame] : []), item];
+      const rootAnchor = oldRoot ? { x: oldRoot.x, y: oldRoot.y, size: oldRoot.w } : undefined;
+      const arranged = assembleParts(next, rect?.width, rect?.height, rootAnchor);
+      const existing = new Map(compatible.map((p) => [p.uid, p]));
+      return def.category === "chassis" || needsFrame
+        ? arranged
+        : def.category === "move"
+          ? arranged.map((p) => p.category === "move" || p.uid === item.uid ? p : existing.get(p.uid) || p)
+          : arranged.map((p) => p.uid === item.uid ? p : existing.get(p.uid) || p);
+    });
     setSelected(item.uid);
     if (tutorial === 1) setTutorial(2);
   };
@@ -446,7 +584,8 @@ export default function Home() {
     if (!parts.length) return;
     pushHistory();
     const rect = canvasRef.current?.getBoundingClientRect();
-    setParts(assembleParts(parts, rect?.width, rect?.height));
+    const root = parts.find((p) => p.category === "chassis");
+    setParts(assembleParts(parts, rect?.width, rect?.height, root ? { x: root.x, y: root.y, size: root.w } : undefined));
     setSelected(null);
     setToast("咔嗒！零件连接好啦");
     setTimeout(() => setToast(""), 1600);
@@ -463,6 +602,14 @@ export default function Home() {
     pushHistory();
     setParts((all) => all.filter((p) => p.uid !== selected));
     setSelected(null);
+  };
+
+  const duplicateSelected = () => {
+    if (!selectedPart) return;
+    pushHistory();
+    const copy = { ...selectedPart, uid: `${selectedPart.id}-${Date.now()}-copy`, x: selectedPart.x + 24, y: selectedPart.y + 24, z: Math.max(...parts.map((p) => p.z)) + 1 };
+    setParts((all) => [...all, copy]);
+    setSelected(copy.uid);
   };
 
   const undo = () => {
@@ -488,13 +635,36 @@ export default function Home() {
     if (!box) return;
     setSelected(part.uid);
     pushHistory();
-    dragging.current = { uid: part.uid, dx: e.clientX - box.left - part.x, dy: e.clientY - box.top - part.y };
+    dragging.current = {
+      uid: part.uid,
+      dx: e.clientX - box.left - part.x,
+      dy: e.clientY - box.top - part.y,
+      group: moveWhole,
+      lastX: e.clientX - box.left,
+      lastY: e.clientY - box.top,
+    };
   };
   const onPointerMove = (e: React.PointerEvent) => {
     if (!dragging.current || !canvasRef.current) return;
     const box = canvasRef.current.getBoundingClientRect();
-    let x = e.clientX - box.left - dragging.current.dx;
-    let y = e.clientY - box.top - dragging.current.dy;
+    const pointerX = e.clientX - box.left;
+    const pointerY = e.clientY - box.top;
+    if (dragging.current.group) {
+      let deltaX = pointerX - dragging.current.lastX;
+      let deltaY = pointerY - dragging.current.lastY;
+      const minX = Math.min(...parts.map((p) => p.x));
+      const minY = Math.min(...parts.map((p) => p.y));
+      const maxX = Math.max(...parts.map((p) => p.x + p.w * p.scale));
+      const maxY = Math.max(...parts.map((p) => p.y + p.h * p.scale));
+      deltaX = Math.max(-minX - 30, Math.min(box.width - maxX + 30, deltaX));
+      deltaY = Math.max(-minY - 30, Math.min(box.height - maxY + 30, deltaY));
+      setParts((all) => all.map((p) => ({ ...p, x: p.x + deltaX, y: p.y + deltaY })));
+      dragging.current.lastX = pointerX;
+      dragging.current.lastY = pointerY;
+      return;
+    }
+    let x = pointerX - dragging.current.dx;
+    let y = pointerY - dragging.current.dy;
     if (snap) {
       x = Math.round(x / 10) * 10;
       y = Math.round(y / 10) * 10;
@@ -507,37 +677,32 @@ export default function Home() {
     } : p));
   };
   const onPointerUp = () => {
-    const released = dragging.current?.uid;
     dragging.current = null;
-    if (snap && released) {
-      const rect = canvasRef.current?.getBoundingClientRect();
-      const arranged = assembleParts(parts, rect?.width, rect?.height);
-      const target = arranged.find((p) => p.uid === released);
-      const current = parts.find((p) => p.uid === released);
-      if (target && current && Math.hypot(target.x - current.x, target.y - current.y) < 140) {
-        setParts((all) => all.map((p) => p.uid === released ? { ...p, x: target.x, y: target.y, rotate: target.rotate } : p));
-        setToast("咔嗒！");
-        setTimeout(() => setToast(""), 700);
-      }
-    }
     if (tutorial === 2) setTutorial(3);
   };
 
   const evaluate = () => {
     if (mode === "free") {
+      if (!parts.length) {
+        setToast("先从仓库挑一个零件，再让作品出发吧！");
+        setTimeout(() => setToast(""), 1800);
+        return;
+      }
       setResult({ ok: true, missing: [] });
       return;
     }
     const tags = new Set(parts.flatMap((p) => p.tags));
-    const missing = (mission?.needs || []).filter((n) => !tags.has(n));
+    const functionTags = new Set(parts.filter((p) => ["body", "move", "tool", "help"].includes(p.category)).flatMap((p) => p.tags));
+    const missing = (mission?.needs || []).filter((n) => !functionTags.has(n));
+    if (!tags.has("chassis")) return setResult({ ok: false, missing, reason: "先装一副底盘，车身、轮子和工具才有牢固的安装位置。" });
     if (!tags.has("body")) return setResult({ ok: false, missing, reason: "还需要一个结实的车身，让零件们有地方坐好。" });
     if (!tags.has("move")) return setResult({ ok: false, missing, reason: "车车还没有会走路的轮子或履带呢！" });
     if (!tags.has("cab")) return setResult({ ok: false, missing, reason: "装上一间驾驶室，工程师才能安全地开车。" });
     if (missing.length) return setResult({ ok: false, missing, reason: mission?.hint });
-    const body = parts.find((p) => p.tags.includes("body"))!;
-    const bodyCenter = { x: body.x + body.w / 2, y: body.y + body.h / 2 };
-    const connected = parts.filter((p) => p.uid !== body.uid && (p.category === "move" || p.tags.some((t) => mission?.needs.includes(t))))
-      .every((p) => Math.hypot(p.x + p.w / 2 - bodyCenter.x, p.y + p.h / 2 - bodyCenter.y) < 330);
+    const root = parts.find((p) => p.category === "chassis")!;
+    const rootCenter = { x: root.x + root.w / 2, y: root.y + root.h / 2 };
+    const connected = parts.filter((p) => p.uid !== root.uid && (p.category === "move" || p.tags.some((t) => mission?.needs.includes(t))))
+      .every((p) => Math.hypot(p.x + p.w / 2 - rootCenter.x, p.y + p.h / 2 - rootCenter.y) < root.w * 1.65);
     if (!connected) return setResult({ ok: false, missing, reason: "有零件离车身太远啦，点一下“自动拼好”，让连接座咔嗒扣上。" });
     setResult({ ok: true, missing: [] });
     const wasNew = mission && !save.completed.includes(mission.id);
@@ -548,7 +713,6 @@ export default function Home() {
         return { ...s, completed, unlocked: nextUnlock, stars: s.stars + (wasNew ? 3 : 1) };
       });
     }
-    setTimeout(() => speak("太棒啦！你造的工程车完成任务啦！", voice), 400);
   };
 
   const saveCar = () => {
@@ -591,22 +755,22 @@ export default function Home() {
     setParts((all) => all.map((p) => p.uid === selected ? { ...p, scale: Math.max(.55, Math.min(1.55, p.scale - e.deltaY * .001)) } : p));
   };
 
-  const buildPreview = (carParts: Part[], carPaint: Paint, small = false) => {
+  const buildPreview = (carParts: Part[], carPaint: Paint, small = false, previewScale?: number) => {
     if (!carParts.length) return <div className="empty-car">🚧</div>;
     const minX = Math.min(...carParts.map((p) => p.x));
     const minY = Math.min(...carParts.map((p) => p.y));
-    const scale = small ? .27 : 1;
+    const scale = previewScale ?? (small ? .27 : 1);
     return carParts.slice(0, 16).map((p) => (
-      <div key={p.uid} className={`part part-${p.category} ${SPRITES[p.id] ? "with-art" : ""}`} style={{
+      <div key={p.uid} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""}`} style={{
         left: (p.x - minX) * scale + (small ? 12 : 0),
         top: (p.y - minY) * scale + (small ? 15 : 0),
         width: p.w * p.scale * scale,
         height: p.h * p.scale * scale,
         transform: `rotate(${p.rotate}deg) scaleX(${p.flip ? -1 : 1})`,
         zIndex: p.z,
-        "--part-color": p.category === "move" ? carPaint.wheels : carPaint.primary,
+        "--part-color": p.category === "move" ? carPaint.wheels : p.category === "tool" ? carPaint.secondary : carPaint.primary,
         "--part-accent": carPaint.secondary,
-      } as React.CSSProperties}>{SPRITES[p.id] ? <span className="part-art" style={spriteStyle(p.id)}/> : p.icon}</div>
+      } as React.CSSProperties}>{SPRITES[p.id] ? <><span className="part-art" style={spriteStyle(p.id)}/><span className="paint-overlay" style={spriteMaskStyle(p.id)}/></> : p.icon}</div>
     ));
   };
 
@@ -671,7 +835,7 @@ export default function Home() {
     <header className="build-header">
       <button className="back-btn" onClick={() => setScreen("home")}>‹</button>
       <div className="build-title"><small>{mode === "mission" ? `${mission?.icon} ${mission?.title}` : "🌈 想怎么拼都可以"}</small><b>{mode === "mission" ? "任务工程车" : "自由创造工坊"}</b></div>
-      <div className="build-actions"><button onClick={undo} disabled={!history.length}>↶<small>撤销</small></button><button onClick={redo} disabled={!future.length}>↷<small>重做</small></button><button onClick={() => setSnap(!snap)} className={snap ? "active" : ""}>🧲<small>吸附</small></button><button onClick={autoAssemble}>🧩<small>自动拼好</small></button><button onClick={() => setShowPaint(true)}>🎨<small>涂装</small></button></div>
+      <div className="build-actions"><button onClick={undo} disabled={!history.length}>↶<small>撤销</small></button><button onClick={redo} disabled={!future.length}>↷<small>重做</small></button><button onClick={() => setSnap(!snap)} className={snap ? "active" : ""}>🧲<small>吸附</small></button><button onClick={() => { setMoveWhole(!moveWhole); setSelected(null); }} className={moveWhole ? "active whole-move" : "whole-move"}>✥<small>整车移动</small></button><button onClick={autoAssemble}>🧩<small>自动拼好</small></button><button onClick={() => setShowPaint(true)}>🎨<small>涂装</small></button></div>
       <button className="go-btn" onClick={evaluate}>出发！<span>➜</span></button>
     </header>
     <div className="work-area">
@@ -681,32 +845,37 @@ export default function Home() {
         <div className="parts-grid">{PARTS.filter((p) => p.category === category).map((p) => <button key={p.id} className="part-card" onClick={() => addPart(p)}><span className={`mini-part ${SPRITES[p.id] ? "has-art" : `part-${p.category}`}`}>{SPRITES[p.id] ? <span className="part-art" style={spriteStyle(p.id)}/> : p.icon}</span><b>{p.name}</b><i>＋</i></button>)}</div>
       </aside>
       <section className="canvas-wrap">
-        <div className="canvas-info"><span>拖动零件 · 滚轮缩放</span><span>{parts.length} 个零件</span></div>
+        <div className="canvas-info"><span>{moveWhole ? "✥ 整车移动已开启：拖任意零件，整辆车一起走" : "☝ 默认单件模式：点到哪个零件，就只移动哪个零件"}</span><span>{parts.length} 个零件</span></div>
         <div className={`build-canvas pattern-${paint.pattern} finish-${paint.finish}`} ref={canvasRef} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp} onWheel={wheel}>
           <div className="horizon"><span>☁</span><span>☁</span></div><div className="ground-line"/>
-          {!parts.length && <div className="canvas-empty"><span>👇</span><b>从左边选一个车身吧</b><small>零件会出现在这里</small></div>}
-          {parts.map((p) => <div key={p.uid} onPointerDown={(e) => onPointerDown(e, p)} className={`part part-${p.category} ${SPRITES[p.id] ? "with-art" : ""} ${selected === p.uid ? "selected" : ""}`} style={{
+          {!parts.length && <div className="canvas-empty"><span>👇</span><b>先从左边选一副底盘吧</b><small>底盘是整辆工程车的基础</small></div>}
+          {parts.map((p) => <div key={p.uid} data-part-id={p.id} data-category={p.category} onPointerDown={(e) => onPointerDown(e, p)} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""} ${selected === p.uid ? "selected" : ""}`} style={{
             left: p.x, top: p.y, width: p.w * p.scale, height: p.h * p.scale,
             transform: `rotate(${p.rotate}deg) scaleX(${p.flip ? -1 : 1})`, zIndex: p.z,
-            "--part-color": p.category === "move" ? paint.wheels : paint.primary,
+            "--part-layer": p.z,
+            "--part-color": p.category === "move" ? paint.wheels : p.category === "tool" ? paint.secondary : paint.primary,
             "--part-accent": paint.secondary,
-          } as React.CSSProperties}><span className={SPRITES[p.id] ? "part-art" : ""} style={spriteStyle(p.id)}>{SPRITES[p.id] ? "" : p.icon}</span>{paint.sticker && p.category === "body" && <i className="part-sticker">{paint.sticker}</i>}</div>)}
-          {selectedPart && <div className="selection-tools">
-            <button onClick={() => updateSelected({ rotate: selectedPart.rotate - 15 })}>↶</button>
-            <button onClick={() => updateSelected({ rotate: selectedPart.rotate + 15 })}>↷</button>
-            <button onClick={() => updateSelected({ scale: Math.max(.55, selectedPart.scale - .1) })}>−</button>
-            <button onClick={() => updateSelected({ scale: Math.min(1.55, selectedPart.scale + .1) })}>＋</button>
-            <button onClick={() => updateSelected({ flip: !selectedPart.flip })}>⇆</button>
-            <button onClick={() => updateSelected({ z: Math.max(...parts.map((p) => p.z)) + 1 })}>置前</button>
-            <button className="trash" onClick={deleteSelected}>🗑</button>
+          } as React.CSSProperties}>{SPRITES[p.id] ? <><span className="part-art" style={spriteStyle(p.id)}/><span className="paint-overlay" style={spriteMaskStyle(p.id)}/><span className="part-hit"/></> : <span>{p.icon}</span>}{paint.sticker && p.category === "body" && <i className="part-sticker">{paint.sticker}</i>}</div>)}
+          {selectedPart && !showPaint && <div className="selection-tools">
+            <b>{selectedPart.name}</b>
+            <button aria-label="左转" onClick={() => updateSelected({ rotate: selectedPart.rotate - 15 })}>↶<small>左转</small></button>
+            <button aria-label="右转" onClick={() => updateSelected({ rotate: selectedPart.rotate + 15 })}>↷<small>右转</small></button>
+            <button aria-label="缩小" onClick={() => updateSelected({ scale: Math.max(.45, selectedPart.scale - .1) })}>−<small>缩小</small></button>
+            <button aria-label="放大" onClick={() => updateSelected({ scale: Math.min(1.8, selectedPart.scale + .1) })}>＋<small>放大</small></button>
+            <button aria-label="翻面" onClick={() => updateSelected({ flip: !selectedPart.flip })}>⇆<small>翻面</small></button>
+            <button aria-label="复制" onClick={duplicateSelected}>⧉<small>复制</small></button>
+            <button aria-label="置前" onClick={() => updateSelected({ z: Math.max(...parts.map((p) => p.z)) + 1 })}>⇧<small>置前</small></button>
+            <button aria-label="置后" onClick={() => updateSelected({ z: Math.min(...parts.map((p) => p.z)) - 1 })}>⇩<small>置后</small></button>
+            <button aria-label="删除" className="trash" onClick={deleteSelected}>🗑<small>删除</small></button>
           </div>}
         </div>
       </section>
     </div>
 
     {showPaint && <div className="paint-drawer"><div className="drawer-head"><div><span>🎨</span><b>神奇涂装屋</b><small>给工程车换身新衣服</small></div><button onClick={() => setShowPaint(false)}>完成 ✓</button></div>
-      <div className="paint-section"><b>车身颜色</b><div className="swatches">{["#ffc52f","#ff704b","#59c986","#45aaf2","#9b78e8","#ef71ae","#f5f1dd"].map((c) => <button key={c} className={paint.primary === c ? "chosen" : ""} style={{ background: c }} onClick={() => setPaint({ ...paint, primary: c })}/>)}</div></div>
-      <div className="paint-section"><b>搭配颜色</b><div className="swatches">{["#ff7b3e","#2e98d1","#754fbb","#68b33e","#f4e04d","#ffffff"].map((c) => <button key={c} className={paint.secondary === c ? "chosen" : ""} style={{ background: c }} onClick={() => setPaint({ ...paint, secondary: c })}/>)}</div></div>
+      <div className="paint-section"><b>车身颜色</b><div className="swatches">{["#ffc52f","#ff704b","#59c986","#45aaf2","#9b78e8","#ef71ae","#f5f1dd"].map((c, i) => <button key={c} aria-label={`车身颜色 ${i + 1}`} className={paint.primary === c ? "chosen" : ""} style={{ background: c }} onClick={() => setPaint({ ...paint, primary: c })}/>)}</div></div>
+      <div className="paint-section"><b>搭配颜色</b><div className="swatches">{["#ff7b3e","#2e98d1","#754fbb","#68b33e","#f4e04d","#ffffff"].map((c, i) => <button key={c} aria-label={`搭配颜色 ${i + 1}`} className={paint.secondary === c ? "chosen" : ""} style={{ background: c }} onClick={() => setPaint({ ...paint, secondary: c })}/>)}</div></div>
+      <div className="paint-section"><b>轮胎轮毂颜色</b><div className="swatches">{["#27313d","#ffd43b","#ff6b4a","#46aaf2","#8b6fe8","#f3f3ec"].map((c, i) => <button key={c} aria-label={`轮胎颜色 ${i + 1}`} className={paint.wheels === c ? "chosen" : ""} style={{ background: c }} onClick={() => setPaint({ ...paint, wheels: c })}/>)}</div></div>
       <div className="paint-section"><b>花纹</b><div className="option-row">{[["none","纯色"],["stripe","闪电"],["dots","圆点"]].map(([v,n]) => <button key={v} className={paint.pattern === v ? "chosen" : ""} onClick={() => setPaint({ ...paint, pattern: v })}>{v === "stripe" ? "⚡" : v === "dots" ? "●●" : "▰"}<small>{n}</small></button>)}</div></div>
       <div className="paint-section"><b>贴纸</b><div className="sticker-row">{["","⭐","🌈","🦕","🚀","🐾"].map((s) => <button key={s || "no"} className={paint.sticker === s ? "chosen" : ""} onClick={() => setPaint({ ...paint, sticker: s })}>{s || "无"}</button>)}</div></div>
       <div className="paint-section"><b>特别效果</b><div className="option-row"><button className={paint.finish === "clean" ? "chosen" : ""} onClick={() => setPaint({ ...paint, finish: "clean" })}>✨<small>亮晶晶</small></button><button className={paint.finish === "mud" ? "chosen" : ""} onClick={() => setPaint({ ...paint, finish: "mud" })}>🟤<small>泥点勇士</small></button></div></div>
@@ -714,15 +883,16 @@ export default function Home() {
 
     {result && <div className="modal-shade result-shade"><div className={`result-card ${result.ok ? "success" : "oops"}`}>
       <div className="confetti">{result.ok ? "✨ ⭐ 🎉 ⭐ ✨" : "💨　🍃　💭"}</div>
-      <div className="result-animation"><div className="result-vehicle">{parts.length ? "🚜" : "🛒"}</div><div className="result-character">{result.ok ? mission?.icon || "🤩" : "🐣"}</div></div>
-      <span className="result-label">{result.ok ? "任务完成！" : "差一点点就可以啦"}</span>
+      <div className={`result-animation action-${mission?.needs[0] || "drive"}`}><div className="action-scene">{ACTION_EFFECT[mission?.needs[0] || ""]?.scene || "🏁"}</div><div className="result-vehicle-art">{buildPreview(assembleParts(parts, 900, 500, { x: 250, y: 150, size: 240 }), paint, true, .65)}</div><div className="result-character">{result.ok ? mission?.icon || "🤩" : "🐣"}</div></div>
+      <span className="result-label">{result.ok ? (mode === "free" ? "试车成功！" : "任务完成！") : "差一点点就可以啦"}</span>
       <h2>{result.ok ? (mode === "free" ? "这辆车太有创意啦！" : `${mission?.character}开心得跳起来！`) : "车车噗噗两声，停下来想了想…"}</h2>
       <p>{result.ok ? (mode === "free" ? "它是全世界独一无二的工程车。" : `你用自己的方法解决了“${mission?.title}”！`) : result.reason}</p>
+      {result.ok && mode === "mission" && <p className="action-caption">{ACTION_EFFECT[mission?.needs[0] || ""]?.label || "工程车顺利完成了工作"}</p>}
       {result.ok && mode === "mission" && <div className="reward">获得贴纸 <b>{mission?.reward}</b> ＋ ⭐⭐⭐</div>}
       <div className="result-buttons">{!result.ok ? <button className="primary" onClick={() => setResult(null)}>回去加零件</button> : <><button className="secondary" onClick={saveCar}>♥ 收藏这辆车</button><button className="primary" onClick={() => { saveCar(); setResult(null); mode === "mission" ? pickMission() : setScreen("home"); }}>{mode === "mission" ? "下一个故事" : "回到首页"}</button></>}</div>
     </div></div>}
 
-    {tutorial > 0 && <div className={`tutorial tip-${tutorial}`}><button onClick={() => { setTutorial(0); setSave((s) => ({ ...s, tutorialSeen: true })); }}>跳过</button><span>{tutorial === 1 ? "👈" : tutorial === 2 ? "☝️" : "🎨"}</span><b>{tutorial === 1 ? "先选一个喜欢的车身" : tutorial === 2 ? "拖动零件，摆到你喜欢的位置" : "继续加轮子和工具，然后换个漂亮颜色！"}</b>{tutorial === 3 && <button className="got-it" onClick={() => { setTutorial(0); setSave((s) => ({ ...s, tutorialSeen: true })); }}>知道啦！</button>}</div>}
+    {tutorial > 0 && <div className={`tutorial tip-${tutorial}`}><button onClick={() => { setTutorial(0); setSave((s) => ({ ...s, tutorialSeen: true })); }}>跳过</button><span>{tutorial === 1 ? "👈" : tutorial === 2 ? "☝️" : "🎨"}</span><b>{tutorial === 1 ? "先选一副喜欢的底盘" : tutorial === 2 ? "底盘、车身和车头会自动对齐，也都能单独拖动" : "继续加轮子和工具，然后换个漂亮颜色！"}</b>{tutorial === 3 && <button className="got-it" onClick={() => { setTutorial(0); setSave((s) => ({ ...s, tutorialSeen: true })); }}>知道啦！</button>}</div>}
     {toast && <div className="toast">{toast}</div>}
   </main>;
 }
