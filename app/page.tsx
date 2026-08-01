@@ -196,11 +196,11 @@ function spriteStyle(id: string): React.CSSProperties | undefined {
   const col = index % 4;
   const row = Math.floor(index / 4);
   const sheets: Record<number, string> = {
-    6: "v2-chassis.png",
-    7: "v2-bodies.png",
-    8: "v2-cabs.png",
-    9: "v2-tools.png",
-    10: "v2-movement.png",
+    6: "v3-chassis.png",
+    7: "v3-bodies.png",
+    8: "v3-cabs.png",
+    9: "v3-tools.png",
+    10: "v3-movement.png",
     11: "v2-extras.png",
   };
   return {
@@ -490,6 +490,103 @@ function assembleParts(input: Part[], width = 900, height = 600, anchor?: Assemb
   });
 }
 
+const WIDE_MOVES = new Set(["track", "miningtrack", "snowtrack", "greentrack", "ski", "hover"]);
+const UPPER_TOOLS = new Set(["crane", "mixer", "liftplatform", "conveyor"]);
+const REAR_TOOLS = new Set(["tow", "plow"]);
+
+function preparePerformanceBuild(input: Part[], action: string): Part[] {
+  const chassis = input.find((part) => part.category === "chassis");
+  if (!chassis) return assembleParts(input, 620, 300, { x: 48, y: 20, size: 290 });
+
+  const body = input.find((part) => part.category === "body");
+  const cab = input.find((part) => part.category === "cab");
+  const movement = input.filter((part) => part.category === "move");
+  const wideMove = movement.find((part) => WIDE_MOVES.has(part.id));
+  const rollingMoves = wideMove ? [wideMove] : movement.slice(0, 4);
+  const tools = input.filter((part) => part.category === "tool");
+  const missionTool = tools.find((part) => part.tags.includes(action)) || tools.at(-1);
+  const helpers = input
+    .filter((part) => part.category === "help")
+    .sort((a, b) => Number(b.tags.includes(action)) - Number(a.tags.includes(action)))
+    .slice(0, 2);
+  const decorations = input.filter((part) => part.category === "decor").slice(0, 2);
+  const chosen = [chassis, body, cab, ...rollingMoves, missionTool, ...helpers, ...decorations]
+    .filter((part): part is Part => Boolean(part));
+
+  const rootX = 50;
+  const rootY = 18;
+  const rootSize = 300;
+  let wheelNo = 0;
+  let helperNo = 0;
+  let decorNo = 0;
+  const wheelCount = rollingMoves.length;
+
+  return chosen.map((part) => {
+    let x = rootX;
+    let y = rootY;
+    let size = rootSize;
+    let flip = false;
+    let layer = 20;
+
+    if (part.category === "body") {
+      x = rootX + 15;
+      y = rootY + 39;
+      size = 240;
+      layer = 32;
+    } else if (part.category === "cab") {
+      x = rootX + 165;
+      y = rootY + 50;
+      size = 210;
+      layer = 60;
+    } else if (part.category === "move") {
+      layer = 48;
+      if (WIDE_MOVES.has(part.id)) {
+        x = rootX + 24;
+        y = rootY + 112;
+        size = 252;
+      } else {
+        size = wheelCount >= 4 ? 88 : wheelCount === 3 ? 98 : 110;
+        const centers = wheelCount <= 1
+          ? [150]
+          : Array.from({ length: wheelCount }, (_, index) => 55 + index * (190 / (wheelCount - 1)));
+        x = rootX + centers[wheelNo] - size / 2;
+        y = rootY + 164;
+        wheelNo += 1;
+      }
+    } else if (part.category === "tool") {
+      layer = 44;
+      if (REAR_TOOLS.has(part.id)) {
+        x = rootX - 128;
+        y = rootY + 80;
+        size = 205;
+        flip = true;
+      } else if (UPPER_TOOLS.has(part.id)) {
+        x = rootX + 70;
+        y = rootY - 25;
+        size = 250;
+      } else {
+        x = rootX + 335;
+        y = rootY + 42;
+        size = 215;
+      }
+    } else if (part.category === "help") {
+      size = ["lamp", "siren"].includes(part.id) ? 58 : 78;
+      x = rootX + (helperNo === 0 ? 210 : 110);
+      y = rootY + (helperNo === 0 ? 38 : 102);
+      helperNo += 1;
+      layer = 70;
+    } else if (part.category === "decor") {
+      size = 58;
+      x = rootX + (decorNo === 0 ? 245 : 125);
+      y = rootY + (decorNo === 0 ? 38 : 105);
+      decorNo += 1;
+      layer = 80;
+    }
+
+    return { ...part, x, y, w: size, h: size, scale: 1, rotate: 0, flip, z: layer };
+  });
+}
+
 export default function Home() {
   const [screen, setScreen] = useState<"home" | "mission" | "build" | "garage">("home");
   const [save, setSave] = useState<SaveData>(DEFAULT_SAVE);
@@ -504,6 +601,7 @@ export default function Home() {
   const [history, setHistory] = useState<Part[][]>([]);
   const [future, setFuture] = useState<Part[][]>([]);
   const [result, setResult] = useState<null | { ok: boolean; missing: string[]; reason?: string }>(null);
+  const [performanceRun, setPerformanceRun] = useState(0);
   const [showPaint, setShowPaint] = useState(false);
   const [showParent, setShowParent] = useState(false);
   const [voice] = useState(true);
@@ -522,6 +620,13 @@ export default function Home() {
 
   const unlockedThemes = THEMES.slice(0, save.unlocked);
   const selectedPart = parts.find((p) => p.uid === selected);
+  const performanceAction = mission?.needs[0] || [...parts].reverse().find((p) => p.category === "tool")?.tags[0] || "drive";
+  const performanceParts = useMemo(() => preparePerformanceBuild(parts, performanceAction), [parts, performanceAction]);
+
+  const showResult = (next: { ok: boolean; missing: string[]; reason?: string }) => {
+    setPerformanceRun((run) => run + 1);
+    setResult(next);
+  };
 
   const pushHistory = useCallback(() => {
     setHistory((h) => [...h.slice(-24), parts.map((p) => ({ ...p }))]);
@@ -688,23 +793,23 @@ export default function Home() {
         setTimeout(() => setToast(""), 1800);
         return;
       }
-      setResult({ ok: true, missing: [] });
+      showResult({ ok: true, missing: [] });
       return;
     }
     const tags = new Set(parts.flatMap((p) => p.tags));
     const functionTags = new Set(parts.filter((p) => ["body", "move", "tool", "help"].includes(p.category)).flatMap((p) => p.tags));
     const missing = (mission?.needs || []).filter((n) => !functionTags.has(n));
-    if (!tags.has("chassis")) return setResult({ ok: false, missing, reason: "先装一副底盘，车身、轮子和工具才有牢固的安装位置。" });
-    if (!tags.has("body")) return setResult({ ok: false, missing, reason: "还需要一个结实的车身，让零件们有地方坐好。" });
-    if (!tags.has("move")) return setResult({ ok: false, missing, reason: "车车还没有会走路的轮子或履带呢！" });
-    if (!tags.has("cab")) return setResult({ ok: false, missing, reason: "装上一间驾驶室，工程师才能安全地开车。" });
-    if (missing.length) return setResult({ ok: false, missing, reason: mission?.hint });
+    if (!tags.has("chassis")) return showResult({ ok: false, missing, reason: "先装一副底盘，车身、轮子和工具才有牢固的安装位置。" });
+    if (!tags.has("body")) return showResult({ ok: false, missing, reason: "还需要一个结实的车身，让零件们有地方坐好。" });
+    if (!tags.has("move")) return showResult({ ok: false, missing, reason: "车车还没有会走路的轮子或履带呢！" });
+    if (!tags.has("cab")) return showResult({ ok: false, missing, reason: "装上一间驾驶室，工程师才能安全地开车。" });
+    if (missing.length) return showResult({ ok: false, missing, reason: mission?.hint });
     const root = parts.find((p) => p.category === "chassis")!;
     const rootCenter = { x: root.x + root.w / 2, y: root.y + root.h / 2 };
     const connected = parts.filter((p) => p.uid !== root.uid && (p.category === "move" || p.tags.some((t) => mission?.needs.includes(t))))
       .every((p) => Math.hypot(p.x + p.w / 2 - rootCenter.x, p.y + p.h / 2 - rootCenter.y) < root.w * 1.65);
-    if (!connected) return setResult({ ok: false, missing, reason: "有零件离车身太远啦，点一下“自动拼好”，让连接座咔嗒扣上。" });
-    setResult({ ok: true, missing: [] });
+    if (!connected) return showResult({ ok: false, missing, reason: "有零件离车身太远啦，点一下“自动拼好”，让连接座咔嗒扣上。" });
+    showResult({ ok: true, missing: [] });
     const wasNew = mission && !save.completed.includes(mission.id);
     if (mission) {
       setSave((s) => {
@@ -883,13 +988,18 @@ export default function Home() {
 
     {result && <div className="modal-shade result-shade"><div className={`result-card ${result.ok ? "success" : "oops"}`}>
       <div className="confetti">{result.ok ? "✨ ⭐ 🎉 ⭐ ✨" : "💨　🍃　💭"}</div>
-      <div className={`result-animation action-${mission?.needs[0] || "drive"}`}><div className="action-scene">{ACTION_EFFECT[mission?.needs[0] || ""]?.scene || "🏁"}</div><div className="result-vehicle-art">{buildPreview(assembleParts(parts, 900, 500, { x: 250, y: 150, size: 240 }), paint, true, .65)}</div><div className="result-character">{result.ok ? mission?.icon || "🤩" : "🐣"}</div></div>
+      <div key={performanceRun} className={`result-animation action-${performanceAction} ${result.ok ? "is-running" : "is-thinking"}`}>
+        <div className="mission-road"><i/><i/><i/><i/></div>
+        <div className="action-scene"><span className="task-object">{ACTION_EFFECT[performanceAction]?.scene || "🏁"}</span><span className="work-puff">✨</span></div>
+        <div className="performance-route"><div className="result-vehicle-art">{buildPreview(performanceParts, paint, false, .66)}</div></div>
+        <div className="result-character">{result.ok ? mission?.icon || "🤩" : "🐣"}</div>
+      </div>
       <span className="result-label">{result.ok ? (mode === "free" ? "试车成功！" : "任务完成！") : "差一点点就可以啦"}</span>
       <h2>{result.ok ? (mode === "free" ? "这辆车太有创意啦！" : `${mission?.character}开心得跳起来！`) : "车车噗噗两声，停下来想了想…"}</h2>
       <p>{result.ok ? (mode === "free" ? "它是全世界独一无二的工程车。" : `你用自己的方法解决了“${mission?.title}”！`) : result.reason}</p>
       {result.ok && mode === "mission" && <p className="action-caption">{ACTION_EFFECT[mission?.needs[0] || ""]?.label || "工程车顺利完成了工作"}</p>}
       {result.ok && mode === "mission" && <div className="reward">获得贴纸 <b>{mission?.reward}</b> ＋ ⭐⭐⭐</div>}
-      <div className="result-buttons">{!result.ok ? <button className="primary" onClick={() => setResult(null)}>回去加零件</button> : <><button className="secondary" onClick={saveCar}>♥ 收藏这辆车</button><button className="primary" onClick={() => { saveCar(); setResult(null); mode === "mission" ? pickMission() : setScreen("home"); }}>{mode === "mission" ? "下一个故事" : "回到首页"}</button></>}</div>
+      <div className="result-buttons">{!result.ok ? <button className="primary" onClick={() => setResult(null)}>回去加零件</button> : <><button className="secondary replay-button" onClick={() => setPerformanceRun((run) => run + 1)}>↻ 再看一遍</button><button className="secondary" onClick={saveCar}>♥ 收藏</button><button className="primary" onClick={() => { saveCar(); setResult(null); mode === "mission" ? pickMission() : setScreen("home"); }}>{mode === "mission" ? "下一个故事" : "回到首页"}</button></>}</div>
     </div></div>}
 
     {tutorial > 0 && <div className={`tutorial tip-${tutorial}`}><button onClick={() => { setTutorial(0); setSave((s) => ({ ...s, tutorialSeen: true })); }}>跳过</button><span>{tutorial === 1 ? "👈" : tutorial === 2 ? "☝️" : "🎨"}</span><b>{tutorial === 1 ? "先选一副喜欢的底盘" : tutorial === 2 ? "底盘、车身和车头会自动对齐，也都能单独拖动" : "继续加轮子和工具，然后换个漂亮颜色！"}</b>{tutorial === 3 && <button className="got-it" onClick={() => { setTutorial(0); setSave((s) => ({ ...s, tutorialSeen: true })); }}>知道啦！</button>}</div>}
