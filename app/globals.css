@@ -102,7 +102,7 @@
 .part-tool.with-art .part-hit{left:3%;right:3%;top:8%;bottom:8%;border-radius:16px}
 .part-tool:is(.part-id-blade,.part-id-fork,.part-id-drill,.part-id-plow,.part-id-hose,.part-id-tow,.part-id-snowblade,.part-id-conveyor) .part-hit{top:22%;bottom:22%}
 .part-tool:is(.part-id-roller,.part-id-brush,.part-id-grabber,.part-id-mixer) .part-hit{top:14%;bottom:14%}
-.tool-adapter{position:absolute;z-index:0;left:-1%;top:39%;width:27%;height:25%;border:3px solid #303941;border-radius:10px;background:linear-gradient(145deg,var(--part-accent) 0 62%,#d65d25 63% 100%);box-shadow:inset 0 0 0 3px #ffffff42,0 3px 0 #26323a;pointer-events:none}
+.tool-adapter{display:none}
 .tool-adapter:before{content:"";position:absolute;width:17%;aspect-ratio:1;border-radius:50%;left:13%;top:18%;background:#dce5e5;border:2px solid #33414a;box-shadow:calc(100% * 3) calc(100% * 2) 0 -1px #dce5e5,calc(100% * 3) calc(100% * 2) 0 1px #33414a}
 .tool-adapter:after{content:"";position:absolute;left:83%;top:36%;width:46%;height:22%;border:3px solid #303941;border-left:0;border-radius:0 9px 9px 0;background:linear-gradient(#eef2ed 0 38%,#79868a 40% 100%)}
 .tool-adapter.mount-upper{left:13%;top:72%;width:31%;height:18%;border-radius:9px 9px 5px 5px}

@@ -212,27 +212,20 @@ const SPRITES: Record<string, [number, number]> = {
 function spriteStyle(id: string): React.CSSProperties | undefined {
   const sprite = SPRITES[id];
   if (!sprite) return undefined;
-  if (sprite[0] === 9) {
-    return {
-      backgroundImage: `url(/assets/tools/${id}.png)`,
-      backgroundPosition: "center",
-      backgroundSize: "100% 100%",
-    };
-  }
   const index = sprite[1];
   const col = index % 4;
   const row = Math.floor(index / 4);
   const sheets: Record<number, string> = {
-    6: "v3-chassis.png",
-    7: "v3-bodies.png",
-    8: "v3-cabs.png",
-    9: "v4-tools-clean.png",
-    10: "v3-movement.png",
+    6: "v6-flat-chassis.png",
+    7: "v6-flat-bodies.png",
+    8: "v6-flat-cabs.png",
+    9: "v6-flat-tools.png",
+    10: "v6-flat-movement.png",
     11: "v2-extras.png",
     12: "v5-flat-transport.svg",
   };
   return {
-    backgroundImage: `url(/assets/${sheets[sprite[0]]})`,
+    backgroundImage: `url(/assets/${sheets[sprite[0]]}?v=6.1)`,
     backgroundPosition: `${col * 33.333}% ${row * 33.333}%`,
   };
 }
@@ -240,14 +233,13 @@ function spriteStyle(id: string): React.CSSProperties | undefined {
 function spriteMaskStyle(id: string): React.CSSProperties | undefined {
   const style = spriteStyle(id);
   if (!style?.backgroundImage) return undefined;
-  const isolated = SPRITES[id]?.[0] === 9;
   return {
     WebkitMaskImage: style.backgroundImage,
     maskImage: style.backgroundImage,
     WebkitMaskPosition: style.backgroundPosition,
     maskPosition: style.backgroundPosition,
-    WebkitMaskSize: isolated ? "100% 100%" : "400% 400%",
-    maskSize: isolated ? "100% 100%" : "400% 400%",
+    WebkitMaskSize: "400% 400%",
+    maskSize: "400% 400%",
     WebkitMaskRepeat: "no-repeat",
     maskRepeat: "no-repeat",
   };
@@ -423,8 +415,10 @@ type TransportMode = "ground" | "hover" | "air";
 const ROUND_MOVES = new Set(["wheel", "orangewheel", "bluewheel", "redwheel", "smallwheel", "farmwheel", "citywheel", "fantasywheel", "rollerwheel", "paddlewheel"]);
 const WIDE_MOVES = new Set(["track", "miningtrack", "snowtrack", "greentrack", "ski", "hover", "hovercraftskirt"]);
 const AIR_MOVES = new Set(["wing", "paraglider", "propeller"]);
-const UPPER_TOOLS = new Set(["crane", "mixer", "liftplatform", "conveyor"]);
+const BOOM_TOOLS = new Set(["shovel", "crane", "liftplatform", "conveyor"]);
+const DECK_TOOLS = new Set(["mixer", "hose"]);
 const REAR_TOOLS = new Set(["tow", "plow"]);
+const CORE_CATEGORIES = new Set<Category>(["chassis", "body", "cab", "move", "tool"]);
 
 function getTransportMode(input: Part[]): TransportMode {
   if (input.some((part) => AIR_MOVES.has(part.id) || ["airframe", "gliderframe"].includes(part.id))) return "air";
@@ -433,23 +427,25 @@ function getTransportMode(input: Part[]): TransportMode {
 }
 
 function movementBottomRatio(id: string) {
-  if (["wheel", "orangewheel", "bluewheel", "redwheel"].includes(id)) return .965;
-  if (id === "smallwheel") return .925;
-  if (id === "farmwheel") return .95;
-  if (["citywheel", "fantasywheel"].includes(id)) return .94;
-  if (["rollerwheel", "paddlewheel"].includes(id)) return .94;
-  if (["track", "miningtrack", "snowtrack", "greentrack"].includes(id)) return .73;
-  if (id === "ski") return .77;
-  return .72;
+  if (id === "smallwheel") return .75;
+  if (id === "ski") return .715;
+  if (id === "hover") return .74;
+  return .8;
 }
 
 function toolMountKind(id: string) {
-  if (UPPER_TOOLS.has(id)) return "upper";
+  if (BOOM_TOOLS.has(id)) return "boom";
+  if (DECK_TOOLS.has(id)) return "deck";
   if (REAR_TOOLS.has(id)) return "rear";
   return "front";
 }
 
 function assembleParts(input: Part[], width = 900, height = 600, anchor?: AssemblyAnchor): Part[] {
+  const newestToolAtStation = new Map<string, string>();
+  input.forEach((part) => {
+    if (part.category === "tool") newestToolAtStation.set(toolMountKind(part.id), part.uid);
+  });
+  input = input.filter((part) => part.category !== "tool" || newestToolAtStation.get(toolMountKind(part.id)) === part.uid);
   const defaultSize = Math.max(210, Math.min(320, width * .38, height * .52));
   const currentRoot = input.find((p) => p.category === "chassis");
   const hasPlacedRoot = Boolean(currentRoot && currentRoot.w >= 190 && Math.abs(currentRoot.w - currentRoot.h) < 4);
@@ -462,9 +458,6 @@ function assembleParts(input: Part[], width = 900, height = 600, anchor?: Assemb
   const wheelCount = Math.max(1, input.filter((p) => p.category === "move" && ROUND_MOVES.has(p.id)).length);
   let wheelNo = 0;
   let wideMoveNo = 0;
-  let frontNo = 0;
-  let upperNo = 0;
-  let rearNo = 0;
   return input.map((part) => {
     const n = counts[part.category] || 0;
     counts[part.category] = n + 1;
@@ -478,9 +471,9 @@ function assembleParts(input: Part[], width = 900, height = 600, anchor?: Assemb
       x = rootX;
       y = rootY;
     } else if (part.category === "body") {
-      size = rootSize * (transportMode === "ground" ? .68 : .74);
-      x = rootX + rootSize * (transportMode === "ground" ? .03 : .06);
-      y = rootY + rootSize * (transportMode === "ground" ? .02 : .14);
+      size = rootSize * (transportMode === "ground" ? .88 : .74);
+      x = rootX + rootSize * (transportMode === "ground" ? 0 : .06);
+      y = rootY + rootSize * (transportMode === "ground" ? -.01 : .14);
     } else if (part.category === "move") {
       if (part.id === "wing") {
         size = rootSize * 1.02;
@@ -504,7 +497,7 @@ function assembleParts(input: Part[], width = 900, height = 600, anchor?: Assemb
         layer = 25 + wideMoveNo;
         wideMoveNo += 1;
       } else if (ROUND_MOVES.has(part.id)) {
-        size = rootSize * (wheelCount >= 4 ? .24 : wheelCount === 3 ? .27 : .31);
+        size = rootSize * (wheelCount >= 4 ? .36 : wheelCount === 3 ? .41 : wheelCount === 2 ? .46 : .48);
         const ratio = wheelCount === 1 ? .5 : .16 + wheelNo * (.68 / (wheelCount - 1));
         const wheelCenter = rootX + rootSize * ratio;
         x = wheelCenter - size / 2;
@@ -512,26 +505,30 @@ function assembleParts(input: Part[], width = 900, height = 600, anchor?: Assemb
         wheelNo += 1;
       }
     } else if (part.category === "cab") {
-      size = rootSize * (transportMode === "air" ? .44 : .5);
-      x = rootX + rootSize * (transportMode === "air" ? .54 : .55);
-      y = rootY + rootSize * (transportMode === "air" ? .25 : .18);
+      size = rootSize * (transportMode === "air" ? .44 : .62);
+      x = rootX + rootSize * (transportMode === "air" ? .54 : .45);
+      y = rootY + rootSize * (transportMode === "air" ? .25 : .02);
     } else if (part.category === "tool") {
-      if (REAR_TOOLS.has(part.id)) {
-        size = rootSize * (.64 - Math.min(rearNo, 1) * .06);
-        x = rootX - rootSize * (.43 + rearNo * .08);
-        y = rootY + rootSize * (.27 + rearNo * .07);
+      const mount = toolMountKind(part.id);
+      if (mount === "rear") {
+        size = rootSize * .64;
+        x = rootX - rootSize * .43;
+        y = rootY + rootSize * .27;
         flip = true;
-        rearNo += 1;
-      } else if (!UPPER_TOOLS.has(part.id)) {
-        size = rootSize * (.7 - Math.min(frontNo, 2) * .06);
-        x = rootX + rootSize * (.74 + frontNo * .08);
-        y = rootY + rootSize * (.2 + frontNo * .08);
-        frontNo += 1;
+      } else if (mount === "boom") {
+        size = rootSize * (part.id === "shovel" ? .72 : 1.05);
+        x = rootX + rootSize * (part.id === "shovel" ? .38 : .03);
+        y = rootY - rootSize * (part.id === "shovel" ? .08 : .32);
+        layer = 48;
+      } else if (mount === "deck") {
+        size = rootSize * .64;
+        x = rootX + rootSize * .12;
+        y = rootY - rootSize * .06;
+        layer = 46;
       } else {
-        size = rootSize * (.68 - Math.min(upperNo, 2) * .06);
-        x = rootX + rootSize * (.18 + upperNo * .15);
-        y = rootY - rootSize * (.2 + upperNo * .06);
-        upperNo += 1;
+        size = rootSize * .7;
+        x = rootX + rootSize * .74;
+        y = rootY + rootSize * .2;
       }
     } else if (part.category === "help") {
       if (["engine", "battery"].includes(part.id)) {
@@ -615,14 +612,14 @@ function preparePerformanceBuild(input: Part[], action: string): Part[] {
     let layer = 20;
 
     if (part.category === "body") {
-      x = rootX + (transportMode === "ground" ? 15 : 18);
-      y = rootY + (transportMode === "ground" ? 39 : 48);
-      size = transportMode === "ground" ? 240 : 250;
+      x = rootX + (transportMode === "ground" ? 0 : 18);
+      y = rootY + (transportMode === "ground" ? -3 : 48);
+      size = transportMode === "ground" ? 264 : 250;
       layer = 32;
     } else if (part.category === "cab") {
-      x = rootX + (transportMode === "air" ? 168 : 165);
-      y = rootY + (transportMode === "air" ? 73 : 50);
-      size = transportMode === "air" ? 185 : 210;
+      x = rootX + (transportMode === "air" ? 168 : 135);
+      y = rootY + (transportMode === "air" ? 73 : 6);
+      size = transportMode === "air" ? 185 : 186;
       layer = 60;
     } else if (part.category === "move") {
       layer = 48;
@@ -647,7 +644,7 @@ function preparePerformanceBuild(input: Part[], action: string): Part[] {
         y = groundY - size * movementBottomRatio(part.id);
         layer = 26;
       } else if (ROUND_MOVES.has(part.id)) {
-        size = wheelCount >= 4 ? 88 : 104;
+        size = wheelCount >= 4 ? 118 : 128;
         const centers = wheelCount <= 1
           ? [150]
           : Array.from({ length: wheelCount }, (_, index) => 55 + index * (190 / (wheelCount - 1)));
@@ -657,17 +654,24 @@ function preparePerformanceBuild(input: Part[], action: string): Part[] {
       }
     } else if (part.category === "tool") {
       layer = 44;
-      if (REAR_TOOLS.has(part.id)) {
+      const mount = toolMountKind(part.id);
+      if (mount === "rear") {
         x = rootX - 128;
         y = rootY + 80;
         size = 205;
         flip = true;
-      } else if (UPPER_TOOLS.has(part.id)) {
-        x = rootX + 70;
-        y = rootY - 25;
-        size = 250;
+      } else if (mount === "boom") {
+        x = rootX + (part.id === "shovel" ? 114 : 8);
+        y = rootY - (part.id === "shovel" ? 24 : 96);
+        size = part.id === "shovel" ? 216 : 315;
+        layer = 48;
+      } else if (mount === "deck") {
+        x = rootX + 36;
+        y = rootY - 18;
+        size = 192;
+        layer = 46;
       } else {
-        x = rootX + 335;
+        x = rootX + 245;
         y = rootY + 42;
         size = 215;
       }
@@ -691,7 +695,8 @@ function preparePerformanceBuild(input: Part[], action: string): Part[] {
 
 export default function Home() {
   const [screen, setScreen] = useState<"home" | "mission" | "build" | "garage">("home");
-  const [save, setSave] = useState<SaveData>(() => safeLoad());
+  const [save, setSave] = useState<SaveData>(DEFAULT_SAVE);
+  const [saveReady, setSaveReady] = useState(false);
   const [mission, setMission] = useState<Mission | null>(null);
   const [parts, setParts] = useState<Part[]>([]);
   const [selected, setSelected] = useState<string | null>(null);
@@ -714,10 +719,19 @@ export default function Home() {
   const parentTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
+    const loadTimer = window.setTimeout(() => {
+      setSave(safeLoad());
+      setSaveReady(true);
+    }, 0);
+    return () => window.clearTimeout(loadTimer);
+  }, []);
+
+  useEffect(() => {
+    if (!saveReady) return;
     try {
       localStorage.setItem("buildyard-save-v1", JSON.stringify(save));
     } catch { /* local play still works */ }
-  }, [save]);
+  }, [save, saveReady]);
 
   const unlockedThemes = THEMES.slice(0, save.unlocked);
   const selectedPart = parts.find((p) => p.uid === selected);
@@ -771,6 +785,9 @@ export default function Home() {
       setTimeout(() => setToast(""), 1700);
       return;
     }
+    const mountedAtStation = def.category === "tool"
+      ? parts.find((part) => part.category === "tool" && toolMountKind(part.id) === toolMountKind(def.id))
+      : undefined;
     pushHistory();
     const rect = canvasRef.current?.getBoundingClientRect();
     const item = newPart(def, 0);
@@ -780,19 +797,22 @@ export default function Home() {
       if (def.category === "chassis") compatible = compatible.filter((p) => p.category !== "chassis");
       if (def.category === "body") compatible = compatible.filter((p) => p.category !== "body");
       if (def.category === "cab") compatible = compatible.filter((p) => p.category !== "cab");
+      if (mountedAtStation) compatible = compatible.filter((p) => p.uid !== mountedAtStation.uid);
       const needsFrame = def.category !== "chassis" && !compatible.some((p) => p.category === "chassis");
       const frame = needsFrame ? newPart(PARTS.find((p) => p.id === "frame")!, compatible.length) : null;
       const next = [...compatible, ...(frame ? [frame] : []), item];
       const rootAnchor = oldRoot ? { x: oldRoot.x, y: oldRoot.y, size: oldRoot.w } : undefined;
       const arranged = assembleParts(next, rect?.width, rect?.height, rootAnchor);
       const existing = new Map(compatible.map((p) => [p.uid, p]));
-      return def.category === "chassis" || needsFrame
-        ? arranged
-        : def.category === "move"
-          ? arranged.map((p) => p.category === "move" || p.uid === item.uid ? p : existing.get(p.uid) || p)
-          : arranged.map((p) => p.uid === item.uid ? p : existing.get(p.uid) || p);
+      return CORE_CATEGORIES.has(def.category) || needsFrame
+        ? arranged.map((p) => CORE_CATEGORIES.has(p.category) ? p : existing.get(p.uid) || p)
+        : arranged.map((p) => p.uid === item.uid ? p : existing.get(p.uid) || p);
     });
     setSelected(item.uid);
+    if (mountedAtStation) {
+      setToast("这个作业位换上新工具啦！");
+      setTimeout(() => setToast(""), 1600);
+    }
     if (tutorial === 1) setTutorial(2);
   };
 
@@ -1041,7 +1061,7 @@ export default function Home() {
     <header className="simple-header"><button onClick={() => setScreen("home")}>‹ 回家</button><span>我的工程车库</span><span className="star-count">⭐ {save.stars}</span></header>
     <div className="garage-title"><div><span>🏠</span><h1>我的车车收藏</h1><p>每一辆都是独一无二的作品！</p></div><button className="primary" onClick={() => { setMission(null); startBuild("free"); }}>＋ 再造一辆</button></div>
     <section className="garage-grid">
-      {save.garage.length ? save.garage.map((car) => <article key={car.id} className="car-card" onClick={() => { setParts(car.parts); setPaint(car.paint); setMission(null); setMode("free"); setScreen("build"); }}>
+      {save.garage.length ? save.garage.map((car) => <article key={car.id} className="car-card" onClick={() => { setParts(assembleParts(car.parts, 900, 600)); setPaint(car.paint); setMission(null); setMode("free"); setScreen("build"); }}>
         <div className="car-thumb">{buildPreview(car.parts, car.paint, true)}</div><h3>{car.name}</h3><p>{car.parts.length} 个零件 · {car.date}</p>
       </article>) : <div className="empty-garage"><span>🚜</span><h2>车库还空空的</h2><p>去创造第一辆工程车吧！</p></div>}
     </section>
