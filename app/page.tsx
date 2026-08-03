@@ -216,16 +216,16 @@ function spriteStyle(id: string): React.CSSProperties | undefined {
   const col = index % 4;
   const row = Math.floor(index / 4);
   const sheets: Record<number, string> = {
-    6: "v6-flat-chassis.png",
-    7: "v6-flat-bodies.png",
-    8: "v6-flat-cabs.png",
-    9: "v6-flat-tools.png",
-    10: "v6-flat-movement.png",
+    6: "v7-concrete-chassis.png",
+    7: "v7-concrete-bodies.png",
+    8: "v7-concrete-cabs.png",
+    9: "v7-concrete-tools.png",
+    10: "v7-concrete-movement.png",
     11: "v2-extras.png",
     12: "v5-flat-transport.svg",
   };
   return {
-    backgroundImage: `url(/assets/${sheets[sprite[0]]}?v=6.1)`,
+    backgroundImage: `url(/assets/${sheets[sprite[0]]}?v=7.1)`,
     backgroundPosition: `${col * 33.333}% ${row * 33.333}%`,
   };
 }
@@ -427,9 +427,19 @@ function getTransportMode(input: Part[]): TransportMode {
 }
 
 function movementBottomRatio(id: string) {
-  if (id === "smallwheel") return .75;
-  if (id === "ski") return .715;
-  if (id === "hover") return .74;
+  if (id === "wheel") return .984;
+  if (["orangewheel", "bluewheel"].includes(id)) return .978;
+  if (id === "redwheel") return .971;
+  if (id === "smallwheel") return .933;
+  if (id === "farmwheel") return .978;
+  if (id === "citywheel") return .958;
+  if (id === "fantasywheel") return .965;
+  if (["track", "miningtrack", "snowtrack", "greentrack"].includes(id)) return .764;
+  if (id === "rollerwheel") return .783;
+  if (id === "paddlewheel") return .771;
+  if (id === "ski") return .774;
+  if (id === "hover") return .783;
+  if (id === "hovercraftskirt") return .72;
   return .8;
 }
 
@@ -497,7 +507,7 @@ function assembleParts(input: Part[], width = 900, height = 600, anchor?: Assemb
         layer = 25 + wideMoveNo;
         wideMoveNo += 1;
       } else if (ROUND_MOVES.has(part.id)) {
-        size = rootSize * (wheelCount >= 4 ? .36 : wheelCount === 3 ? .41 : wheelCount === 2 ? .46 : .48);
+        size = rootSize * (wheelCount >= 4 ? .25 : wheelCount === 3 ? .29 : wheelCount === 2 ? .34 : .36);
         const ratio = wheelCount === 1 ? .5 : .16 + wheelNo * (.68 / (wheelCount - 1));
         const wheelCenter = rootX + rootSize * ratio;
         x = wheelCenter - size / 2;
@@ -516,9 +526,9 @@ function assembleParts(input: Part[], width = 900, height = 600, anchor?: Assemb
         y = rootY + rootSize * .27;
         flip = true;
       } else if (mount === "boom") {
-        size = rootSize * (part.id === "shovel" ? .72 : 1.05);
-        x = rootX + rootSize * (part.id === "shovel" ? .38 : .03);
-        y = rootY - rootSize * (part.id === "shovel" ? .08 : .32);
+        size = rootSize * (part.id === "shovel" ? .82 : part.id === "crane" ? .78 : .72);
+        x = rootX + rootSize * (part.id === "shovel" ? .38 : part.id === "crane" ? .05 : .12);
+        y = rootY - rootSize * (part.id === "shovel" ? .18 : part.id === "crane" ? .16 : .08);
         layer = 48;
       } else if (mount === "deck") {
         size = rootSize * .64;
@@ -644,7 +654,7 @@ function preparePerformanceBuild(input: Part[], action: string): Part[] {
         y = groundY - size * movementBottomRatio(part.id);
         layer = 26;
       } else if (ROUND_MOVES.has(part.id)) {
-        size = wheelCount >= 4 ? 118 : 128;
+        size = wheelCount >= 4 ? 82 : 94;
         const centers = wheelCount <= 1
           ? [150]
           : Array.from({ length: wheelCount }, (_, index) => 55 + index * (190 / (wheelCount - 1)));
@@ -661,9 +671,9 @@ function preparePerformanceBuild(input: Part[], action: string): Part[] {
         size = 205;
         flip = true;
       } else if (mount === "boom") {
-        x = rootX + (part.id === "shovel" ? 114 : 8);
-        y = rootY - (part.id === "shovel" ? 24 : 96);
-        size = part.id === "shovel" ? 216 : 315;
+        x = rootX + (part.id === "shovel" ? 114 : part.id === "crane" ? 15 : 36);
+        y = rootY - (part.id === "shovel" ? 54 : part.id === "crane" ? 48 : 24);
+        size = part.id === "shovel" ? 246 : part.id === "crane" ? 234 : 216;
         layer = 48;
       } else if (mount === "deck") {
         x = rootX + 36;

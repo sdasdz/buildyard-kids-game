@@ -130,3 +130,9 @@
 @keyframes propeller-route-cycle{to{transform:rotate(360deg)}}
 @keyframes canopy-float{to{transform:rotate(1.5deg) translateY(-3px)}}
 @keyframes cushion-breathe{to{transform:scaleY(.96) translateY(2px)}}
+
+/* Preserve glass, rubber and mechanical details on the concrete v7 sprites. */
+.part.with-art .paint-overlay{opacity:.18}
+.part.with-art.part-tool .paint-overlay{opacity:.16}
+.pattern-stripe .part.with-art .paint-overlay,.pattern-dots .part.with-art .paint-overlay{opacity:.56}
+.part:is(.part-id-wheel,.part-id-orangewheel,.part-id-bluewheel,.part-id-redwheel,.part-id-smallwheel,.part-id-farmwheel,.part-id-citywheel,.part-id-fantasywheel,.part-id-rollerwheel,.part-id-paddlewheel) .paint-overlay{opacity:.72}
