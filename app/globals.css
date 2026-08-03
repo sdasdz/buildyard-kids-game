@@ -97,3 +97,36 @@
 
 @media(max-width:700px){.result-card{padding:15px 14px 22px}.result-animation{height:230px}.performance-route{transform-origin:left bottom}.action-scene{right:25%;font-size:39px}.result-character{font-size:42px}.result-buttons{flex-wrap:wrap}.result-buttons button{flex:1 1 130px}}
 @media(prefers-reduced-motion:reduce){.performance-route,.task-object,.work-puff,.result-character,.mission-road i,.result-vehicle-art .part{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
+/* V4 physical assembly: grounded axles, clean tool cells and built-in load-bearing mounts. */
+.part-tool.with-art .part-hit{left:3%;right:3%;top:8%;bottom:8%;border-radius:16px}
+.part-tool:is(.part-id-blade,.part-id-fork,.part-id-drill,.part-id-plow,.part-id-hose,.part-id-tow,.part-id-snowblade,.part-id-conveyor) .part-hit{top:22%;bottom:22%}
+.part-tool:is(.part-id-roller,.part-id-brush,.part-id-grabber,.part-id-mixer) .part-hit{top:14%;bottom:14%}
+.tool-adapter{position:absolute;z-index:0;left:-1%;top:39%;width:27%;height:25%;border:3px solid #303941;border-radius:10px;background:linear-gradient(145deg,var(--part-accent) 0 62%,#d65d25 63% 100%);box-shadow:inset 0 0 0 3px #ffffff42,0 3px 0 #26323a;pointer-events:none}
+.tool-adapter:before{content:"";position:absolute;width:17%;aspect-ratio:1;border-radius:50%;left:13%;top:18%;background:#dce5e5;border:2px solid #33414a;box-shadow:calc(100% * 3) calc(100% * 2) 0 -1px #dce5e5,calc(100% * 3) calc(100% * 2) 0 1px #33414a}
+.tool-adapter:after{content:"";position:absolute;left:83%;top:36%;width:46%;height:22%;border:3px solid #303941;border-left:0;border-radius:0 9px 9px 0;background:linear-gradient(#eef2ed 0 38%,#79868a 40% 100%)}
+.tool-adapter.mount-upper{left:13%;top:72%;width:31%;height:18%;border-radius:9px 9px 5px 5px}
+.tool-adapter.mount-upper:after{left:37%;top:-42%;width:25%;height:48%;border:3px solid #303941;border-bottom:0;border-radius:8px 8px 0 0}
+.tool-adapter.mount-rear{left:-2%;top:42%;width:30%;height:23%}
+.mini-part .tool-adapter{display:none}
+.result-vehicle-art .tool-adapter{filter:drop-shadow(1px 2px 0 #0002)}
+
+/* Flight and hover vehicles use their own physically sensible route instead of a road-only motion. */
+.result-animation.mode-air{background:linear-gradient(#aee8fa 0 76%,#d9efc4 76% 100%)}
+.result-animation.mode-air .mission-road{height:12%;background:linear-gradient(#86bd67,#6b9f50)}
+.result-animation.mode-air .mission-road i{display:none}
+.result-animation.mode-air .performance-route{left:120px;bottom:16px;animation-name:performance-flight-route}
+.result-animation.mode-air.variant-glider .performance-route{left:170px}
+.result-animation.mode-hover{background:linear-gradient(#bfeaf7 0 58%,#7dd7e4 58% 82%,#3fa9c1 82% 100%)}
+.result-animation.mode-hover .mission-road{height:19%;background:repeating-radial-gradient(ellipse at 25% 0,#baf4ff 0 5px,#3fa9c1 7px 20px)}
+.result-animation.mode-hover .mission-road i{display:none}
+.result-animation.mode-hover .performance-route{bottom:7px;animation-name:performance-hover-route}
+.result-animation.mode-air .action-scene{bottom:35px}
+.result-animation.is-running .part-id-propeller{transform-origin:50% 50%;animation:propeller-route-cycle .18s linear infinite}
+.result-animation.is-running .part-id-paraglider{transform-origin:50% 95%;animation:canopy-float 1.2s ease-in-out infinite alternate}
+.result-animation.is-running .part-id-hovercraftskirt{animation:cushion-breathe .42s ease-in-out infinite alternate}
+@keyframes performance-flight-route{0%{transform:translate(-440px,32px)}24%{transform:translate(8px,-9px)}67%{transform:translate(8px,-9px)}100%{transform:translate(700px,-45px)}}
+@keyframes performance-hover-route{0%{transform:translate(-440px,4px)}23%{transform:translate(8px,-3px)}68%{transform:translate(8px,1px)}100%{transform:translate(700px,-4px)}}
+@keyframes propeller-route-cycle{to{transform:rotate(360deg)}}
+@keyframes canopy-float{to{transform:rotate(1.5deg) translateY(-3px)}}
+@keyframes cushion-breathe{to{transform:scaleY(.96) translateY(2px)}}

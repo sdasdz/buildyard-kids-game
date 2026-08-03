@@ -80,6 +80,10 @@ const PARTS: PartDef[] = [
   { id: "citychassis", name: "城市维护底盘", icon: "▬", category: "chassis", tags: ["chassis", "clean"], w: 245, h: 72 },
   { id: "rescuechassis", name: "白色救援底盘", icon: "▬", category: "chassis", tags: ["chassis", "rescue"], w: 255, h: 74 },
   { id: "fantasychassis", name: "紫色能量底盘", icon: "▬", category: "chassis", tags: ["chassis"], w: 255, h: 74 },
+  { id: "hoverframe", name: "气垫船承载骨架", icon: "▬", category: "chassis", tags: ["chassis", "water", "hover"], w: 270, h: 78 },
+  { id: "airframe", name: "工程飞机机身骨架", icon: "▬", category: "chassis", tags: ["chassis", "air"], w: 285, h: 80 },
+  { id: "gliderframe", name: "滑翔伞轻型骨架", icon: "▬", category: "chassis", tags: ["chassis", "air"], w: 250, h: 78 },
+  { id: "pontoonframe", name: "水陆浮筒底盘", icon: "▬", category: "chassis", tags: ["chassis", "water"], w: 275, h: 80 },
   { id: "utilitybody", name: "实体工具车身", icon: "▰", category: "body", tags: ["body"], w: 180, h: 100 },
   { id: "cargo", name: "加长货运车身", icon: "▰", category: "body", tags: ["body", "carry"], w: 210, h: 105 },
   { id: "miningdumpbody", name: "黑色重载车厢", icon: "▰", category: "body", tags: ["body", "carry", "rough"], w: 210, h: 110 },
@@ -96,6 +100,10 @@ const PARTS: PartDef[] = [
   { id: "citybody", name: "城市维护车身", icon: "▰", category: "body", tags: ["body", "clean"], w: 190, h: 108 },
   { id: "rescuebody", name: "白色救援车身", icon: "▰", category: "body", tags: ["body", "rescue"], w: 195, h: 110 },
   { id: "fantasybody", name: "紫色奇想车身", icon: "▰", category: "body", tags: ["body"], w: 195, h: 110 },
+  { id: "hoverbody", name: "气垫船工程舱", icon: "▰", category: "body", tags: ["body", "water", "hover"], w: 215, h: 110 },
+  { id: "airbody", name: "工程飞机机身", icon: "▰", category: "body", tags: ["body", "air", "carry"], w: 225, h: 105 },
+  { id: "gliderpod", name: "滑翔伞设备舱", icon: "▰", category: "body", tags: ["body", "air", "rescue"], w: 190, h: 105 },
+  { id: "seaplanebody", name: "水上救援机身", icon: "▰", category: "body", tags: ["body", "air", "water", "rescue"], w: 225, h: 108 },
   { id: "wheel", name: "黄心越野轮", icon: "●", category: "move", tags: ["move"], w: 78, h: 78 },
   { id: "orangewheel", name: "橙心工程轮", icon: "●", category: "move", tags: ["move"], w: 78, h: 78 },
   { id: "bluewheel", name: "蓝心救援轮", icon: "●", category: "move", tags: ["move"], w: 78, h: 78 },
@@ -112,6 +120,10 @@ const PARTS: PartDef[] = [
   { id: "paddlewheel", name: "水陆桨轮", icon: "●", category: "move", tags: ["move", "water"], w: 100, h: 100 },
   { id: "ski", name: "雪地滑橇", icon: "⌣", category: "move", tags: ["move", "snow"], w: 150, h: 60 },
   { id: "hover", name: "紫色悬浮垫", icon: "◉", category: "move", tags: ["move"], w: 140, h: 70 },
+  { id: "hovercraftskirt", name: "气垫船气囊", icon: "▱", category: "move", tags: ["move", "water", "hover"], w: 190, h: 74 },
+  { id: "wing", name: "工程飞机机翼", icon: "✈", category: "move", tags: ["move", "air"], w: 210, h: 78 },
+  { id: "paraglider", name: "救援滑翔伞翼", icon: "🪂", category: "move", tags: ["move", "air"], w: 230, h: 150 },
+  { id: "propeller", name: "航空螺旋桨", icon: "✣", category: "move", tags: ["move", "air", "power"], w: 112, h: 112 },
   { id: "cab", name: "驾驶室", icon: "▣", category: "cab", tags: ["cab"], w: 116, h: 112 },
   { id: "bubblecab", name: "泡泡驾驶舱", icon: "◒", category: "cab", tags: ["cab"], w: 126, h: 104 },
   { id: "lampcab", name: "探险驾驶室", icon: "▥", category: "cab", tags: ["cab", "light"], w: 122, h: 116 },
@@ -131,6 +143,10 @@ const PARTS: PartDef[] = [
   { id: "amphicab2", name: "蓝色水陆车头", icon: "◒", category: "cab", tags: ["cab", "water"], w: 126, h: 118 },
   { id: "snowcab", name: "暖暖雪地车头", icon: "▣", category: "cab", tags: ["cab", "snow"], w: 122, h: 120 },
   { id: "fantasycab", name: "紫色魔法车头", icon: "▣", category: "cab", tags: ["cab"], w: 124, h: 120 },
+  { id: "hovercab", name: "气垫船驾驶舱", icon: "▣", category: "cab", tags: ["cab", "water", "hover"], w: 135, h: 120 },
+  { id: "pilotcab", name: "飞机透明座舱", icon: "▣", category: "cab", tags: ["cab", "air"], w: 140, h: 116 },
+  { id: "gliderseat", name: "滑翔伞安全座椅", icon: "▣", category: "cab", tags: ["cab", "air", "rescue"], w: 126, h: 126 },
+  { id: "bubblecockpit", name: "救援观察舱", icon: "▣", category: "cab", tags: ["cab", "air", "rescue"], w: 138, h: 126 },
   { id: "shovel", name: "挖掘斗", icon: "⤵", category: "tool", tags: ["dig", "clear"], w: 130, h: 86 },
   { id: "blade", name: "推土铲", icon: "◢", category: "tool", tags: ["push", "clear", "snow"], w: 145, h: 76 },
   { id: "crane", name: "起重吊臂", icon: "⌝", category: "tool", tags: ["lift"], w: 150, h: 180 },
@@ -167,14 +183,17 @@ const SPRITES: Record<string, [number, number]> = {
   excavatorchassis:[6,4], bulldozerchassis:[6,5], cranechassis:[6,6], dumpchassis:[6,7],
   firechassis:[6,8], farmchassis:[6,9], snowchassis:[6,10], miningchassis:[6,11],
   amphichassis:[6,12], citychassis:[6,13], rescuechassis:[6,14], fantasychassis:[6,15],
+  hoverframe:[12,0], airframe:[12,1], gliderframe:[12,2], pontoonframe:[12,3],
   utilitybody:[7,0], cargo:[7,1], miningdumpbody:[7,2], forkliftbody:[7,3],
   excavatorbase:[7,4], bulldozerbody:[7,5], cranebody:[7,6], bucketbody:[7,7],
   firebody:[7,8], tractorbody:[7,9], snowbody:[7,10], miningbody:[7,11],
   tank:[7,12], citybody:[7,13], rescuebody:[7,14], fantasybody:[7,15],
+  hoverbody:[12,3], airbody:[12,5], gliderpod:[12,6], seaplanebody:[12,7],
   cab:[8,0], bubblecab:[8,1], lampcab:[8,2], firecab:[8,3],
   farmcab:[8,4], rescuecab:[8,5], bulldozercab:[8,6], cranecab:[8,7],
   miningcab:[8,8], forkcab:[8,9], amphicab:[8,10], citycab:[8,11],
   farmcab2:[8,12], amphicab2:[8,13], snowcab:[8,14], fantasycab:[8,15],
+  hovercab:[12,11], pilotcab:[12,9], gliderseat:[12,10], bubblecockpit:[12,8],
   shovel:[9,0], blade:[9,1], crane:[9,2], fork:[9,3],
   drill:[9,4], roller:[9,5], plow:[9,6], hose:[9,7],
   tow:[9,8], brush:[9,9], snowblade:[9,10], grabber:[9,11],
@@ -183,6 +202,7 @@ const SPRITES: Record<string, [number, number]> = {
   smallwheel:[10,4], farmwheel:[10,5], citywheel:[10,6], fantasywheel:[10,7],
   track:[10,8], miningtrack:[10,9], snowtrack:[10,10], greentrack:[10,11],
   rollerwheel:[10,12], paddlewheel:[10,13], ski:[10,14], hover:[10,15],
+  hovercraftskirt:[12,12], wing:[12,13], paraglider:[12,14], propeller:[12,15],
   engine:[11,0], battery:[11,1], suspension:[11,2], lamp:[11,3],
   siren:[11,4], bridge:[11,5], rescuebox:[11,6], flag:[11,7],
   star:[11,8], eyes:[11,9], pipe:[11,10], toolbox:[11,11],
@@ -192,6 +212,13 @@ const SPRITES: Record<string, [number, number]> = {
 function spriteStyle(id: string): React.CSSProperties | undefined {
   const sprite = SPRITES[id];
   if (!sprite) return undefined;
+  if (sprite[0] === 9) {
+    return {
+      backgroundImage: `url(/assets/tools/${id}.png)`,
+      backgroundPosition: "center",
+      backgroundSize: "100% 100%",
+    };
+  }
   const index = sprite[1];
   const col = index % 4;
   const row = Math.floor(index / 4);
@@ -199,9 +226,10 @@ function spriteStyle(id: string): React.CSSProperties | undefined {
     6: "v3-chassis.png",
     7: "v3-bodies.png",
     8: "v3-cabs.png",
-    9: "v3-tools.png",
+    9: "v4-tools-clean.png",
     10: "v3-movement.png",
     11: "v2-extras.png",
+    12: "v4-transport.png",
   };
   return {
     backgroundImage: `url(/assets/${sheets[sprite[0]]})`,
@@ -212,13 +240,14 @@ function spriteStyle(id: string): React.CSSProperties | undefined {
 function spriteMaskStyle(id: string): React.CSSProperties | undefined {
   const style = spriteStyle(id);
   if (!style?.backgroundImage) return undefined;
+  const isolated = SPRITES[id]?.[0] === 9;
   return {
     WebkitMaskImage: style.backgroundImage,
     maskImage: style.backgroundImage,
     WebkitMaskPosition: style.backgroundPosition,
     maskPosition: style.backgroundPosition,
-    WebkitMaskSize: "400% 400%",
-    maskSize: "400% 400%",
+    WebkitMaskSize: isolated ? "100% 100%" : "400% 400%",
+    maskSize: isolated ? "100% 100%" : "400% 400%",
     WebkitMaskRepeat: "no-repeat",
     maskRepeat: "no-repeat",
   };
@@ -325,7 +354,7 @@ const MISSIONS: Mission[] = EVENT_SEEDS.map((e, i) => ({
 const CATEGORY_LABELS: Record<Category, [string, string]> = {
   chassis: ["底盘", "🛤️"],
   body: ["车身", "🟨"],
-  move: ["轮子", "🛞"],
+  move: ["移动", "🛞"],
   cab: ["驾驶室", "🪟"],
   tool: ["工具", "🛠️"],
   help: ["辅助", "💡"],
@@ -389,55 +418,111 @@ function newPart(def: PartDef, index: number): Part {
 
 type AssemblyAnchor = { x: number; y: number; size: number };
 
+type TransportMode = "ground" | "hover" | "air";
+
+const ROUND_MOVES = new Set(["wheel", "orangewheel", "bluewheel", "redwheel", "smallwheel", "farmwheel", "citywheel", "fantasywheel", "rollerwheel", "paddlewheel"]);
+const WIDE_MOVES = new Set(["track", "miningtrack", "snowtrack", "greentrack", "ski", "hover", "hovercraftskirt"]);
+const AIR_MOVES = new Set(["wing", "paraglider", "propeller"]);
+const UPPER_TOOLS = new Set(["crane", "mixer", "liftplatform", "conveyor"]);
+const REAR_TOOLS = new Set(["tow", "plow"]);
+
+function getTransportMode(input: Part[]): TransportMode {
+  if (input.some((part) => AIR_MOVES.has(part.id) || ["airframe", "gliderframe"].includes(part.id))) return "air";
+  if (input.some((part) => ["hoverframe", "hoverbody", "hovercab", "hovercraftskirt"].includes(part.id))) return "hover";
+  return "ground";
+}
+
+function movementBottomRatio(id: string) {
+  if (["wheel", "orangewheel", "bluewheel", "redwheel"].includes(id)) return .965;
+  if (id === "smallwheel") return .925;
+  if (id === "farmwheel") return .95;
+  if (["citywheel", "fantasywheel"].includes(id)) return .94;
+  if (["rollerwheel", "paddlewheel"].includes(id)) return .94;
+  if (["track", "miningtrack", "snowtrack", "greentrack"].includes(id)) return .73;
+  if (id === "ski") return .77;
+  return .72;
+}
+
+function toolMountKind(id: string) {
+  if (UPPER_TOOLS.has(id)) return "upper";
+  if (REAR_TOOLS.has(id)) return "rear";
+  return "front";
+}
+
 function assembleParts(input: Part[], width = 900, height = 600, anchor?: AssemblyAnchor): Part[] {
   const defaultSize = Math.max(210, Math.min(320, width * .38, height * .52));
   const currentRoot = input.find((p) => p.category === "chassis");
   const hasPlacedRoot = Boolean(currentRoot && currentRoot.w >= 190 && Math.abs(currentRoot.w - currentRoot.h) < 4);
   const rootSize = anchor?.size || (hasPlacedRoot ? currentRoot!.w : defaultSize);
   const rootX = anchor?.x ?? (hasPlacedRoot ? currentRoot!.x : Math.max(35, width * .43 - rootSize / 2));
-  const rootY = anchor?.y ?? (hasPlacedRoot ? currentRoot!.y : Math.max(25, height * .72 - rootSize * .82));
+  const rootY = anchor?.y ?? (hasPlacedRoot ? currentRoot!.y : Math.max(25, height * .78 - rootSize * .82));
+  const groundY = rootY + rootSize * .82;
+  const transportMode = getTransportMode(input);
   const counts: Partial<Record<Category, number>> = {};
-  const wideMoveIds = new Set(["track", "miningtrack", "snowtrack", "greentrack", "ski", "hover"]);
-  const wheelCount = Math.max(1, input.filter((p) => p.category === "move" && !wideMoveIds.has(p.id)).length);
+  const wheelCount = Math.max(1, input.filter((p) => p.category === "move" && ROUND_MOVES.has(p.id)).length);
   let wheelNo = 0;
   let wideMoveNo = 0;
   let frontNo = 0;
   let upperNo = 0;
+  let rearNo = 0;
   return input.map((part) => {
     const n = counts[part.category] || 0;
     counts[part.category] = n + 1;
     let x = rootX;
     let y = rootY;
-    let rotate = 0;
+    const rotate = 0;
     let size = rootSize;
+    let flip = false;
+    let layer = part.category === "chassis" ? 20 : part.category === "body" ? 30 : part.category === "move" ? 40 : part.category === "tool" ? 50 : part.category === "cab" ? 60 : part.category === "help" ? 70 : 80;
     if (part.category === "chassis") {
       x = rootX;
       y = rootY;
     } else if (part.category === "body") {
-      size = rootSize * .68;
-      x = rootX + rootSize * .03;
-      y = rootY + rootSize * .02;
+      size = rootSize * (transportMode === "ground" ? .68 : .74);
+      x = rootX + rootSize * (transportMode === "ground" ? .03 : .06);
+      y = rootY + rootSize * (transportMode === "ground" ? .02 : .14);
     } else if (part.category === "move") {
-      const isWide = wideMoveIds.has(part.id);
-      size = rootSize * (isWide ? .9 : wheelCount >= 4 ? .24 : wheelCount === 3 ? .27 : .31);
-      if (isWide) {
+      if (part.id === "wing") {
+        size = rootSize * 1.02;
+        x = rootX - rootSize * .01;
+        y = rootY + rootSize * .02;
+        layer = 24;
+      } else if (part.id === "paraglider") {
+        size = rootSize * 1.16;
+        x = rootX - rootSize * .08;
+        y = rootY - rootSize * .68;
+        layer = 26;
+      } else if (part.id === "propeller") {
+        size = rootSize * .36;
+        x = rootX + rootSize * .8;
+        y = rootY + rootSize * .36;
+        layer = 58;
+      } else if (WIDE_MOVES.has(part.id)) {
+        size = rootSize * .9;
         x = rootX + (rootSize - size) / 2 + wideMoveNo * 8;
-        y = rootY + rootSize * .2 + wideMoveNo * 7;
+        y = groundY - size * movementBottomRatio(part.id) + wideMoveNo * 5;
+        layer = 25 + wideMoveNo;
         wideMoveNo += 1;
-      } else {
+      } else if (ROUND_MOVES.has(part.id)) {
+        size = rootSize * (wheelCount >= 4 ? .24 : wheelCount === 3 ? .27 : .31);
         const ratio = wheelCount === 1 ? .5 : .16 + wheelNo * (.68 / (wheelCount - 1));
         const wheelCenter = rootX + rootSize * ratio;
         x = wheelCenter - size / 2;
-        y = rootY + rootSize * .55;
+        y = groundY - size * movementBottomRatio(part.id);
         wheelNo += 1;
       }
     } else if (part.category === "cab") {
-      size = rootSize * .5;
-      x = rootX + rootSize * .55;
-      y = rootY + rootSize * .18;
+      size = rootSize * (transportMode === "air" ? .44 : .5);
+      x = rootX + rootSize * (transportMode === "air" ? .54 : .55);
+      y = rootY + rootSize * (transportMode === "air" ? .25 : .18);
     } else if (part.category === "tool") {
-      const frontTool = !["crane", "mixer", "liftplatform", "conveyor"].includes(part.id);
-      if (frontTool) {
+      if (REAR_TOOLS.has(part.id)) {
+        size = rootSize * (.64 - Math.min(rearNo, 1) * .06);
+        x = rootX - rootSize * (.43 + rearNo * .08);
+        y = rootY + rootSize * (.27 + rearNo * .07);
+        flip = true;
+        rearNo += 1;
+      } else if (!UPPER_TOOLS.has(part.id)) {
         size = rootSize * (.7 - Math.min(frontNo, 2) * .06);
         x = rootX + rootSize * (.74 + frontNo * .08);
         y = rootY + rootSize * (.2 + frontNo * .08);
@@ -485,24 +570,24 @@ function assembleParts(input: Part[], width = 900, height = 600, anchor?: Assemb
         y = rootY + rootSize * .34;
       }
     }
-    const layer = part.category === "chassis" ? 20 : part.category === "body" ? 30 : part.category === "move" ? 40 : part.category === "tool" ? 50 : part.category === "cab" ? 60 : part.category === "help" ? 70 : 80;
-    return { ...part, x, y, w: size, h: size, rotate, scale: 1, z: layer + n };
+    return { ...part, x, y, w: size, h: size, rotate, flip, scale: 1, z: layer + n };
   });
 }
-
-const WIDE_MOVES = new Set(["track", "miningtrack", "snowtrack", "greentrack", "ski", "hover"]);
-const UPPER_TOOLS = new Set(["crane", "mixer", "liftplatform", "conveyor"]);
-const REAR_TOOLS = new Set(["tow", "plow"]);
 
 function preparePerformanceBuild(input: Part[], action: string): Part[] {
   const chassis = input.find((part) => part.category === "chassis");
   if (!chassis) return assembleParts(input, 620, 300, { x: 48, y: 20, size: 290 });
 
+  const transportMode = getTransportMode(input);
   const body = input.find((part) => part.category === "body");
   const cab = input.find((part) => part.category === "cab");
   const movement = input.filter((part) => part.category === "move");
+  const airMoves = movement.filter((part) => AIR_MOVES.has(part.id));
+  const landingMoves = movement.filter((part) => ROUND_MOVES.has(part.id)).slice(0, 2);
   const wideMove = movement.find((part) => WIDE_MOVES.has(part.id));
-  const rollingMoves = wideMove ? [wideMove] : movement.slice(0, 4);
+  const rollingMoves = transportMode === "air"
+    ? [...airMoves.slice(0, 3), ...landingMoves]
+    : wideMove ? [wideMove] : movement.filter((part) => ROUND_MOVES.has(part.id)).slice(0, 4);
   const tools = input.filter((part) => part.category === "tool");
   const missionTool = tools.find((part) => part.tags.includes(action)) || tools.at(-1);
   const helpers = input
@@ -516,10 +601,11 @@ function preparePerformanceBuild(input: Part[], action: string): Part[] {
   const rootX = 50;
   const rootY = 18;
   const rootSize = 300;
+  const groundY = rootY + 245;
   let wheelNo = 0;
   let helperNo = 0;
   let decorNo = 0;
-  const wheelCount = rollingMoves.length;
+  const wheelCount = rollingMoves.filter((part) => ROUND_MOVES.has(part.id)).length;
 
   return chosen.map((part) => {
     let x = rootX;
@@ -529,28 +615,44 @@ function preparePerformanceBuild(input: Part[], action: string): Part[] {
     let layer = 20;
 
     if (part.category === "body") {
-      x = rootX + 15;
-      y = rootY + 39;
-      size = 240;
+      x = rootX + (transportMode === "ground" ? 15 : 18);
+      y = rootY + (transportMode === "ground" ? 39 : 48);
+      size = transportMode === "ground" ? 240 : 250;
       layer = 32;
     } else if (part.category === "cab") {
-      x = rootX + 165;
-      y = rootY + 50;
-      size = 210;
+      x = rootX + (transportMode === "air" ? 168 : 165);
+      y = rootY + (transportMode === "air" ? 73 : 50);
+      size = transportMode === "air" ? 185 : 210;
       layer = 60;
     } else if (part.category === "move") {
       layer = 48;
-      if (WIDE_MOVES.has(part.id)) {
+      if (part.id === "wing") {
+        x = rootX - 5;
+        y = rootY + 9;
+        size = 315;
+        layer = 24;
+      } else if (part.id === "paraglider") {
+        x = rootX - 18;
+        y = rootY - 205;
+        size = 350;
+        layer = 26;
+      } else if (part.id === "propeller") {
+        x = rootX + 242;
+        y = rootY + 108;
+        size = 116;
+        layer = 66;
+      } else if (WIDE_MOVES.has(part.id)) {
         x = rootX + 24;
-        y = rootY + 112;
         size = 252;
-      } else {
-        size = wheelCount >= 4 ? 88 : wheelCount === 3 ? 98 : 110;
+        y = groundY - size * movementBottomRatio(part.id);
+        layer = 26;
+      } else if (ROUND_MOVES.has(part.id)) {
+        size = wheelCount >= 4 ? 88 : 104;
         const centers = wheelCount <= 1
           ? [150]
           : Array.from({ length: wheelCount }, (_, index) => 55 + index * (190 / (wheelCount - 1)));
         x = rootX + centers[wheelNo] - size / 2;
-        y = rootY + 164;
+        y = groundY - size * movementBottomRatio(part.id);
         wheelNo += 1;
       }
     } else if (part.category === "tool") {
@@ -589,7 +691,7 @@ function preparePerformanceBuild(input: Part[], action: string): Part[] {
 
 export default function Home() {
   const [screen, setScreen] = useState<"home" | "mission" | "build" | "garage">("home");
-  const [save, setSave] = useState<SaveData>(DEFAULT_SAVE);
+  const [save, setSave] = useState<SaveData>(() => safeLoad());
   const [mission, setMission] = useState<Mission | null>(null);
   const [parts, setParts] = useState<Part[]>([]);
   const [selected, setSelected] = useState<string | null>(null);
@@ -611,7 +713,6 @@ export default function Home() {
   const dragging = useRef<{ uid: string; dx: number; dy: number; group: boolean; lastX: number; lastY: number } | null>(null);
   const parentTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => setSave(safeLoad()), []);
   useEffect(() => {
     try {
       localStorage.setItem("buildyard-save-v1", JSON.stringify(save));
@@ -622,6 +723,9 @@ export default function Home() {
   const selectedPart = parts.find((p) => p.uid === selected);
   const performanceAction = mission?.needs[0] || [...parts].reverse().find((p) => p.category === "tool")?.tags[0] || "drive";
   const performanceParts = useMemo(() => preparePerformanceBuild(parts, performanceAction), [parts, performanceAction]);
+  const performanceMode = getTransportMode(performanceParts);
+  const performanceScale = performanceParts.some((part) => part.id === "paraglider") ? .4 : performanceMode === "air" ? .6 : .66;
+  const performanceVariant = performanceParts.some((part) => part.id === "paraglider") ? "glider" : performanceMode;
 
   const showResult = (next: { ok: boolean; missing: string[]; reason?: string }) => {
     setPerformanceRun((run) => run + 1);
@@ -660,6 +764,13 @@ export default function Home() {
   };
 
   const addPart = (def: PartDef) => {
+    const alreadyOnVehicle = def.category === "tool" && parts.find((part) => part.id === def.id);
+    if (alreadyOnVehicle) {
+      setSelected(alreadyOnVehicle.uid);
+      setToast("这个工具已经装好啦，需要两个可以点“复制”");
+      setTimeout(() => setToast(""), 1700);
+      return;
+    }
     pushHistory();
     const rect = canvasRef.current?.getBoundingClientRect();
     const item = newPart(def, 0);
@@ -875,7 +986,7 @@ export default function Home() {
         zIndex: p.z,
         "--part-color": p.category === "move" ? carPaint.wheels : p.category === "tool" ? carPaint.secondary : carPaint.primary,
         "--part-accent": carPaint.secondary,
-      } as React.CSSProperties}>{SPRITES[p.id] ? <><span className="part-art" style={spriteStyle(p.id)}/><span className="paint-overlay" style={spriteMaskStyle(p.id)}/></> : p.icon}</div>
+      } as React.CSSProperties}>{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <><span className="part-art" style={spriteStyle(p.id)}/><span className="paint-overlay" style={spriteMaskStyle(p.id)}/></> : p.icon}</div>
     ));
   };
 
@@ -960,7 +1071,7 @@ export default function Home() {
             "--part-layer": p.z,
             "--part-color": p.category === "move" ? paint.wheels : p.category === "tool" ? paint.secondary : paint.primary,
             "--part-accent": paint.secondary,
-          } as React.CSSProperties}>{SPRITES[p.id] ? <><span className="part-art" style={spriteStyle(p.id)}/><span className="paint-overlay" style={spriteMaskStyle(p.id)}/><span className="part-hit"/></> : <span>{p.icon}</span>}{paint.sticker && p.category === "body" && <i className="part-sticker">{paint.sticker}</i>}</div>)}
+          } as React.CSSProperties}>{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <><span className="part-art" style={spriteStyle(p.id)}/><span className="paint-overlay" style={spriteMaskStyle(p.id)}/><span className="part-hit"/></> : <span>{p.icon}</span>}{paint.sticker && p.category === "body" && <i className="part-sticker">{paint.sticker}</i>}</div>)}
           {selectedPart && !showPaint && <div className="selection-tools">
             <b>{selectedPart.name}</b>
             <button aria-label="左转" onClick={() => updateSelected({ rotate: selectedPart.rotate - 15 })}>↶<small>左转</small></button>
@@ -988,10 +1099,10 @@ export default function Home() {
 
     {result && <div className="modal-shade result-shade"><div className={`result-card ${result.ok ? "success" : "oops"}`}>
       <div className="confetti">{result.ok ? "✨ ⭐ 🎉 ⭐ ✨" : "💨　🍃　💭"}</div>
-      <div key={performanceRun} className={`result-animation action-${performanceAction} ${result.ok ? "is-running" : "is-thinking"}`}>
+      <div key={performanceRun} className={`result-animation mode-${performanceMode} variant-${performanceVariant} action-${performanceAction} ${result.ok ? "is-running" : "is-thinking"}`}>
         <div className="mission-road"><i/><i/><i/><i/></div>
         <div className="action-scene"><span className="task-object">{ACTION_EFFECT[performanceAction]?.scene || "🏁"}</span><span className="work-puff">✨</span></div>
-        <div className="performance-route"><div className="result-vehicle-art">{buildPreview(performanceParts, paint, false, .66)}</div></div>
+        <div className="performance-route"><div className="result-vehicle-art">{buildPreview(performanceParts, paint, false, performanceScale)}</div></div>
         <div className="result-character">{result.ok ? mission?.icon || "🤩" : "🐣"}</div>
       </div>
       <span className="result-label">{result.ok ? (mode === "free" ? "试车成功！" : "任务完成！") : "差一点点就可以啦"}</span>
