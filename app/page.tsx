@@ -216,16 +216,16 @@ function spriteStyle(id: string): React.CSSProperties | undefined {
   const col = index % 4;
   const row = Math.floor(index / 4);
   const sheets: Record<number, string> = {
-    6: "v8-rig-chassis.png",
-    7: "v8-rig-bodies.png",
-    8: "v8-rig-cabs.png",
-    9: "v8-rig-tools.png",
-    10: "v8-rig-movement.png",
+    6: "v9-workshop-chassis.png",
+    7: "v9-workshop-bodies.png",
+    8: "v9-workshop-cabs.png",
+    9: "v9-workshop-tools.png",
+    10: "v9-workshop-movement.png",
     11: "v2-extras.png",
     12: "v5-flat-transport.svg",
   };
   return {
-    backgroundImage: `url(/assets/${sheets[sprite[0]]}?v=8.0)`,
+    backgroundImage: `url(/assets/${sheets[sprite[0]]}?v=9.0)`,
     backgroundPosition: `${col * 33.333}% ${row * 33.333}%`,
   };
 }
