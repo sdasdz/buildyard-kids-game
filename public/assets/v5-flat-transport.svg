@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <style>
+      .o{fill:#f6a919;stroke:#263746;stroke-width:8;stroke-linejoin:round;stroke-linecap:round}.y{fill:#ffd34f;stroke:#263746;stroke-width:8;stroke-linejoin:round;stroke-linecap:round}.d{fill:#374956;stroke:#263746;stroke-width:8;stroke-linejoin:round;stroke-linecap:round}.m{fill:#83929a;stroke:#263746;stroke-width:8;stroke-linejoin:round;stroke-linecap:round}.b{fill:#78d7ee;stroke:#263746;stroke-width:8;stroke-linejoin:round;stroke-linecap:round}.w{fill:#e9f8fb;stroke:#263746;stroke-width:7;stroke-linejoin:round}.l{fill:none;stroke:#263746;stroke-width:10;stroke-linejoin:round;stroke-linecap:round}.h{fill:none;stroke:#ffd34f;stroke-width:5;stroke-linecap:round}.bolt{fill:#ecf2ef;stroke:#263746;stroke-width:5}
+    </style>
+  </defs>
+
+  <!-- 1 hovercraft frame -->
+  <g transform="translate(0 0)">
+    <path class="o" d="M30 172h232l-20 52H48z"/>
+    <rect class="d" x="48" y="218" width="196" height="25" rx="12"/>
+    <path class="l" d="M55 169V95h40v74M210 169v-48h34v48"/>
+    <path class="m" d="M42 149h42v27H42zM206 145h48v31h-48z"/>
+    <circle class="bolt" cx="67" cy="188" r="8"/><circle class="bolt" cx="220" cy="188" r="8"/>
+  </g>
+
+  <!-- 2 aircraft frame -->
+  <g transform="translate(300 0)">
+    <path class="o" d="M26 186L63 139h141l66 39-49 30H62z"/>
+    <path class="l" d="M55 141L38 82h28l43 57M111 139l48-53 47 53M205 139l38-55"/>
+    <rect class="d" x="70" y="203" width="158" height="25" rx="10"/>
+    <circle class="bolt" cx="86" cy="175" r="8"/><circle class="bolt" cx="211" cy="177" r="8"/>
+  </g>
+
+  <!-- 3 paraglider trike frame -->
+  <g transform="translate(600 0)">
+    <path class="l" d="M55 224h185M75 222L118 92l83 130M118 92h52M170 92l35 44M102 191h77"/>
+    <rect class="o" x="52" y="217" width="190" height="27" rx="12"/>
+    <rect class="d" x="56" y="132" width="41" height="63" rx="10"/>
+    <path class="m" d="M44 125h61v22H44z"/>
+    <circle class="bolt" cx="82" cy="229" r="8"/><circle class="bolt" cx="215" cy="229" r="8"/>
+  </g>
+
+  <!-- 4 pontoon frame -->
+  <g transform="translate(900 0)">
+    <path class="d" d="M25 190h250l-25 46H48z"/>
+    <path class="b" d="M36 205h226l-18 35H55z"/>
+    <path class="l" d="M55 186v-48h190v48M90 138v48M210 138v48"/>
+    <rect class="o" x="52" y="168" width="196" height="24" rx="9"/>
+    <circle class="bolt" cx="73" cy="180" r="7"/><circle class="bolt" cx="227" cy="180" r="7"/>
+  </g>
+
+  <!-- 5 hovercraft utility body -->
+  <g transform="translate(0 300)">
+    <path class="o" d="M35 122h214l24 94H45z"/>
+    <rect class="y" x="55" y="143" width="67" height="53" rx="9"/>
+    <rect class="d" x="133" y="143" width="93" height="53" rx="9"/>
+    <path class="h" d="M145 158h68M145 174h68"/>
+    <path class="m" d="M52 216h199v24H52z"/>
+    <circle class="bolt" cx="73" cy="226" r="7"/><circle class="bolt" cx="229" cy="226" r="7"/>
+  </g>
+
+  <!-- 6 aircraft fuselage body -->
+  <g transform="translate(300 300)">
+    <path class="o" d="M24 153l40-39h129l80 51-48 52H59z"/>
+    <path class="d" d="M52 202h183l-18 29H70z"/>
+    <path class="y" d="M31 151h46v48H44z"/>
+    <circle class="b" cx="110" cy="165" r="18"/><circle class="b" cx="158" cy="165" r="18"/>
+    <path class="h" d="M68 127h120"/>
+  </g>
+
+  <!-- 7 paraglider equipment pod -->
+  <g transform="translate(600 300)">
+    <path class="o" d="M62 149h151l29 48-30 35H57l-19-42z"/>
+    <rect class="d" x="79" y="164" width="60" height="47" rx="8"/>
+    <path class="y" d="M152 163h50l18 34-18 15h-50z"/>
+    <circle class="bolt" cx="94" cy="187" r="7"/><circle class="bolt" cx="181" cy="187" r="7"/>
+  </g>
+
+  <!-- 8 seaplane body -->
+  <g transform="translate(900 300)">
+    <path class="o" d="M26 148l35-39h145l69 48-35 64H60z"/>
+    <path class="b" d="M53 205h192l-18 30H76z"/>
+    <path class="y" d="M44 146h38v52H48z"/>
+    <circle class="w" cx="123" cy="157" r="18"/><circle class="w" cx="171" cy="157" r="18"/>
+  </g>
+
+  <!-- 9 hovercraft cabin -->
+  <g transform="translate(0 600)">
+    <path class="o" d="M52 222V125q0-56 63-56h56q57 0 74 58v95z"/>
+    <path class="b" d="M77 128q6-35 44-35h44q37 1 50 38v39H77z"/>
+    <path class="w" d="M83 180h128v27H83z"/>
+    <path class="d" d="M48 216h202v27H48z"/>
+  </g>
+
+  <!-- 10 aircraft canopy -->
+  <g transform="translate(300 600)">
+    <path class="o" d="M45 211l25-102q11-39 58-42h39q45 6 70 48l24 96z"/>
+    <path class="b" d="M78 119q10-28 48-31h37q34 4 54 37l10 46H70z"/>
+    <path class="d" d="M45 205h216v34H45z"/>
+    <path class="h" d="M155 92v78"/>
+  </g>
+
+  <!-- 11 paraglider seat -->
+  <g transform="translate(600 600)">
+    <path class="l" d="M67 231V101q0-35 36-35h69q35 0 43 35v130"/>
+    <path class="d" d="M102 104h65l17 78-36 27H99l-21-39z"/>
+    <path class="m" d="M88 202h108v34H88z"/>
+    <path class="y" d="M109 120h44l10 48-22 18h-34l-12-31z"/>
+  </g>
+
+  <!-- 12 rescue bubble cockpit -->
+  <g transform="translate(900 600)">
+    <path class="o" d="M54 222V141q0-77 91-79h24q69 10 82 89v71z"/>
+    <path class="b" d="M80 145q4-56 69-60h17q51 9 60 68v35H80z"/>
+    <path class="d" d="M50 213h205v30H50z"/>
+    <circle class="bolt" cx="73" cy="226" r="7"/><circle class="bolt" cx="231" cy="226" r="7"/>
+  </g>
+
+  <!-- 13 hovercraft cushion skirt -->
+  <g transform="translate(0 900)">
+    <path class="d" d="M24 146q14-49 67-55h122q53 5 65 55l-14 67q-15 31-55 34H90q-42-3-57-34z"/>
+    <path class="m" d="M48 148h206l-11 52q-12 21-40 23H96q-29-2-39-23z"/>
+    <path class="l" d="M72 111l-8 111M112 95l-4 141M153 92v148M194 95l5 141M235 111l8 111"/>
+  </g>
+
+  <!-- 14 aircraft wing side profile -->
+  <g transform="translate(300 900)">
+    <path class="o" d="M36 151l28-35h197l18 26-22 39H67z"/>
+    <path class="y" d="M73 132h154l20 16-13 16H72z"/>
+    <path class="m" d="M35 128h38v76H35z"/>
+    <circle class="bolt" cx="55" cy="146" r="7"/><circle class="bolt" cx="55" cy="184" r="7"/>
+  </g>
+
+  <!-- 15 paraglider canopy and suspension bar -->
+  <g transform="translate(600 900)">
+    <path class="o" d="M26 133Q150 26 274 133l-33 47q-91-58-182 0z"/>
+    <path class="y" d="M63 119q87-58 174 0l-20 28q-67-37-134 0z"/>
+    <path class="h" d="M58 177l74 74M103 151l38 100M197 151l-38 100M242 177l-74 74"/>
+    <rect class="d" x="123" y="244" width="54" height="18" rx="8"/>
+  </g>
+
+  <!-- 16 flat propeller and engine -->
+  <g transform="translate(900 900)">
+    <path class="o" d="M46 127h120q38 0 53 35v47q-18 30-53 30H46z"/>
+    <path class="d" d="M44 142h29v82H44z"/>
+    <circle class="m" cx="202" cy="183" r="29"/>
+    <path class="d" d="M191 156q-35-64 8-116 27 58 15 116zM213 209q35 64-8 116-27-58-15-116z"/>
+    <circle class="y" cx="202" cy="183" r="12"/>
+    <path class="h" d="M88 148h62M88 168h72"/>
+  </g>
+</svg>

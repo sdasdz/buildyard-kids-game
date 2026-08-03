@@ -188,12 +188,12 @@ const SPRITES: Record<string, [number, number]> = {
   excavatorbase:[7,4], bulldozerbody:[7,5], cranebody:[7,6], bucketbody:[7,7],
   firebody:[7,8], tractorbody:[7,9], snowbody:[7,10], miningbody:[7,11],
   tank:[7,12], citybody:[7,13], rescuebody:[7,14], fantasybody:[7,15],
-  hoverbody:[12,3], airbody:[12,5], gliderpod:[12,6], seaplanebody:[12,7],
+  hoverbody:[12,4], airbody:[12,5], gliderpod:[12,6], seaplanebody:[12,7],
   cab:[8,0], bubblecab:[8,1], lampcab:[8,2], firecab:[8,3],
   farmcab:[8,4], rescuecab:[8,5], bulldozercab:[8,6], cranecab:[8,7],
   miningcab:[8,8], forkcab:[8,9], amphicab:[8,10], citycab:[8,11],
   farmcab2:[8,12], amphicab2:[8,13], snowcab:[8,14], fantasycab:[8,15],
-  hovercab:[12,11], pilotcab:[12,9], gliderseat:[12,10], bubblecockpit:[12,8],
+  hovercab:[12,8], pilotcab:[12,9], gliderseat:[12,10], bubblecockpit:[12,11],
   shovel:[9,0], blade:[9,1], crane:[9,2], fork:[9,3],
   drill:[9,4], roller:[9,5], plow:[9,6], hose:[9,7],
   tow:[9,8], brush:[9,9], snowblade:[9,10], grabber:[9,11],
@@ -229,7 +229,7 @@ function spriteStyle(id: string): React.CSSProperties | undefined {
     9: "v4-tools-clean.png",
     10: "v3-movement.png",
     11: "v2-extras.png",
-    12: "v4-transport.png",
+    12: "v5-flat-transport.svg",
   };
   return {
     backgroundImage: `url(/assets/${sheets[sprite[0]]})`,
