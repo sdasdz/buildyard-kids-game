@@ -53,7 +53,9 @@ const groups = [
   { input: "movement-alpha.png", output: "v9-workshop-movement.png", maxW: 440, maxH: 440, x: "center", y: "bottom", bottom: 486 },
 ];
 
-for (const group of groups) {
+const selectedGroups = new Set(process.argv.slice(2));
+
+for (const group of groups.filter((item) => !selectedGroups.size || selectedGroups.has(path.basename(item.input, "-alpha.png")))) {
   const inputPath = path.join(source, group.input);
   const metadata = await sharp(inputPath).metadata();
   const composites = [];

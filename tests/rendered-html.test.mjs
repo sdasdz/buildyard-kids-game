@@ -47,7 +47,7 @@ test("ships and wires the normalized v9 workshop sprite sheets", async () => {
     "v9-workshop-movement.png",
   ];
 
-  assert.match(page, /\?v=9\.0/);
+  assert.match(page, /\?v=9\.1/);
   assert.match(page, /function assembleParts/);
   assert.match(page, /function preparePerformanceBuild/);
   assert.match(page, /const deckY = rootY \+ rootSize \* \.56/);

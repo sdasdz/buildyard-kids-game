@@ -225,7 +225,7 @@ function spriteStyle(id: string): React.CSSProperties | undefined {
     12: "v5-flat-transport.svg",
   };
   return {
-    backgroundImage: `url(/assets/${sheets[sprite[0]]}?v=9.0)`,
+    backgroundImage: `url(/assets/${sheets[sprite[0]]}?v=9.1)`,
     backgroundPosition: `${col * 33.333}% ${row * 33.333}%`,
   };
 }
