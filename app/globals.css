@@ -136,3 +136,13 @@
 .part.with-art.part-tool .paint-overlay{opacity:.16}
 .pattern-stripe .part.with-art .paint-overlay,.pattern-dots .part.with-art .paint-overlay{opacity:.56}
 .part:is(.part-id-wheel,.part-id-orangewheel,.part-id-bluewheel,.part-id-redwheel,.part-id-smallwheel,.part-id-farmwheel,.part-id-citywheel,.part-id-fantasywheel,.part-id-rollerwheel,.part-id-paddlewheel) .paint-overlay{opacity:.72}
+
+/* A light assembly skeleton: every normalized v8 module shares these two anchors. */
+.rig-guide{position:absolute;pointer-events:none;z-index:9;color:#2388bd;font-weight:900;font-size:10px;opacity:.62}
+.rig-guide>span{position:absolute;display:block}
+.rig-deck-line{left:4%;right:3%;top:56%;border-top:3px dashed #2ca9df}
+.rig-axle-line{left:7%;right:7%;top:84%;border-top:3px dashed #4d91a8}
+.rig-guide i{position:absolute;right:0;top:-22px;padding:2px 8px;border-radius:9px;background:#fff;color:#277fa6;white-space:nowrap;font-style:normal;box-shadow:0 2px 0 #b7dce8}
+.rig-axle-line i{top:5px;color:#477c8c}
+.rig-cab-zone{right:4%;top:6%;width:39%;height:49%;display:grid!important;place-items:center;border:3px dashed #55b7df;border-radius:17px;background:#fff7;color:#338cb1}
+.part.selected{z-index:var(--part-layer)!important}
