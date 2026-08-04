@@ -105,3 +105,15 @@ test("selected modules support persistent direct material tinting", async () => 
   assert.match(css, /\.part\.with-art\.custom-color \.paint-overlay\{opacity:/);
   assert.match(css, /\.part\.with-art\.original-color \.paint-overlay\{display:none!important\}/);
 });
+
+test("assembly zones are visible guidance only", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  for (const zone of ["rig-body-zone", "rig-cab-zone", "rig-wheel-zone", "rig-front-tool-zone", "rig-rear-tool-zone"]) {
+    assert.match(page, new RegExp(`className="${zone}"`));
+    assert.match(css, new RegExp(`\\.${zone}\\{`));
+  }
+  assert.match(page, /仅作参考 · 可以自由摆放/);
+  assert.match(css, /\.rig-guide\{[^}]*pointer-events:none/);
+});

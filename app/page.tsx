@@ -1029,9 +1029,14 @@ export default function Home() {
         <div className="canvas-info"><span>{moveWhole ? "✥ 整车移动已开启：拖任意零件，整辆车一起走" : "☝ 默认单件模式：点到哪个零件，就只移动哪个零件"}</span><span>{parts.length} 个零件</span></div>
         <div className={`build-canvas pattern-${paint.pattern} finish-${paint.finish}`} ref={canvasRef} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp} onWheel={wheel}>
           {snap && assemblyRoot && <div aria-hidden="true" className="rig-guide" style={{ left: assemblyRoot.x, top: assemblyRoot.y, width: assemblyRoot.w * assemblyRoot.scale, height: assemblyRoot.h * assemblyRoot.scale }}>
+            <span className="rig-guide-note">仅作参考 · 可以自由摆放</span>
+            <span className="rig-body-zone">车身</span>
             <span className="rig-deck-line"><i>车身承载线</i></span>
             <span className="rig-axle-line"><i>轮子地面线</i></span>
             <span className="rig-cab-zone">驾驶室</span>
+            <span className="rig-wheel-zone">轮子区</span>
+            <span className="rig-front-tool-zone">前工具</span>
+            <span className="rig-rear-tool-zone">后工具</span>
           </div>}
           <div className="horizon"><span>☁</span><span>☁</span></div><div className="ground-line"/>
           {!parts.length && <div className="canvas-empty"><span>👇</span><b>先从左边选一副底盘吧</b><small>底盘是整辆工程车的基础</small></div>}

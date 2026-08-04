@@ -152,4 +152,9 @@
 .rig-guide i{position:absolute;right:0;top:-22px;padding:2px 8px;border-radius:9px;background:#fff;color:#277fa6;white-space:nowrap;font-style:normal;box-shadow:0 2px 0 #b7dce8}
 .rig-axle-line i{top:5px;color:#477c8c}
 .rig-cab-zone{right:4%;top:6%;width:39%;height:49%;display:grid!important;place-items:center;border:3px dashed #55b7df;border-radius:17px;background:#fff7;color:#338cb1}
+.rig-guide-note{left:20%;right:20%;top:-12%;padding:4px 8px;text-align:center;border-radius:10px;background:#fff;color:#4d879e;box-shadow:0 2px 0 #b7dce8;white-space:nowrap}
+.rig-body-zone{left:3%;top:15%;width:60%;height:40%;display:grid!important;place-items:center;border:3px dashed #58b8dc;border-radius:17px;background:#fff5;color:#338cb1}
+.rig-wheel-zone{left:8%;right:8%;top:69%;height:26%;display:grid!important;place-items:center;border:3px dashed #679db1;border-radius:18px;background:#eefaff55;color:#477c8c}
+.rig-front-tool-zone{right:-35%;top:25%;width:36%;height:40%;display:grid!important;place-items:center;border:3px dashed #e5a637;border-radius:17px;background:#fff8df77;color:#9b6a12}
+.rig-rear-tool-zone{left:-29%;top:29%;width:30%;height:36%;display:grid!important;place-items:center;border:3px dashed #e5a637;border-radius:17px;background:#fff8df77;color:#9b6a12}
 .part.selected{z-index:var(--part-layer)!important}
