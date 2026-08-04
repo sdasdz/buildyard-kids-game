@@ -58,18 +58,19 @@
 .mission-road i:nth-child(1){left:1%}.mission-road i:nth-child(2){left:26%}.mission-road i:nth-child(3){left:51%}.mission-road i:nth-child(4){left:76%}
 .performance-route{position:absolute;z-index:4;left:0;bottom:11px;width:430px;height:224px;animation:performance-route 6.4s cubic-bezier(.32,.02,.25,1) infinite both;will-change:transform}
 .performance-route .result-vehicle-art{position:absolute;left:0;bottom:0;width:430px;height:218px;animation:none!important;transform:none!important}
-.performance-route .result-vehicle-art .part{filter:drop-shadow(2px 4px 1px #25323845)}
+.performance-route .result-vehicle-art .part{filter:drop-shadow(2px 4px 1px #25323845);animation:none!important}
+.result-vehicle-art .part-motion{position:absolute;inset:0;display:block;pointer-events:none;transform-origin:inherit}
 .action-scene{z-index:3;right:39%;bottom:43px;font-size:46px;letter-spacing:-7px;animation:none;white-space:nowrap}
 .task-object{display:inline-block;transform-origin:center bottom;animation:task-work 6.4s ease-in-out infinite both}
 .work-puff{position:absolute;left:-18px;top:-30px;font-size:27px;letter-spacing:0;opacity:0;animation:work-puff 6.4s ease-out infinite both}
 .result-character{z-index:6;right:13px;top:11px;bottom:auto;font-size:49px;filter:drop-shadow(0 3px 0 #fff);animation:character-cheer 1s ease-in-out infinite alternate}
 .result-buttons button{min-height:56px;font-weight:900}.replay-button{background:#e8f5ff;color:#216e98;border:2px solid #aad6ee}
 
-.result-animation.is-running .result-vehicle-art :is(.part-id-wheel,.part-id-orangewheel,.part-id-bluewheel,.part-id-redwheel,.part-id-smallwheel,.part-id-farmwheel,.part-id-citywheel,.part-id-fantasywheel,.part-id-rollerwheel,.part-id-paddlewheel){animation:wheel-route-cycle 6.4s linear infinite}
-.result-animation.is-running .result-vehicle-art :is(.part-id-track,.part-id-miningtrack,.part-id-snowtrack,.part-id-greentrack,.part-id-ski,.part-id-hover){animation:track-route-cycle 6.4s linear infinite}
-.result-animation.is-running:is(.action-dig,.action-clear) .part-tool{transform-origin:14% 55%;animation:tool-dig-cycle 6.4s ease-in-out infinite}
-.result-animation.is-running:is(.action-lift,.action-rescue) .part-tool{transform-origin:14% 58%;animation:tool-lift-cycle 6.4s ease-in-out infinite}
-.result-animation.is-running:is(.action-drill,.action-roll,.action-clean,.action-mix) .part-tool{animation:tool-rumble-cycle 6.4s ease-in-out infinite}
+.result-animation.is-running .result-vehicle-art :is(.part-id-wheel,.part-id-orangewheel,.part-id-bluewheel,.part-id-redwheel,.part-id-smallwheel,.part-id-farmwheel,.part-id-citywheel,.part-id-fantasywheel,.part-id-rollerwheel,.part-id-paddlewheel)>.part-motion{animation:wheel-route-cycle 6.4s linear infinite}
+.result-animation.is-running .result-vehicle-art :is(.part-id-track,.part-id-miningtrack,.part-id-snowtrack,.part-id-greentrack,.part-id-ski,.part-id-hover)>.part-motion{animation:track-route-cycle 6.4s linear infinite}
+.result-animation.is-running:is(.action-dig,.action-clear) .part-tool>.part-motion{transform-origin:14% 55%;animation:tool-dig-cycle 6.4s ease-in-out infinite}
+.result-animation.is-running:is(.action-lift,.action-rescue) .part-tool>.part-motion{transform-origin:14% 58%;animation:tool-lift-cycle 6.4s ease-in-out infinite}
+.result-animation.is-running:is(.action-drill,.action-roll,.action-clean,.action-mix) .part-tool>.part-motion{animation:tool-rumble-cycle 6.4s ease-in-out infinite}
 .result-animation:is(.action-lift,.action-fork) .task-object{animation-name:task-lift}
 .result-animation:is(.action-push,.action-snow,.action-clear) .task-object{animation-name:task-push}
 .result-animation:is(.action-water,.action-fire) .task-object{animation-name:task-spray}
@@ -96,7 +97,7 @@
 @keyframes character-cheer{to{transform:translateY(-7px) rotate(4deg)}}
 
 @media(max-width:700px){.result-card{padding:15px 14px 22px}.result-animation{height:230px}.performance-route{transform-origin:left bottom}.action-scene{right:25%;font-size:39px}.result-character{font-size:42px}.result-buttons{flex-wrap:wrap}.result-buttons button{flex:1 1 130px}}
-@media(prefers-reduced-motion:reduce){.performance-route,.task-object,.work-puff,.result-character,.mission-road i,.result-vehicle-art .part{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+@media(prefers-reduced-motion:reduce){.performance-route,.task-object,.work-puff,.result-character,.mission-road i,.result-vehicle-art .part-motion{animation-duration:.01ms!important;animation-iteration-count:1!important}}
 
 /* V4 physical assembly: grounded axles, clean tool cells and built-in load-bearing mounts. */
 .part-tool.with-art .part-hit{left:3%;right:3%;top:8%;bottom:8%;border-radius:16px}

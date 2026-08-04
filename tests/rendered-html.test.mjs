@@ -58,3 +58,22 @@ test("ships and wires the normalized v9 workshop sprite sheets", async () => {
     await access(new URL(`../public/assets/${assetName}`, import.meta.url));
   }
 });
+
+test("departure preserves the complete child-authored vehicle build", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  const start = page.indexOf("function preparePerformanceBuild");
+  const end = page.indexOf("\n\nexport default function Home", start);
+  const departureBuilder = page.slice(start, end);
+
+  assert.ok(start >= 0 && end > start);
+  assert.match(departureBuilder, /return input\.map/);
+  assert.match(departureBuilder, /\.\.\.part/);
+  assert.match(departureBuilder, /part\.rotate/);
+  assert.match(departureBuilder, /part\.scale/);
+  assert.doesNotMatch(departureBuilder, /rotate:\s*0|scale:\s*1|flip:\s*(?:true|false)/);
+  assert.doesNotMatch(page, /carParts\.slice\(0,\s*16\)/);
+  assert.match(page, /className="part-motion"/);
+  assert.match(css, /\.performance-route \.result-vehicle-art \.part\{[^}]*animation:none!important/);
+  assert.match(css, />\.part-motion\{animation:wheel-route-cycle/);
+});
