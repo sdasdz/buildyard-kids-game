@@ -794,6 +794,7 @@ export default function Home() {
   const [voice] = useState(true);
   const [toast, setToast] = useState("");
   const [tutorial, setTutorial] = useState(0);
+  const [garageDeleteId, setGarageDeleteId] = useState<string | null>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const dragging = useRef<{ uid: string; dx: number; dy: number; group: boolean; lastX: number; lastY: number } | null>(null);
   const parentTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -816,6 +817,7 @@ export default function Home() {
   const unlockedThemes = THEMES.slice(0, save.unlocked);
   const selectedPart = parts.find((p) => p.uid === selected);
   const assemblyRoot = parts.find((p) => p.category === "chassis");
+  const garageDeleteCar = save.garage.find((car) => car.id === garageDeleteId);
   const performanceAction = mission?.needs[0] || [...parts].reverse().find((p) => p.category === "tool")?.tags[0] || "drive";
   const performanceParts = useMemo(() => preparePerformanceBuild(parts, performanceAction), [parts, performanceAction]);
   const performanceMode = getTransportMode(performanceParts);
@@ -1049,6 +1051,11 @@ export default function Home() {
     setTimeout(() => setToast(""), 1800);
   };
 
+  const deleteGarageCar = (id: string) => {
+    setSave((s) => ({ ...s, garage: s.garage.filter((car) => car.id !== id) }));
+    setGarageDeleteId(null);
+  };
+
   const resetProgress = () => {
     if (!confirm("要清空所有星星、解锁和收藏的工程车吗？")) return;
     setSave(DEFAULT_SAVE);
@@ -1146,9 +1153,14 @@ export default function Home() {
     <div className="garage-title"><div><span>🏠</span><h1>我的车车收藏</h1><p>每一辆都是独一无二的作品！</p></div><button className="primary" onClick={() => { setMission(null); startBuild("free"); }}>＋ 再造一辆</button></div>
     <section className="garage-grid">
       {save.garage.length ? save.garage.map((car) => <article key={car.id} className="car-card" onClick={() => { setParts(assembleParts(car.parts, 900, 600)); setPaint(car.paint); setMission(null); setMode("free"); setScreen("build"); }}>
+        <button className="car-delete" aria-label={`删除 ${car.name}`} title="删除这辆车" onClick={(event) => { event.stopPropagation(); setGarageDeleteId(car.id); }}>🗑️<span>删除</span></button>
         <div className="car-thumb">{buildPreview(car.parts, car.paint, true)}</div><h3>{car.name}</h3><p>{car.parts.length} 个零件 · {car.date}</p>
       </article>) : <div className="empty-garage"><span>🚜</span><h2>车库还空空的</h2><p>去创造第一辆工程车吧！</p></div>}
     </section>
+    {garageDeleteCar && <div className="modal-shade" onClick={() => setGarageDeleteId(null)}><div className="garage-delete-dialog" role="dialog" aria-modal="true" aria-labelledby="delete-car-title" onClick={(event) => event.stopPropagation()}>
+      <span className="delete-car-icon">🗑️</span><h2 id="delete-car-title">把这辆车移出车库吗？</h2><p>“{garageDeleteCar.name}”会从这台设备的车库里删除。</p>
+      <div className="garage-delete-actions"><button className="secondary" onClick={() => setGarageDeleteId(null)}>先留着</button><button className="garage-delete-confirm" onClick={() => deleteGarageCar(garageDeleteCar.id)}>确定删除</button></div>
+    </div></div>}
   </main>;
 
   return <main className="build-screen">

@@ -118,6 +118,18 @@ test("paint shop includes a broad safety warning decal library", async () => {
   assert.match(page, /function SafetySticker/);
 });
 
+test("garage vehicles can be removed without opening the build", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  assert.match(page, /className="car-delete"/);
+  assert.match(page, /event\.stopPropagation\(\); setGarageDeleteId\(car\.id\)/);
+  assert.match(page, /garage: s\.garage\.filter\(\(car\) => car\.id !== id\)/);
+  assert.match(page, /role="dialog" aria-modal="true"/);
+  assert.match(page, /确定删除/);
+  assert.match(css, /\.car-delete\{[^}]*min-width:64px;[^}]*height:56px/);
+});
+
 test("assembly zones are visible guidance only", async () => {
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
