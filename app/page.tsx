@@ -52,6 +52,8 @@ type Paint = {
   wheels: string;
   pattern: string;
   sticker: string;
+  stickerX?: number;
+  stickerY?: number;
   finish: string;
 };
 
@@ -463,6 +465,8 @@ const DEFAULT_PAINT: Paint = {
   wheels: "#f5b52b",
   pattern: "none",
   sticker: "",
+  stickerX: 58,
+  stickerY: 52,
   finish: "clean",
 };
 
@@ -523,11 +527,12 @@ function PartArtwork({ part, paint, hit = false }: { part: Part; paint: Paint; h
   </>;
 }
 
-function SafetySticker({ value }: { value: string }) {
+function SafetySticker({ value, x = 58, y = 52, draggable = false, onPointerDown }: { value: string; x?: number; y?: number; draggable?: boolean; onPointerDown?: React.PointerEventHandler<HTMLElement> }) {
   if (!value) return null;
   const sticker = SAFETY_STICKERS.find((item) => item.id === value);
-  if (!sticker) return <i className="part-sticker legacy-sticker">{value}</i>;
-  return <i className="part-sticker safety-sticker" aria-label={sticker.label}><SafetyStickerIcon sticker={sticker}/></i>;
+  const position = { left: `${x}%`, top: `${y}%` };
+  if (!sticker) return <i className={`part-sticker legacy-sticker ${draggable ? "draggable" : ""}`} style={position} onPointerDown={onPointerDown}>{value}</i>;
+  return <i className={`part-sticker safety-sticker ${draggable ? "draggable" : ""}`} aria-label={sticker.label} style={position} onPointerDown={onPointerDown}><SafetyStickerIcon sticker={sticker}/></i>;
 }
 const DEFAULT_SAVE: SaveData = {
   stars: 0,
@@ -827,6 +832,7 @@ export default function Home() {
   const unlockedThemes = THEMES.slice(0, save.unlocked);
   const selectedPart = parts.find((p) => p.uid === selected);
   const assemblyRoot = parts.find((p) => p.category === "chassis");
+  const stickerHostUid = [...parts].filter((part) => part.category === "body").sort((a, b) => b.z - a.z)[0]?.uid;
   const garageDeleteCar = save.garage.find((car) => car.id === garageDeleteId);
   const performanceAction = mission?.needs[0] || [...parts].reverse().find((p) => p.category === "tool")?.tags[0] || "drive";
   const performanceParts = useMemo(() => preparePerformanceBuild(parts, performanceAction), [parts, performanceAction]);
@@ -1066,6 +1072,37 @@ export default function Home() {
     setGarageDeleteId(null);
   };
 
+  const dragSticker = (event: React.PointerEvent<HTMLElement>) => {
+    if (!paint.sticker) return;
+    event.preventDefault();
+    event.stopPropagation();
+    const sticker = event.currentTarget;
+    const host = sticker.closest(".part") as HTMLElement | null;
+    if (!host) return;
+    const stickerRect = sticker.getBoundingClientRect();
+    const grabOffsetX = event.clientX - (stickerRect.left + stickerRect.width / 2);
+    const grabOffsetY = event.clientY - (stickerRect.top + stickerRect.height / 2);
+    sticker.setPointerCapture(event.pointerId);
+    sticker.classList.add("is-dragging");
+
+    const move = (pointer: PointerEvent) => {
+      const hostRect = host.getBoundingClientRect();
+      const x = Math.max(12, Math.min(88, ((pointer.clientX - grabOffsetX - hostRect.left) / hostRect.width) * 100));
+      const y = Math.max(14, Math.min(86, ((pointer.clientY - grabOffsetY - hostRect.top) / hostRect.height) * 100));
+      setPaint((current) => ({ ...current, stickerX: x, stickerY: y }));
+    };
+    const finish = (pointer: PointerEvent) => {
+      sticker.classList.remove("is-dragging");
+      if (sticker.hasPointerCapture(pointer.pointerId)) sticker.releasePointerCapture(pointer.pointerId);
+      sticker.removeEventListener("pointermove", move);
+      sticker.removeEventListener("pointerup", finish);
+      sticker.removeEventListener("pointercancel", finish);
+    };
+    sticker.addEventListener("pointermove", move);
+    sticker.addEventListener("pointerup", finish);
+    sticker.addEventListener("pointercancel", finish);
+  };
+
   const resetProgress = () => {
     if (!confirm("要清空所有星星、解锁和收藏的工程车吗？")) return;
     setSave(DEFAULT_SAVE);
@@ -1097,6 +1134,7 @@ export default function Home() {
     const minX = Math.min(...carParts.map((p) => p.x));
     const minY = Math.min(...carParts.map((p) => p.y));
     const scale = previewScale ?? (small ? .27 : 1);
+    const previewStickerHost = [...carParts].filter((part) => part.category === "body").sort((a, b) => b.z - a.z)[0]?.uid;
     return carParts.map((p) => (
       <div key={p.uid} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""}`} style={{
         left: (p.x - minX) * scale + (small ? 12 : 0),
@@ -1107,7 +1145,7 @@ export default function Home() {
         zIndex: p.z,
         "--part-color": resolvedPartColor(p, carPaint),
         "--part-accent": carPaint.secondary,
-      } as React.CSSProperties}><span className="part-motion">{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <PartArtwork part={p} paint={carPaint}/> : p.icon}</span></div>
+      } as React.CSSProperties}><span className="part-motion">{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <PartArtwork part={p} paint={carPaint}/> : p.icon}</span>{p.uid === previewStickerHost && <SafetySticker value={carPaint.sticker} x={carPaint.stickerX} y={carPaint.stickerY}/>}</div>
     ));
   };
 
@@ -1207,7 +1245,7 @@ export default function Home() {
             "--part-layer": p.z,
             "--part-color": resolvedPartColor(p, paint),
             "--part-accent": paint.secondary,
-          } as React.CSSProperties}>{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <PartArtwork part={p} paint={paint} hit/> : <span>{p.icon}</span>}{p.category === "body" && <SafetySticker value={paint.sticker}/>}</div>)}
+          } as React.CSSProperties}>{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <PartArtwork part={p} paint={paint} hit/> : <span>{p.icon}</span>}{p.uid === stickerHostUid && <SafetySticker value={paint.sticker} x={paint.stickerX} y={paint.stickerY} draggable onPointerDown={dragSticker}/>}</div>)}
           {selectedPart && !showPaint && !result && <div className="part-color-bar" aria-label="单个零件调色">
             <b>直接换色</b>
             {PART_TINTS.map((color) => <button key={color} aria-label={`改成 ${color}`} className={!selectedPart.originalColor && selectedPart.color === color ? "chosen color-dot" : "color-dot"} style={{ background: color }} onClick={() => updateSelected({ color, originalColor: false, colorMode: "custom" })}/>) }
@@ -1234,7 +1272,7 @@ export default function Home() {
       <div className="paint-section"><b>搭配颜色</b><div className="swatches">{["#ff7b3e","#2e98d1","#754fbb","#68b33e","#f4e04d","#ffffff"].map((c, i) => <button key={c} aria-label={`搭配颜色 ${i + 1}`} className={paint.secondary === c ? "chosen" : ""} style={{ background: c }} onClick={() => setPaint({ ...paint, secondary: c })}/>)}</div></div>
       <div className="paint-section"><b>轮胎轮毂颜色</b><div className="swatches">{["#27313d","#ffd43b","#ff6b4a","#46aaf2","#8b6fe8","#f3f3ec"].map((c, i) => <button key={c} aria-label={`轮胎颜色 ${i + 1}`} className={paint.wheels === c ? "chosen" : ""} style={{ background: c }} onClick={() => setPaint({ ...paint, wheels: c })}/>)}</div></div>
       <div className="paint-section"><b>花纹</b><div className="option-row">{[["none","纯色"],["stripe","闪电"],["dots","圆点"]].map(([v,n]) => <button key={v} className={paint.pattern === v ? "chosen" : ""} onClick={() => setPaint({ ...paint, pattern: v })}>{v === "stripe" ? "⚡" : v === "dots" ? "●●" : "▰"}<small>{n}</small></button>)}</div></div>
-      <div className="paint-section safety-paint-section"><b>安全警告装饰</b><small className="paint-help">选择一个小标志贴在车身上</small><div className="sticker-row safety-sticker-row">{SAFETY_STICKERS.map((sticker) => <button key={sticker.id || "none"} aria-label={sticker.label} title={sticker.label} className={paint.sticker === sticker.id ? "chosen" : ""} onClick={() => setPaint({ ...paint, sticker: sticker.id })}><SafetyStickerIcon sticker={sticker}/><small>{sticker.label}</small></button>)}</div></div>
+      <div className="paint-section safety-paint-section"><b>安全警告装饰</b><small className="paint-help">选好后，直接按住车身上的标志拖动位置</small><div className="sticker-row safety-sticker-row">{SAFETY_STICKERS.map((sticker) => <button key={sticker.id || "none"} aria-label={sticker.label} title={sticker.label} className={paint.sticker === sticker.id ? "chosen" : ""} onClick={() => setPaint({ ...paint, sticker: sticker.id, stickerX: paint.stickerX ?? 58, stickerY: paint.stickerY ?? 52 })}><SafetyStickerIcon sticker={sticker}/><small>{sticker.label}</small></button>)}</div></div>
       <div className="paint-section"><b>特别效果</b><div className="option-row"><button className={paint.finish === "clean" ? "chosen" : ""} onClick={() => setPaint({ ...paint, finish: "clean" })}>✨<small>亮晶晶</small></button><button className={paint.finish === "mud" ? "chosen" : ""} onClick={() => setPaint({ ...paint, finish: "mud" })}>🟤<small>泥点勇士</small></button></div></div>
     </div>}
 

@@ -123,6 +123,20 @@ test("paint shop includes a broad safety warning decal library", async () => {
   assert.doesNotMatch(css, /\.safety-sticker\{min-width:62%/);
 });
 
+test("paint stickers drag freely and keep their position in saved previews", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  assert.match(page, /stickerX\?: number/);
+  assert.match(page, /stickerY\?: number/);
+  assert.match(page, /sticker\.setPointerCapture\(event\.pointerId\)/);
+  assert.match(page, /setPaint\(\(current\) => \(\{ \.\.\.current, stickerX: x, stickerY: y \}\)\)/);
+  assert.match(page, /draggable onPointerDown=\{dragSticker\}/);
+  assert.match(page, /previewStickerHost/);
+  assert.match(page, /x=\{carPaint\.stickerX\} y=\{carPaint\.stickerY\}/);
+  assert.match(css, /\.part\.with-art \.part-sticker\.draggable\{z-index:7;pointer-events:auto;touch-action:none/);
+});
+
 test("garage vehicles can be removed without opening the build", async () => {
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
