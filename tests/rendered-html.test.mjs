@@ -77,3 +77,16 @@ test("departure preserves the complete child-authored vehicle build", async () =
   assert.match(css, /\.performance-route \.result-vehicle-art \.part\{[^}]*animation:none!important/);
   assert.match(css, />\.part-motion\{animation:wheel-route-cycle/);
 });
+
+test("adding a part preserves every already-positioned instance", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const start = page.indexOf("  const addPart =");
+  const end = page.indexOf("\n\n  const autoAssemble", start);
+  const addPart = page.slice(start, end);
+
+  assert.ok(start >= 0 && end > start);
+  assert.match(addPart, /const existing = new Map\(compatible\.map/);
+  assert.match(addPart, /const suggested = new Map\(arranged\.map/);
+  assert.match(addPart, /return next\.map\(\(part\) => existing\.get\(part\.uid\) \|\| suggested\.get\(part\.uid\) \|\| part\)/);
+  assert.doesNotMatch(addPart, /CORE_CATEGORIES/);
+});

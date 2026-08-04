@@ -418,8 +418,6 @@ const AIR_MOVES = new Set(["wing", "paraglider", "propeller"]);
 const BOOM_TOOLS = new Set(["shovel", "crane", "liftplatform", "conveyor"]);
 const DECK_TOOLS = new Set(["mixer", "hose"]);
 const REAR_TOOLS = new Set(["tow", "plow"]);
-const CORE_CATEGORIES = new Set<Category>(["chassis", "body", "cab", "move", "tool"]);
-
 function getTransportMode(input: Part[]): TransportMode {
   if (input.some((part) => AIR_MOVES.has(part.id) || ["airframe", "gliderframe"].includes(part.id))) return "air";
   if (input.some((part) => ["hoverframe", "hoverbody", "hovercab", "hovercraftskirt"].includes(part.id))) return "hover";
@@ -729,9 +727,12 @@ export default function Home() {
       const rootAnchor = oldRoot ? { x: oldRoot.x, y: oldRoot.y, size: oldRoot.w } : undefined;
       const arranged = assembleParts(next, rect?.width, rect?.height, rootAnchor);
       const existing = new Map(compatible.map((p) => [p.uid, p]));
-      return CORE_CATEGORIES.has(def.category) || needsFrame
-        ? arranged.map((p) => CORE_CATEGORIES.has(p.category) ? p : existing.get(p.uid) || p)
-        : arranged.map((p) => p.uid === item.uid ? p : existing.get(p.uid) || p);
+      const suggested = new Map(arranged.map((p) => [p.uid, p]));
+
+      // Adding a module must never reassemble work the child has already placed.
+      // Use auto-layout only to suggest positions for the genuinely new part (and
+      // an automatically supplied frame); every existing instance stays verbatim.
+      return next.map((part) => existing.get(part.uid) || suggested.get(part.uid) || part);
     });
     setSelected(item.uid);
     if (mountedAtStation) {
