@@ -12,6 +12,7 @@ type PartDef = {
   w: number;
   h: number;
 };
+type PartColorMode = "auto" | "primary" | "secondary" | "wheels" | "custom" | "original";
 type Part = PartDef & {
   uid: string;
   x: number;
@@ -20,6 +21,8 @@ type Part = PartDef & {
   scale: number;
   flip: boolean;
   z: number;
+  colorMode?: PartColorMode;
+  color?: string;
 };
 type Mission = {
   id: string;
@@ -361,6 +364,22 @@ const DEFAULT_PAINT: Paint = {
   sticker: "",
   finish: "clean",
 };
+
+const PART_TINTS = ["#f2b632", "#e86642", "#45ad76", "#3f91cf", "#745bb0", "#d65f93", "#ecebe2"];
+
+function defaultPartColor(part: Part, paint: Paint) {
+  if (part.category === "move") return paint.wheels;
+  if (part.category === "tool") return paint.secondary;
+  return paint.primary;
+}
+
+function resolvedPartColor(part: Part, paint: Paint) {
+  if (part.colorMode === "primary") return paint.primary;
+  if (part.colorMode === "secondary") return paint.secondary;
+  if (part.colorMode === "wheels") return paint.wheels;
+  if (part.colorMode === "custom" && part.color) return part.color;
+  return defaultPartColor(part, paint);
+}
 const DEFAULT_SAVE: SaveData = {
   stars: 0,
   completed: [],
@@ -923,14 +942,14 @@ export default function Home() {
     const minY = Math.min(...carParts.map((p) => p.y));
     const scale = previewScale ?? (small ? .27 : 1);
     return carParts.map((p) => (
-      <div key={p.uid} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""}`} style={{
+      <div key={p.uid} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""} ${p.colorMode && !["auto", "original"].includes(p.colorMode) ? "custom-color" : ""} ${p.colorMode === "original" ? "original-color" : ""}`} style={{
         left: (p.x - minX) * scale + (small ? 12 : 0),
         top: (p.y - minY) * scale + (small ? 15 : 0),
         width: p.w * p.scale * scale,
         height: p.h * p.scale * scale,
         transform: `rotate(${p.rotate}deg) scaleX(${p.flip ? -1 : 1})`,
         zIndex: p.z,
-        "--part-color": p.category === "move" ? carPaint.wheels : p.category === "tool" ? carPaint.secondary : carPaint.primary,
+        "--part-color": resolvedPartColor(p, carPaint),
         "--part-accent": carPaint.secondary,
       } as React.CSSProperties}><span className="part-motion">{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <><span className="part-art" style={spriteStyle(p.id)}/><span className="paint-overlay" style={spriteMaskStyle(p.id)}/></> : p.icon}</span></div>
     ));
@@ -1016,13 +1035,22 @@ export default function Home() {
           </div>}
           <div className="horizon"><span>☁</span><span>☁</span></div><div className="ground-line"/>
           {!parts.length && <div className="canvas-empty"><span>👇</span><b>先从左边选一副底盘吧</b><small>底盘是整辆工程车的基础</small></div>}
-          {parts.map((p) => <div key={p.uid} data-part-id={p.id} data-category={p.category} onPointerDown={(e) => onPointerDown(e, p)} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""} ${selected === p.uid ? "selected" : ""}`} style={{
+          {parts.map((p) => <div key={p.uid} data-part-id={p.id} data-category={p.category} onPointerDown={(e) => onPointerDown(e, p)} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""} ${p.colorMode && !["auto", "original"].includes(p.colorMode) ? "custom-color" : ""} ${p.colorMode === "original" ? "original-color" : ""} ${selected === p.uid ? "selected" : ""}`} style={{
             left: p.x, top: p.y, width: p.w * p.scale, height: p.h * p.scale,
             transform: `rotate(${p.rotate}deg) scaleX(${p.flip ? -1 : 1})`, zIndex: p.z,
             "--part-layer": p.z,
-            "--part-color": p.category === "move" ? paint.wheels : p.category === "tool" ? paint.secondary : paint.primary,
+            "--part-color": resolvedPartColor(p, paint),
             "--part-accent": paint.secondary,
           } as React.CSSProperties}>{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <><span className="part-art" style={spriteStyle(p.id)}/><span className="paint-overlay" style={spriteMaskStyle(p.id)}/><span className="part-hit"/></> : <span>{p.icon}</span>}{paint.sticker && p.category === "body" && <i className="part-sticker">{paint.sticker}</i>}</div>)}
+          {selectedPart && !showPaint && !result && <div className="part-color-bar" aria-label="单个零件调色">
+            <b>单件颜色</b>
+            <button aria-label="跟随整车涂装" title="跟随整车涂装" className={!selectedPart.colorMode || selectedPart.colorMode === "auto" ? "chosen follow-paint" : "follow-paint"} onClick={() => updateSelected({ colorMode: "auto", color: undefined })}><span>🎨</span><small>跟随</small></button>
+            <button aria-label="使用整车主色" className={selectedPart.colorMode === "primary" ? "chosen linked-color" : "linked-color"} style={{ background: paint.primary }} onClick={() => updateSelected({ colorMode: "primary", color: undefined })}><small>主色</small></button>
+            <button aria-label="使用整车辅色" className={selectedPart.colorMode === "secondary" ? "chosen linked-color" : "linked-color"} style={{ background: paint.secondary }} onClick={() => updateSelected({ colorMode: "secondary", color: undefined })}><small>辅色</small></button>
+            <button aria-label="使用轮胎颜色" className={selectedPart.colorMode === "wheels" ? "chosen linked-color" : "linked-color"} style={{ background: paint.wheels }} onClick={() => updateSelected({ colorMode: "wheels", color: undefined })}><small>轮色</small></button>
+            {PART_TINTS.map((color) => <button key={color} aria-label={`改成 ${color}`} className={selectedPart.colorMode === "custom" && selectedPart.color === color ? "chosen color-dot" : "color-dot"} style={{ background: color }} onClick={() => updateSelected({ colorMode: "custom", color })}/>) }
+            <button aria-label="恢复素材原色" title="恢复素材原色" className={selectedPart.colorMode === "original" ? "chosen original-paint" : "original-paint"} onClick={() => updateSelected({ colorMode: "original", color: undefined })}><span>✦</span><small>原色</small></button>
+          </div>}
           {selectedPart && !showPaint && !result && <div className="selection-tools">
             <b>{selectedPart.name}</b>
             <button aria-label="左转" onClick={() => updateSelected({ rotate: selectedPart.rotate - 15 })}>↶<small>左转</small></button>

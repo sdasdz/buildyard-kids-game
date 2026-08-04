@@ -90,3 +90,18 @@ test("adding a part preserves every already-positioned instance", async () => {
   assert.match(addPart, /return next\.map\(\(part\) => existing\.get\(part\.uid\) \|\| suggested\.get\(part\.uid\) \|\| part\)/);
   assert.doesNotMatch(addPart, /CORE_CATEGORIES/);
 });
+
+test("selected modules support persistent direct material tinting", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  assert.match(page, /type PartColorMode = "auto" \| "primary" \| "secondary" \| "wheels" \| "custom" \| "original"/);
+  assert.match(page, /colorMode\?: PartColorMode/);
+  assert.match(page, /function resolvedPartColor/);
+  assert.match(page, /className="part-color-bar"/);
+  assert.match(page, /updateSelected\(\{ colorMode: "custom", color \}\)/);
+  assert.match(page, /updateSelected\(\{ colorMode: "original", color: undefined \}\)/);
+  assert.ok(page.match(/"--part-color": resolvedPartColor/g)?.length >= 2);
+  assert.match(css, /\.part\.with-art\.custom-color \.paint-overlay\{opacity:/);
+  assert.match(css, /\.part\.with-art\.original-color \.paint-overlay\{display:none!important\}/);
+});
