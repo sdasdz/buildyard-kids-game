@@ -492,7 +492,10 @@ function resolvedPartColor(part: Part, paint: Paint) {
   if (part.colorMode === "primary") return paint.primary;
   if (part.colorMode === "secondary") return paint.secondary;
   if (part.colorMode === "wheels") return paint.wheels;
-  if (part.colorMode === "custom" && part.color) return part.color;
+  // A part-level colour is an explicit override. Older saved builds and the
+  // quick-colour bar may not have a colorMode field, so do not silently throw
+  // the child's chosen colour away just because that metadata is missing.
+  if (part.color && !part.originalColor) return part.color;
   return defaultPartColor(part, paint);
 }
 
@@ -1185,7 +1188,7 @@ export default function Home() {
           } as React.CSSProperties}>{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <PartArtwork part={p} paint={paint} hit/> : <span>{p.icon}</span>}{p.category === "body" && <SafetySticker value={paint.sticker}/>}</div>)}
           {selectedPart && !showPaint && !result && <div className="part-color-bar" aria-label="单个零件调色">
             <b>直接换色</b>
-            {PART_TINTS.map((color) => <button key={color} aria-label={`改成 ${color}`} className={!selectedPart.originalColor && selectedPart.color === color ? "chosen color-dot" : "color-dot"} style={{ background: color }} onClick={() => updateSelected({ color, originalColor: false, colorMode: undefined })}/>) }
+            {PART_TINTS.map((color) => <button key={color} aria-label={`改成 ${color}`} className={!selectedPart.originalColor && selectedPart.color === color ? "chosen color-dot" : "color-dot"} style={{ background: color }} onClick={() => updateSelected({ color, originalColor: false, colorMode: "custom" })}/>) }
             <button aria-label="恢复素材原色" title="恢复素材原色" className={selectedPart.originalColor ? "chosen original-paint" : "original-paint"} onClick={() => updateSelected({ originalColor: true, color: undefined, colorMode: undefined })}><span>✦</span><small>原色</small></button>
           </div>}
           {selectedPart && !showPaint && !result && <div className="selection-tools">

@@ -99,7 +99,8 @@ test("selected modules use direct pixel recoloring without overlay modes", async
   assert.match(page, /context\.getImageData/);
   assert.match(page, /hsvToRgb/);
   assert.match(page, /className="part-color-bar"/);
-  assert.match(page, /updateSelected\(\{ color, originalColor: false, colorMode: undefined \}\)/);
+  assert.match(page, /updateSelected\(\{ color, originalColor: false, colorMode: "custom" \}\)/);
+  assert.match(page, /if \(part\.color && !part\.originalColor\) return part\.color/);
   assert.match(page, /updateSelected\(\{ originalColor: true, color: undefined, colorMode: undefined \}\)/);
   assert.ok(page.match(/"--part-color": resolvedPartColor/g)?.length >= 2);
   assert.match(css, /\.part-recolor\{position:absolute/);
