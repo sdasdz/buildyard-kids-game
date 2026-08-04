@@ -110,12 +110,17 @@ test("selected modules use direct pixel recoloring without overlay modes", async
 
 test("paint shop includes a broad safety warning decal library", async () => {
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
 
   for (const label of ["注意安全", "易燃", "易爆", "禁止烟火", "防火", "高压危险", "当心高温", "戴安全帽", "急救", "紧急救援", "施工注意"]) {
     assert.match(page, new RegExp(label));
   }
   assert.match(page, /className="sticker-row safety-sticker-row"/);
   assert.match(page, /function SafetySticker/);
+  assert.match(page, /safety-icons-v1\.png/);
+  assert.match(page, /<SafetyStickerIcon sticker=\{sticker\}\/>/);
+  assert.match(css, /\.safety-sticker\{width:24%;height:24%;[^}]*background:transparent/);
+  assert.doesNotMatch(css, /\.safety-sticker\{min-width:62%/);
 });
 
 test("garage vehicles can be removed without opening the build", async () => {

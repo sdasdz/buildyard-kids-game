@@ -468,19 +468,29 @@ const DEFAULT_PAINT: Paint = {
 
 const PART_TINTS = ["#f2b632", "#e86642", "#45ad76", "#3f91cf", "#745bb0", "#d65f93", "#ecebe2"];
 const SAFETY_STICKERS = [
-  { id: "", icon: "—", label: "无贴纸" },
-  { id: "warning", icon: "⚠", label: "注意安全" },
-  { id: "flammable", icon: "🔥", label: "易燃" },
-  { id: "explosive", icon: "💥", label: "易爆" },
-  { id: "no-fire", icon: "🚫", label: "禁止烟火" },
-  { id: "fire-safe", icon: "🧯", label: "防火" },
-  { id: "electric", icon: "⚡", label: "高压危险" },
-  { id: "hot", icon: "♨", label: "当心高温" },
-  { id: "helmet", icon: "⛑", label: "戴安全帽" },
-  { id: "first-aid", icon: "✚", label: "急救" },
-  { id: "rescue", icon: "SOS", label: "紧急救援" },
-  { id: "construction", icon: "🚧", label: "施工注意" },
+  { id: "", sprite: -1, label: "无贴纸" },
+  { id: "warning", sprite: 0, label: "注意安全" },
+  { id: "flammable", sprite: 1, label: "易燃" },
+  { id: "explosive", sprite: 2, label: "易爆" },
+  { id: "no-fire", sprite: 3, label: "禁止烟火" },
+  { id: "fire-safe", sprite: 4, label: "防火" },
+  { id: "electric", sprite: 5, label: "高压危险" },
+  { id: "hot", sprite: 6, label: "当心高温" },
+  { id: "helmet", sprite: 7, label: "戴安全帽" },
+  { id: "first-aid", sprite: 8, label: "急救" },
+  { id: "rescue", sprite: 9, label: "紧急救援" },
+  { id: "construction", sprite: 10, label: "施工注意" },
 ];
+
+function SafetyStickerIcon({ sticker }: { sticker: (typeof SAFETY_STICKERS)[number] }) {
+  if (sticker.sprite < 0) return <span className="safety-icon-none">—</span>;
+  const col = sticker.sprite % 4;
+  const row = Math.floor(sticker.sprite / 4);
+  return <span className="safety-icon" style={{
+    backgroundImage: "url(/assets/safety-icons-v1.png)",
+    backgroundPosition: `${col * 33.333}% ${row * 33.333}%`,
+  }}/>;
+}
 
 function defaultPartColor(part: Part, paint: Paint) {
   if (part.category === "move") return paint.wheels;
@@ -516,8 +526,8 @@ function PartArtwork({ part, paint, hit = false }: { part: Part; paint: Paint; h
 function SafetySticker({ value }: { value: string }) {
   if (!value) return null;
   const sticker = SAFETY_STICKERS.find((item) => item.id === value);
-  if (!sticker) return <i className="part-sticker">{value}</i>;
-  return <i className={`part-sticker safety-sticker sticker-${sticker.id}`}><span>{sticker.icon}</span><b>{sticker.label}</b></i>;
+  if (!sticker) return <i className="part-sticker legacy-sticker">{value}</i>;
+  return <i className="part-sticker safety-sticker" aria-label={sticker.label}><SafetyStickerIcon sticker={sticker}/></i>;
 }
 const DEFAULT_SAVE: SaveData = {
   stars: 0,
@@ -1224,7 +1234,7 @@ export default function Home() {
       <div className="paint-section"><b>搭配颜色</b><div className="swatches">{["#ff7b3e","#2e98d1","#754fbb","#68b33e","#f4e04d","#ffffff"].map((c, i) => <button key={c} aria-label={`搭配颜色 ${i + 1}`} className={paint.secondary === c ? "chosen" : ""} style={{ background: c }} onClick={() => setPaint({ ...paint, secondary: c })}/>)}</div></div>
       <div className="paint-section"><b>轮胎轮毂颜色</b><div className="swatches">{["#27313d","#ffd43b","#ff6b4a","#46aaf2","#8b6fe8","#f3f3ec"].map((c, i) => <button key={c} aria-label={`轮胎颜色 ${i + 1}`} className={paint.wheels === c ? "chosen" : ""} style={{ background: c }} onClick={() => setPaint({ ...paint, wheels: c })}/>)}</div></div>
       <div className="paint-section"><b>花纹</b><div className="option-row">{[["none","纯色"],["stripe","闪电"],["dots","圆点"]].map(([v,n]) => <button key={v} className={paint.pattern === v ? "chosen" : ""} onClick={() => setPaint({ ...paint, pattern: v })}>{v === "stripe" ? "⚡" : v === "dots" ? "●●" : "▰"}<small>{n}</small></button>)}</div></div>
-      <div className="paint-section safety-paint-section"><b>安全警告装饰</b><small className="paint-help">选择一种贴在车身上</small><div className="sticker-row safety-sticker-row">{SAFETY_STICKERS.map((sticker) => <button key={sticker.id || "none"} aria-label={sticker.label} title={sticker.label} className={paint.sticker === sticker.id ? "chosen" : ""} onClick={() => setPaint({ ...paint, sticker: sticker.id })}><span>{sticker.icon}</span><small>{sticker.label}</small></button>)}</div></div>
+      <div className="paint-section safety-paint-section"><b>安全警告装饰</b><small className="paint-help">选择一个小标志贴在车身上</small><div className="sticker-row safety-sticker-row">{SAFETY_STICKERS.map((sticker) => <button key={sticker.id || "none"} aria-label={sticker.label} title={sticker.label} className={paint.sticker === sticker.id ? "chosen" : ""} onClick={() => setPaint({ ...paint, sticker: sticker.id })}><SafetyStickerIcon sticker={sticker}/><small>{sticker.label}</small></button>)}</div></div>
       <div className="paint-section"><b>特别效果</b><div className="option-row"><button className={paint.finish === "clean" ? "chosen" : ""} onClick={() => setPaint({ ...paint, finish: "clean" })}>✨<small>亮晶晶</small></button><button className={paint.finish === "mud" ? "chosen" : ""} onClick={() => setPaint({ ...paint, finish: "mud" })}>🟤<small>泥点勇士</small></button></div></div>
     </div>}
 
