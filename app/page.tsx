@@ -21,6 +21,8 @@ type Part = PartDef & {
   scale: number;
   flip: boolean;
   z: number;
+  originalColor?: boolean;
+  // Kept only so vehicles saved by the previous version still open correctly.
   colorMode?: PartColorMode;
   color?: string;
 };
@@ -212,40 +214,139 @@ const SPRITES: Record<string, [number, number]> = {
   aidkit:[11,12], cones:[11,13], step:[11,14], spare:[11,15],
 };
 
+const SPRITE_SHEETS: Record<number, string> = {
+  6: "v9-workshop-chassis.png",
+  7: "v9-workshop-bodies.png",
+  8: "v9-workshop-cabs.png",
+  9: "v9-workshop-tools.png",
+  10: "v9-workshop-movement.png",
+  11: "v2-extras.png",
+  12: "v5-flat-transport.svg",
+};
+
 function spriteStyle(id: string): React.CSSProperties | undefined {
   const sprite = SPRITES[id];
   if (!sprite) return undefined;
   const index = sprite[1];
   const col = index % 4;
   const row = Math.floor(index / 4);
-  const sheets: Record<number, string> = {
-    6: "v9-workshop-chassis.png",
-    7: "v9-workshop-bodies.png",
-    8: "v9-workshop-cabs.png",
-    9: "v9-workshop-tools.png",
-    10: "v9-workshop-movement.png",
-    11: "v2-extras.png",
-    12: "v5-flat-transport.svg",
-  };
   return {
-    backgroundImage: `url(/assets/${sheets[sprite[0]]}?v=9.1)`,
+    backgroundImage: `url(/assets/${SPRITE_SHEETS[sprite[0]]}?v=9.1)`,
     backgroundPosition: `${col * 33.333}% ${row * 33.333}%`,
   };
 }
 
-function spriteMaskStyle(id: string): React.CSSProperties | undefined {
-  const style = spriteStyle(id);
-  if (!style?.backgroundImage) return undefined;
-  return {
-    WebkitMaskImage: style.backgroundImage,
-    maskImage: style.backgroundImage,
-    WebkitMaskPosition: style.backgroundPosition,
-    maskPosition: style.backgroundPosition,
-    WebkitMaskSize: "400% 400%",
-    maskSize: "400% 400%",
-    WebkitMaskRepeat: "no-repeat",
-    maskRepeat: "no-repeat",
-  };
+const recolorCache = new Map<string, ImageData>();
+
+function rgbToHsv(red: number, green: number, blue: number) {
+  const r = red / 255;
+  const g = green / 255;
+  const b = blue / 255;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const delta = max - min;
+  let hue = 0;
+  if (delta) {
+    if (max === r) hue = ((g - b) / delta) % 6;
+    else if (max === g) hue = (b - r) / delta + 2;
+    else hue = (r - g) / delta + 4;
+    hue = ((hue / 6) + 1) % 1;
+  }
+  return [hue, max ? delta / max : 0, max] as const;
+}
+
+function hsvToRgb(hue: number, saturation: number, value: number) {
+  const section = Math.floor(hue * 6);
+  const fraction = hue * 6 - section;
+  const p = value * (1 - saturation);
+  const q = value * (1 - fraction * saturation);
+  const t = value * (1 - (1 - fraction) * saturation);
+  const channels = [[value, t, p], [q, value, p], [p, value, t], [p, q, value], [t, p, value], [value, p, q]][section % 6];
+  return channels.map((channel) => Math.round(channel * 255));
+}
+
+function hueDistance(a: number, b: number) {
+  const distance = Math.abs(a - b);
+  return Math.min(distance, 1 - distance);
+}
+
+function RecoloredPartArt({ id, color, accent, pattern, category }: { id: string; color: string; accent: string; pattern: string; category: Category }) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const sprite = SPRITES[id];
+    if (!canvas || !sprite) return;
+    const context = canvas.getContext("2d", { willReadFrequently: true });
+    if (!context) return;
+    const cacheKey = `${id}:${color}:${accent}:${pattern}`;
+    const cached = recolorCache.get(cacheKey);
+    if (cached) {
+      context.putImageData(cached, 0, 0);
+      return;
+    }
+
+    let cancelled = false;
+    const image = new Image();
+    image.onload = () => {
+      if (cancelled) return;
+      const sourceWidth = image.naturalWidth / 4;
+      const sourceHeight = image.naturalHeight / 4;
+      const col = sprite[1] % 4;
+      const row = Math.floor(sprite[1] / 4);
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.drawImage(image, col * sourceWidth, row * sourceHeight, sourceWidth, sourceHeight, 0, 0, canvas.width, canvas.height);
+      const pixels = context.getImageData(0, 0, canvas.width, canvas.height);
+      const hueBins = new Array(36).fill(0) as number[];
+
+      for (let index = 0; index < pixels.data.length; index += 4) {
+        if (pixels.data[index + 3] < 32) continue;
+        const [hue, saturation, value] = rgbToHsv(pixels.data[index], pixels.data[index + 1], pixels.data[index + 2]);
+        if (saturation < .28 || value < .16) continue;
+        if (category === "cab" && hue > .47 && hue < .64) continue; // keep blue glass untouched
+        hueBins[Math.floor(hue * hueBins.length) % hueBins.length] += saturation * pixels.data[index + 3];
+      }
+
+      const sourceHue = (hueBins.indexOf(Math.max(...hueBins)) + .5) / hueBins.length;
+      const [targetHue, targetSaturation, targetValue] = rgbToHsv(
+        Number.parseInt(color.slice(1, 3), 16),
+        Number.parseInt(color.slice(3, 5), 16),
+        Number.parseInt(color.slice(5, 7), 16),
+      );
+      const [accentHue, accentSaturation, accentValue] = rgbToHsv(
+        Number.parseInt(accent.slice(1, 3), 16),
+        Number.parseInt(accent.slice(3, 5), 16),
+        Number.parseInt(accent.slice(5, 7), 16),
+      );
+
+      for (let index = 0; index < pixels.data.length; index += 4) {
+        if (pixels.data[index + 3] < 32) continue;
+        const [hue, saturation, value] = rgbToHsv(pixels.data[index], pixels.data[index + 1], pixels.data[index + 2]);
+        if (saturation < .25 || hueDistance(hue, sourceHue) > .115) continue;
+        const pixel = index / 4;
+        const x = pixel % canvas.width;
+        const y = Math.floor(pixel / canvas.width);
+        const useAccent = pattern === "stripe"
+          ? (x + y) % 42 > 29
+          : pattern === "dots" && ((x % 30) - 15) ** 2 + ((y % 30) - 15) ** 2 < 28;
+        const paintHue = useAccent ? accentHue : targetHue;
+        const paintSaturation = useAccent ? accentSaturation : targetSaturation;
+        const paintValue = useAccent ? accentValue : targetValue;
+        const nextValue = Math.max(.08, Math.min(1, value * .86 + paintValue * .14));
+        const nextSaturation = Math.max(.18, Math.min(1, paintSaturation * .82 + saturation * .18));
+        const [red, green, blue] = hsvToRgb(paintHue, nextSaturation, nextValue);
+        pixels.data[index] = red;
+        pixels.data[index + 1] = green;
+        pixels.data[index + 2] = blue;
+      }
+      recolorCache.set(cacheKey, pixels);
+      context.putImageData(pixels, 0, 0);
+    };
+    image.src = `/assets/${SPRITE_SHEETS[sprite[0]]}?v=9.1`;
+    return () => { cancelled = true; };
+  }, [accent, category, color, id, pattern]);
+
+  return <canvas ref={canvasRef} className="part-recolor" width="256" height="256" aria-hidden="true"/>;
 }
 
 const ACTION_EFFECT: Record<string, { scene: string; label: string }> = {
@@ -366,6 +467,20 @@ const DEFAULT_PAINT: Paint = {
 };
 
 const PART_TINTS = ["#f2b632", "#e86642", "#45ad76", "#3f91cf", "#745bb0", "#d65f93", "#ecebe2"];
+const SAFETY_STICKERS = [
+  { id: "", icon: "—", label: "无贴纸" },
+  { id: "warning", icon: "⚠", label: "注意安全" },
+  { id: "flammable", icon: "🔥", label: "易燃" },
+  { id: "explosive", icon: "💥", label: "易爆" },
+  { id: "no-fire", icon: "🚫", label: "禁止烟火" },
+  { id: "fire-safe", icon: "🧯", label: "防火" },
+  { id: "electric", icon: "⚡", label: "高压危险" },
+  { id: "hot", icon: "♨", label: "当心高温" },
+  { id: "helmet", icon: "⛑", label: "戴安全帽" },
+  { id: "first-aid", icon: "✚", label: "急救" },
+  { id: "rescue", icon: "SOS", label: "紧急救援" },
+  { id: "construction", icon: "🚧", label: "施工注意" },
+];
 
 function defaultPartColor(part: Part, paint: Paint) {
   if (part.category === "move") return paint.wheels;
@@ -379,6 +494,27 @@ function resolvedPartColor(part: Part, paint: Paint) {
   if (part.colorMode === "wheels") return paint.wheels;
   if (part.colorMode === "custom" && part.color) return part.color;
   return defaultPartColor(part, paint);
+}
+
+function directPartColor(part: Part, paint: Paint) {
+  if (part.originalColor || part.colorMode === "original") return undefined;
+  return resolvedPartColor(part, paint);
+}
+
+function PartArtwork({ part, paint, hit = false }: { part: Part; paint: Paint; hit?: boolean }) {
+  const color = directPartColor(part, paint);
+  return <>
+    <span className="part-art" style={spriteStyle(part.id)}/>
+    {color && <RecoloredPartArt id={part.id} color={color} accent={paint.secondary} pattern={paint.pattern} category={part.category}/>}
+    {hit && <span className="part-hit"/>}
+  </>;
+}
+
+function SafetySticker({ value }: { value: string }) {
+  if (!value) return null;
+  const sticker = SAFETY_STICKERS.find((item) => item.id === value);
+  if (!sticker) return <i className="part-sticker">{value}</i>;
+  return <i className={`part-sticker safety-sticker sticker-${sticker.id}`}><span>{sticker.icon}</span><b>{sticker.label}</b></i>;
 }
 const DEFAULT_SAVE: SaveData = {
   stars: 0,
@@ -942,7 +1078,7 @@ export default function Home() {
     const minY = Math.min(...carParts.map((p) => p.y));
     const scale = previewScale ?? (small ? .27 : 1);
     return carParts.map((p) => (
-      <div key={p.uid} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""} ${p.colorMode && !["auto", "original"].includes(p.colorMode) ? "custom-color" : ""} ${p.colorMode === "original" ? "original-color" : ""}`} style={{
+      <div key={p.uid} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""}`} style={{
         left: (p.x - minX) * scale + (small ? 12 : 0),
         top: (p.y - minY) * scale + (small ? 15 : 0),
         width: p.w * p.scale * scale,
@@ -951,7 +1087,7 @@ export default function Home() {
         zIndex: p.z,
         "--part-color": resolvedPartColor(p, carPaint),
         "--part-accent": carPaint.secondary,
-      } as React.CSSProperties}><span className="part-motion">{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <><span className="part-art" style={spriteStyle(p.id)}/><span className="paint-overlay" style={spriteMaskStyle(p.id)}/></> : p.icon}</span></div>
+      } as React.CSSProperties}><span className="part-motion">{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <PartArtwork part={p} paint={carPaint}/> : p.icon}</span></div>
     ));
   };
 
@@ -1040,21 +1176,17 @@ export default function Home() {
           </div>}
           <div className="horizon"><span>☁</span><span>☁</span></div><div className="ground-line"/>
           {!parts.length && <div className="canvas-empty"><span>👇</span><b>先从左边选一副底盘吧</b><small>底盘是整辆工程车的基础</small></div>}
-          {parts.map((p) => <div key={p.uid} data-part-id={p.id} data-category={p.category} onPointerDown={(e) => onPointerDown(e, p)} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""} ${p.colorMode && !["auto", "original"].includes(p.colorMode) ? "custom-color" : ""} ${p.colorMode === "original" ? "original-color" : ""} ${selected === p.uid ? "selected" : ""}`} style={{
+          {parts.map((p) => <div key={p.uid} data-part-id={p.id} data-category={p.category} onPointerDown={(e) => onPointerDown(e, p)} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""} ${selected === p.uid ? "selected" : ""}`} style={{
             left: p.x, top: p.y, width: p.w * p.scale, height: p.h * p.scale,
             transform: `rotate(${p.rotate}deg) scaleX(${p.flip ? -1 : 1})`, zIndex: p.z,
             "--part-layer": p.z,
             "--part-color": resolvedPartColor(p, paint),
             "--part-accent": paint.secondary,
-          } as React.CSSProperties}>{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <><span className="part-art" style={spriteStyle(p.id)}/><span className="paint-overlay" style={spriteMaskStyle(p.id)}/><span className="part-hit"/></> : <span>{p.icon}</span>}{paint.sticker && p.category === "body" && <i className="part-sticker">{paint.sticker}</i>}</div>)}
+          } as React.CSSProperties}>{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <PartArtwork part={p} paint={paint} hit/> : <span>{p.icon}</span>}{p.category === "body" && <SafetySticker value={paint.sticker}/>}</div>)}
           {selectedPart && !showPaint && !result && <div className="part-color-bar" aria-label="单个零件调色">
-            <b>单件颜色</b>
-            <button aria-label="跟随整车涂装" title="跟随整车涂装" className={!selectedPart.colorMode || selectedPart.colorMode === "auto" ? "chosen follow-paint" : "follow-paint"} onClick={() => updateSelected({ colorMode: "auto", color: undefined })}><span>🎨</span><small>跟随</small></button>
-            <button aria-label="使用整车主色" className={selectedPart.colorMode === "primary" ? "chosen linked-color" : "linked-color"} style={{ background: paint.primary }} onClick={() => updateSelected({ colorMode: "primary", color: undefined })}><small>主色</small></button>
-            <button aria-label="使用整车辅色" className={selectedPart.colorMode === "secondary" ? "chosen linked-color" : "linked-color"} style={{ background: paint.secondary }} onClick={() => updateSelected({ colorMode: "secondary", color: undefined })}><small>辅色</small></button>
-            <button aria-label="使用轮胎颜色" className={selectedPart.colorMode === "wheels" ? "chosen linked-color" : "linked-color"} style={{ background: paint.wheels }} onClick={() => updateSelected({ colorMode: "wheels", color: undefined })}><small>轮色</small></button>
-            {PART_TINTS.map((color) => <button key={color} aria-label={`改成 ${color}`} className={selectedPart.colorMode === "custom" && selectedPart.color === color ? "chosen color-dot" : "color-dot"} style={{ background: color }} onClick={() => updateSelected({ colorMode: "custom", color })}/>) }
-            <button aria-label="恢复素材原色" title="恢复素材原色" className={selectedPart.colorMode === "original" ? "chosen original-paint" : "original-paint"} onClick={() => updateSelected({ colorMode: "original", color: undefined })}><span>✦</span><small>原色</small></button>
+            <b>直接换色</b>
+            {PART_TINTS.map((color) => <button key={color} aria-label={`改成 ${color}`} className={!selectedPart.originalColor && selectedPart.color === color ? "chosen color-dot" : "color-dot"} style={{ background: color }} onClick={() => updateSelected({ color, originalColor: false, colorMode: undefined })}/>) }
+            <button aria-label="恢复素材原色" title="恢复素材原色" className={selectedPart.originalColor ? "chosen original-paint" : "original-paint"} onClick={() => updateSelected({ originalColor: true, color: undefined, colorMode: undefined })}><span>✦</span><small>原色</small></button>
           </div>}
           {selectedPart && !showPaint && !result && <div className="selection-tools">
             <b>{selectedPart.name}</b>
@@ -1077,7 +1209,7 @@ export default function Home() {
       <div className="paint-section"><b>搭配颜色</b><div className="swatches">{["#ff7b3e","#2e98d1","#754fbb","#68b33e","#f4e04d","#ffffff"].map((c, i) => <button key={c} aria-label={`搭配颜色 ${i + 1}`} className={paint.secondary === c ? "chosen" : ""} style={{ background: c }} onClick={() => setPaint({ ...paint, secondary: c })}/>)}</div></div>
       <div className="paint-section"><b>轮胎轮毂颜色</b><div className="swatches">{["#27313d","#ffd43b","#ff6b4a","#46aaf2","#8b6fe8","#f3f3ec"].map((c, i) => <button key={c} aria-label={`轮胎颜色 ${i + 1}`} className={paint.wheels === c ? "chosen" : ""} style={{ background: c }} onClick={() => setPaint({ ...paint, wheels: c })}/>)}</div></div>
       <div className="paint-section"><b>花纹</b><div className="option-row">{[["none","纯色"],["stripe","闪电"],["dots","圆点"]].map(([v,n]) => <button key={v} className={paint.pattern === v ? "chosen" : ""} onClick={() => setPaint({ ...paint, pattern: v })}>{v === "stripe" ? "⚡" : v === "dots" ? "●●" : "▰"}<small>{n}</small></button>)}</div></div>
-      <div className="paint-section"><b>贴纸</b><div className="sticker-row">{["","⭐","🌈","🦕","🚀","🐾"].map((s) => <button key={s || "no"} className={paint.sticker === s ? "chosen" : ""} onClick={() => setPaint({ ...paint, sticker: s })}>{s || "无"}</button>)}</div></div>
+      <div className="paint-section safety-paint-section"><b>安全警告装饰</b><small className="paint-help">选择一种贴在车身上</small><div className="sticker-row safety-sticker-row">{SAFETY_STICKERS.map((sticker) => <button key={sticker.id || "none"} aria-label={sticker.label} title={sticker.label} className={paint.sticker === sticker.id ? "chosen" : ""} onClick={() => setPaint({ ...paint, sticker: sticker.id })}><span>{sticker.icon}</span><small>{sticker.label}</small></button>)}</div></div>
       <div className="paint-section"><b>特别效果</b><div className="option-row"><button className={paint.finish === "clean" ? "chosen" : ""} onClick={() => setPaint({ ...paint, finish: "clean" })}>✨<small>亮晶晶</small></button><button className={paint.finish === "mud" ? "chosen" : ""} onClick={() => setPaint({ ...paint, finish: "mud" })}>🟤<small>泥点勇士</small></button></div></div>
     </div>}
 

@@ -91,19 +91,30 @@ test("adding a part preserves every already-positioned instance", async () => {
   assert.doesNotMatch(addPart, /CORE_CATEGORIES/);
 });
 
-test("selected modules support persistent direct material tinting", async () => {
+test("selected modules use direct pixel recoloring without overlay modes", async () => {
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
 
-  assert.match(page, /type PartColorMode = "auto" \| "primary" \| "secondary" \| "wheels" \| "custom" \| "original"/);
-  assert.match(page, /colorMode\?: PartColorMode/);
-  assert.match(page, /function resolvedPartColor/);
+  assert.match(page, /function RecoloredPartArt/);
+  assert.match(page, /context\.getImageData/);
+  assert.match(page, /hsvToRgb/);
   assert.match(page, /className="part-color-bar"/);
-  assert.match(page, /updateSelected\(\{ colorMode: "custom", color \}\)/);
-  assert.match(page, /updateSelected\(\{ colorMode: "original", color: undefined \}\)/);
+  assert.match(page, /updateSelected\(\{ color, originalColor: false, colorMode: undefined \}\)/);
+  assert.match(page, /updateSelected\(\{ originalColor: true, color: undefined, colorMode: undefined \}\)/);
   assert.ok(page.match(/"--part-color": resolvedPartColor/g)?.length >= 2);
-  assert.match(css, /\.part\.with-art\.custom-color \.paint-overlay\{opacity:/);
-  assert.match(css, /\.part\.with-art\.original-color \.paint-overlay\{display:none!important\}/);
+  assert.match(css, /\.part-recolor\{position:absolute/);
+  assert.doesNotMatch(page, /paint-overlay|spriteMaskStyle/);
+  assert.doesNotMatch(css, /paint-overlay|mix-blend-mode/);
+});
+
+test("paint shop includes a broad safety warning decal library", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+
+  for (const label of ["注意安全", "易燃", "易爆", "禁止烟火", "防火", "高压危险", "当心高温", "戴安全帽", "急救", "紧急救援", "施工注意"]) {
+    assert.match(page, new RegExp(label));
+  }
+  assert.match(page, /className="sticker-row safety-sticker-row"/);
+  assert.match(page, /function SafetySticker/);
 });
 
 test("assembly zones are visible guidance only", async () => {
