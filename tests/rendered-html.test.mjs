@@ -157,6 +157,161 @@ test("assembly zones are visible guidance only", async () => {
     assert.match(page, new RegExp(`className="${zone}"`));
     assert.match(css, new RegExp(`\\.${zone}\\{`));
   }
-  assert.match(page, /仅作参考 · 可以自由摆放/);
+  assert.match(page, /参考位置，也可以自己摆/);
   assert.match(css, /\.rig-guide\{[^}]*pointer-events:none/);
+});
+
+test("story library exposes 100 missions and does not trap new players in one theme", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const originalStart = page.indexOf("const EVENT_SEEDS = [");
+  const originalEnd = page.indexOf("] as const;", originalStart);
+  const extraStart = page.indexOf("const EXTRA_EVENT_SEEDS = [");
+  const extraEnd = page.indexOf("] as const;", extraStart);
+  const originalEntries = page.slice(originalStart, originalEnd).match(/^\s*\["/gm) ?? [];
+  const extraEntries = page.slice(extraStart, extraEnd).match(/^\s*\["/gm) ?? [];
+  const themeNames = [
+    ...page.slice(originalStart, originalEnd).matchAll(/^\s*\["([^"]+)"/gm),
+    ...page.slice(extraStart, extraEnd).matchAll(/^\s*\["([^"]+)"/gm),
+  ].map((match) => match[1]);
+
+  assert.equal(originalEntries.length, 60);
+  assert.equal(extraEntries.length, 40);
+  for (const theme of ["建筑工地", "农场田野", "城市维护", "山地救援", "消防防灾", "港口物流", "矿山探索", "海滩水边", "冰雪地区", "奇想任务"]) {
+    assert.equal(themeNames.filter((name) => name === theme).length, 10, `${theme} should contain 10 stories`);
+  }
+  assert.match(page, /const ALL_EVENT_SEEDS = \[\.\.\.EVENT_SEEDS, \.\.\.EXTRA_EVENT_SEEDS\]/);
+  assert.match(page, /unlocked: 3/);
+  assert.match(page, /unlocked: Math\.max\(3,/);
+  assert.match(page, /recent: \[\.\.\.s\.recent\.slice\(-9\), chosen\.id\]/);
+  assert.match(page, /item\.theme !== mission\?\.theme/);
+  assert.match(page, /当前可选 \{availableMissions\.length\} \/ 共 \{MISSIONS\.length\} 个故事/);
+});
+
+test("missions provide precise briefings and play in a dedicated story theatre", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  assert.match(page, /objective: string/);
+  assert.match(page, /steps: readonly \[string, string, string\]/);
+  assert.match(page, /这次要做什么/);
+  assert.match(page, /完成时会看到/);
+  assert.match(page, /setScreen\("performance"\)/);
+  assert.match(page, /screen === "performance" && result/);
+  assert.match(page, /className="theatre-target theatre-before"/);
+  assert.match(page, /className="theatre-target theatre-after"/);
+  assert.match(page, /回仓库继续修改/);
+  assert.doesNotMatch(page, /modal-shade result-shade/);
+  assert.match(css, /\.performance-screen\{/);
+  assert.match(css, /@keyframes theatre-before/);
+  assert.match(css, /@keyframes theatre-after/);
+  assert.match(css, /@keyframes theatre-tool-lower/);
+  assert.match(css, /\.stage-port \.theatre-stage/);
+  assert.match(css, /\.stage-mine \.theatre-stage/);
+});
+
+test("brief mission hints use offline narration instead of mechanical browser speech", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+
+  assert.match(page, /const HINT_VOICE_LINES/);
+  assert.match(page, /voiceHint: HINT_VOICE_LINES\[e\[5\]\]/);
+  assert.match(page, /voiceKey: e\[5\]/);
+  assert.match(page, /function playNarrationFiles/);
+  assert.match(page, /audio\.addEventListener\("ended", \(\) => playAt\(index \+ 1\)/);
+  assert.match(page, /resourcePath\(`\/audio\/hint-\$\{mission\.voiceKey\}\.wav`\)/);
+  assert.match(page, /听故事和提示/);
+  assert.match(page, /只听提示/);
+  assert.doesNotMatch(page, /speechSynthesis|SpeechSynthesisUtterance/);
+  for (let index = 1; index <= 100; index += 1) {
+    await access(new URL(`../public/audio/mission-${index}.wav`, import.meta.url));
+  }
+  for (const key of ["dig", "lift", "carry", "drill", "smash", "roll", "push", "tow", "farm", "clear", "water", "clean", "snow", "rough", "bridge", "light", "fire", "mix", "rescue", "fork"]) {
+    await access(new URL(`../public/audio/hint-${key}.wav`, import.meta.url));
+  }
+});
+
+test("desktop file builds resolve art and narration beside index.html", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const main = await readFile(new URL("../desktop-app/main.cjs", import.meta.url), "utf8");
+
+  assert.match(page, /function resourcePath\(path: string\)/);
+  assert.match(page, /window\.location\.protocol === "file:"/);
+  assert.match(page, /return `\.\$\{path\}`/);
+  assert.match(page, /backgroundImage: `url\(\$\{resourcePath\(`/);
+  assert.match(page, /image\.src = resourcePath\(/);
+  assert.match(page, /resourcePath\(`\/audio\/\$\{mission\.id\}\.wav`\)/);
+  assert.match(main, /loadImage\("\.\/assets\/v9-workshop-movement\.png"\)/);
+  assert.match(main, /loadImage\("\.\/assets\/transport-gliderseat-v11\.png"\)/);
+  assert.match(main, /loadImage\("\.\/assets\/movement-ski-v13\.png"\)/);
+  assert.match(main, /loadImage\("\.\/assets\/transport-seaplanebody-v13\.png"\)/);
+  assert.match(main, /loadAudio\("\.\/audio\/hint-drill\.wav"\)/);
+  assert.match(main, /BUILDYARD_SMOKE_REPORT/);
+});
+
+test("warehouse includes a long auger drill and a working wrecking-ball module", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  assert.match(page, /id: "augerdrill", name: "长螺旋钻机"/);
+  assert.match(page, /id: "wreckingball", name: "工程大摆锤"/);
+  assert.match(page, /augerdrill: "tool-auger-drill-v1\.png"/);
+  assert.match(page, /wreckingball: "tool-wrecking-ball-v1\.png"/);
+  assert.match(page, /smash: \{ scene: "⚫💥🧱"/);
+  assert.match(page, /"wreckingball"\]\)/);
+  assert.match(css, /@keyframes theatre-auger-work/);
+  assert.match(css, /@keyframes theatre-wrecking-swing/);
+  await access(new URL("../public/assets/tool-auger-drill-v1.png", import.meta.url));
+  await access(new URL("../public/assets/tool-wrecking-ball-v1.png", import.meta.url));
+});
+
+test("transport, accessory, and special movement modules share the side-view workshop art direction", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+
+  assert.match(page, /11: "v10-side-extras\.png"/);
+  assert.match(page, /12: "v10-side-transport\.png"/);
+  assert.match(page, /13: "v10-side-special-movement\.png"/);
+  assert.match(page, /rollerwheel:\[13,0\]/);
+  assert.match(page, /ski:\[13,1\]/);
+  assert.match(page, /hover:\[13,2\]/);
+  for (const asset of ["v10-side-extras.png", "v10-side-transport.png", "v10-side-special-movement.png"]) {
+    await access(new URL(`../public/assets/${asset}`, import.meta.url));
+  }
+});
+
+test("new transport modules are individually cropped and the workshop uses kid-readable categories", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  assert.match(page, /hoverframe:\[12,8\]/);
+  assert.match(page, /hovercab:\[12,0\]/);
+  assert.match(page, /chassis: \{ label: "车底"/);
+  assert.match(page, /move: \{ label: "轮子"/);
+  assert.match(page, /cab: \{ label: "车头"/);
+  assert.match(page, /help: \{ label: "随车物品"/);
+  assert.match(page, /className="category-picture"/);
+  assert.match(page, /第 1 步：点一个“车底”/);
+  assert.match(css, /V12 kid-first workshop navigation/);
+  for (const part of ["hovercab", "pilotcab", "gliderseat", "bubblecockpit", "hoverbody", "airbody", "gliderpod", "hoverframe", "airframe", "gliderframe", "hovercraftskirt", "wing", "paraglider", "propeller"]) {
+    assert.match(page, new RegExp(`${part}: "transport-${part}-v11\\.png"`));
+    await access(new URL(`../public/assets/transport-${part}-v11.png`, import.meta.url));
+  }
+});
+
+test("problem modules use complete independent RGBA assets without sprite-sheet bleed", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const assets = [
+    ["greentrack", "movement-greentrack-v13.png"],
+    ["ski", "movement-ski-v13.png"],
+    ["hover", "movement-hover-v13.png"],
+    ["pontoonframe", "transport-pontoonframe-v13.png"],
+    ["seaplanebody", "transport-seaplanebody-v13.png"],
+  ];
+
+  for (const [part, fileName] of assets) {
+    assert.match(page, new RegExp(`${part}: "${fileName.replaceAll(".", "\\.")}"`));
+    const png = await readFile(new URL(`../public/assets/${fileName}`, import.meta.url));
+    assert.equal(png.subarray(1, 4).toString("ascii"), "PNG");
+    assert.equal(png[25], 6, `${fileName} must be RGBA rather than a painted checkerboard`);
+    assert.ok(png.readUInt32BE(16) >= 1024);
+    assert.ok(png.readUInt32BE(20) >= 700);
+  }
 });

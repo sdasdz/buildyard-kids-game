@@ -1,0 +1,50 @@
+{
+  "name": "buildyard-kids-desktop",
+  "version": "1.2.2",
+  "private": true,
+  "description": "工程车创造营 Windows 离线桌面版",
+  "main": "main.cjs",
+  "author": "工程车创造营",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "electron": "35.7.5",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "cn.buildyard.kids.game",
+    "productName": "工程车创造营",
+    "copyright": "Copyright © 2026 工程车创造营",
+    "asar": true,
+    "compression": "maximum",
+    "directories": {
+      "output": "E:/BuildyardRelease122"
+    },
+    "files": [
+      "main.cjs",
+      "app-dist/**/*",
+      "icon.ico",
+      "package.json"
+    ],
+    "win": {
+      "icon": "icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "工程车创造营-直接安装版-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "工程车创造营",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false,
+      "installerLanguages": ["zh_CN"],
+      "language": "2052"
+    }
+  }
+}

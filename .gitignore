@@ -45,3 +45,12 @@ next-env.d.ts
 /dev-output.log
 /dev-error.log
 /public/assets/*-source.png
+
+# desktop packaging dependencies and build output
+/desktop-app/node_modules/
+/desktop-app/app-dist/
+/desktop-app/release/
+
+# local delivery artifacts (source and required game media remain tracked)
+/安装包/
+/*.tar.gz

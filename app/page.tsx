@@ -37,6 +37,13 @@ type Mission = {
   needs: string[];
   hint: string;
   reward: string;
+  objective: string;
+  steps: readonly [string, string, string];
+  success: string;
+  targetBefore: string;
+  targetAfter: string;
+  voiceHint: string;
+  voiceKey: string;
 };
 type SaveData = {
   stars: number;
@@ -159,6 +166,7 @@ const PARTS: PartDef[] = [
   { id: "crane", name: "起重吊臂", icon: "⌝", category: "tool", tags: ["lift"], w: 150, h: 180 },
   { id: "fork", name: "叉车臂", icon: "乚", category: "tool", tags: ["lift", "carry"], w: 120, h: 108 },
   { id: "drill", name: "钻头", icon: "◆", category: "tool", tags: ["drill", "dig"], w: 125, h: 72 },
+  { id: "augerdrill", name: "长螺旋钻机", icon: "⟿", category: "tool", tags: ["drill", "dig"], w: 196, h: 78 },
   { id: "roller", name: "压路滚筒", icon: "⬤", category: "tool", tags: ["roll"], w: 110, h: 110 },
   { id: "plow", name: "农田犁", icon: "≋", category: "tool", tags: ["farm", "dig"], w: 142, h: 76 },
   { id: "hose", name: "喷水炮", icon: "➹", category: "tool", tags: ["water", "fire"], w: 140, h: 76 },
@@ -168,6 +176,7 @@ const PARTS: PartDef[] = [
   { id: "grabber", name: "液压抓木爪", icon: "♆", category: "tool", tags: ["lift", "clear"], w: 128, h: 128 },
   { id: "mixer", name: "水泥搅拌筒", icon: "◒", category: "tool", tags: ["mix"], w: 148, h: 118 },
   { id: "hammer", name: "破碎锤", icon: "⇣", category: "tool", tags: ["drill", "clear"], w: 104, h: 142 },
+  { id: "wreckingball", name: "工程大摆锤", icon: "●", category: "tool", tags: ["smash", "clear"], w: 190, h: 130 },
   { id: "liftplatform", name: "高空作业篮", icon: "♜", category: "tool", tags: ["lift", "rescue"], w: 148, h: 158 },
   { id: "conveyor", name: "装卸传送臂", icon: "↗", category: "tool", tags: ["carry", "lift"], w: 160, h: 110 },
   { id: "lamp", name: "亮亮探照灯", icon: "🔦", category: "help", tags: ["light", "rescue"], w: 86, h: 70 },
@@ -190,7 +199,7 @@ const SPRITES: Record<string, [number, number]> = {
   excavatorchassis:[6,4], bulldozerchassis:[6,5], cranechassis:[6,6], dumpchassis:[6,7],
   firechassis:[6,8], farmchassis:[6,9], snowchassis:[6,10], miningchassis:[6,11],
   amphichassis:[6,12], citychassis:[6,13], rescuechassis:[6,14], fantasychassis:[6,15],
-  hoverframe:[12,0], airframe:[12,1], gliderframe:[12,2], pontoonframe:[12,3],
+  hoverframe:[12,8], airframe:[12,9], gliderframe:[12,10], pontoonframe:[12,11],
   utilitybody:[7,0], cargo:[7,1], miningdumpbody:[7,2], forkliftbody:[7,3],
   excavatorbase:[7,4], bulldozerbody:[7,5], cranebody:[7,6], bucketbody:[7,7],
   firebody:[7,8], tractorbody:[7,9], snowbody:[7,10], miningbody:[7,11],
@@ -200,7 +209,7 @@ const SPRITES: Record<string, [number, number]> = {
   farmcab:[8,4], rescuecab:[8,5], bulldozercab:[8,6], cranecab:[8,7],
   miningcab:[8,8], forkcab:[8,9], amphicab:[8,10], citycab:[8,11],
   farmcab2:[8,12], amphicab2:[8,13], snowcab:[8,14], fantasycab:[8,15],
-  hovercab:[12,8], pilotcab:[12,9], gliderseat:[12,10], bubblecockpit:[12,11],
+  hovercab:[12,0], pilotcab:[12,1], gliderseat:[12,2], bubblecockpit:[12,3],
   shovel:[9,0], blade:[9,1], crane:[9,2], fork:[9,3],
   drill:[9,4], roller:[9,5], plow:[9,6], hose:[9,7],
   tow:[9,8], brush:[9,9], snowblade:[9,10], grabber:[9,11],
@@ -208,7 +217,7 @@ const SPRITES: Record<string, [number, number]> = {
   wheel:[10,0], orangewheel:[10,1], bluewheel:[10,2], redwheel:[10,3],
   smallwheel:[10,4], farmwheel:[10,5], citywheel:[10,6], fantasywheel:[10,7],
   track:[10,8], miningtrack:[10,9], snowtrack:[10,10], greentrack:[10,11],
-  rollerwheel:[10,12], paddlewheel:[10,13], ski:[10,14], hover:[10,15],
+  rollerwheel:[13,0], paddlewheel:[10,13], ski:[13,1], hover:[13,2],
   hovercraftskirt:[12,12], wing:[12,13], paraglider:[12,14], propeller:[12,15],
   engine:[11,0], battery:[11,1], suspension:[11,2], lamp:[11,3],
   siren:[11,4], bridge:[11,5], rescuebox:[11,6], flag:[11,7],
@@ -222,18 +231,62 @@ const SPRITE_SHEETS: Record<number, string> = {
   8: "v9-workshop-cabs.png",
   9: "v9-workshop-tools.png",
   10: "v9-workshop-movement.png",
-  11: "v2-extras.png",
-  12: "v5-flat-transport.svg",
+  11: "v10-side-extras.png",
+  12: "v10-side-transport.png",
+  13: "v10-side-special-movement.png",
 };
 
+const PART_IMAGE_ASSETS: Record<string, string> = {
+  augerdrill: "tool-auger-drill-v1.png",
+  wreckingball: "tool-wrecking-ball-v1.png",
+  hovercab: "transport-hovercab-v11.png",
+  pilotcab: "transport-pilotcab-v11.png",
+  gliderseat: "transport-gliderseat-v11.png",
+  bubblecockpit: "transport-bubblecockpit-v11.png",
+  hoverbody: "transport-hoverbody-v11.png",
+  airbody: "transport-airbody-v11.png",
+  gliderpod: "transport-gliderpod-v11.png",
+  seaplanebody: "transport-seaplanebody-v13.png",
+  hoverframe: "transport-hoverframe-v11.png",
+  airframe: "transport-airframe-v11.png",
+  gliderframe: "transport-gliderframe-v11.png",
+  pontoonframe: "transport-pontoonframe-v13.png",
+  hovercraftskirt: "transport-hovercraftskirt-v11.png",
+  wing: "transport-wing-v11.png",
+  paraglider: "transport-paraglider-v11.png",
+  propeller: "transport-propeller-v11.png",
+  greentrack: "movement-greentrack-v13.png",
+  ski: "movement-ski-v13.png",
+  hover: "movement-hover-v13.png",
+};
+
+function hasPartArt(id: string) {
+  return Boolean(SPRITES[id] || PART_IMAGE_ASSETS[id]);
+}
+
+// The hosted game lives at the site root, while the Windows edition is opened
+// directly from app-dist/index.html. Keep one content build working in both
+// places instead of letting "/assets" resolve to the computer's drive root.
+function resourcePath(path: string) {
+  if (typeof window !== "undefined" && window.location.protocol === "file:") {
+    return `.${path}`;
+  }
+  return path;
+}
+
 function spriteStyle(id: string): React.CSSProperties | undefined {
+  if (PART_IMAGE_ASSETS[id]) return {
+    backgroundImage: `url(${resourcePath(`/assets/${PART_IMAGE_ASSETS[id]}?v=1`)})`,
+    backgroundPosition: "center",
+    backgroundSize: "contain",
+  };
   const sprite = SPRITES[id];
   if (!sprite) return undefined;
   const index = sprite[1];
   const col = index % 4;
   const row = Math.floor(index / 4);
   return {
-    backgroundImage: `url(/assets/${SPRITE_SHEETS[sprite[0]]}?v=9.1)`,
+    backgroundImage: `url(${resourcePath(`/assets/${SPRITE_SHEETS[sprite[0]]}?v=9.1`)})`,
     backgroundPosition: `${col * 33.333}% ${row * 33.333}%`,
   };
 }
@@ -278,7 +331,8 @@ function RecoloredPartArt({ id, color, accent, pattern, category }: { id: string
   useEffect(() => {
     const canvas = canvasRef.current;
     const sprite = SPRITES[id];
-    if (!canvas || !sprite) return;
+    const imageAsset = PART_IMAGE_ASSETS[id];
+    if (!canvas || (!sprite && !imageAsset)) return;
     const context = canvas.getContext("2d", { willReadFrequently: true });
     if (!context) return;
     const cacheKey = `${id}:${color}:${accent}:${pattern}`;
@@ -292,12 +346,19 @@ function RecoloredPartArt({ id, color, accent, pattern, category }: { id: string
     const image = new Image();
     image.onload = () => {
       if (cancelled) return;
-      const sourceWidth = image.naturalWidth / 4;
-      const sourceHeight = image.naturalHeight / 4;
-      const col = sprite[1] % 4;
-      const row = Math.floor(sprite[1] / 4);
       context.clearRect(0, 0, canvas.width, canvas.height);
-      context.drawImage(image, col * sourceWidth, row * sourceHeight, sourceWidth, sourceHeight, 0, 0, canvas.width, canvas.height);
+      if (imageAsset) {
+        const fit = Math.min(canvas.width / image.naturalWidth, canvas.height / image.naturalHeight);
+        const width = image.naturalWidth * fit;
+        const height = image.naturalHeight * fit;
+        context.drawImage(image, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height);
+      } else if (sprite) {
+        const sourceWidth = image.naturalWidth / 4;
+        const sourceHeight = image.naturalHeight / 4;
+        const col = sprite[1] % 4;
+        const row = Math.floor(sprite[1] / 4);
+        context.drawImage(image, col * sourceWidth, row * sourceHeight, sourceWidth, sourceHeight, 0, 0, canvas.width, canvas.height);
+      }
       const pixels = context.getImageData(0, 0, canvas.width, canvas.height);
       const hueBins = new Array(36).fill(0) as number[];
 
@@ -344,7 +405,7 @@ function RecoloredPartArt({ id, color, accent, pattern, category }: { id: string
       recolorCache.set(cacheKey, pixels);
       context.putImageData(pixels, 0, 0);
     };
-    image.src = `/assets/${SPRITE_SHEETS[sprite[0]]}?v=9.1`;
+    image.src = resourcePath(imageAsset ? `/assets/${imageAsset}?v=1` : `/assets/${SPRITE_SHEETS[sprite![0]]}?v=9.1`);
     return () => { cancelled = true; };
   }, [accent, category, color, id, pattern]);
 
@@ -356,6 +417,7 @@ const ACTION_EFFECT: Record<string, { scene: string; label: string }> = {
   lift: { scene: "📦⬆️", label: "吊臂稳稳举起重物" },
   carry: { scene: "📦📦", label: "车厢装好物资送到目的地" },
   drill: { scene: "🪨✨", label: "钻头转起来打开通道" },
+  smash: { scene: "⚫💥🧱", label: "大摆锤来回摆动，把旧砖墙轻轻拆开" },
   roll: { scene: "〰️➡️", label: "滚筒把路面压得平平整整" },
   push: { scene: "🧱➡️", label: "推土铲把障碍推到一边" },
   tow: { scene: "🚙〰️", label: "拖钩拉着受困车辆前进" },
@@ -373,13 +435,71 @@ const ACTION_EFFECT: Record<string, { scene: string; label: string }> = {
   fork: { scene: "📦⬆️", label: "货叉稳稳托起箱子送上货架" },
 };
 
+const ACTION_GUIDE: Record<string, {
+  tool: string;
+  objective: string;
+  steps: readonly [string, string, string];
+  success: string;
+  before: string;
+  after: string;
+}> = {
+  dig: { tool: "挖斗或挖掘臂", objective: "把指定位置挖开，并把挖出的泥土放到旁边", steps: ["装上挖斗或挖掘臂", "让工具靠近车身前端", "装好轮子或履带再出发"], success: "挖斗落下，目标区域被整齐挖开", before: "🟫🪨", after: "🕳️✨" },
+  lift: { tool: "吊臂、起重钩或升降台", objective: "把目标稳稳举起，再放到故事指定的位置", steps: ["选择能升高的工具", "把工具装在车身上方或后部", "给车辆装好移动部件"], success: "吊臂升起，目标被稳稳放到正确位置", before: "📦⬇️", after: "📦✅" },
+  carry: { tool: "货斗、货箱或承载平台", objective: "把要搬运的物品装上车，并安全送到目的地", steps: ["选择能装货的车身", "给货箱留出足够空间", "装好轮子或履带"], success: "货物没有掉落，全部安全送达", before: "📦📦", after: "🏁✅" },
+  drill: { tool: "旋转钻头", objective: "对准软岩或障碍钻开通道，不碰旁边的区域", steps: ["装上旋转钻头", "让钻头朝向车辆前方", "使用稳定的底盘和移动部件"], success: "钻头转动，通道顺利打开", before: "🪨⛔", after: "🕳️💎" },
+  smash: { tool: "工程大摆锤", objective: "停在安全标线外，让摆锤摆动并拆开指定的旧矮墙", steps: ["装上工程大摆锤", "把摆锤安装在车身上方", "使用宽底盘和稳定的移动部件"], success: "摆锤稳稳摆动，旧砖墙变成整齐的小砖堆", before: "🧱🧱", after: "🧱✨" },
+  roll: { tool: "压路滚筒", objective: "从起点压到终点，让整段路面变得平整", steps: ["装上宽滚筒", "让滚筒接近地面", "装好驾驶室和移动部件"], success: "滚筒慢慢压过，路面变得平平整整", before: "〰️〰️", after: "━━━━" },
+  push: { tool: "推土铲或雪铲", objective: "把挡路物推到标线外，重新打开通道", steps: ["选择宽宽的推铲", "把推铲装在车辆前端", "装好有抓地力的轮子或履带"], success: "推铲向前，障碍被整齐推到一边", before: "🧱⛔", after: "➡️✅" },
+  tow: { tool: "拖钩或救援绞盘", objective: "连接受困目标，慢慢把它拉回安全区域", steps: ["装上拖钩或绞盘", "把拖具放在车身后部", "选择能稳定移动的轮子或履带"], success: "拖具绷紧，受困的伙伴安全回来了", before: "🚙🕳️", after: "🚙✅" },
+  farm: { tool: "犁、耙或播种工具", objective: "沿着田垄作业，让土地达到播种条件", steps: ["装上农田作业工具", "让农具接近地面", "使用适合田野的移动部件"], success: "整齐的田垄出现了，可以开始播种啦", before: "🟫🟫", after: "🌱🌱" },
+  clear: { tool: "抓斗、推铲或清障臂", objective: "把散落的障碍收拢并移出道路", steps: ["选择能清障的工具", "把工具装在车身前端或侧面", "留出稳定的移动空间"], success: "道路上的障碍被清理干净", before: "🪨🍂", after: "🛣️✨" },
+  water: { tool: "水箱、水炮或喷洒器", objective: "把水准确送到目标区域，并均匀喷洒", steps: ["带上储水设备", "装上水炮或喷洒器", "让喷水口朝向车辆外侧"], success: "清凉的水花准确落在需要的地方", before: "🌱☀️", after: "🌿💧" },
+  clean: { tool: "旋转清扫刷", objective: "把地面杂物扫进收集区，不留在道路中央", steps: ["装上旋转清扫刷", "让刷子贴近地面", "装好能慢速前进的移动部件"], success: "刷子转起来，地面重新亮晶晶", before: "🍂🧻", after: "✨✨" },
+  snow: { tool: "雪铲、扫雪刷或雪地履带", objective: "清出一条从入口到出口都能通行的雪路", steps: ["装上雪地清理工具", "让工具靠近地面", "选择轮胎或履带稳定前进"], success: "积雪被推到路边，通道重新打开", before: "❄️⛔", after: "🛣️✅" },
+  rough: { tool: "履带或越野轮", objective: "平稳穿过崎岖路段，把物资送到终点", steps: ["选择履带或越野轮", "把车身和底盘连接好", "确认货物有承载位置"], success: "车辆稳稳越过石路，物资准时到达", before: "⛰️📦", after: "⛺✅" },
+  bridge: { tool: "折叠桥或架桥平台", objective: "把桥面展开到缺口两端，连接两边道路", steps: ["带上一座折叠桥", "把桥架装在承载平台上", "使用稳定的底盘移动到缺口旁"], success: "桥面展开，两边道路连起来了", before: "🛣️🌊🛣️", after: "🛣️🌉🛣️" },
+  light: { tool: "探照灯或照明架", objective: "照亮故事里的目标和前方路线", steps: ["装上一盏探照灯", "把灯放在较高位置", "调整朝向让灯照向车辆前方"], success: "灯光亮起，隐藏的路线清楚出现", before: "🌫️❓", after: "🔦✨" },
+  fire: { tool: "水箱和消防水炮", objective: "在安全位置对准小火苗喷水，直到火苗完全熄灭", steps: ["带上水箱", "装上消防水炮", "让水炮朝向车辆外侧"], success: "水炮喷出水花，小火苗安全熄灭", before: "🔥🔥", after: "💧✨" },
+  mix: { tool: "搅拌筒和出料槽", objective: "把材料搅拌均匀，再送到指定施工位置", steps: ["装上搅拌筒", "给搅拌筒准备承载车身", "装好移动部件运到现场"], success: "搅拌筒转动，材料均匀送达", before: "🪨💧", after: "🌀✅" },
+  rescue: { tool: "救援平台、绞盘或救生设备", objective: "靠近需要帮助的伙伴，把它安全带回指定区域", steps: ["装上救援设备", "给救援目标留出承载位置", "选择适合现场的移动部件"], success: "伙伴坐上救援平台，安全回到大家身边", before: "🆘🌊", after: "🛟✅" },
+  fork: { tool: "升降货叉", objective: "把货叉插到箱子下方，抬起后放上指定货架", steps: ["装上升降货叉", "让货叉朝向车辆前方", "选择紧凑稳定的底盘"], success: "货叉升起，箱子整齐住进货架", before: "📦⬇️", after: "📦⬆️✅" },
+};
+
+const HINT_VOICE_LINES: Record<string, string> = {
+  dig: "小提示：装上挖斗，再准备轮子或履带。",
+  lift: "小提示：选择能升高的吊臂或升降台。",
+  carry: "小提示：准备能装货的车身，再装好移动部件。",
+  drill: "小提示：装上钻头，让钻尖朝向车辆前方。",
+  smash: "小提示：装上工程大摆锤，再选择宽而稳定的底盘。",
+  roll: "小提示：让压路滚筒靠近地面。",
+  push: "小提示：把宽推铲安装在车辆前端。",
+  tow: "小提示：把拖钩或绞盘安装在车身后部。",
+  farm: "小提示：让农田工具贴近地面，再沿田垄前进。",
+  clear: "小提示：抓斗、推铲或清障臂都能清理道路。",
+  water: "小提示：水箱和喷水设备要一起带上。",
+  clean: "小提示：把旋转清扫刷安装在接近地面的位置。",
+  snow: "小提示：雪铲要在车头前面，履带走雪地更稳。",
+  rough: "小提示：选择履带或越野轮，崎岖路面会更稳定。",
+  bridge: "小提示：把折叠桥放在稳定的承载平台上。",
+  light: "小提示：把探照灯装高一点，并朝向车辆前方。",
+  fire: "小提示：带上水箱和消防水炮，并在安全位置喷水。",
+  mix: "小提示：搅拌筒需要结实的车身来承载。",
+  rescue: "小提示：带上救援平台、绞盘或救生设备。",
+  fork: "小提示：让货叉朝前，并使用紧凑稳定的底盘。",
+};
+
+const THEME_STAGE: Record<string, string> = {
+  建筑工地: "construction", 农场田野: "farm", 城市维护: "city", 山地救援: "mountain", 消防防灾: "fire",
+  港口物流: "port", 矿山探索: "mine", 海滩水边: "coast", 冰雪地区: "snow", 奇想任务: "fantasy",
+};
+
 const EVENT_SEEDS = [
   ["建筑工地", "地基里的硬土", "小河狸", "🦫", "新图书馆要开工啦，可是地面硬邦邦的。帮小河狸挖出整齐的地基吧！", "dig", "装上会挖土的工具"],
   ["建筑工地", "高高的钢梁", "斑马工长", "🦓", "活动中心的钢梁太高了，大家踮起脚也够不到。需要一位大力士！", "lift", "装上能举高高的工具"],
   ["建筑工地", "沙石搬家", "熊猫师傅", "🐼", "一堆沙石挡住了工地小路，把它们装起来运走吧。", "carry", "装上可以装东西的车厢"],
   ["建筑工地", "隧道向前进", "鼹鼠工程师", "🐹", "小山下面要开一条圆圆的隧道，前面有一层软岩石。", "drill", "装上会转动的钻头"],
   ["建筑工地", "水泥路变平", "河马队长", "🦛", "刚铺好的路面像波浪一样，校车开过去会摇摇晃晃。", "roll", "装上圆圆的大滚筒"],
-  ["建筑工地", "砖块让一让", "狐狸建筑师", "🦊", "旧砖块排成了一堵矮墙，新花园没有入口啦。", "push", "装上宽宽的推土铲"],
+  ["建筑工地", "旧砖墙轻轻拆", "狐狸建筑师", "🦊", "旧砖块排成了一堵矮墙，新花园没有入口啦。请停在黄色标线外，用大摆锤把指定墙段拆成小砖堆。", "smash", "装上工程大摆锤和宽而稳定的底盘"],
   ["农场田野", "南瓜大丰收", "兔子农夫", "🐰", "圆滚滚的南瓜成熟啦，一次要运好多好多！", "carry", "装上大车厢来装南瓜"],
   ["农场田野", "泥地里的小牛", "奶牛妈妈", "🐮", "小牛追蝴蝶时陷进软泥里，正在等温柔的帮助。", "tow", "装上结实的拖钩"],
   ["农场田野", "给土地挠痒痒", "小鸡农夫", "🐥", "春天到了，土地睡了一个冬天，要先松松土才能播种。", "farm", "装上农田用的犁"],
@@ -436,7 +556,54 @@ const EVENT_SEEDS = [
   ["奇想任务", "彩虹下的金星星", "独角兽", "🦄", "一颗金星星落在软泥里，只露出闪亮的小角。", "dig", "挖掘工具能找到星星"],
 ] as const;
 
-const MISSIONS: Mission[] = EVENT_SEEDS.map((e, i) => ({
+const EXTRA_EVENT_SEEDS = [
+  ["建筑工地", "操场边的小土坡", "袋鼠校长", "🦘", "新操场的入口被一座小土坡挡住了。请从黄色标线开始，把泥土推到右边的收集区。", "push", "把宽推铲装在车头前面"],
+  ["建筑工地", "雨棚立柱上楼", "熊猫焊工", "🐼", "四根雨棚立柱要从地面送到二层平台。每次吊一根，放进蓝色方框里。", "lift", "吊臂需要能升高并稳稳放下"],
+  ["建筑工地", "搅拌一车彩色水泥", "河马配料员", "🦛", "儿童乐园要铺一块蓝色软地面。请把砂石和水搅匀，再运到滑梯旁。", "mix", "装上搅拌筒和能承载它的车身"],
+  ["建筑工地", "地下管道的入口", "鼹鼠测量员", "🐹", "测量标记下面有一块薄岩层。只钻开红旗正下方，给新管道留出入口。", "drill", "让钻头朝前并对准岩层"],
+  ["农场田野", "玉米苗的三条水线", "小鹿农夫", "🦌", "三排玉米苗叶子卷起来了。请沿着田边慢慢走，让每一排都淋到水。", "water", "带水箱和向侧面喷水的设备"],
+  ["农场田野", "苹果筐送进仓库", "刺猬采摘员", "🦔", "六筐苹果排在果园门口。请装进货箱，送到红屋顶仓库里。", "carry", "大货箱能一次装下更多果筐"],
+  ["农场田野", "稻草人重新站好", "麻雀队长", "🐦", "稻草人被风吹倒在田埂上。请把它轻轻吊起，放回木桩旁。", "lift", "用吊臂轻轻提起稻草人"],
+  ["农场田野", "播种前的直田垄", "羊驼农夫", "🦙", "播种机明天要来，菜地还没有田垄。请从木牌走到小屋，犁出三条直直的沟。", "farm", "把犁装低一点并沿地面工作"],
+  ["城市维护", "公交站牌擦亮亮", "浣熊清洁员", "🦝", "雨后泥点盖住了公交站牌下的小广场。请把泥叶扫进绿色垃圾箱。", "clean", "清扫刷要靠近地面"],
+  ["城市维护", "树坑里的新土", "考拉园丁", "🐨", "新栽的小树根旁少了一圈土。请运来细土，倒进白色树坑线以内。", "carry", "用货斗装土并运到树坑旁"],
+  ["城市维护", "地下阀门找到了", "水獭维修员", "🦦", "蓝色水管一直滴水，阀门藏在路边软土下面。请挖开小旗圈出的地方。", "dig", "只挖开标记区域就能找到阀门"],
+  ["城市维护", "窄巷里的纸箱", "猫咪巡查员", "🐱", "三个空纸箱挡住了窄巷出口。请抬起它们，放到巷口回收车旁。", "lift", "小型升降工具更适合窄巷"],
+  ["山地救援", "落在坡下的背包", "狐狸向导", "🦊", "蓝背包滚到缓坡下，旁边的路很窄。请用救援绞盘把背包拉回木牌边。", "rescue", "绞盘或救援平台能安全带回背包"],
+  ["山地救援", "两箱药品过石路", "鹰医生", "🦅", "营地需要两箱急救用品。石路凹凸不平，请平稳送到白帐篷门口。", "rough", "履带或越野轮走石路更稳"],
+  ["山地救援", "雨后的小塌方", "山羊巡路员", "🐐", "雨把碎石冲到山路中央。请从左到右清出一条能让小巴通过的路。", "clear", "抓斗或推铲都能清走碎石"],
+  ["山地救援", "山谷信号灯", "猫头鹰通讯员", "🦉", "傍晚的白雾盖住了营地信号牌。请把探照灯抬高，照向红色三角牌。", "light", "高处的探照灯能照得更远"],
+  ["消防防灾", "厨房演习的小火盆", "斑点狗教官", "🐶", "安全演习开始了，金属火盆里有一簇训练火苗。请停在黄线外喷水。", "fire", "水箱和水炮要一起带上"],
+  ["消防防灾", "枯叶隔离带", "大象护林员", "🐘", "林边的枯叶堆得太厚。请把它们扫进远处的收集框，留出一条干净隔离带。", "clean", "旋转刷能把枯叶集中起来"],
+  ["消防防灾", "消防栓前的花盆", "小马消防员", "🐴", "两个大花盆挡住了消防栓。请把它们吊到墙边白色方框里。", "lift", "用吊臂逐个搬开花盆"],
+  ["消防防灾", "训练塔水池补水", "河马教官", "🦛", "训练塔旁的蓝水池只剩一半水。请带水过去，喷到水位线位置。", "water", "大水箱和喷洒设备最合适"],
+  ["港口物流", "冷藏箱赶轮船", "北极狐理货员", "🦊", "两只冷藏箱要在汽笛响前送到三号泊位。请把箱子装稳再出发。", "carry", "用封闭货箱或宽平台运送"],
+  ["港口物流", "渔网卷上货架", "海狮仓管员", "🦭", "圆圆的渔网卷太重，工人抱不动。请用货叉托起，放到一层蓝货架。", "fork", "货叉要从渔网卷下方托起"],
+  ["港口物流", "航道浮标归位", "海豚巡航员", "🐬", "黄色浮标被浪推到浅滩。请挂好拖钩，把它慢慢拉回水中标记处。", "tow", "拖钩适合拉动浮标"],
+  ["港口物流", "木屑离开装卸区", "螃蟹清洁员", "🦀", "装木材后，码头上落了一地木屑。请全部扫进棕色收集箱。", "clean", "让清扫刷贴着码头地面"],
+  ["矿山探索", "发光矿石的窄缝", "穿山甲博士", "🦔", "探测器在窄缝后面闪烁。请对准白色圆点钻开软岩，停在矿石前。", "drill", "钻头要朝向岩缝并保持稳定"],
+  ["矿山探索", "样本箱回实验室", "蝙蝠研究员", "🦇", "四个标好号码的样本箱不能颠簸。请装进车厢，送到洞口实验室。", "carry", "稳定货箱和履带能保护样本"],
+  ["矿山探索", "矿洞顶的检查牌", "鼹鼠安全员", "🐹", "高处检查牌被灰尘盖住了。请升高工作平台，让安全员靠近检查。", "lift", "升降台要稳稳装在车身上"],
+  ["矿山探索", "岔路口照明", "狐狸地质家", "🦊", "洞穴有左右两条岔路，右边标记看不清。请把灯照向蓝箭头。", "light", "高位探照灯可以照亮岔路"],
+  ["海滩水边", "潮池里的玩具船", "海獭救生员", "🦦", "玩具船漂进浅潮池，被海草缠住了。请用救援设备带它回沙滩小旗旁。", "rescue", "救生平台或绞盘都能帮忙"],
+  ["海滩水边", "木栈道下的细沙", "海龟工长", "🐢", "木栈道下被浪冲出一个浅坑。请运来细沙，填到木板下方。", "carry", "货斗能把细沙送到栈道边"],
+  ["海滩水边", "冲上岸的海草", "寄居蟹清洁员", "🦀", "一长条海草盖住了沙滩通道。请从入口扫到蓝色收集网里。", "clean", "清扫刷适合收拢柔软海草"],
+  ["海滩水边", "小堤岸再压实", "河狸工程师", "🦫", "刚填好的堤岸沙土松松的。请沿白线来回压一遍，让表面平整结实。", "roll", "宽滚筒要贴着堤岸表面"],
+  ["冰雪地区", "诊所门前通道", "北极狐医生", "🦊", "夜里又下了雪，诊所门口到主路之间被盖住了。请清出一条直通道。", "snow", "雪铲装在车头前面最方便"],
+  ["冰雪地区", "冰屋顶上的红围巾", "海豹宝宝", "🦭", "红围巾被风吹到低矮冰屋顶上。请用升降工具取下，放进门口篮子。", "lift", "升降台能把围巾轻轻取下"],
+  ["冰雪地区", "雪地研究箱", "驯鹿研究员", "🦌", "三个保温研究箱要送到远处蓝帐篷。请走有旗子的安全雪路。", "rough", "雪地履带能让车辆不打滑"],
+  ["冰雪地区", "路标露出来", "企鹅巡查员", "🐧", "路标下半段被松雪埋住了。请轻轻挖开周围的雪，不碰到路标。", "dig", "小挖斗适合精细清雪"],
+  ["奇想任务", "机器人丢了齿轮", "小机器人", "🤖", "一枚金齿轮滚进彩色沙坑。请挖开闪光的位置，把齿轮找出来。", "dig", "用挖斗对准闪光点"],
+  ["奇想任务", "龙宝宝的彩虹浴", "龙宝宝", "🐲", "龙宝宝跑过云朵操场，身上沾满星星灰。请均匀喷一场轻轻的彩虹水。", "water", "水箱和喷洒器能变出彩虹水花"],
+  ["奇想任务", "会飞的书架", "猫头鹰魔法师", "🦉", "三本故事书飞到高书架顶端。请用升降工具把它们逐本接回篮子。", "lift", "升降台要到达高书架旁"],
+  ["奇想任务", "月球小车回基地", "星星队长", "⭐", "月球小车卡在软软的银色沙坑里。请接好拖具，沿蓝箭头拉回圆顶基地。", "tow", "拖钩和越野轮适合月球沙地"],
+] as const;
+
+const ALL_EVENT_SEEDS = [...EVENT_SEEDS, ...EXTRA_EVENT_SEEDS] as const;
+
+const MISSIONS: Mission[] = ALL_EVENT_SEEDS.map((e, i) => {
+  const guide = ACTION_GUIDE[e[5]];
+  return {
   id: `mission-${i + 1}`,
   theme: e[0],
   title: e[1],
@@ -447,16 +614,24 @@ const MISSIONS: Mission[] = EVENT_SEEDS.map((e, i) => ({
   needs: e[5] === "fork" ? ["lift"] : [e[5]],
   hint: e[6],
   reward: ["⭐", "🌼", "⚡", "🌈", "🍀", "🎈"][i % 6],
-}));
+  objective: `${e[1]}现场：${guide.objective}。`,
+  steps: guide.steps,
+  success: guide.success,
+  targetBefore: guide.before,
+  targetAfter: guide.after,
+  voiceHint: HINT_VOICE_LINES[e[5]],
+  voiceKey: e[5],
+  };
+});
 
-const CATEGORY_LABELS: Record<Category, [string, string]> = {
-  chassis: ["底盘", "🛤️"],
-  body: ["车身", "🟨"],
-  move: ["移动", "🛞"],
-  cab: ["驾驶室", "🪟"],
-  tool: ["工具", "🛠️"],
-  help: ["辅助", "💡"],
-  decor: ["装饰", "⭐"],
+const CATEGORY_LABELS: Record<Category, { label: string; tip: string; part: string }> = {
+  chassis: { label: "车底", tip: "第一步，托住整辆车", part: "frame" },
+  body: { label: "车身", tip: "把设备装在它上面", part: "utilitybody" },
+  move: { label: "轮子", tip: "让车走起来", part: "wheel" },
+  cab: { label: "车头", tip: "小司机坐这里", part: "cab" },
+  tool: { label: "工具", tip: "挖、推、吊和钻", part: "shovel" },
+  help: { label: "随车物品", tip: "灯、箱子和安全用品", part: "rescuebox" },
+  decor: { label: "贴纸", tip: "把车装扮漂亮", part: "star" },
 };
 
 const DEFAULT_PAINT: Paint = {
@@ -491,7 +666,7 @@ function SafetyStickerIcon({ sticker }: { sticker: (typeof SAFETY_STICKERS)[numb
   const col = sticker.sprite % 4;
   const row = Math.floor(sticker.sprite / 4);
   return <span className="safety-icon" style={{
-    backgroundImage: "url(/assets/safety-icons-v1.png)",
+    backgroundImage: `url(${resourcePath("/assets/safety-icons-v1.png")})`,
     backgroundPosition: `${col * 33.333}% ${row * 33.333}%`,
   }}/>;
 }
@@ -538,7 +713,7 @@ const DEFAULT_SAVE: SaveData = {
   stars: 0,
   completed: [],
   recent: [],
-  unlocked: 1,
+  unlocked: 3,
   garage: [],
   tutorialSeen: false,
 };
@@ -549,23 +724,41 @@ function safeLoad(): SaveData {
     const raw = localStorage.getItem("buildyard-save-v1");
     if (!raw) return DEFAULT_SAVE;
     const parsed = JSON.parse(raw);
-    return { ...DEFAULT_SAVE, ...parsed, garage: Array.isArray(parsed.garage) ? parsed.garage : [] };
+    return {
+      ...DEFAULT_SAVE,
+      ...parsed,
+      unlocked: Math.max(3, Number(parsed.unlocked) || 0),
+      garage: Array.isArray(parsed.garage) ? parsed.garage : [],
+    };
   } catch {
     return DEFAULT_SAVE;
   }
 }
 
 let currentNarration: HTMLAudioElement | null = null;
+let narrationRun = 0;
 
-function playNarration(id: string, enabled = true) {
-  if (!enabled || typeof Audio === "undefined") return;
+function playNarrationFiles(files: string[], enabled = true) {
+  if (!enabled || typeof Audio === "undefined" || !files.length) return;
   currentNarration?.pause();
-  const audio = new Audio(`/audio/${id}.wav`);
-  audio.volume = .92;
-  currentNarration = audio;
-  void audio.play().catch(() => {
-    // Browsers may require the child to tap the microphone button first.
-  });
+  const run = ++narrationRun;
+  const playAt = (index: number) => {
+    if (run !== narrationRun || index >= files.length) return;
+    const audio = new Audio(files[index]);
+    audio.volume = .92;
+    currentNarration = audio;
+    audio.addEventListener("ended", () => playAt(index + 1), { once: true });
+    audio.addEventListener("error", () => playAt(index + 1), { once: true });
+    void audio.play().catch(() => {
+      // Autoplay may be blocked; the large microphone buttons remain available.
+    });
+  };
+  playAt(0);
+}
+
+function playMissionNarration(mission: Mission, hintOnly = false, enabled = true) {
+  const hintFile = resourcePath(`/audio/hint-${mission.voiceKey}.wav`);
+  playNarrationFiles(hintOnly ? [hintFile] : [resourcePath(`/audio/${mission.id}.wav`), hintFile], enabled);
 }
 
 function newPart(def: PartDef, index: number): Part {
@@ -588,7 +781,7 @@ type TransportMode = "ground" | "hover" | "air";
 const ROUND_MOVES = new Set(["wheel", "orangewheel", "bluewheel", "redwheel", "smallwheel", "farmwheel", "citywheel", "fantasywheel", "rollerwheel", "paddlewheel"]);
 const WIDE_MOVES = new Set(["track", "miningtrack", "snowtrack", "greentrack", "ski", "hover", "hovercraftskirt"]);
 const AIR_MOVES = new Set(["wing", "paraglider", "propeller"]);
-const BOOM_TOOLS = new Set(["shovel", "crane", "liftplatform", "conveyor"]);
+const BOOM_TOOLS = new Set(["shovel", "crane", "liftplatform", "conveyor", "wreckingball"]);
 const DECK_TOOLS = new Set(["mixer", "hose"]);
 const REAR_TOOLS = new Set(["tow", "plow"]);
 function getTransportMode(input: Part[]): TransportMode {
@@ -789,7 +982,7 @@ function preparePerformanceBuild(input: Part[], _action: string): Part[] {
 }
 
 export default function Home() {
-  const [screen, setScreen] = useState<"home" | "mission" | "build" | "garage">("home");
+  const [screen, setScreen] = useState<"home" | "mission" | "build" | "performance" | "garage">("home");
   const [save, setSave] = useState<SaveData>(DEFAULT_SAVE);
   const [saveReady, setSaveReady] = useState(false);
   const [mission, setMission] = useState<Mission | null>(null);
@@ -830,6 +1023,7 @@ export default function Home() {
   }, [save, saveReady]);
 
   const unlockedThemes = THEMES.slice(0, save.unlocked);
+  const availableMissions = MISSIONS.filter((item) => unlockedThemes.some((theme) => theme.name === item.theme));
   const selectedPart = parts.find((p) => p.uid === selected);
   const assemblyRoot = parts.find((p) => p.category === "chassis");
   const stickerHostUid = [...parts].filter((part) => part.category === "body").sort((a, b) => b.z - a.z)[0]?.uid;
@@ -843,6 +1037,7 @@ export default function Home() {
   const showResult = (next: { ok: boolean; missing: string[]; reason?: string }) => {
     setPerformanceRun((run) => run + 1);
     setResult(next);
+    setScreen("performance");
   };
 
   const pushHistory = useCallback(() => {
@@ -851,14 +1046,17 @@ export default function Home() {
   }, [parts]);
 
   const pickMission = () => {
-    const pool = MISSIONS.filter((m) => unlockedThemes.some((t) => t.name === m.theme));
+    const pool = availableMissions;
     const fresh = pool.filter((m) => !save.recent.includes(m.id) && !save.completed.includes(m.id));
     const candidates = fresh.length ? fresh : pool.filter((m) => !save.recent.includes(m.id));
-    const chosen = (candidates.length ? candidates : pool)[Math.floor(Math.random() * (candidates.length || pool.length))];
+    const differentTheme = candidates.filter((item) => item.theme !== mission?.theme);
+    const drawPool = differentTheme.length ? differentTheme : (candidates.length ? candidates : pool);
+    const chosen = drawPool[Math.floor(Math.random() * drawPool.length)];
+    if (!chosen) return;
     setMission(chosen);
-    setSave((s) => ({ ...s, recent: [...s.recent.slice(-4), chosen.id] }));
+    setSave((s) => ({ ...s, recent: [...s.recent.slice(-9), chosen.id] }));
     setScreen("mission");
-    setTimeout(() => playNarration(chosen.id, voice), 250);
+    setTimeout(() => playMissionNarration(chosen, false, voice), 250);
   };
 
   const startBuild = (kind: "mission" | "free") => {
@@ -1047,7 +1245,7 @@ export default function Home() {
     if (mission) {
       setSave((s) => {
         const completed = s.completed.includes(mission.id) ? s.completed : [...s.completed, mission.id];
-        const nextUnlock = Math.min(THEMES.length, Math.max(s.unlocked, 1 + Math.floor(completed.length / 3)));
+        const nextUnlock = Math.min(THEMES.length, Math.max(s.unlocked, 3 + Math.floor(completed.length / 4)));
         return { ...s, completed, unlocked: nextUnlock, stars: s.stars + (wasNew ? 3 : 1) };
       });
     }
@@ -1136,7 +1334,7 @@ export default function Home() {
     const scale = previewScale ?? (small ? .27 : 1);
     const previewStickerHost = [...carParts].filter((part) => part.category === "body").sort((a, b) => b.z - a.z)[0]?.uid;
     return carParts.map((p) => (
-      <div key={p.uid} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""}`} style={{
+      <div key={p.uid} className={`part part-${p.category} part-id-${p.id} ${hasPartArt(p.id) ? "with-art" : ""}`} style={{
         left: (p.x - minX) * scale + (small ? 12 : 0),
         top: (p.y - minY) * scale + (small ? 15 : 0),
         width: p.w * p.scale * scale,
@@ -1145,7 +1343,7 @@ export default function Home() {
         zIndex: p.z,
         "--part-color": resolvedPartColor(p, carPaint),
         "--part-accent": carPaint.secondary,
-      } as React.CSSProperties}><span className="part-motion">{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <PartArtwork part={p} paint={carPaint}/> : p.icon}</span>{p.uid === previewStickerHost && <SafetySticker value={carPaint.sticker} x={carPaint.stickerX} y={carPaint.stickerY}/>}</div>
+      } as React.CSSProperties}><span className="part-motion">{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {hasPartArt(p.id) ? <PartArtwork part={p} paint={carPaint}/> : p.icon}</span>{p.uid === previewStickerHost && <SafetySticker value={carPaint.sticker} x={carPaint.stickerX} y={carPaint.stickerY}/>}</div>
     ));
   };
 
@@ -1162,7 +1360,7 @@ export default function Home() {
           <span className="eyebrow">今天也有新任务！</span>
           <h1>小小工程师，<br/><em>开工啦！</em></h1>
           <p>挑零件、拼车车、换颜色，<br/>开着独一无二的工程车去帮忙。</p>
-          <button className="primary giant" onClick={pickMission}><span>🎲</span><b>开始随机任务</b><i>出发！</i></button>
+          <button className="primary giant" onClick={pickMission}><span>🎲</span><b>开始随机任务</b><i>{availableMissions.length} 个可选故事</i></button>
           <button className="secondary giant" onClick={() => { setMission(null); startBuild("free"); }}><span>🧰</span><b>自由创造</b><i>随便拼</i></button>
         </div>
         <div className="hero-machine" aria-label="卡通工程车">
@@ -1184,15 +1382,73 @@ export default function Home() {
   if (screen === "mission" && mission) {
     const theme = THEMES.find((t) => t.name === mission.theme)!;
     return <main className="story-screen" style={{ "--theme": theme.color } as React.CSSProperties}>
-      <header className="simple-header"><button onClick={() => setScreen("home")}>‹ 回家</button><span>随机任务</span><span className="star-count">⭐ {save.stars}</span></header>
+      <header className="simple-header"><button onClick={() => setScreen("home")}>‹ 回家</button><span>随机任务 · 当前可选 {availableMissions.length} / 共 {MISSIONS.length} 个故事</span><span className="star-count">⭐ {save.stars}</span></header>
       <section className="story-card">
         <div className="story-scene"><span className="scene-icon">{theme.icon}</span><div className="character">{mission.icon}</div><div className="help-bubble">帮帮忙！</div></div>
-        <div className="story-copy"><span className="theme-pill">{theme.icon} {mission.theme}</span><h1>{mission.title}</h1><p>{mission.story}</p><div className="speaker"><span>{mission.icon}</span><div><b>{mission.character}</b><small>正在请求你的帮助</small></div><button onClick={() => playNarration(mission.id, true)}>🎙️ 再听一遍</button></div>
-          <div className="mission-hint"><span>💡</span><div><small>小提示</small><b>{mission.hint}</b></div></div>
+        <div className="story-copy"><span className="theme-pill">{theme.icon} {mission.theme}</span><h1>{mission.title}</h1><p>{mission.story}</p><div className="speaker"><span>{mission.icon}</span><div><b>{mission.character}</b><small>故事播完后，会接着说一句简短提示</small></div><button onClick={() => playMissionNarration(mission, false, true)}>🎙️ 听故事和提示</button></div>
+          <section className="mission-brief" aria-label="任务说明">
+            <div className="mission-objective"><span>🎯</span><div><small>这次要做什么</small><b>{mission.objective}</b></div></div>
+            <ol>{mission.steps.map((step, index) => <li key={step}><span>{index + 1}</span>{step}</li>)}</ol>
+            <div className="mission-success"><span>🏁</span><div><small>完成时会看到</small><b>{mission.success}</b></div></div>
+          </section>
+          <div className="mission-hint"><span>💡</span><div><small>选零件提示</small><b>{mission.hint}</b><em>{mission.voiceHint}</em></div><button className="hint-voice-button" onClick={() => playMissionNarration(mission, true, true)}>▶ 只听提示</button></div>
           <button className="primary story-start" onClick={() => startBuild("mission")}>去仓库造车 <span>→</span></button>
-          <button className="text-btn" onClick={pickMission}>🎲 换一个故事</button>
+          <button className="text-btn" onClick={pickMission}>🎲 换一个没看过的故事（最近 10 个不重复）</button>
         </div>
       </section>
+    </main>;
+  }
+
+  if (screen === "performance" && result) {
+    const theme = THEMES.find((item) => item.name === mission?.theme) || THEMES[0];
+    const stageName = mission ? THEME_STAGE[mission.theme] || "construction" : "test-track";
+    const isMissionSuccess = result.ok && mode === "mission" && mission;
+    return <main className={`performance-screen stage-${stageName} ${result.ok ? "performance-success" : "performance-needs-help"}`} style={{ "--theme": theme.color } as React.CSSProperties}>
+      <header className="performance-header">
+        <button onClick={() => { setResult(null); setScreen("build"); }}>‹ 返回拼装</button>
+        <div><small>{mission ? `${theme.icon} ${mission.theme}` : "🛞 创意试车场"}</small><b>{mission?.title || "我的工程车试车"}</b></div>
+        <span className="performance-status">{result.ok ? "任务演出" : "检查时间"}</span>
+      </header>
+
+      <section key={performanceRun} className={`theatre-stage mode-${performanceMode} variant-${performanceVariant} action-${performanceAction} ${result.ok ? "is-playing" : "is-paused"}`} aria-label="任务动画舞台">
+        <div className="theatre-sky"><i/><i/><i/></div>
+        <div className="theatre-landmarks" aria-hidden="true"><span/><span/><span/></div>
+        <div className="theatre-story-board">
+          <span>{mission?.icon || "🤩"}</span>
+          <div><small>现场任务</small><b>{mission?.objective || "让你的创意工程车完成一次试运行。"}</b></div>
+        </div>
+        <div className="theatre-ground"><i/><i/><i/><i/></div>
+
+        <div className="theatre-work-zone">
+          <div className="theatre-target theatre-before"><small>作业前</small><b>{mission?.targetBefore || "🏁"}</b></div>
+          <div className="theatre-action-burst"><span>{ACTION_EFFECT[performanceAction]?.scene || "✨"}</span><i>✦</i><i>✦</i><i>✦</i></div>
+          <div className="theatre-target theatre-after"><small>作业完成</small><b>{mission?.targetAfter || "🏁✅"}</b></div>
+        </div>
+
+        <div className="performance-route theatre-route"><div className="result-vehicle-art">{buildPreview(performanceParts, paint, false, performanceScale)}</div></div>
+        <div className="theatre-character"><span>{result.ok ? mission?.icon || "🤩" : "🐣"}</span><b>{result.ok ? "太棒啦！" : "我们再检查一下"}</b></div>
+
+        {result.ok ? <div className="theatre-captions" aria-live="polite">
+          <span>① 到达现场</span><span>② 停稳并开始作业</span><span>③ {mission?.success || "顺利完成试车"}</span>
+        </div> : <div className="theatre-check-card"><span>🧰</span><div><small>这次没有扣分</small><b>{result.reason}</b><p>回到原来的作品继续修改，位置和涂装都会保留。</p></div></div>}
+      </section>
+
+      <footer className="performance-footer">
+        <div>
+          <span className="result-label">{result.ok ? (mode === "free" ? "试车完成" : "故事任务完成") : "还差一个小帮手"}</span>
+          <h1>{result.ok ? (mission ? `${mission.character}看到工作真的完成啦！` : "这辆创意工程车跑起来啦！") : "车车停稳，等你回去调整"}</h1>
+          <p>{result.ok ? (mission?.success || "所有零件一起完成了试运行。") : result.reason}</p>
+          {isMissionSuccess && <div className="reward">获得贴纸 <b>{mission.reward}</b> ＋ ⭐⭐⭐</div>}
+        </div>
+        <div className="performance-buttons">
+          {!result.ok ? <button className="primary" onClick={() => { setResult(null); setScreen("build"); }}>回仓库继续修改</button> : <>
+            <button className="secondary replay-button" onClick={() => setPerformanceRun((run) => run + 1)}>↻ 再看一遍</button>
+            <button className="secondary" onClick={saveCar}>♥ 收藏这辆车</button>
+            <button className="primary" onClick={() => { saveCar(); setResult(null); mode === "mission" ? pickMission() : setScreen("home"); }}>{mode === "mission" ? "下一个故事" : "回到首页"}</button>
+          </>}
+        </div>
+      </footer>
+      {toast && <div className="toast">{toast}</div>}
     </main>;
   }
 
@@ -1213,39 +1469,40 @@ export default function Home() {
 
   return <main className="build-screen">
     <header className="build-header">
-      <button className="back-btn" onClick={() => setScreen("home")}>‹</button>
+      <button className="back-btn" aria-label="回到游戏首页" onClick={() => setScreen("home")}><span>⌂</span><small>回家</small></button>
       <div className="build-title"><small>{mode === "mission" ? `${mission?.icon} ${mission?.title}` : "🌈 想怎么拼都可以"}</small><b>{mode === "mission" ? "任务工程车" : "自由创造工坊"}</b></div>
-      <div className="build-actions"><button onClick={undo} disabled={!history.length}>↶<small>撤销</small></button><button onClick={redo} disabled={!future.length}>↷<small>重做</small></button><button onClick={() => setSnap(!snap)} className={snap ? "active" : ""}>🧲<small>吸附</small></button><button onClick={() => { setMoveWhole(!moveWhole); setSelected(null); }} className={moveWhole ? "active whole-move" : "whole-move"}>✥<small>整车移动</small></button><button onClick={autoAssemble}>🧩<small>自动拼好</small></button><button onClick={() => setShowPaint(true)}>🎨<small>涂装</small></button></div>
-      <button className="go-btn" onClick={evaluate}>出发！<span>➜</span></button>
+      <div className="build-actions"><button onClick={undo} disabled={!history.length}>↶<small>上一步</small></button><button onClick={redo} disabled={!future.length}>↷<small>下一步</small></button><button onClick={() => setSnap(!snap)} className={snap ? "active" : ""}>🧲<small>靠近对齐</small></button><button onClick={() => { setMoveWhole(!moveWhole); setSelected(null); }} className={moveWhole ? "active whole-move" : "whole-move"}>🚚<small>搬整辆车</small></button><button onClick={autoAssemble}>🧩<small>排整齐</small></button><button onClick={() => setShowPaint(true)}>🎨<small>换颜色</small></button></div>
+      <button className="go-btn" onClick={evaluate}>开工！<span>▶</span></button>
     </header>
     <div className="work-area">
       <aside className="warehouse">
-        <div className="warehouse-head"><span>🧰</span><div><b>零件仓库</b><small>点一下放进工地</small></div></div>
-        <div className="category-tabs">{(Object.keys(CATEGORY_LABELS) as Category[]).map((c) => <button key={c} className={category === c ? "active" : ""} onClick={() => setCategory(c)}><span>{CATEGORY_LABELS[c][1]}</span>{CATEGORY_LABELS[c][0]}</button>)}</div>
-        <div className="parts-grid">{PARTS.filter((p) => p.category === category).map((p) => <button key={p.id} className="part-card" onClick={() => addPart(p)}><span className={`mini-part ${SPRITES[p.id] ? "has-art" : `part-${p.category}`}`}>{SPRITES[p.id] ? <span className="part-art" style={spriteStyle(p.id)}/> : p.icon}</span><b>{p.name}</b><i>＋</i></button>)}</div>
+        <div className="warehouse-head"><span>🧰</span><div><b>选零件</b><small>先选一类，再点喜欢的零件</small></div></div>
+        <div className="category-tabs">{(Object.keys(CATEGORY_LABELS) as Category[]).map((c) => <button key={c} aria-label={`${CATEGORY_LABELS[c].label}：${CATEGORY_LABELS[c].tip}`} className={category === c ? "active" : ""} onClick={() => setCategory(c)}><span className="category-picture"><span className="part-art" style={spriteStyle(CATEGORY_LABELS[c].part)}/></span><b>{CATEGORY_LABELS[c].label}</b></button>)}</div>
+        <div className="category-kid-tip"><span>👆</span><div><b>{CATEGORY_LABELS[category].label}</b><small>{CATEGORY_LABELS[category].tip}</small></div></div>
+        <div className="parts-grid">{PARTS.filter((p) => p.category === category).map((p) => <button key={p.id} className="part-card" onClick={() => addPart(p)}>{["augerdrill", "wreckingball"].includes(p.id) && <small className="new-tool-badge">新工具</small>}<span className={`mini-part ${hasPartArt(p.id) ? "has-art" : `part-${p.category}`}`}>{hasPartArt(p.id) ? <span className="part-art" style={spriteStyle(p.id)}/> : p.icon}</span><b>{p.name}</b><i>＋</i></button>)}</div>
       </aside>
       <section className="canvas-wrap">
-        <div className="canvas-info"><span>{moveWhole ? "✥ 整车移动已开启：拖任意零件，整辆车一起走" : "☝ 默认单件模式：点到哪个零件，就只移动哪个零件"}</span><span>{parts.length} 个零件</span></div>
+        <div className="canvas-info"><span>{moveWhole ? "🚚 现在拖一下，就能搬动整辆车" : "☝ 现在一次移动一个零件"}</span><span>已经放了 {parts.length} 个</span></div>
         <div className={`build-canvas pattern-${paint.pattern} finish-${paint.finish}`} ref={canvasRef} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp} onWheel={wheel}>
           {snap && assemblyRoot && <div aria-hidden="true" className="rig-guide" style={{ left: assemblyRoot.x, top: assemblyRoot.y, width: assemblyRoot.w * assemblyRoot.scale, height: assemblyRoot.h * assemblyRoot.scale }}>
-            <span className="rig-guide-note">仅作参考 · 可以自由摆放</span>
-            <span className="rig-body-zone">车身</span>
-            <span className="rig-deck-line"><i>车身承载线</i></span>
-            <span className="rig-axle-line"><i>轮子地面线</i></span>
-            <span className="rig-cab-zone">驾驶室</span>
-            <span className="rig-wheel-zone">轮子区</span>
-            <span className="rig-front-tool-zone">前工具</span>
-            <span className="rig-rear-tool-zone">后工具</span>
+            <span className="rig-guide-note">参考位置，也可以自己摆</span>
+            <span className="rig-body-zone">车身放这里</span>
+            <span className="rig-deck-line"><i>上面能放设备</i></span>
+            <span className="rig-axle-line"><i>轮子贴近这条线</i></span>
+            <span className="rig-cab-zone">车头放这里</span>
+            <span className="rig-wheel-zone">轮子放这里</span>
+            <span className="rig-front-tool-zone">前面工具</span>
+            <span className="rig-rear-tool-zone">后面工具</span>
           </div>}
           <div className="horizon"><span>☁</span><span>☁</span></div><div className="ground-line"/>
-          {!parts.length && <div className="canvas-empty"><span>👇</span><b>先从左边选一副底盘吧</b><small>底盘是整辆工程车的基础</small></div>}
-          {parts.map((p) => <div key={p.uid} data-part-id={p.id} data-category={p.category} onPointerDown={(e) => onPointerDown(e, p)} className={`part part-${p.category} part-id-${p.id} ${SPRITES[p.id] ? "with-art" : ""} ${selected === p.uid ? "selected" : ""}`} style={{
+          {!parts.length && <div className="canvas-empty"><span>👈</span><b>第 1 步：点一个“车底”</b><small>然后再选车身、车头和轮子</small></div>}
+          {parts.map((p) => <div key={p.uid} data-part-id={p.id} data-category={p.category} onPointerDown={(e) => onPointerDown(e, p)} className={`part part-${p.category} part-id-${p.id} ${hasPartArt(p.id) ? "with-art" : ""} ${selected === p.uid ? "selected" : ""}`} style={{
             left: p.x, top: p.y, width: p.w * p.scale, height: p.h * p.scale,
             transform: `rotate(${p.rotate}deg) scaleX(${p.flip ? -1 : 1})`, zIndex: p.z,
             "--part-layer": p.z,
             "--part-color": resolvedPartColor(p, paint),
             "--part-accent": paint.secondary,
-          } as React.CSSProperties}>{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {SPRITES[p.id] ? <PartArtwork part={p} paint={paint} hit/> : <span>{p.icon}</span>}{p.uid === stickerHostUid && <SafetySticker value={paint.sticker} x={paint.stickerX} y={paint.stickerY} draggable onPointerDown={dragSticker}/>}</div>)}
+          } as React.CSSProperties}>{p.category === "tool" && <span className={`tool-adapter mount-${toolMountKind(p.id)}`}/>} {hasPartArt(p.id) ? <PartArtwork part={p} paint={paint} hit/> : <span>{p.icon}</span>}{p.uid === stickerHostUid && <SafetySticker value={paint.sticker} x={paint.stickerX} y={paint.stickerY} draggable onPointerDown={dragSticker}/>}</div>)}
           {selectedPart && !showPaint && !result && <div className="part-color-bar" aria-label="单个零件调色">
             <b>直接换色</b>
             {PART_TINTS.map((color) => <button key={color} aria-label={`改成 ${color}`} className={!selectedPart.originalColor && selectedPart.color === color ? "chosen color-dot" : "color-dot"} style={{ background: color }} onClick={() => updateSelected({ color, originalColor: false, colorMode: "custom" })}/>) }
@@ -1275,22 +1532,6 @@ export default function Home() {
       <div className="paint-section safety-paint-section"><b>安全警告装饰</b><small className="paint-help">选好后，直接按住车身上的标志拖动位置</small><div className="sticker-row safety-sticker-row">{SAFETY_STICKERS.map((sticker) => <button key={sticker.id || "none"} aria-label={sticker.label} title={sticker.label} className={paint.sticker === sticker.id ? "chosen" : ""} onClick={() => setPaint({ ...paint, sticker: sticker.id, stickerX: paint.stickerX ?? 58, stickerY: paint.stickerY ?? 52 })}><SafetyStickerIcon sticker={sticker}/><small>{sticker.label}</small></button>)}</div></div>
       <div className="paint-section"><b>特别效果</b><div className="option-row"><button className={paint.finish === "clean" ? "chosen" : ""} onClick={() => setPaint({ ...paint, finish: "clean" })}>✨<small>亮晶晶</small></button><button className={paint.finish === "mud" ? "chosen" : ""} onClick={() => setPaint({ ...paint, finish: "mud" })}>🟤<small>泥点勇士</small></button></div></div>
     </div>}
-
-    {result && <div className="modal-shade result-shade"><div className={`result-card ${result.ok ? "success" : "oops"}`}>
-      <div className="confetti">{result.ok ? "✨ ⭐ 🎉 ⭐ ✨" : "💨　🍃　💭"}</div>
-      <div key={performanceRun} className={`result-animation mode-${performanceMode} variant-${performanceVariant} action-${performanceAction} ${result.ok ? "is-running" : "is-thinking"}`}>
-        <div className="mission-road"><i/><i/><i/><i/></div>
-        <div className="action-scene"><span className="task-object">{ACTION_EFFECT[performanceAction]?.scene || "🏁"}</span><span className="work-puff">✨</span></div>
-        <div className="performance-route"><div className="result-vehicle-art">{buildPreview(performanceParts, paint, false, performanceScale)}</div></div>
-        <div className="result-character">{result.ok ? mission?.icon || "🤩" : "🐣"}</div>
-      </div>
-      <span className="result-label">{result.ok ? (mode === "free" ? "试车成功！" : "任务完成！") : "差一点点就可以啦"}</span>
-      <h2>{result.ok ? (mode === "free" ? "这辆车太有创意啦！" : `${mission?.character}开心得跳起来！`) : "车车噗噗两声，停下来想了想…"}</h2>
-      <p>{result.ok ? (mode === "free" ? "它是全世界独一无二的工程车。" : `你用自己的方法解决了“${mission?.title}”！`) : result.reason}</p>
-      {result.ok && mode === "mission" && <p className="action-caption">{ACTION_EFFECT[mission?.needs[0] || ""]?.label || "工程车顺利完成了工作"}</p>}
-      {result.ok && mode === "mission" && <div className="reward">获得贴纸 <b>{mission?.reward}</b> ＋ ⭐⭐⭐</div>}
-      <div className="result-buttons">{!result.ok ? <button className="primary" onClick={() => setResult(null)}>回去加零件</button> : <><button className="secondary replay-button" onClick={() => setPerformanceRun((run) => run + 1)}>↻ 再看一遍</button><button className="secondary" onClick={saveCar}>♥ 收藏</button><button className="primary" onClick={() => { saveCar(); setResult(null); mode === "mission" ? pickMission() : setScreen("home"); }}>{mode === "mission" ? "下一个故事" : "回到首页"}</button></>}</div>
-    </div></div>}
 
     {tutorial > 0 && <div className={`tutorial tip-${tutorial}`}><button onClick={() => { setTutorial(0); setSave((s) => ({ ...s, tutorialSeen: true })); }}>跳过</button><span>{tutorial === 1 ? "👈" : tutorial === 2 ? "☝️" : "🎨"}</span><b>{tutorial === 1 ? "先选一副喜欢的底盘" : tutorial === 2 ? "底盘、车身和车头会自动对齐，也都能单独拖动" : "继续加轮子和工具，然后换个漂亮颜色！"}</b>{tutorial === 3 && <button className="got-it" onClick={() => { setTutorial(0); setSave((s) => ({ ...s, tutorialSeen: true })); }}>知道啦！</button>}</div>}
     {toast && <div className="toast">{toast}</div>}
