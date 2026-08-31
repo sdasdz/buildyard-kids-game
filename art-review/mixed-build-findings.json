@@ -1,0 +1,52 @@
+[
+  {
+    "build": "v9 core + v1 auger drill",
+    "result": "REVIEW",
+    "finding": "The drill direction is correct, but its connector overlaps the track/body region and needs a canonical mount geometry check."
+  },
+  {
+    "build": "v9 core + v1 wrecking ball",
+    "result": "REVIEW",
+    "finding": "The boom is mostly hidden by the cab and wheels under current assembleParts layering; the ball sits inside the wheel envelope."
+  },
+  {
+    "build": "v9 core + v10 extras",
+    "result": "REVIEW",
+    "finding": "The v10 engine and siren are readable, but their outline/highlight treatment still needs gold-style approval."
+  },
+  {
+    "build": "v9 core + v13 green track",
+    "result": "REGENERATE",
+    "finding": "The active individual track art occupies the body region instead of sitting below the chassis in the current runtime path."
+  },
+  {
+    "build": "v9 core + v13 ski",
+    "result": "REGENERATE",
+    "finding": "One part contains two complete skis; it reads as a preassembled pair and conflicts with the single-module system."
+  },
+  {
+    "build": "v9 core + v13 hover",
+    "result": "REGENERATE",
+    "finding": "The hover unit fits geometrically but its glossy purple material and contour system do not match the v9 vehicle."
+  },
+  {
+    "build": "v11 hovercraft set",
+    "result": "REGENERATE",
+    "finding": "The set assembles, but the propeller is front/three-quarter view and the complete batch has a different outline and highlight language."
+  },
+  {
+    "build": "v11 airplane set",
+    "result": "REGENERATE",
+    "finding": "The fuselage and pilot cabin point left while the runtime propulsion placement assumes a right-facing vehicle."
+  },
+  {
+    "build": "v11 paraglider set",
+    "result": "REGENERATE",
+    "finding": "The canopy and seat are perspective-baked and the seat is not a strict side-view cab module."
+  },
+  {
+    "build": "v13 pontoons + seaplane",
+    "result": "REGENERATE",
+    "finding": "The seaplane nose points left while the propeller is placed on the right, producing a physically contradictory vehicle."
+  }
+]

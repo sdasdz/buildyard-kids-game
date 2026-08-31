@@ -1,0 +1,5360 @@
+[
+  {
+    "id": "frame",
+    "name": "短轴基础底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 0,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 221,
+      "width": 470,
+      "height": 169
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 235,
+      "width": 430,
+      "height": 155
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.244434,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "longframe",
+    "name": "三轴加长底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 1,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 223,
+      "width": 470,
+      "height": 167
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 237,
+      "width": 430,
+      "height": 153
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.20435,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "heavyframe",
+    "name": "四轴重载底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 2,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 245,
+      "width": 470,
+      "height": 145
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 257,
+      "width": 430,
+      "height": 133
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.209358,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "compactchassis",
+    "name": "叉车紧凑底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 3,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 88,
+      "y": 140,
+      "width": 336,
+      "height": 250
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 70,
+      "width": 430,
+      "height": 320
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.122208,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "excavatorchassis",
+    "name": "挖机旋转底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 4,
+    "facing": "right",
+    "projection": "side-biased with visible top face",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 234,
+      "width": 470,
+      "height": 156
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 247,
+      "width": 430,
+      "height": 143
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the large turntable top surface is visibly exposed and cannot be corrected by anchor alignment.",
+    "automatedChecks": {
+      "alphaCoverage": 0.225853,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "bulldozerchassis",
+    "name": "推土强化底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 5,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 196,
+      "width": 470,
+      "height": 194
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 213,
+      "width": 430,
+      "height": 177
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.242901,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "cranechassis",
+    "name": "起重支腿底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 6,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 191,
+      "width": 470,
+      "height": 199
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 208,
+      "width": 430,
+      "height": 182
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.218914,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "dumpchassis",
+    "name": "翻斗承载底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 7,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 22,
+      "y": 249,
+      "width": 469,
+      "height": 141
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 261,
+      "width": 430,
+      "height": 129
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.213573,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "firechassis",
+    "name": "消防红色底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 8,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 248,
+      "width": 470,
+      "height": 142
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 260,
+      "width": 430,
+      "height": 130
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.214558,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "farmchassis",
+    "name": "农场绿色底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 9,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 22,
+      "y": 244,
+      "width": 469,
+      "height": 146
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 256,
+      "width": 430,
+      "height": 134
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.207336,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "snowchassis",
+    "name": "雪地蓝色底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 10,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 235,
+      "width": 470,
+      "height": 155
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 248,
+      "width": 430,
+      "height": 142
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.167648,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "miningchassis",
+    "name": "矿山防护底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 11,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 254,
+      "width": 470,
+      "height": 136
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 266,
+      "width": 430,
+      "height": 124
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.209377,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "amphichassis",
+    "name": "水陆密封底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 12,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 219,
+      "width": 470,
+      "height": 171
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 234,
+      "width": 430,
+      "height": 156
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.219131,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "citychassis",
+    "name": "城市维护底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 13,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 245,
+      "width": 470,
+      "height": 145
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 257,
+      "width": 430,
+      "height": 133
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.190491,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "rescuechassis",
+    "name": "白色救援底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 14,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 262,
+      "width": 470,
+      "height": 128
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 273,
+      "width": 430,
+      "height": 117
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.185661,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "fantasychassis",
+    "name": "紫色能量底盘",
+    "category": "chassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 15,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 271,
+      "width": 470,
+      "height": 119
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 281,
+      "width": 430,
+      "height": 109
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.173328,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "hoverframe",
+    "name": "气垫船承载骨架",
+    "category": "chassis",
+    "sourceFile": "transport-hoverframe-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "side",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 22,
+      "y": 78,
+      "width": 270,
+      "height": 156
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 142,
+      "width": 430,
+      "height": 248
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v11 outline, shading and detail density do not match the v9 main batch.",
+    "automatedChecks": {
+      "alphaCoverage": 0.289809,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "airframe",
+    "name": "工程飞机机身骨架",
+    "category": "chassis",
+    "sourceFile": "transport-airframe-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "side",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 22,
+      "y": 90,
+      "width": 270,
+      "height": 134
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 177,
+      "width": 430,
+      "height": 213
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v11 outline, shading and detail density do not match the v9 main batch.",
+    "automatedChecks": {
+      "alphaCoverage": 0.188933,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "gliderframe",
+    "name": "滑翔伞轻型骨架",
+    "category": "chassis",
+    "sourceFile": "transport-gliderframe-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "side",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 90,
+      "width": 269,
+      "height": 133
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 177,
+      "width": 430,
+      "height": 213
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v11 outline, shading and detail density do not match the v9 main batch.",
+    "automatedChecks": {
+      "alphaCoverage": 0.185657,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "pontoonframe",
+    "name": "水陆浮筒底盘",
+    "category": "chassis",
+    "sourceFile": "transport-pontoonframe-v13.png",
+    "sourceBatch": "v13",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "side",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 47,
+      "y": 127,
+      "width": 1954,
+      "height": 497
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 281,
+      "width": 430,
+      "height": 109
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v13 outline, shading and detail density do not match the v9 main batch.",
+    "automatedChecks": {
+      "alphaCoverage": 0.360592,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "utilitybody",
+    "name": "实体工具车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 0,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 70,
+      "y": 100,
+      "width": 372,
+      "height": 340
+    },
+    "normalizedBounds": {
+      "x": 70,
+      "y": 100,
+      "width": 372,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.415119,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "cargo",
+    "name": "加长货运车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 1,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 26,
+      "y": 246,
+      "width": 460,
+      "height": 194
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 259,
+      "width": 430,
+      "height": 181
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.288193,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "miningdumpbody",
+    "name": "黑色重载车厢",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 2,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 26,
+      "y": 150,
+      "width": 460,
+      "height": 290
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 169,
+      "width": 430,
+      "height": 271
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.390263,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "forkliftbody",
+    "name": "叉车配重车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 3,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 50,
+      "y": 100,
+      "width": 412,
+      "height": 340
+    },
+    "normalizedBounds": {
+      "x": 50,
+      "y": 100,
+      "width": 412,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.484947,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "excavatorbase",
+    "name": "挖机实体机身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 4,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 51,
+      "y": 100,
+      "width": 410,
+      "height": 340
+    },
+    "normalizedBounds": {
+      "x": 51,
+      "y": 100,
+      "width": 410,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.395947,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "bulldozerbody",
+    "name": "推土动力车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 5,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 57,
+      "y": 100,
+      "width": 398,
+      "height": 340
+    },
+    "normalizedBounds": {
+      "x": 57,
+      "y": 100,
+      "width": 398,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.331211,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "cranebody",
+    "name": "起重动力车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 6,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 41,
+      "y": 100,
+      "width": 430,
+      "height": 340
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 100,
+      "width": 430,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.466042,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "bucketbody",
+    "name": "实体翻斗车厢",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 7,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 26,
+      "y": 195,
+      "width": 460,
+      "height": 245
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 211,
+      "width": 430,
+      "height": 229
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.353806,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "firebody",
+    "name": "消防装备车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 8,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 49,
+      "y": 100,
+      "width": 415,
+      "height": 340
+    },
+    "normalizedBounds": {
+      "x": 49,
+      "y": 100,
+      "width": 415,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.479771,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "tractorbody",
+    "name": "农场动力车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 9,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 54,
+      "y": 100,
+      "width": 405,
+      "height": 340
+    },
+    "normalizedBounds": {
+      "x": 54,
+      "y": 100,
+      "width": 405,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.332619,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "snowbody",
+    "name": "扫雪动力车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 10,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 26,
+      "y": 112,
+      "width": 460,
+      "height": 328
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 133,
+      "width": 430,
+      "height": 307
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.500278,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "miningbody",
+    "name": "矿山防护车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 11,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 27,
+      "y": 172,
+      "width": 459,
+      "height": 268
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 189,
+      "width": 430,
+      "height": 251
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.401772,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "tank",
+    "name": "密封水箱车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 12,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 26,
+      "y": 101,
+      "width": 460,
+      "height": 339
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 123,
+      "width": 430,
+      "height": 317
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.535557,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "citybody",
+    "name": "城市维护车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 13,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 26,
+      "y": 155,
+      "width": 460,
+      "height": 285
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 174,
+      "width": 430,
+      "height": 266
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.467346,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "rescuebody",
+    "name": "白色救援车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 14,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 26,
+      "y": 120,
+      "width": 460,
+      "height": 320
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 141,
+      "width": 430,
+      "height": 299
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.543476,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "fantasybody",
+    "name": "紫色奇想车身",
+    "category": "body",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 15,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 27,
+      "y": 120,
+      "width": 459,
+      "height": 320
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 140,
+      "width": 430,
+      "height": 300
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.515423,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "hoverbody",
+    "name": "气垫船工程舱",
+    "category": "body",
+    "sourceFile": "transport-hoverbody-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "side-biased with end face",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 22,
+      "y": 63,
+      "width": 271,
+      "height": 188
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 142,
+      "width": 430,
+      "height": 298
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the fan/end face and v11 material style are incompatible with the v9 body set.",
+    "automatedChecks": {
+      "alphaCoverage": 0.418648,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "airbody",
+    "name": "工程飞机机身",
+    "category": "body",
+    "sourceFile": "transport-airbody-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "left",
+    "projection": "side-biased",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 85,
+      "width": 272,
+      "height": 144
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 212,
+      "width": 430,
+      "height": 228
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the nose points left and the v11 material style is incompatible with the right-facing v9 set.",
+    "automatedChecks": {
+      "alphaCoverage": 0.32979,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0.000215
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "gliderpod",
+    "name": "滑翔伞设备舱",
+    "category": "body",
+    "sourceFile": "transport-gliderpod-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "ambiguous",
+    "projection": "side-biased",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 24,
+      "y": 48,
+      "width": 266,
+      "height": 217
+    },
+    "normalizedBounds": {
+      "x": 48,
+      "y": 100,
+      "width": 417,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v11 material, outline and detail density are incompatible with the v9 body set.",
+    "automatedChecks": {
+      "alphaCoverage": 0.488641,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0.000021
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "seaplanebody",
+    "name": "水上救援机身",
+    "category": "body",
+    "sourceFile": "transport-seaplanebody-v13.png",
+    "sourceBatch": "v13",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "left",
+    "projection": "side",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 27,
+      "y": 106,
+      "width": 1466,
+      "height": 752
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 219,
+      "width": 430,
+      "height": 221
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the nose points left and the v13 material style is incompatible with the right-facing v9 set.",
+    "automatedChecks": {
+      "alphaCoverage": 0.490265,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "wheel",
+    "name": "黄心越野轮",
+    "category": "move",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 0,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 36,
+      "y": 55,
+      "width": 440,
+      "height": 431
+    },
+    "normalizedBounds": {
+      "x": 93,
+      "y": 166,
+      "width": 327,
+      "height": 320
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.567368,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "orangewheel",
+    "name": "橙心工程轮",
+    "category": "move",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 1,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 37,
+      "y": 46,
+      "width": 439,
+      "height": 440
+    },
+    "normalizedBounds": {
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.583481,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "bluewheel",
+    "name": "蓝心救援轮",
+    "category": "move",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 2,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 36,
+      "y": 51,
+      "width": 440,
+      "height": 435
+    },
+    "normalizedBounds": {
+      "x": 94,
+      "y": 166,
+      "width": 324,
+      "height": 320
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.578964,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "redwheel",
+    "name": "红心消防轮",
+    "category": "move",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 3,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 36,
+      "y": 53,
+      "width": 440,
+      "height": 433
+    },
+    "normalizedBounds": {
+      "x": 94,
+      "y": 166,
+      "width": 325,
+      "height": 320
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.577301,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "smallwheel",
+    "name": "黄色小轮",
+    "category": "move",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 4,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 37,
+      "y": 46,
+      "width": 438,
+      "height": 440
+    },
+    "normalizedBounds": {
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.576538,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "farmwheel",
+    "name": "绿色农场轮",
+    "category": "move",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 5,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 37,
+      "y": 46,
+      "width": 438,
+      "height": 440
+    },
+    "normalizedBounds": {
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.564903,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "citywheel",
+    "name": "蓝色城市轮",
+    "category": "move",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 6,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 38,
+      "y": 46,
+      "width": 436,
+      "height": 440
+    },
+    "normalizedBounds": {
+      "x": 98,
+      "y": 166,
+      "width": 317,
+      "height": 320
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.577652,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "fantasywheel",
+    "name": "紫色星星轮",
+    "category": "move",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 7,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 37,
+      "y": 46,
+      "width": 438,
+      "height": 440
+    },
+    "normalizedBounds": {
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.579212,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "track",
+    "name": "黄色工程履带",
+    "category": "move",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 8,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 36,
+      "y": 259,
+      "width": 440,
+      "height": 227
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 264,
+      "width": 430,
+      "height": 222
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.308193,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "miningtrack",
+    "name": "黑色矿山履带",
+    "category": "move",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 9,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 37,
+      "y": 264,
+      "width": 439,
+      "height": 222
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 269,
+      "width": 430,
+      "height": 217
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.302517,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "snowtrack",
+    "name": "蓝色雪地履带",
+    "category": "move",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 10,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 36,
+      "y": 262,
+      "width": 440,
+      "height": 224
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 267,
+      "width": 430,
+      "height": 219
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.304489,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "greentrack",
+    "name": "绿色越野履带",
+    "category": "move",
+    "sourceFile": "movement-greentrack-v13.png",
+    "sourceBatch": "v13",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "side",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 63,
+      "y": 93,
+      "width": 1582,
+      "height": 732
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 287,
+      "width": 430,
+      "height": 199
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the v13 olive recolor, highlights and contour treatment are inconsistent with the v9 movement set.",
+    "automatedChecks": {
+      "alphaCoverage": 0.593505,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "rollerwheel",
+    "name": "宽幅压路滚筒",
+    "category": "move",
+    "sourceFile": "v10-side-special-movement.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 0,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 43,
+      "y": 67,
+      "width": 270,
+      "height": 246
+    },
+    "normalizedBounds": {
+      "x": 81,
+      "y": 166,
+      "width": 351,
+      "height": 320
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "REGENERATE",
+    "reason": "Visible pixels touch the source-cell edge; crop or atlas bleed requires review.",
+    "automatedChecks": {
+      "alphaCoverage": 0.512468,
+      "edgePixelRatio": 0.006533,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "paddlewheel",
+    "name": "水陆桨轮",
+    "category": "move",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 13,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 36,
+      "y": 74,
+      "width": 440,
+      "height": 412
+    },
+    "normalizedBounds": {
+      "x": 85,
+      "y": 166,
+      "width": 342,
+      "height": 320
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.48637,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "ski",
+    "name": "雪地滑橇",
+    "category": "move",
+    "sourceFile": "movement-ski-v13.png",
+    "sourceBatch": "v13",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "side",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 95,
+      "y": 76,
+      "width": 1365,
+      "height": 879
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 209,
+      "width": 430,
+      "height": 277
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: one asset contains two complete skis and its v13 style does not match the v9 movement set.",
+    "automatedChecks": {
+      "alphaCoverage": 0.434814,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "hover",
+    "name": "紫色悬浮垫",
+    "category": "move",
+    "sourceFile": "movement-hover-v13.png",
+    "sourceBatch": "v13",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "side-biased",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 20,
+      "y": 222,
+      "width": 1496,
+      "height": 562
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 324,
+      "width": 430,
+      "height": 162
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the v13 glossy hover assembly has incompatible contour and material treatment.",
+    "automatedChecks": {
+      "alphaCoverage": 0.478995,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "hovercraftskirt",
+    "name": "气垫船气囊",
+    "category": "move",
+    "sourceFile": "transport-hovercraftskirt-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "three-quarter/top visible",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 22,
+      "y": 104,
+      "width": 270,
+      "height": 105
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 319,
+      "width": 430,
+      "height": 167
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the top plate and rounded skirt depth are visibly perspective-baked.",
+    "automatedChecks": {
+      "alphaCoverage": 0.253976,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "wing",
+    "name": "工程飞机机翼",
+    "category": "move",
+    "sourceFile": "transport-wing-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "three-quarter/top visible",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 22,
+      "y": 94,
+      "width": 271,
+      "height": 126
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 286,
+      "width": 430,
+      "height": 200
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the large top surface is visible and cannot be corrected by alignment.",
+    "automatedChecks": {
+      "alphaCoverage": 0.271025,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "paraglider",
+    "name": "救援滑翔伞翼",
+    "category": "move",
+    "sourceFile": "transport-paraglider-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "three-quarter",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 16,
+      "y": 55,
+      "width": 276,
+      "height": 204
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 168,
+      "width": 430,
+      "height": 318
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the canopy is perspective-baked and does not share the orthographic side view.",
+    "automatedChecks": {
+      "alphaCoverage": 0.308035,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "propeller",
+    "name": "航空螺旋桨",
+    "category": "move",
+    "sourceFile": "transport-propeller-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "three-quarter/front visible",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 21,
+      "y": 49,
+      "width": 271,
+      "height": 213
+    },
+    "normalizedBounds": {
+      "x": 53,
+      "y": 166,
+      "width": 407,
+      "height": 320
+    },
+    "baseline": 486,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the hub and blades are presented from the front/three-quarter view rather than strict side projection.",
+    "automatedChecks": {
+      "alphaCoverage": 0.31051,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "cab",
+    "name": "驾驶室",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 0,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 101,
+      "y": 37,
+      "width": 383,
+      "height": 445
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 133,
+      "width": 300,
+      "height": 349
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.547321,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "bubblecab",
+    "name": "泡泡驾驶舱",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 1,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 105,
+      "width": 390,
+      "height": 377
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 192,
+      "width": 300,
+      "height": 290
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.499493,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "lampcab",
+    "name": "探险驾驶室",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 2,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 64,
+      "width": 390,
+      "height": 418
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 160,
+      "width": 300,
+      "height": 322
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.550316,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "engine",
+    "name": "轰隆动力机",
+    "category": "help",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 0,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 37,
+      "y": 88,
+      "width": 262,
+      "height": 194
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 122,
+      "width": 430,
+      "height": 318
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.433453,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "battery",
+    "name": "闪电电池箱",
+    "category": "help",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 1,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 47,
+      "y": 93,
+      "width": 229,
+      "height": 189
+    },
+    "normalizedBounds": {
+      "x": 50,
+      "y": 100,
+      "width": 412,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.37664,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "suspension",
+    "name": "弹簧减震器",
+    "category": "help",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 2,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 40,
+      "y": 63,
+      "width": 237,
+      "height": 235
+    },
+    "normalizedBounds": {
+      "x": 85,
+      "y": 100,
+      "width": 343,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.254254,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "firecab",
+    "name": "红色消防车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 3,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 66,
+      "width": 390,
+      "height": 416
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 162,
+      "width": 300,
+      "height": 320
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.572922,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "farmcab",
+    "name": "绿色农场车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 4,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 85,
+      "width": 390,
+      "height": 397
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 177,
+      "width": 300,
+      "height": 305
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.551933,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "rescuecab",
+    "name": "白色救援车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 5,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 95,
+      "y": 66,
+      "width": 389,
+      "height": 416
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 161,
+      "width": 300,
+      "height": 321
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.550037,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "bulldozercab",
+    "name": "推土机车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 6,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 82,
+      "width": 390,
+      "height": 400
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 174,
+      "width": 300,
+      "height": 308
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.531734,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "cranecab",
+    "name": "高视野吊车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 7,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 60,
+      "width": 390,
+      "height": 422
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 157,
+      "width": 300,
+      "height": 325
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.49712,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "miningcab",
+    "name": "防护矿山车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 8,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 102,
+      "width": 390,
+      "height": 380
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 190,
+      "width": 300,
+      "height": 292
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.530376,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "forkcab",
+    "name": "紧凑叉车车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 9,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 76,
+      "width": 390,
+      "height": 406
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 170,
+      "width": 300,
+      "height": 312
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.5373,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "amphicab",
+    "name": "泡泡水陆车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 10,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 65,
+      "width": 390,
+      "height": 417
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 161,
+      "width": 300,
+      "height": 321
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.511253,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "citycab",
+    "name": "红色城市车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 11,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 50,
+      "width": 390,
+      "height": 432
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 150,
+      "width": 300,
+      "height": 332
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.520874,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "farmcab2",
+    "name": "圆窗农场车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 12,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 101,
+      "width": 390,
+      "height": 381
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 189,
+      "width": 300,
+      "height": 293
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.52948,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "amphicab2",
+    "name": "蓝色水陆车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 13,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 79,
+      "width": 390,
+      "height": 403
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 172,
+      "width": 300,
+      "height": 310
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.47493,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "snowcab",
+    "name": "暖暖雪地车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 14,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 132,
+      "width": 390,
+      "height": 350
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 213,
+      "width": 300,
+      "height": 269
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.424805,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "fantasycab",
+    "name": "紫色魔法车头",
+    "category": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 15,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 94,
+      "y": 150,
+      "width": 390,
+      "height": 332
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 227,
+      "width": 300,
+      "height": 255
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.32753,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "hovercab",
+    "name": "气垫船驾驶舱",
+    "category": "cab",
+    "sourceFile": "transport-hovercab-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "side-biased",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 25,
+      "y": 23,
+      "width": 263,
+      "height": 277
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 166,
+      "width": 300,
+      "height": 316
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v11 outline and glossy bubble treatment do not match the v9 cab set.",
+    "automatedChecks": {
+      "alphaCoverage": 0.542537,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "pilotcab",
+    "name": "飞机透明座舱",
+    "category": "cab",
+    "sourceFile": "transport-pilotcab-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "left",
+    "projection": "side-biased",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 22,
+      "y": 52,
+      "width": 270,
+      "height": 217
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 241,
+      "width": 300,
+      "height": 241
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the cabin points left and shows a large nose/end face.",
+    "automatedChecks": {
+      "alphaCoverage": 0.467179,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "gliderseat",
+    "name": "滑翔伞安全座椅",
+    "category": "cab",
+    "sourceFile": "transport-gliderseat-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "ambiguous",
+    "projection": "three-quarter",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 54,
+      "y": 23,
+      "width": 205,
+      "height": 277
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 77,
+      "width": 300,
+      "height": 405
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: this is a perspective seat rather than a strict side-view cab module.",
+    "automatedChecks": {
+      "alphaCoverage": 0.358118,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "bubblecockpit",
+    "name": "救援观察舱",
+    "category": "cab",
+    "sourceFile": "transport-bubblecockpit-v11.png",
+    "sourceBatch": "v11",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "side-biased",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 33,
+      "y": 23,
+      "width": 248,
+      "height": 277
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 147,
+      "width": 300,
+      "height": 335
+    },
+    "baseline": 482,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v11 outline and glossy bubble treatment do not match the v9 cab set.",
+    "automatedChecks": {
+      "alphaCoverage": 0.501501,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "shovel",
+    "name": "挖掘斗",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 0,
+    "facing": "right",
+    "projection": "side-biased with bucket interior",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 91,
+      "width": 466,
+      "height": 331
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 109,
+      "width": 466,
+      "height": 331
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the bucket interior/front plane is prominent and perspective-baked.",
+    "automatedChecks": {
+      "alphaCoverage": 0.299191,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "blade",
+    "name": "推土铲",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 1,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 41,
+      "width": 363,
+      "height": 430
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 329,
+      "height": 390
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.267624,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "crane",
+    "name": "起重吊臂",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 2,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 115,
+      "width": 466,
+      "height": 282
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 158,
+      "width": 466,
+      "height": 282
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.238979,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "fork",
+    "name": "叉车臂",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 3,
+    "facing": "right",
+    "projection": "three-quarter",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 75,
+      "width": 466,
+      "height": 363
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 77,
+      "width": 466,
+      "height": 363
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: both fork tines and mast depth are visible, creating a three-quarter view.",
+    "automatedChecks": {
+      "alphaCoverage": 0.255726,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "drill",
+    "name": "钻头",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 4,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 41,
+      "width": 394,
+      "height": 430
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 357,
+      "height": 390
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.31567,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "augerdrill",
+    "name": "长螺旋钻机",
+    "category": "tool",
+    "sourceFile": "tool-auger-drill-v1.png",
+    "sourceBatch": "v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 37,
+      "y": 117,
+      "width": 1976,
+      "height": 479
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 327,
+      "width": 466,
+      "height": 113
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.318456,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "roller",
+    "name": "压路滚筒",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 5,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 107,
+      "width": 466,
+      "height": 299
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 141,
+      "width": 466,
+      "height": 299
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.307011,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "plow",
+    "name": "农田犁",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 6,
+    "facing": "right",
+    "projection": "three-quarter",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 133,
+      "width": 466,
+      "height": 246
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 194,
+      "width": 466,
+      "height": 246
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: three staggered moldboards encode depth and cannot read as strict side projection.",
+    "automatedChecks": {
+      "alphaCoverage": 0.270512,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "hose",
+    "name": "喷水炮",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 7,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 136,
+      "width": 466,
+      "height": 240
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 200,
+      "width": 466,
+      "height": 240
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.236317,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "tow",
+    "name": "救援拖钩",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 8,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 109,
+      "width": 466,
+      "height": 294
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 146,
+      "width": 466,
+      "height": 294
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.233444,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "brush",
+    "name": "清扫刷",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 9,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 59,
+      "width": 466,
+      "height": 394
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 461,
+      "height": 390
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.382824,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "snowblade",
+    "name": "弧形扫雪铲",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 10,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 55,
+      "width": 466,
+      "height": 403
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 451,
+      "height": 390
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.287151,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "grabber",
+    "name": "液压抓木爪",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 11,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 43,
+      "width": 443,
+      "height": 428
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 404,
+      "height": 390
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.391865,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "mixer",
+    "name": "水泥搅拌筒",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 12,
+    "facing": "right",
+    "projection": "three-quarter/end visible",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 108,
+      "width": 466,
+      "height": 297
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 143,
+      "width": 466,
+      "height": 297
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "REGENERATE",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the drum end face and elliptical bands expose a baked perspective view.",
+    "automatedChecks": {
+      "alphaCoverage": 0.400883,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "hammer",
+    "name": "破碎锤",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 13,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 41,
+      "width": 289,
+      "height": 430
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 262,
+      "height": 390
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.266533,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "wreckingball",
+    "name": "工程大摆锤",
+    "category": "tool",
+    "sourceFile": "tool-wrecking-ball-v1.png",
+    "sourceBatch": "v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 57,
+      "y": 7,
+      "width": 1340,
+      "height": 988
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 96,
+      "width": 466,
+      "height": 344
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.33073,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "liftplatform",
+    "name": "高空作业篮",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 14,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 127,
+      "width": 466,
+      "height": 258
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 182,
+      "width": 466,
+      "height": 258
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.229996,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "conveyor",
+    "name": "装卸传送臂",
+    "category": "tool",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceBatch": "v9",
+    "sourceType": "sprite-cell",
+    "sourceCell": 15,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 23,
+      "y": 126,
+      "width": 466,
+      "height": 261
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 179,
+      "width": 466,
+      "height": 261
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.230892,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "lamp",
+    "name": "亮亮探照灯",
+    "category": "help",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 3,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 20,
+      "y": 107,
+      "width": 256,
+      "height": 175
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 146,
+      "width": 430,
+      "height": 294
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.34121,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "siren",
+    "name": "安全警示灯",
+    "category": "help",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 4,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 52,
+      "y": 75,
+      "width": 210,
+      "height": 182
+    },
+    "normalizedBounds": {
+      "x": 67,
+      "y": 112,
+      "width": 378,
+      "height": 328
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.279946,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "bridge",
+    "name": "折叠小桥",
+    "category": "help",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 5,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 18,
+      "y": 106,
+      "width": 266,
+      "height": 148
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 201,
+      "width": 430,
+      "height": 239
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.351591,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "rescuebox",
+    "name": "蓝色救援物资箱",
+    "category": "help",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 6,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 47,
+      "y": 91,
+      "width": 238,
+      "height": 169
+    },
+    "normalizedBounds": {
+      "x": 42,
+      "y": 136,
+      "width": 428,
+      "height": 304
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.347743,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "toolbox",
+    "name": "红色随车工具箱",
+    "category": "help",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 11,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 27,
+      "y": 60,
+      "width": 257,
+      "height": 175
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 147,
+      "width": 430,
+      "height": 293
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.367167,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "aidkit",
+    "name": "白色急救箱",
+    "category": "help",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 12,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 35,
+      "y": 28,
+      "width": 242,
+      "height": 189
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 104,
+      "width": 430,
+      "height": 336
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.365371,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "cones",
+    "name": "安全路锥架",
+    "category": "help",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 13,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 14,
+      "y": 25,
+      "width": 295,
+      "height": 192
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 160,
+      "width": 430,
+      "height": 280
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.366187,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "step",
+    "name": "防滑侧踏板",
+    "category": "help",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 14,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 53,
+      "y": 79,
+      "width": 231,
+      "height": 137
+    },
+    "normalizedBounds": {
+      "x": 48,
+      "y": 193,
+      "width": 416,
+      "height": 247
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.293695,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "spare",
+    "name": "随车备用轮",
+    "category": "help",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 15,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 30,
+      "y": 7,
+      "width": 237,
+      "height": 239
+    },
+    "normalizedBounds": {
+      "x": 88,
+      "y": 100,
+      "width": 337,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.451316,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "flag",
+    "name": "小旗子",
+    "category": "decor",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 7,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 65,
+      "y": 58,
+      "width": 185,
+      "height": 214
+    },
+    "normalizedBounds": {
+      "x": 109,
+      "y": 100,
+      "width": 294,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.21025,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "star",
+    "name": "大星星",
+    "category": "decor",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 8,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 53,
+      "y": 46,
+      "width": 196,
+      "height": 186
+    },
+    "normalizedBounds": {
+      "x": 80,
+      "y": 105,
+      "width": 353,
+      "height": 335
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.194347,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "eyes",
+    "name": "笑脸眼睛",
+    "category": "decor",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 9,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 25,
+      "y": 77,
+      "width": 250,
+      "height": 148
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 185,
+      "width": 430,
+      "height": 255
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.271606,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "pipe",
+    "name": "彩虹排气管",
+    "category": "decor",
+    "sourceFile": "v10-side-extras.png",
+    "sourceBatch": "v10",
+    "sourceType": "sprite-cell",
+    "sourceCell": 10,
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "lighting": "unknown-human-review",
+    "materialStyle": "unknown-human-review",
+    "alphaBounds": {
+      "x": 41,
+      "y": 7,
+      "width": 145,
+      "height": 261
+    },
+    "normalizedBounds": {
+      "x": 162,
+      "y": 100,
+      "width": 189,
+      "height": 340
+    },
+    "baseline": 440,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "status": "ALIGN_ONLY",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "automatedChecks": {
+      "alphaCoverage": 0.214609,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": true,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  }
+]

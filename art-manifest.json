@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "phase": "audit-only",
+  "approvedVersion": null,
+  "runtimeActivated": false,
+  "canvas": {
+    "width": 512,
+    "height": 512,
+    "format": "PNG",
+    "channels": "RGBA",
+    "colorSpace": "sRGB",
+    "background": "transparent"
+  },
+  "anchors": {
+    "chassis": { "baselineY": 390 },
+    "body": { "baselineY": 440 },
+    "cab": { "baselineY": 482, "rightMargin": 28 },
+    "movement": { "groundY": 486 },
+    "frontTool": { "mountX": 23 }
+  },
+  "canonicalAssets": [],
+  "notes": [
+    "Phase one extracts and reviews active art without replacing runtime files.",
+    "Independent PNG overrides are resolved before sprite-sheet cells.",
+    "Subjective projection, top-face, lighting and material checks require human approval."
+  ]
+}
+

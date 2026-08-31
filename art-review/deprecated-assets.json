@@ -1,0 +1,116 @@
+[
+  {
+    "id": "hoverframe",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 8,
+    "reason": "Overridden at runtime by transport-hoverframe-v11.png."
+  },
+  {
+    "id": "airframe",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 9,
+    "reason": "Overridden at runtime by transport-airframe-v11.png."
+  },
+  {
+    "id": "gliderframe",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 10,
+    "reason": "Overridden at runtime by transport-gliderframe-v11.png."
+  },
+  {
+    "id": "pontoonframe",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 11,
+    "reason": "Overridden at runtime by transport-pontoonframe-v13.png."
+  },
+  {
+    "id": "hoverbody",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 4,
+    "reason": "Overridden at runtime by transport-hoverbody-v11.png."
+  },
+  {
+    "id": "airbody",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 5,
+    "reason": "Overridden at runtime by transport-airbody-v11.png."
+  },
+  {
+    "id": "gliderpod",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 6,
+    "reason": "Overridden at runtime by transport-gliderpod-v11.png."
+  },
+  {
+    "id": "seaplanebody",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 7,
+    "reason": "Overridden at runtime by transport-seaplanebody-v13.png."
+  },
+  {
+    "id": "hovercab",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 0,
+    "reason": "Overridden at runtime by transport-hovercab-v11.png."
+  },
+  {
+    "id": "pilotcab",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 1,
+    "reason": "Overridden at runtime by transport-pilotcab-v11.png."
+  },
+  {
+    "id": "gliderseat",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 2,
+    "reason": "Overridden at runtime by transport-gliderseat-v11.png."
+  },
+  {
+    "id": "bubblecockpit",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 3,
+    "reason": "Overridden at runtime by transport-bubblecockpit-v11.png."
+  },
+  {
+    "id": "greentrack",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 11,
+    "reason": "Overridden at runtime by movement-greentrack-v13.png."
+  },
+  {
+    "id": "ski",
+    "sourceFile": "v10-side-special-movement.png",
+    "sourceCell": 1,
+    "reason": "Overridden at runtime by movement-ski-v13.png."
+  },
+  {
+    "id": "hover",
+    "sourceFile": "v10-side-special-movement.png",
+    "sourceCell": 2,
+    "reason": "Overridden at runtime by movement-hover-v13.png."
+  },
+  {
+    "id": "hovercraftskirt",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 12,
+    "reason": "Overridden at runtime by transport-hovercraftskirt-v11.png."
+  },
+  {
+    "id": "wing",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 13,
+    "reason": "Overridden at runtime by transport-wing-v11.png."
+  },
+  {
+    "id": "paraglider",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 14,
+    "reason": "Overridden at runtime by transport-paraglider-v11.png."
+  },
+  {
+    "id": "propeller",
+    "sourceFile": "v10-side-transport.png",
+    "sourceCell": 15,
+    "reason": "Overridden at runtime by transport-propeller-v11.png."
+  }
+]
