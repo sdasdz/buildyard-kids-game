@@ -35,9 +35,10 @@ function block(source, start, end) {
 
 export async function parsePageSource() {
   const source = await fs.readFile(PAGE_FILE, "utf8");
-  const partsBlock = block(source, "const PARTS:", "const SPRITES:");
-  const spritesBlock = block(source, "const SPRITES:", "const SPRITE_SHEETS:");
-  const sheetsBlock = block(source, "const SPRITE_SHEETS:", "const PART_IMAGE_ASSETS:");
+  const hasLegacySprites = source.includes("const SPRITES:");
+  const partsBlock = block(source, "const PARTS:", hasLegacySprites ? "const SPRITES:" : "const PART_IMAGE_ASSETS:");
+  const spritesBlock = hasLegacySprites ? block(source, "const SPRITES:", "const SPRITE_SHEETS:") : "";
+  const sheetsBlock = hasLegacySprites ? block(source, "const SPRITE_SHEETS:", "const PART_IMAGE_ASSETS:") : "";
   const individualBlock = block(source, "const PART_IMAGE_ASSETS:", "function hasPartArt");
 
   const parts = [];
@@ -58,12 +59,16 @@ export async function parsePageSource() {
   for (const match of sheetsBlock.matchAll(/(\d+)\s*:\s*"([^"]+)"/g)) sheets[Number(match[1])] = match[2];
   const individuals = {};
   for (const match of individualBlock.matchAll(/([a-zA-Z0-9_]+)\s*:\s*"([^"]+)"/g)) individuals[match[1]] = match[2];
+  if (individualBlock.includes("canonical-v1/${id}.png")) {
+    for (const part of parts) individuals[part.id] = `canonical-v1/${part.id}.png`;
+  }
 
   if (parts.length < 50) throw new Error(`PARTS parse looks incomplete (${parts.length})`);
   return { source, parts, sprites, sheets, individuals };
 }
 
 export function sourceBatch(file) {
+  if (file.includes("canonical-v1/")) return "canonical-v1";
   const version = file.match(/(?:^|[-_])(v\d+)(?:[-_.]|$)/i)?.[1];
   return version ? version.toLowerCase() : "unversioned";
 }
@@ -125,8 +130,8 @@ function fitSize(bounds, category) {
   return Math.min(maxWidth / bounds.width, maxHeight / bounds.height, 1.8);
 }
 
-export async function drawCanonicalPart(asset, outputFile) {
-  const source = await readActiveSource(asset);
+export async function drawCanonicalPart(asset, outputFile, options = {}) {
+  const source = options.sourceBuffer || await readActiveSource(asset);
   const analysis = await alphaAnalysis(source);
   if (!analysis.bounds) throw new Error(`Asset ${asset.id} has no visible pixels`);
   const rule = CATEGORY_RULES[asset.category] || CATEGORY_RULES.help;

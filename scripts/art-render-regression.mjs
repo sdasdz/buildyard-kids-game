@@ -1,3 +1,4 @@
+import fs from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 import { REVIEW_DIR, escapeXml, loadAudit, readActiveSource } from "./art-pipeline-lib.mjs";
@@ -18,12 +19,18 @@ const WIDE = new Set(["track", "miningtrack", "snowtrack", "greentrack", "ski", 
 const ROUND = new Set(["wheel", "orangewheel", "bluewheel", "redwheel", "smallwheel", "farmwheel", "citywheel", "fantasywheel", "rollerwheel", "paddlewheel"]);
 const BOOM = new Set(["shovel", "crane", "wreckingball", "liftplatform"]);
 const DECK = new Set(["mixer", "hose", "bridge"]);
-const audit = await loadAudit();
+const candidateMode = process.argv.includes("--canonical-candidates");
+const candidateRoot = path.join(REVIEW_DIR, "canonical-v1-candidates");
+const audit = candidateMode
+  ? JSON.parse(await fs.readFile(path.join(candidateRoot, "candidates.json"), "utf8"))
+  : await loadAudit();
 const byId = Object.fromEntries(audit.map((asset) => [asset.id, asset]));
 const columns = 2, tileWidth = 768, tileHeight = 576;
 
 async function squareArt(asset, size, flip = false) {
-  const source = await readActiveSource({ ...asset, cell: asset.sourceCell });
+  const source = candidateMode
+    ? await fs.readFile(path.join(candidateRoot, "parts", `${asset.id}.png`))
+    : await readActiveSource({ ...asset, cell: asset.sourceCell });
   let image = sharp(source).resize(size, size, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } });
   if (flip) image = image.flop();
   return image.png().toBuffer();
@@ -50,9 +57,9 @@ async function renderBuild(build) {
       size = rootSize * (transport === "air" ? .44 : .58); x = rootX + rootSize * (transport === "air" ? .54 : .42); y = transport === "air" ? rootY + rootSize * .25 : deckY - size * .941;
     } else if (asset.category === "move") {
       if (id === "wing") { size = rootSize * 1.02; x = rootX - rootSize * .01; y = rootY + rootSize * .02; layer = 24; }
-      else if (id === "paraglider") { size = rootSize * 1.16; x = rootX - rootSize * .08; y = rootY - rootSize * .68; layer = 26; }
+      else if (id === "paraglider") { size = rootSize * 1.16; x = rootX - rootSize * .08; y = rootY - rootSize * .58; layer = 26; }
       else if (id === "propeller") { size = rootSize * .36; x = rootX + rootSize * .8; y = rootY + rootSize * .36; layer = 58; }
-      else if (WIDE.has(id)) { size = rootSize * .9; x = rootX + (rootSize - size) / 2 + wideNo * 8; y = groundY - size * (id === "hovercraftskirt" ? .72 : .949) + wideNo * 5; layer = 25 + wideNo; wideNo += 1; }
+      else if (WIDE.has(id)) { size = rootSize * .9; x = rootX + (rootSize - size) / 2 + wideNo * 8; y = groundY - size * .949 + wideNo * 5; layer = 25 + wideNo; wideNo += 1; }
       else if (ROUND.has(id)) { size = rootSize * (wheelCount >= 4 ? .25 : wheelCount === 3 ? .29 : wheelCount === 2 ? .34 : .36); const ratio = wheelCount === 1 ? .5 : .16 + wheelNo * (.68 / (wheelCount - 1)); x = rootX + rootSize * ratio - size / 2; y = groundY - size * .949; layer = 55; wheelNo += 1; }
     } else if (asset.category === "tool") {
       if (BOOM.has(id)) { size = rootSize * (id === "shovel" ? .82 : id === "crane" ? .78 : .72); x = rootX + rootSize * (id === "shovel" ? .27 : id === "crane" ? .05 : .12); y = deckY - size * .53; layer = 48; }
@@ -71,5 +78,6 @@ async function renderBuild(build) {
 }
 const composites = [];
 for (let index = 0; index < BUILDS.length; index += 1) composites.push({ input: await renderBuild(BUILDS[index]), left: (index % columns) * tileWidth, top: Math.floor(index / columns) * tileHeight });
-await sharp({ create: { width: columns * tileWidth, height: Math.ceil(BUILDS.length / columns) * tileHeight, channels: 4, background: "#dee2e6" } }).composite(composites).png().toFile(path.join(REVIEW_DIR, "07-mixed-vehicle-tests.png"));
-console.log(`07-mixed-vehicle-tests.png: ${BUILDS.length} builds rendered with current assembleParts rules`);
+const outputFile = candidateMode ? path.join(candidateRoot, "07-mixed-vehicle-tests.png") : path.join(REVIEW_DIR, "07-mixed-vehicle-tests.png");
+await sharp({ create: { width: columns * tileWidth, height: Math.ceil(BUILDS.length / columns) * tileHeight, channels: 4, background: "#dee2e6" } }).composite(composites).png().toFile(outputFile);
+console.log(`${path.basename(outputFile)}: ${BUILDS.length} builds rendered with current assembleParts rules`);

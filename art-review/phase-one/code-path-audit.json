@@ -1,0 +1,51 @@
+{
+  "pageFile": "app/page.tsx",
+  "symbols": [
+    {
+      "name": "PARTS",
+      "line": 80,
+      "role": "Defines active part IDs, names, categories, tags and design sizes."
+    },
+    {
+      "name": "SPRITES",
+      "line": 197,
+      "role": "Maps part IDs to 4x4 sprite-sheet cells."
+    },
+    {
+      "name": "SPRITE_SHEETS",
+      "line": 228,
+      "role": "Maps numeric sheet keys to source files."
+    },
+    {
+      "name": "PART_IMAGE_ASSETS",
+      "line": 239,
+      "role": "Maps part IDs to individual PNG files and overrides SPRITES at runtime."
+    },
+    {
+      "name": "spriteStyle",
+      "line": 277,
+      "role": "Selects individual PNG first; otherwise renders a 4x4 sprite cell. The two paths currently align differently."
+    },
+    {
+      "name": "RecoloredPartArt",
+      "line": 328,
+      "role": "Uses the same individual-first source priority for recoloring."
+    },
+    {
+      "name": "assembleParts",
+      "line": 805,
+      "role": "Applies runtime category placement, sizing, layering and rear-tool flip behavior."
+    }
+  ],
+  "effectivePriority": [
+    "PART_IMAGE_ASSETS individual PNG",
+    "SPRITES sprite-cell"
+  ],
+  "counts": {
+    "active": 114,
+    "individual": 21,
+    "spriteCell": 93,
+    "deprecated": 19
+  },
+  "finding": "Runtime currently has two alignment paths: individual PNG uses centered contain while sprite cells use atlas positioning. Phase one records this and does not alter gameplay code."
+}

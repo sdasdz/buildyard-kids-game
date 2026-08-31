@@ -1,0 +1,1498 @@
+{
+  "candidateCount": 114,
+  "automatedStatus": "PASS",
+  "failures": [],
+  "results": [
+    {
+      "id": "frame",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "longframe",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "heavyframe",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "compactchassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "excavatorchassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "bulldozerchassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "cranechassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "dumpchassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "firechassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "farmchassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "snowchassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "miningchassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "amphichassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "citychassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "rescuechassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "fantasychassis",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "hoverframe",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "airframe",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "gliderframe",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "pontoonframe",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "utilitybody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "cargo",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "miningdumpbody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "forkliftbody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "excavatorbase",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "bulldozerbody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "cranebody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "bucketbody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "firebody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "tractorbody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "snowbody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "miningbody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "tank",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "citybody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "rescuebody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "fantasybody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "hoverbody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "airbody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "gliderpod",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "seaplanebody",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "wheel",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": 1.0219
+      },
+      "failed": []
+    },
+    {
+      "id": "orangewheel",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": 0.9969
+      },
+      "failed": []
+    },
+    {
+      "id": "bluewheel",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": 1.0125
+      },
+      "failed": []
+    },
+    {
+      "id": "redwheel",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": 1.0156
+      },
+      "failed": []
+    },
+    {
+      "id": "smallwheel",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": 0.9969
+      },
+      "failed": []
+    },
+    {
+      "id": "farmwheel",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": 0.9969
+      },
+      "failed": []
+    },
+    {
+      "id": "citywheel",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": 0.9906
+      },
+      "failed": []
+    },
+    {
+      "id": "fantasywheel",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": 0.9969
+      },
+      "failed": []
+    },
+    {
+      "id": "track",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "miningtrack",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "snowtrack",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "greentrack",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "rollerwheel",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "paddlewheel",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "ski",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "hover",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "hovercraftskirt",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "wing",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "paraglider",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "propeller",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "cab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "bubblecab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "lampcab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "engine",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "battery",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "suspension",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "firecab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "farmcab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "rescuecab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "bulldozercab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "cranecab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "miningcab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "forkcab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "amphicab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "citycab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "farmcab2",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "amphicab2",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "snowcab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "fantasycab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "hovercab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "pilotcab",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "gliderseat",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "bubblecockpit",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "shovel",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "blade",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "crane",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "fork",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "drill",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "augerdrill",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "roller",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "plow",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "hose",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "tow",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "brush",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "snowblade",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "grabber",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "mixer",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "hammer",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "wreckingball",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "liftplatform",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "conveyor",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": 0,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "lamp",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "siren",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "bridge",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "rescuebox",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "toolbox",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "aidkit",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "cones",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "step",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "spare",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "flag",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "star",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "eyes",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    },
+    {
+      "id": "pipe",
+      "checks": {
+        "rgba512": true,
+        "hasVisiblePixels": true,
+        "noCanvasEdgeContact": true,
+        "noLikelyGreenResidue": true,
+        "baselineErrorPx": 1,
+        "toolMountErrorPx": null,
+        "wheelAspectRatio": null
+      },
+      "failed": []
+    }
+  ],
+  "manualReviewStillRequired": [
+    "facing",
+    "projection",
+    "top-face visibility",
+    "lighting direction",
+    "material consistency",
+    "white or black fringe",
+    "mixed-build fit"
+  ]
+}

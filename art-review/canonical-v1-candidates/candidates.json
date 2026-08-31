@@ -1,0 +1,2624 @@
+[
+  {
+    "id": "frame",
+    "name": "短轴基础底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/frame.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 235,
+      "width": 430,
+      "height": 155
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "longframe",
+    "name": "三轴加长底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/longframe.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 237,
+      "width": 430,
+      "height": 153
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "heavyframe",
+    "name": "四轴重载底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/heavyframe.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 257,
+      "width": 430,
+      "height": 133
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "compactchassis",
+    "name": "叉车紧凑底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/compactchassis.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 70,
+      "width": 430,
+      "height": 320
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "excavatorchassis",
+    "name": "挖机旋转底盘",
+    "category": "chassis",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/excavatorchassis.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 276,
+      "width": 430,
+      "height": 114
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "bulldozerchassis",
+    "name": "推土强化底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/bulldozerchassis.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 213,
+      "width": 430,
+      "height": 177
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "cranechassis",
+    "name": "起重支腿底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/cranechassis.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 208,
+      "width": 430,
+      "height": 182
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "dumpchassis",
+    "name": "翻斗承载底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/dumpchassis.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 261,
+      "width": 430,
+      "height": 129
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "firechassis",
+    "name": "消防红色底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/firechassis.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 260,
+      "width": 430,
+      "height": 130
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "farmchassis",
+    "name": "农场绿色底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/farmchassis.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 256,
+      "width": 430,
+      "height": 134
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "snowchassis",
+    "name": "雪地蓝色底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/snowchassis.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 248,
+      "width": 430,
+      "height": 142
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "miningchassis",
+    "name": "矿山防护底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/miningchassis.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 266,
+      "width": 430,
+      "height": 124
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "amphichassis",
+    "name": "水陆密封底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/amphichassis.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 234,
+      "width": 430,
+      "height": 156
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "citychassis",
+    "name": "城市维护底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/citychassis.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 257,
+      "width": 430,
+      "height": 133
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "rescuechassis",
+    "name": "白色救援底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/rescuechassis.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 273,
+      "width": 430,
+      "height": 117
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "fantasychassis",
+    "name": "紫色能量底盘",
+    "category": "chassis",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/fantasychassis.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 281,
+      "width": 430,
+      "height": 109
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "hoverframe",
+    "name": "气垫船承载骨架",
+    "category": "chassis",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-hoverframe-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/hoverframe.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 292,
+      "width": 430,
+      "height": 98
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "airframe",
+    "name": "工程飞机机身骨架",
+    "category": "chassis",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-airframe-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/airframe.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 313,
+      "width": 430,
+      "height": 77
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "gliderframe",
+    "name": "滑翔伞轻型骨架",
+    "category": "chassis",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-gliderframe-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/gliderframe.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 303,
+      "width": 430,
+      "height": 87
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "pontoonframe",
+    "name": "水陆浮筒底盘",
+    "category": "chassis",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-pontoonframe-v13.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/pontoonframe.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 390,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 236,
+      "width": 430,
+      "height": 154
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "utilitybody",
+    "name": "实体工具车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/utilitybody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 70,
+      "y": 100,
+      "width": 372,
+      "height": 340
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "cargo",
+    "name": "加长货运车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/cargo.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 259,
+      "width": 430,
+      "height": 181
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "miningdumpbody",
+    "name": "黑色重载车厢",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/miningdumpbody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 169,
+      "width": 430,
+      "height": 271
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "forkliftbody",
+    "name": "叉车配重车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/forkliftbody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 50,
+      "y": 100,
+      "width": 412,
+      "height": 340
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "excavatorbase",
+    "name": "挖机实体机身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/excavatorbase.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 51,
+      "y": 100,
+      "width": 410,
+      "height": 340
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "bulldozerbody",
+    "name": "推土动力车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/bulldozerbody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 57,
+      "y": 100,
+      "width": 398,
+      "height": 340
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "cranebody",
+    "name": "起重动力车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/cranebody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 100,
+      "width": 430,
+      "height": 340
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "bucketbody",
+    "name": "实体翻斗车厢",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/bucketbody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 211,
+      "width": 430,
+      "height": 229
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "firebody",
+    "name": "消防装备车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/firebody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 49,
+      "y": 100,
+      "width": 415,
+      "height": 340
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "tractorbody",
+    "name": "农场动力车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/tractorbody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 54,
+      "y": 100,
+      "width": 405,
+      "height": 340
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "snowbody",
+    "name": "扫雪动力车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/snowbody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 133,
+      "width": 430,
+      "height": 307
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "miningbody",
+    "name": "矿山防护车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/miningbody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 189,
+      "width": 430,
+      "height": 251
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "tank",
+    "name": "密封水箱车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/tank.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 123,
+      "width": 430,
+      "height": 317
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "citybody",
+    "name": "城市维护车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/citybody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 174,
+      "width": 430,
+      "height": 266
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "rescuebody",
+    "name": "白色救援车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/rescuebody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 141,
+      "width": 430,
+      "height": 299
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "fantasybody",
+    "name": "紫色奇想车身",
+    "category": "body",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/fantasybody.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 140,
+      "width": 430,
+      "height": 300
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "hoverbody",
+    "name": "气垫船工程舱",
+    "category": "body",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-hoverbody-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/hoverbody.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 267,
+      "width": 430,
+      "height": 173
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "airbody",
+    "name": "工程飞机机身",
+    "category": "body",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-airbody-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/airbody.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 273,
+      "width": 430,
+      "height": 167
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "gliderpod",
+    "name": "滑翔伞设备舱",
+    "category": "body",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-gliderpod-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/gliderpod.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 229,
+      "width": 430,
+      "height": 211
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "seaplanebody",
+    "name": "水上救援机身",
+    "category": "body",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-seaplanebody-v13.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/seaplanebody.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 293,
+      "width": 430,
+      "height": 147
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "wheel",
+    "name": "黄心越野轮",
+    "category": "move",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/wheel.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 93,
+      "y": 166,
+      "width": 327,
+      "height": 320
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "orangewheel",
+    "name": "橙心工程轮",
+    "category": "move",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/orangewheel.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "bluewheel",
+    "name": "蓝心救援轮",
+    "category": "move",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/bluewheel.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 94,
+      "y": 166,
+      "width": 324,
+      "height": 320
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "redwheel",
+    "name": "红心消防轮",
+    "category": "move",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/redwheel.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 94,
+      "y": 166,
+      "width": 325,
+      "height": 320
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "smallwheel",
+    "name": "黄色小轮",
+    "category": "move",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/smallwheel.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "farmwheel",
+    "name": "绿色农场轮",
+    "category": "move",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/farmwheel.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "citywheel",
+    "name": "蓝色城市轮",
+    "category": "move",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/citywheel.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 98,
+      "y": 166,
+      "width": 317,
+      "height": 320
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "fantasywheel",
+    "name": "紫色星星轮",
+    "category": "move",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/fantasywheel.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "track",
+    "name": "黄色工程履带",
+    "category": "move",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/track.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 264,
+      "width": 430,
+      "height": 222
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "miningtrack",
+    "name": "黑色矿山履带",
+    "category": "move",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/miningtrack.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 269,
+      "width": 430,
+      "height": 217
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "snowtrack",
+    "name": "蓝色雪地履带",
+    "category": "move",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/snowtrack.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 267,
+      "width": 430,
+      "height": 219
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "greentrack",
+    "name": "绿色越野履带",
+    "category": "move",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "movement-greentrack-v13.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/greentrack.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 291,
+      "width": 430,
+      "height": 195
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "rollerwheel",
+    "name": "宽幅压路滚筒",
+    "category": "move",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "v10-side-special-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/rollerwheel.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 204,
+      "width": 430,
+      "height": 282
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "paddlewheel",
+    "name": "水陆桨轮",
+    "category": "move",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/paddlewheel.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 85,
+      "y": 166,
+      "width": 342,
+      "height": 320
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "ski",
+    "name": "雪地滑橇",
+    "category": "move",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "movement-ski-v13.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/ski.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 391,
+      "width": 430,
+      "height": 95
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "hover",
+    "name": "紫色悬浮垫",
+    "category": "move",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "movement-hover-v13.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/hover.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 362,
+      "width": 430,
+      "height": 124
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "hovercraftskirt",
+    "name": "气垫船气囊",
+    "category": "move",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-hovercraftskirt-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/hovercraftskirt.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 397,
+      "width": 430,
+      "height": 89
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "wing",
+    "name": "工程飞机机翼",
+    "category": "move",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-wing-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/wing.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 362,
+      "width": 430,
+      "height": 124
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "paraglider",
+    "name": "救援滑翔伞翼",
+    "category": "move",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-paraglider-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/paraglider.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 221,
+      "width": 430,
+      "height": 265
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "propeller",
+    "name": "航空螺旋桨",
+    "category": "move",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-propeller-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/propeller.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 486
+    },
+    "normalizedBounds": {
+      "x": 112,
+      "y": 166,
+      "width": 289,
+      "height": 320
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "cab",
+    "name": "驾驶室",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/cab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 133,
+      "width": 300,
+      "height": 349
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "bubblecab",
+    "name": "泡泡驾驶舱",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/bubblecab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 192,
+      "width": 300,
+      "height": 290
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "lampcab",
+    "name": "探险驾驶室",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/lampcab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 160,
+      "width": 300,
+      "height": 322
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "engine",
+    "name": "轰隆动力机",
+    "category": "help",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/engine.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 122,
+      "width": 430,
+      "height": 318
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "battery",
+    "name": "闪电电池箱",
+    "category": "help",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/battery.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 50,
+      "y": 100,
+      "width": 412,
+      "height": 340
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "suspension",
+    "name": "弹簧减震器",
+    "category": "help",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/suspension.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 85,
+      "y": 100,
+      "width": 343,
+      "height": 340
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "firecab",
+    "name": "红色消防车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/firecab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 162,
+      "width": 300,
+      "height": 320
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "farmcab",
+    "name": "绿色农场车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/farmcab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 177,
+      "width": 300,
+      "height": 305
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "rescuecab",
+    "name": "白色救援车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/rescuecab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 161,
+      "width": 300,
+      "height": 321
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "bulldozercab",
+    "name": "推土机车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/bulldozercab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 174,
+      "width": 300,
+      "height": 308
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "cranecab",
+    "name": "高视野吊车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/cranecab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 157,
+      "width": 300,
+      "height": 325
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "miningcab",
+    "name": "防护矿山车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/miningcab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 190,
+      "width": 300,
+      "height": 292
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "forkcab",
+    "name": "紧凑叉车车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/forkcab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 170,
+      "width": 300,
+      "height": 312
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "amphicab",
+    "name": "泡泡水陆车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/amphicab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 161,
+      "width": 300,
+      "height": 321
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "citycab",
+    "name": "红色城市车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/citycab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 150,
+      "width": 300,
+      "height": 332
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "farmcab2",
+    "name": "圆窗农场车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/farmcab2.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 189,
+      "width": 300,
+      "height": 293
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "amphicab2",
+    "name": "蓝色水陆车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/amphicab2.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 172,
+      "width": 300,
+      "height": 310
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "snowcab",
+    "name": "暖暖雪地车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/snowcab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 213,
+      "width": 300,
+      "height": 269
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "fantasycab",
+    "name": "紫色魔法车头",
+    "category": "cab",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/fantasycab.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 227,
+      "width": 300,
+      "height": 255
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "hovercab",
+    "name": "气垫船驾驶舱",
+    "category": "cab",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-hovercab-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/hovercab.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 179,
+      "width": 300,
+      "height": 303
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "pilotcab",
+    "name": "飞机透明座舱",
+    "category": "cab",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-pilotcab-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/pilotcab.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 184,
+      "width": 300,
+      "height": 298
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "gliderseat",
+    "name": "滑翔伞安全座椅",
+    "category": "cab",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-gliderseat-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/gliderseat.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 43,
+      "width": 300,
+      "height": 439
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "bubblecockpit",
+    "name": "救援观察舱",
+    "category": "cab",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "transport-bubblecockpit-v11.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/bubblecockpit.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 482,
+    "mountPoint": {
+      "x": 484,
+      "y": 482
+    },
+    "normalizedBounds": {
+      "x": 184,
+      "y": 56,
+      "width": 300,
+      "height": 426
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "shovel",
+    "name": "挖掘斗",
+    "category": "tool",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/shovel.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 220,
+      "width": 466,
+      "height": 220
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "blade",
+    "name": "推土铲",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/blade.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 329,
+      "height": 390
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "crane",
+    "name": "起重吊臂",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/crane.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 158,
+      "width": 466,
+      "height": 282
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "fork",
+    "name": "叉车臂",
+    "category": "tool",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/fork.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 185,
+      "width": 466,
+      "height": 255
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "drill",
+    "name": "钻头",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/drill.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 357,
+      "height": 390
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "augerdrill",
+    "name": "长螺旋钻机",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "tool-auger-drill-v1.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/augerdrill.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 327,
+      "width": 466,
+      "height": 113
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "roller",
+    "name": "压路滚筒",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/roller.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 141,
+      "width": 466,
+      "height": 299
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "plow",
+    "name": "农田犁",
+    "category": "tool",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/plow.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 391,
+      "height": 390
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "hose",
+    "name": "喷水炮",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/hose.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 200,
+      "width": 466,
+      "height": 240
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "tow",
+    "name": "救援拖钩",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/tow.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 146,
+      "width": 466,
+      "height": 294
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "brush",
+    "name": "清扫刷",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/brush.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 461,
+      "height": 390
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "snowblade",
+    "name": "弧形扫雪铲",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/snowblade.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 451,
+      "height": 390
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "grabber",
+    "name": "液压抓木爪",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/grabber.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 404,
+      "height": 390
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "mixer",
+    "name": "水泥搅拌筒",
+    "category": "tool",
+    "sourceKind": "regenerated-single-part-candidate",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/mixer.png",
+    "facing": "right-visual-review",
+    "projection": "strict-side-visual-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 206,
+      "width": 466,
+      "height": 234
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "New single-part redraw; requires contact-sheet and mixed-build approval before runtime activation."
+  },
+  {
+    "id": "hammer",
+    "name": "破碎锤",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/hammer.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 262,
+      "height": 390
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "wreckingball",
+    "name": "工程大摆锤",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "tool-wrecking-ball-v1.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/wreckingball.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 96,
+      "width": 466,
+      "height": 344
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "liftplatform",
+    "name": "高空作业篮",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/liftplatform.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 182,
+      "width": 466,
+      "height": 258
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "conveyor",
+    "name": "装卸传送臂",
+    "category": "tool",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/conveyor.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 23,
+      "y": 350
+    },
+    "normalizedBounds": {
+      "x": 23,
+      "y": 179,
+      "width": 466,
+      "height": 261
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "lamp",
+    "name": "亮亮探照灯",
+    "category": "help",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/lamp.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 146,
+      "width": 430,
+      "height": 294
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "siren",
+    "name": "安全警示灯",
+    "category": "help",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/siren.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 67,
+      "y": 112,
+      "width": 378,
+      "height": 328
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "bridge",
+    "name": "折叠小桥",
+    "category": "help",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/bridge.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 201,
+      "width": 430,
+      "height": 239
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "rescuebox",
+    "name": "蓝色救援物资箱",
+    "category": "help",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/rescuebox.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 42,
+      "y": 136,
+      "width": 428,
+      "height": 304
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "toolbox",
+    "name": "红色随车工具箱",
+    "category": "help",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/toolbox.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 147,
+      "width": 430,
+      "height": 293
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "aidkit",
+    "name": "白色急救箱",
+    "category": "help",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/aidkit.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 104,
+      "width": 430,
+      "height": 336
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "cones",
+    "name": "安全路锥架",
+    "category": "help",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/cones.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 160,
+      "width": 430,
+      "height": 280
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "step",
+    "name": "防滑侧踏板",
+    "category": "help",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/step.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 48,
+      "y": 193,
+      "width": 416,
+      "height": 247
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "spare",
+    "name": "随车备用轮",
+    "category": "help",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/spare.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 88,
+      "y": 100,
+      "width": 337,
+      "height": 340
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "flag",
+    "name": "小旗子",
+    "category": "decor",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/flag.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 109,
+      "y": 100,
+      "width": 294,
+      "height": 340
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "star",
+    "name": "大星星",
+    "category": "decor",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/star.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 80,
+      "y": 105,
+      "width": 353,
+      "height": 335
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "eyes",
+    "name": "笑脸眼睛",
+    "category": "decor",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/eyes.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 185,
+      "width": 430,
+      "height": 255
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  },
+  {
+    "id": "pipe",
+    "name": "彩虹排气管",
+    "category": "decor",
+    "sourceKind": "alignment-only-from-resolved-active-source",
+    "legacySourceFile": "v10-side-extras.png",
+    "candidateFile": "art-review/canonical-v1-candidates/parts/pipe.png",
+    "facing": "unknown-human-review",
+    "projection": "unknown-human-review",
+    "baseline": 440,
+    "mountPoint": {
+      "x": 256,
+      "y": 440
+    },
+    "normalizedBounds": {
+      "x": 162,
+      "y": 100,
+      "width": 189,
+      "height": 340
+    },
+    "status": "PENDING_HUMAN_APPROVAL",
+    "reason": "Phase-one ALIGN_ONLY source normalized without perspective transforms; requires final contact-sheet approval."
+  }
+]
