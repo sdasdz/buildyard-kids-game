@@ -36,6 +36,7 @@ yarn-error.log*
 
 # typescript
 next-env.d.ts
+*.tsbuildinfo
 /dist/
 /.wrangler/
 /outputs/
@@ -50,6 +51,7 @@ next-env.d.ts
 /desktop-app/node_modules/
 /desktop-app/app-dist/
 /desktop-app/release/
+/desktop-app/smoke-*.json
 
 # local delivery artifacts (source and required game media remain tracked)
 /安装包/

@@ -134,6 +134,12 @@ export async function drawCanonicalPart(asset, outputFile, options = {}) {
   const source = options.sourceBuffer || await readActiveSource(asset);
   const analysis = await alphaAnalysis(source);
   if (!analysis.bounds) throw new Error(`Asset ${asset.id} has no visible pixels`);
+  if (!options.sourceBuffer && asset.sourceBatch === "canonical-v1") {
+    if (analysis.width !== CANVAS || analysis.height !== CANVAS) throw new Error(`Canonical asset ${asset.id} is not ${CANVAS}x${CANVAS}`);
+    await fs.mkdir(path.dirname(outputFile), { recursive: true });
+    await sharp(source).ensureAlpha().toColorspace("srgb").png().toFile(outputFile);
+    return { analysis, normalizedBounds: analysis.bounds, scale: 1 };
+  }
   const rule = CATEGORY_RULES[asset.category] || CATEGORY_RULES.help;
   const crop = await sharp(source).extract({
     left: analysis.bounds.x,

@@ -1,0 +1,914 @@
+{
+  "frame": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "longframe": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "heavyframe": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "compactchassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "excavatorchassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "bulldozerchassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "cranechassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "dumpchassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "firechassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "farmchassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "snowchassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "miningchassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "amphichassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "citychassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "rescuechassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "fantasychassis": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "hoverframe": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "airframe": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "gliderframe": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "pontoonframe": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "utilitybody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "cargo": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "miningdumpbody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "forkliftbody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "excavatorbase": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "bulldozerbody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "cranebody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "bucketbody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "firebody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "tractorbody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "snowbody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "miningbody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "tank": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "citybody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "rescuebody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "fantasybody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "hoverbody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "airbody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "gliderpod": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "seaplanebody": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "wheel": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "orangewheel": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "bluewheel": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "redwheel": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "smallwheel": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "farmwheel": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "citywheel": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "fantasywheel": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "track": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "miningtrack": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "snowtrack": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "greentrack": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "rollerwheel": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "paddlewheel": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "ski": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "hover": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "hovercraftskirt": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "wing": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "paraglider": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "propeller": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "cab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "bubblecab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "lampcab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "engine": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "battery": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "suspension": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "firecab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "farmcab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "rescuecab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "bulldozercab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "cranecab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "miningcab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "forkcab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "amphicab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "citycab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "farmcab2": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "amphicab2": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "snowcab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "fantasycab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "hovercab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "pilotcab": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "gliderseat": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "bubblecockpit": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "shovel": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "blade": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "crane": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "fork": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "drill": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "augerdrill": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "roller": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "plow": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "hose": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "tow": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "brush": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "snowblade": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "grabber": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "mixer": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "hammer": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "wreckingball": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "liftplatform": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "conveyor": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "lamp": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "siren": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "bridge": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "rescuebox": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "toolbox": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "aidkit": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "cones": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "step": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "spare": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "flag": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "star": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "eyes": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  },
+  "pipe": {
+    "status": "PASS",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "reason": "Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01."
+  }
+}

@@ -3,19 +3,19 @@
     "id": "frame",
     "name": "短轴基础底盘",
     "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 0,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/frame.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 21,
-      "y": 221,
-      "width": 470,
-      "height": 169
+      "x": 41,
+      "y": 235,
+      "width": 430,
+      "height": 155
     },
     "normalizedBounds": {
       "x": 41,
@@ -29,14 +29,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.244434,
+      "alphaCoverage": 0.205452,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -50,19 +50,19 @@
     "id": "longframe",
     "name": "三轴加长底盘",
     "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 1,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/longframe.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 21,
-      "y": 223,
-      "width": 470,
-      "height": 167
+      "x": 41,
+      "y": 237,
+      "width": 430,
+      "height": 153
     },
     "normalizedBounds": {
       "x": 41,
@@ -76,14 +76,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.20435,
+      "alphaCoverage": 0.171257,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -97,19 +97,19 @@
     "id": "heavyframe",
     "name": "四轴重载底盘",
     "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 2,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/heavyframe.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 21,
-      "y": 245,
-      "width": 470,
-      "height": 145
+      "x": 41,
+      "y": 257,
+      "width": 430,
+      "height": 133
     },
     "normalizedBounds": {
       "x": 41,
@@ -123,14 +123,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.209358,
+      "alphaCoverage": 0.1759,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -144,19 +144,19 @@
     "id": "compactchassis",
     "name": "叉车紧凑底盘",
     "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 3,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/compactchassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 88,
-      "y": 140,
-      "width": 336,
-      "height": 250
+      "x": 41,
+      "y": 70,
+      "width": 430,
+      "height": 320
     },
     "normalizedBounds": {
       "x": 41,
@@ -170,14 +170,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.122208,
+      "alphaCoverage": 0.199883,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -191,25 +191,25 @@
     "id": "excavatorchassis",
     "name": "挖机旋转底盘",
     "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 4,
+    "sourceFile": "canonical-v1/excavatorchassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
     "facing": "right",
-    "projection": "side-biased with visible top face",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 21,
-      "y": 234,
-      "width": 470,
-      "height": 156
+      "x": 41,
+      "y": 276,
+      "width": 430,
+      "height": 114
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 247,
+      "y": 276,
       "width": 430,
-      "height": 143
+      "height": 114
     },
     "baseline": 390,
     "groundLine": 486,
@@ -217,14 +217,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the large turntable top surface is visibly exposed and cannot be corrected by anchor alignment.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.225853,
+      "alphaCoverage": 0.167469,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -238,19 +238,19 @@
     "id": "bulldozerchassis",
     "name": "推土强化底盘",
     "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 5,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/bulldozerchassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 21,
-      "y": 196,
-      "width": 470,
-      "height": 194
+      "x": 41,
+      "y": 213,
+      "width": 430,
+      "height": 177
     },
     "normalizedBounds": {
       "x": 41,
@@ -264,14 +264,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.242901,
+      "alphaCoverage": 0.202271,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -285,19 +285,19 @@
     "id": "cranechassis",
     "name": "起重支腿底盘",
     "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 6,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/cranechassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 21,
-      "y": 191,
-      "width": 470,
-      "height": 199
+      "x": 41,
+      "y": 208,
+      "width": 430,
+      "height": 182
     },
     "normalizedBounds": {
       "x": 41,
@@ -311,14 +311,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.218914,
+      "alphaCoverage": 0.183369,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -332,19 +332,19 @@
     "id": "dumpchassis",
     "name": "翻斗承载底盘",
     "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 7,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/dumpchassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 22,
-      "y": 249,
-      "width": 469,
-      "height": 141
+      "x": 41,
+      "y": 261,
+      "width": 430,
+      "height": 129
     },
     "normalizedBounds": {
       "x": 41,
@@ -358,14 +358,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.213573,
+      "alphaCoverage": 0.179996,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -379,19 +379,19 @@
     "id": "firechassis",
     "name": "消防红色底盘",
     "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 8,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/firechassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 21,
-      "y": 248,
-      "width": 470,
-      "height": 142
+      "x": 41,
+      "y": 260,
+      "width": 430,
+      "height": 130
     },
     "normalizedBounds": {
       "x": 41,
@@ -405,14 +405,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.214558,
+      "alphaCoverage": 0.179203,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -426,207 +426,19 @@
     "id": "farmchassis",
     "name": "农场绿色底盘",
     "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 9,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/farmchassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 22,
-      "y": 244,
-      "width": 469,
-      "height": 146
-    },
-    "normalizedBounds": {
       "x": 41,
-      "y": 256,
+      "y": 257,
       "width": 430,
-      "height": 134
-    },
-    "baseline": 390,
-    "groundLine": 486,
-    "mountPoint": {
-      "x": 256,
-      "y": 390
-    },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
-    "automatedChecks": {
-      "alphaCoverage": 0.207336,
-      "edgePixelRatio": 0,
-      "greenResidueRatio": 0
-    },
-    "manualReviewRequired": true,
-    "manualReviewFields": [
-      "facing",
-      "projection",
-      "top-face visibility",
-      "lighting",
-      "material style",
-      "mount geometry"
-    ]
-  },
-  {
-    "id": "snowchassis",
-    "name": "雪地蓝色底盘",
-    "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 10,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
-    "alphaBounds": {
-      "x": 21,
-      "y": 235,
-      "width": 470,
-      "height": 155
-    },
-    "normalizedBounds": {
-      "x": 41,
-      "y": 248,
-      "width": 430,
-      "height": 142
-    },
-    "baseline": 390,
-    "groundLine": 486,
-    "mountPoint": {
-      "x": 256,
-      "y": 390
-    },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
-    "automatedChecks": {
-      "alphaCoverage": 0.167648,
-      "edgePixelRatio": 0,
-      "greenResidueRatio": 0
-    },
-    "manualReviewRequired": true,
-    "manualReviewFields": [
-      "facing",
-      "projection",
-      "top-face visibility",
-      "lighting",
-      "material style",
-      "mount geometry"
-    ]
-  },
-  {
-    "id": "miningchassis",
-    "name": "矿山防护底盘",
-    "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 11,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
-    "alphaBounds": {
-      "x": 21,
-      "y": 254,
-      "width": 470,
-      "height": 136
-    },
-    "normalizedBounds": {
-      "x": 41,
-      "y": 266,
-      "width": 430,
-      "height": 124
-    },
-    "baseline": 390,
-    "groundLine": 486,
-    "mountPoint": {
-      "x": 256,
-      "y": 390
-    },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
-    "automatedChecks": {
-      "alphaCoverage": 0.209377,
-      "edgePixelRatio": 0,
-      "greenResidueRatio": 0
-    },
-    "manualReviewRequired": true,
-    "manualReviewFields": [
-      "facing",
-      "projection",
-      "top-face visibility",
-      "lighting",
-      "material style",
-      "mount geometry"
-    ]
-  },
-  {
-    "id": "amphichassis",
-    "name": "水陆密封底盘",
-    "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 12,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
-    "alphaBounds": {
-      "x": 21,
-      "y": 219,
-      "width": 470,
-      "height": 171
-    },
-    "normalizedBounds": {
-      "x": 41,
-      "y": 234,
-      "width": 430,
-      "height": 156
-    },
-    "baseline": 390,
-    "groundLine": 486,
-    "mountPoint": {
-      "x": 256,
-      "y": 390
-    },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
-    "automatedChecks": {
-      "alphaCoverage": 0.219131,
-      "edgePixelRatio": 0,
-      "greenResidueRatio": 0
-    },
-    "manualReviewRequired": true,
-    "manualReviewFields": [
-      "facing",
-      "projection",
-      "top-face visibility",
-      "lighting",
-      "material style",
-      "mount geometry"
-    ]
-  },
-  {
-    "id": "citychassis",
-    "name": "城市维护底盘",
-    "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 13,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
-    "alphaBounds": {
-      "x": 21,
-      "y": 245,
-      "width": 470,
-      "height": 145
+      "height": 133
     },
     "normalizedBounds": {
       "x": 41,
@@ -640,14 +452,202 @@
       "x": 256,
       "y": 390
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.190491,
+      "alphaCoverage": 0.175297,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "snowchassis",
+    "name": "雪地蓝色底盘",
+    "category": "chassis",
+    "sourceFile": "canonical-v1/snowchassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "alphaBounds": {
+      "x": 41,
+      "y": 248,
+      "width": 430,
+      "height": 142
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 248,
+      "width": 430,
+      "height": 142
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
+    "automatedChecks": {
+      "alphaCoverage": 0.14082,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": false,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "miningchassis",
+    "name": "矿山防护底盘",
+    "category": "chassis",
+    "sourceFile": "canonical-v1/miningchassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "alphaBounds": {
+      "x": 41,
+      "y": 266,
+      "width": 430,
+      "height": 124
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 266,
+      "width": 430,
+      "height": 124
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
+    "automatedChecks": {
+      "alphaCoverage": 0.174568,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": false,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "amphichassis",
+    "name": "水陆密封底盘",
+    "category": "chassis",
+    "sourceFile": "canonical-v1/amphichassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "alphaBounds": {
+      "x": 41,
+      "y": 234,
+      "width": 430,
+      "height": 156
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 234,
+      "width": 430,
+      "height": 156
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
+    "automatedChecks": {
+      "alphaCoverage": 0.182911,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": false,
+    "manualReviewFields": [
+      "facing",
+      "projection",
+      "top-face visibility",
+      "lighting",
+      "material style",
+      "mount geometry"
+    ]
+  },
+  {
+    "id": "citychassis",
+    "name": "城市维护底盘",
+    "category": "chassis",
+    "sourceFile": "canonical-v1/citychassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
+    "alphaBounds": {
+      "x": 41,
+      "y": 257,
+      "width": 430,
+      "height": 133
+    },
+    "normalizedBounds": {
+      "x": 41,
+      "y": 257,
+      "width": 430,
+      "height": 133
+    },
+    "baseline": 390,
+    "groundLine": 486,
+    "mountPoint": {
+      "x": 256,
+      "y": 390
+    },
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
+    "automatedChecks": {
+      "alphaCoverage": 0.160469,
+      "edgePixelRatio": 0,
+      "greenResidueRatio": 0
+    },
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -661,19 +661,19 @@
     "id": "rescuechassis",
     "name": "白色救援底盘",
     "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 14,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/rescuechassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 21,
-      "y": 262,
-      "width": 470,
-      "height": 128
+      "x": 41,
+      "y": 273,
+      "width": 430,
+      "height": 117
     },
     "normalizedBounds": {
       "x": 41,
@@ -687,14 +687,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.185661,
+      "alphaCoverage": 0.155781,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -708,19 +708,19 @@
     "id": "fantasychassis",
     "name": "紫色能量底盘",
     "category": "chassis",
-    "sourceFile": "v9-workshop-chassis.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 15,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/fantasychassis.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 21,
-      "y": 271,
-      "width": 470,
-      "height": 119
+      "x": 41,
+      "y": 281,
+      "width": 430,
+      "height": 109
     },
     "normalizedBounds": {
       "x": 41,
@@ -734,14 +734,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.173328,
+      "alphaCoverage": 0.145336,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -755,25 +755,25 @@
     "id": "hoverframe",
     "name": "气垫船承载骨架",
     "category": "chassis",
-    "sourceFile": "transport-hoverframe-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/hoverframe.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "side",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 22,
-      "y": 78,
-      "width": 270,
-      "height": 156
+      "x": 41,
+      "y": 292,
+      "width": 430,
+      "height": 98
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 142,
+      "y": 292,
       "width": 430,
-      "height": 248
+      "height": 98
     },
     "baseline": 390,
     "groundLine": 486,
@@ -781,14 +781,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v11 outline, shading and detail density do not match the v9 main batch.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.289809,
+      "alphaCoverage": 0.127384,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -802,25 +802,25 @@
     "id": "airframe",
     "name": "工程飞机机身骨架",
     "category": "chassis",
-    "sourceFile": "transport-airframe-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/airframe.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "side",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 22,
-      "y": 90,
-      "width": 270,
-      "height": 134
+      "x": 41,
+      "y": 313,
+      "width": 430,
+      "height": 77
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 177,
+      "y": 313,
       "width": 430,
-      "height": 213
+      "height": 77
     },
     "baseline": 390,
     "groundLine": 486,
@@ -828,14 +828,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v11 outline, shading and detail density do not match the v9 main batch.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.188933,
+      "alphaCoverage": 0.095829,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -849,25 +849,25 @@
     "id": "gliderframe",
     "name": "滑翔伞轻型骨架",
     "category": "chassis",
-    "sourceFile": "transport-gliderframe-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/gliderframe.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "side",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 23,
-      "y": 90,
-      "width": 269,
-      "height": 133
+      "x": 41,
+      "y": 303,
+      "width": 430,
+      "height": 87
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 177,
+      "y": 303,
       "width": 430,
-      "height": 213
+      "height": 87
     },
     "baseline": 390,
     "groundLine": 486,
@@ -875,14 +875,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v11 outline, shading and detail density do not match the v9 main batch.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.185657,
+      "alphaCoverage": 0.102219,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -896,25 +896,25 @@
     "id": "pontoonframe",
     "name": "水陆浮筒底盘",
     "category": "chassis",
-    "sourceFile": "transport-pontoonframe-v13.png",
-    "sourceBatch": "v13",
+    "sourceFile": "canonical-v1/pontoonframe.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "side",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 47,
-      "y": 127,
-      "width": 1954,
-      "height": 497
+      "x": 41,
+      "y": 236,
+      "width": 430,
+      "height": 154
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 281,
+      "y": 236,
       "width": 430,
-      "height": 109
+      "height": 154
     },
     "baseline": 390,
     "groundLine": 486,
@@ -922,14 +922,14 @@
       "x": 256,
       "y": 390
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v13 outline, shading and detail density do not match the v9 main batch.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.360592,
+      "alphaCoverage": 0.155849,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -943,14 +943,14 @@
     "id": "utilitybody",
     "name": "实体工具车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 0,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/utilitybody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 70,
       "y": 100,
@@ -969,14 +969,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.415119,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -990,19 +990,19 @@
     "id": "cargo",
     "name": "加长货运车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 1,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/cargo.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 26,
-      "y": 246,
-      "width": 460,
-      "height": 194
+      "x": 41,
+      "y": 259,
+      "width": 430,
+      "height": 181
     },
     "normalizedBounds": {
       "x": 41,
@@ -1016,14 +1016,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.288193,
+      "alphaCoverage": 0.251297,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1037,19 +1037,19 @@
     "id": "miningdumpbody",
     "name": "黑色重载车厢",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 2,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/miningdumpbody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 26,
-      "y": 150,
-      "width": 460,
-      "height": 290
+      "x": 41,
+      "y": 169,
+      "width": 430,
+      "height": 271
     },
     "normalizedBounds": {
       "x": 41,
@@ -1063,14 +1063,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.390263,
+      "alphaCoverage": 0.341103,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1084,14 +1084,14 @@
     "id": "forkliftbody",
     "name": "叉车配重车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 3,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/forkliftbody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 50,
       "y": 100,
@@ -1110,14 +1110,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.484947,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1131,14 +1131,14 @@
     "id": "excavatorbase",
     "name": "挖机实体机身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 4,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/excavatorbase.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 51,
       "y": 100,
@@ -1157,14 +1157,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.395947,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1178,14 +1178,14 @@
     "id": "bulldozerbody",
     "name": "推土动力车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 5,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/bulldozerbody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 57,
       "y": 100,
@@ -1204,14 +1204,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.331211,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1225,14 +1225,14 @@
     "id": "cranebody",
     "name": "起重动力车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 6,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/cranebody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 41,
       "y": 100,
@@ -1251,14 +1251,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.466042,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1272,19 +1272,19 @@
     "id": "bucketbody",
     "name": "实体翻斗车厢",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 7,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/bucketbody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 26,
-      "y": 195,
-      "width": 460,
-      "height": 245
+      "x": 41,
+      "y": 211,
+      "width": 430,
+      "height": 229
     },
     "normalizedBounds": {
       "x": 41,
@@ -1298,14 +1298,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.353806,
+      "alphaCoverage": 0.309471,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1319,14 +1319,14 @@
     "id": "firebody",
     "name": "消防装备车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 8,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/firebody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 49,
       "y": 100,
@@ -1345,14 +1345,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.479771,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1366,14 +1366,14 @@
     "id": "tractorbody",
     "name": "农场动力车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 9,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/tractorbody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 54,
       "y": 100,
@@ -1392,14 +1392,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.332619,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1413,19 +1413,19 @@
     "id": "snowbody",
     "name": "扫雪动力车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 10,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/snowbody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 26,
-      "y": 112,
-      "width": 460,
-      "height": 328
+      "x": 41,
+      "y": 133,
+      "width": 430,
+      "height": 307
     },
     "normalizedBounds": {
       "x": 41,
@@ -1439,14 +1439,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.500278,
+      "alphaCoverage": 0.43816,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1460,19 +1460,19 @@
     "id": "miningbody",
     "name": "矿山防护车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 11,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/miningbody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 27,
-      "y": 172,
-      "width": 459,
-      "height": 268
+      "x": 41,
+      "y": 189,
+      "width": 430,
+      "height": 251
     },
     "normalizedBounds": {
       "x": 41,
@@ -1486,14 +1486,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.401772,
+      "alphaCoverage": 0.352901,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1507,19 +1507,19 @@
     "id": "tank",
     "name": "密封水箱车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 12,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/tank.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 26,
-      "y": 101,
-      "width": 460,
-      "height": 339
+      "x": 41,
+      "y": 123,
+      "width": 430,
+      "height": 317
     },
     "normalizedBounds": {
       "x": 41,
@@ -1533,14 +1533,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.535557,
+      "alphaCoverage": 0.468227,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1554,19 +1554,19 @@
     "id": "citybody",
     "name": "城市维护车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 13,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/citybody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 26,
-      "y": 155,
-      "width": 460,
-      "height": 285
+      "x": 41,
+      "y": 174,
+      "width": 430,
+      "height": 266
     },
     "normalizedBounds": {
       "x": 41,
@@ -1580,14 +1580,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.467346,
+      "alphaCoverage": 0.40826,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1601,19 +1601,19 @@
     "id": "rescuebody",
     "name": "白色救援车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 14,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/rescuebody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 26,
-      "y": 120,
-      "width": 460,
-      "height": 320
+      "x": 41,
+      "y": 141,
+      "width": 430,
+      "height": 299
     },
     "normalizedBounds": {
       "x": 41,
@@ -1627,14 +1627,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.543476,
+      "alphaCoverage": 0.475204,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1648,19 +1648,19 @@
     "id": "fantasybody",
     "name": "紫色奇想车身",
     "category": "body",
-    "sourceFile": "v9-workshop-bodies.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 15,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/fantasybody.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 27,
-      "y": 120,
-      "width": 459,
-      "height": 320
+      "x": 41,
+      "y": 140,
+      "width": 430,
+      "height": 300
     },
     "normalizedBounds": {
       "x": 41,
@@ -1674,14 +1674,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.515423,
+      "alphaCoverage": 0.452652,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1695,25 +1695,25 @@
     "id": "hoverbody",
     "name": "气垫船工程舱",
     "category": "body",
-    "sourceFile": "transport-hoverbody-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/hoverbody.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "side-biased with end face",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 22,
-      "y": 63,
-      "width": 271,
-      "height": 188
+      "x": 41,
+      "y": 267,
+      "width": 430,
+      "height": 173
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 142,
+      "y": 267,
       "width": 430,
-      "height": 298
+      "height": 173
     },
     "baseline": 440,
     "groundLine": 486,
@@ -1721,14 +1721,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the fan/end face and v11 material style are incompatible with the v9 body set.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.418648,
+      "alphaCoverage": 0.241974,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1742,25 +1742,25 @@
     "id": "airbody",
     "name": "工程飞机机身",
     "category": "body",
-    "sourceFile": "transport-airbody-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/airbody.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
-    "facing": "left",
-    "projection": "side-biased",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 21,
-      "y": 85,
-      "width": 272,
-      "height": 144
+      "x": 41,
+      "y": 273,
+      "width": 430,
+      "height": 167
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 212,
+      "y": 273,
       "width": 430,
-      "height": 228
+      "height": 167
     },
     "baseline": 440,
     "groundLine": 486,
@@ -1768,14 +1768,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the nose points left and the v11 material style is incompatible with the right-facing v9 set.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.32979,
+      "alphaCoverage": 0.22094,
       "edgePixelRatio": 0,
-      "greenResidueRatio": 0.000215
+      "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1789,25 +1789,25 @@
     "id": "gliderpod",
     "name": "滑翔伞设备舱",
     "category": "body",
-    "sourceFile": "transport-gliderpod-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/gliderpod.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
-    "facing": "ambiguous",
-    "projection": "side-biased",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 24,
-      "y": 48,
-      "width": 266,
-      "height": 217
+      "x": 41,
+      "y": 229,
+      "width": 430,
+      "height": 211
     },
     "normalizedBounds": {
-      "x": 48,
-      "y": 100,
-      "width": 417,
-      "height": 340
+      "x": 41,
+      "y": 229,
+      "width": 430,
+      "height": 211
     },
     "baseline": 440,
     "groundLine": 486,
@@ -1815,14 +1815,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v11 material, outline and detail density are incompatible with the v9 body set.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.488641,
+      "alphaCoverage": 0.291679,
       "edgePixelRatio": 0,
-      "greenResidueRatio": 0.000021
+      "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1836,25 +1836,25 @@
     "id": "seaplanebody",
     "name": "水上救援机身",
     "category": "body",
-    "sourceFile": "transport-seaplanebody-v13.png",
-    "sourceBatch": "v13",
+    "sourceFile": "canonical-v1/seaplanebody.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
-    "facing": "left",
-    "projection": "side",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 27,
-      "y": 106,
-      "width": 1466,
-      "height": 752
+      "x": 41,
+      "y": 293,
+      "width": 430,
+      "height": 147
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 219,
+      "y": 293,
       "width": 430,
-      "height": 221
+      "height": 147
     },
     "baseline": 440,
     "groundLine": 486,
@@ -1862,14 +1862,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the nose points left and the v13 material style is incompatible with the right-facing v9 set.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.490265,
+      "alphaCoverage": 0.200954,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1883,19 +1883,19 @@
     "id": "wheel",
     "name": "黄心越野轮",
     "category": "move",
-    "sourceFile": "v9-workshop-movement.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 0,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/wheel.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 36,
-      "y": 55,
-      "width": 440,
-      "height": 431
+      "x": 93,
+      "y": 166,
+      "width": 327,
+      "height": 320
     },
     "normalizedBounds": {
       "x": 93,
@@ -1909,14 +1909,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.567368,
+      "alphaCoverage": 0.313202,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1930,19 +1930,19 @@
     "id": "orangewheel",
     "name": "橙心工程轮",
     "category": "move",
-    "sourceFile": "v9-workshop-movement.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 1,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/orangewheel.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 37,
-      "y": 46,
-      "width": 439,
-      "height": 440
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
     },
     "normalizedBounds": {
       "x": 97,
@@ -1956,14 +1956,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.583481,
+      "alphaCoverage": 0.308487,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -1977,19 +1977,19 @@
     "id": "bluewheel",
     "name": "蓝心救援轮",
     "category": "move",
-    "sourceFile": "v9-workshop-movement.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 2,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/bluewheel.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 36,
-      "y": 51,
-      "width": 440,
-      "height": 435
+      "x": 94,
+      "y": 166,
+      "width": 324,
+      "height": 320
     },
     "normalizedBounds": {
       "x": 94,
@@ -2003,14 +2003,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.578964,
+      "alphaCoverage": 0.313763,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2024,19 +2024,19 @@
     "id": "redwheel",
     "name": "红心消防轮",
     "category": "move",
-    "sourceFile": "v9-workshop-movement.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 3,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/redwheel.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 36,
-      "y": 53,
-      "width": 440,
-      "height": 433
+      "x": 94,
+      "y": 166,
+      "width": 325,
+      "height": 320
     },
     "normalizedBounds": {
       "x": 94,
@@ -2050,14 +2050,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.577301,
+      "alphaCoverage": 0.315411,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2071,19 +2071,19 @@
     "id": "smallwheel",
     "name": "黄色小轮",
     "category": "move",
-    "sourceFile": "v9-workshop-movement.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 4,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/smallwheel.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 37,
-      "y": 46,
-      "width": 438,
-      "height": 440
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
     },
     "normalizedBounds": {
       "x": 97,
@@ -2097,14 +2097,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.576538,
+      "alphaCoverage": 0.305508,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2118,19 +2118,19 @@
     "id": "farmwheel",
     "name": "绿色农场轮",
     "category": "move",
-    "sourceFile": "v9-workshop-movement.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 5,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/farmwheel.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 37,
-      "y": 46,
-      "width": 438,
-      "height": 440
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
     },
     "normalizedBounds": {
       "x": 97,
@@ -2144,14 +2144,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.564903,
+      "alphaCoverage": 0.299606,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2165,19 +2165,19 @@
     "id": "citywheel",
     "name": "蓝色城市轮",
     "category": "move",
-    "sourceFile": "v9-workshop-movement.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 6,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/citywheel.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 38,
-      "y": 46,
-      "width": 436,
-      "height": 440
+      "x": 98,
+      "y": 166,
+      "width": 317,
+      "height": 320
     },
     "normalizedBounds": {
       "x": 98,
@@ -2191,14 +2191,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.577652,
+      "alphaCoverage": 0.305649,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2212,19 +2212,19 @@
     "id": "fantasywheel",
     "name": "紫色星星轮",
     "category": "move",
-    "sourceFile": "v9-workshop-movement.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 7,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/fantasywheel.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 37,
-      "y": 46,
-      "width": 438,
-      "height": 440
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
     },
     "normalizedBounds": {
       "x": 97,
@@ -2238,14 +2238,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.579212,
+      "alphaCoverage": 0.307003,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2259,19 +2259,19 @@
     "id": "track",
     "name": "黄色工程履带",
     "category": "move",
-    "sourceFile": "v9-workshop-movement.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 8,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/track.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 36,
-      "y": 259,
-      "width": 440,
-      "height": 227
+      "x": 41,
+      "y": 264,
+      "width": 430,
+      "height": 222
     },
     "normalizedBounds": {
       "x": 41,
@@ -2285,14 +2285,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.308193,
+      "alphaCoverage": 0.294567,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2306,19 +2306,19 @@
     "id": "miningtrack",
     "name": "黑色矿山履带",
     "category": "move",
-    "sourceFile": "v9-workshop-movement.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 9,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/miningtrack.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 37,
-      "y": 264,
-      "width": 439,
-      "height": 222
+      "x": 41,
+      "y": 269,
+      "width": 430,
+      "height": 217
     },
     "normalizedBounds": {
       "x": 41,
@@ -2332,14 +2332,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.302517,
+      "alphaCoverage": 0.289833,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2353,19 +2353,19 @@
     "id": "snowtrack",
     "name": "蓝色雪地履带",
     "category": "move",
-    "sourceFile": "v9-workshop-movement.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 10,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/snowtrack.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 36,
-      "y": 262,
-      "width": 440,
-      "height": 224
+      "x": 41,
+      "y": 267,
+      "width": 430,
+      "height": 219
     },
     "normalizedBounds": {
       "x": 41,
@@ -2379,14 +2379,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.304489,
+      "alphaCoverage": 0.290936,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2400,25 +2400,25 @@
     "id": "greentrack",
     "name": "绿色越野履带",
     "category": "move",
-    "sourceFile": "movement-greentrack-v13.png",
-    "sourceBatch": "v13",
+    "sourceFile": "canonical-v1/greentrack.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "side",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 63,
-      "y": 93,
-      "width": 1582,
-      "height": 732
+      "x": 41,
+      "y": 291,
+      "width": 430,
+      "height": 195
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 287,
+      "y": 291,
       "width": 430,
-      "height": 199
+      "height": 195
     },
     "baseline": 486,
     "groundLine": 486,
@@ -2426,14 +2426,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the v13 olive recolor, highlights and contour treatment are inconsistent with the v9 movement set.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.593505,
+      "alphaCoverage": 0.256748,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2447,25 +2447,25 @@
     "id": "rollerwheel",
     "name": "宽幅压路滚筒",
     "category": "move",
-    "sourceFile": "v10-side-special-movement.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 0,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/rollerwheel.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 43,
-      "y": 67,
-      "width": 270,
-      "height": 246
+      "x": 41,
+      "y": 204,
+      "width": 430,
+      "height": 282
     },
     "normalizedBounds": {
-      "x": 81,
-      "y": 166,
-      "width": 351,
-      "height": 320
+      "x": 41,
+      "y": 204,
+      "width": 430,
+      "height": 282
     },
     "baseline": 486,
     "groundLine": 486,
@@ -2473,14 +2473,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "REGENERATE",
-    "reason": "Visible pixels touch the source-cell edge; crop or atlas bleed requires review.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.512468,
-      "edgePixelRatio": 0.006533,
+      "alphaCoverage": 0.300644,
+      "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2494,19 +2494,19 @@
     "id": "paddlewheel",
     "name": "水陆桨轮",
     "category": "move",
-    "sourceFile": "v9-workshop-movement.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 13,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/paddlewheel.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 36,
-      "y": 74,
-      "width": 440,
-      "height": 412
+      "x": 85,
+      "y": 166,
+      "width": 342,
+      "height": 320
     },
     "normalizedBounds": {
       "x": 85,
@@ -2520,14 +2520,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.48637,
+      "alphaCoverage": 0.293915,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2541,25 +2541,25 @@
     "id": "ski",
     "name": "雪地滑橇",
     "category": "move",
-    "sourceFile": "movement-ski-v13.png",
-    "sourceBatch": "v13",
+    "sourceFile": "canonical-v1/ski.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "side",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 95,
-      "y": 76,
-      "width": 1365,
-      "height": 879
+      "x": 41,
+      "y": 391,
+      "width": 430,
+      "height": 95
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 209,
+      "y": 391,
       "width": 430,
-      "height": 277
+      "height": 95
     },
     "baseline": 486,
     "groundLine": 486,
@@ -2567,14 +2567,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: one asset contains two complete skis and its v13 style does not match the v9 movement set.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.434814,
+      "alphaCoverage": 0.081486,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2588,25 +2588,25 @@
     "id": "hover",
     "name": "紫色悬浮垫",
     "category": "move",
-    "sourceFile": "movement-hover-v13.png",
-    "sourceBatch": "v13",
+    "sourceFile": "canonical-v1/hover.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "side-biased",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 20,
-      "y": 222,
-      "width": 1496,
-      "height": 562
+      "x": 41,
+      "y": 362,
+      "width": 430,
+      "height": 124
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 324,
+      "y": 362,
       "width": 430,
-      "height": 162
+      "height": 124
     },
     "baseline": 486,
     "groundLine": 486,
@@ -2614,14 +2614,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the v13 glossy hover assembly has incompatible contour and material treatment.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.478995,
+      "alphaCoverage": 0.152267,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2635,25 +2635,25 @@
     "id": "hovercraftskirt",
     "name": "气垫船气囊",
     "category": "move",
-    "sourceFile": "transport-hovercraftskirt-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/hovercraftskirt.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "three-quarter/top visible",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 22,
-      "y": 104,
-      "width": 270,
-      "height": 105
+      "x": 41,
+      "y": 397,
+      "width": 430,
+      "height": 89
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 319,
+      "y": 397,
       "width": 430,
-      "height": 167
+      "height": 89
     },
     "baseline": 486,
     "groundLine": 486,
@@ -2661,14 +2661,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the top plate and rounded skirt depth are visibly perspective-baked.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.253976,
+      "alphaCoverage": 0.107075,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2682,25 +2682,25 @@
     "id": "wing",
     "name": "工程飞机机翼",
     "category": "move",
-    "sourceFile": "transport-wing-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/wing.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "three-quarter/top visible",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 22,
-      "y": 94,
-      "width": 271,
-      "height": 126
+      "x": 41,
+      "y": 362,
+      "width": 430,
+      "height": 124
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 286,
+      "y": 362,
       "width": 430,
-      "height": 200
+      "height": 124
     },
     "baseline": 486,
     "groundLine": 486,
@@ -2708,14 +2708,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the large top surface is visible and cannot be corrected by alignment.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.271025,
+      "alphaCoverage": 0.120613,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2729,25 +2729,25 @@
     "id": "paraglider",
     "name": "救援滑翔伞翼",
     "category": "move",
-    "sourceFile": "transport-paraglider-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/paraglider.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "three-quarter",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 16,
-      "y": 55,
-      "width": 276,
-      "height": 204
+      "x": 41,
+      "y": 221,
+      "width": 430,
+      "height": 265
     },
     "normalizedBounds": {
       "x": 41,
-      "y": 168,
+      "y": 221,
       "width": 430,
-      "height": 318
+      "height": 265
     },
     "baseline": 486,
     "groundLine": 486,
@@ -2755,14 +2755,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the canopy is perspective-baked and does not share the orthographic side view.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.308035,
+      "alphaCoverage": 0.172482,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2776,24 +2776,24 @@
     "id": "propeller",
     "name": "航空螺旋桨",
     "category": "move",
-    "sourceFile": "transport-propeller-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/propeller.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "three-quarter/front visible",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 21,
-      "y": 49,
-      "width": 271,
-      "height": 213
+      "x": 112,
+      "y": 166,
+      "width": 289,
+      "height": 320
     },
     "normalizedBounds": {
-      "x": 53,
+      "x": 112,
       "y": 166,
-      "width": 407,
+      "width": 289,
       "height": 320
     },
     "baseline": 486,
@@ -2802,14 +2802,14 @@
       "x": 256,
       "y": 486
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the hub and blades are presented from the front/three-quarter view rather than strict side projection.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.31051,
+      "alphaCoverage": 0.10741,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2823,19 +2823,19 @@
     "id": "cab",
     "name": "驾驶室",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 0,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/cab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 101,
-      "y": 37,
-      "width": 383,
-      "height": 445
+      "x": 184,
+      "y": 133,
+      "width": 300,
+      "height": 349
     },
     "normalizedBounds": {
       "x": 184,
@@ -2849,14 +2849,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.547321,
+      "alphaCoverage": 0.336235,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2870,19 +2870,19 @@
     "id": "bubblecab",
     "name": "泡泡驾驶舱",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 1,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/bubblecab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 105,
-      "width": 390,
-      "height": 377
+      "x": 184,
+      "y": 192,
+      "width": 300,
+      "height": 290
     },
     "normalizedBounds": {
       "x": 184,
@@ -2896,14 +2896,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.499493,
+      "alphaCoverage": 0.295712,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2917,25 +2917,25 @@
     "id": "lampcab",
     "name": "探险驾驶室",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 2,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/lampcab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 64,
-      "width": 390,
-      "height": 418
+      "x": 184,
+      "y": 161,
+      "width": 300,
+      "height": 321
     },
     "normalizedBounds": {
       "x": 184,
-      "y": 160,
+      "y": 161,
       "width": 300,
-      "height": 322
+      "height": 321
     },
     "baseline": 482,
     "groundLine": 486,
@@ -2943,14 +2943,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.550316,
+      "alphaCoverage": 0.326756,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -2964,19 +2964,19 @@
     "id": "engine",
     "name": "轰隆动力机",
     "category": "help",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 0,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/engine.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 37,
-      "y": 88,
-      "width": 262,
-      "height": 194
+      "x": 41,
+      "y": 122,
+      "width": 430,
+      "height": 318
     },
     "normalizedBounds": {
       "x": 41,
@@ -2990,14 +2990,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.433453,
+      "alphaCoverage": 0.436562,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3011,25 +3011,25 @@
     "id": "battery",
     "name": "闪电电池箱",
     "category": "help",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 1,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/battery.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 47,
-      "y": 93,
-      "width": 229,
-      "height": 189
+      "x": 51,
+      "y": 101,
+      "width": 409,
+      "height": 339
     },
     "normalizedBounds": {
-      "x": 50,
-      "y": 100,
-      "width": 412,
-      "height": 340
+      "x": 51,
+      "y": 101,
+      "width": 409,
+      "height": 339
     },
     "baseline": 440,
     "groundLine": 486,
@@ -3037,14 +3037,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.37664,
+      "alphaCoverage": 0.4561,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3058,19 +3058,19 @@
     "id": "suspension",
     "name": "弹簧减震器",
     "category": "help",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 2,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/suspension.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 40,
-      "y": 63,
-      "width": 237,
-      "height": 235
+      "x": 85,
+      "y": 100,
+      "width": 343,
+      "height": 340
     },
     "normalizedBounds": {
       "x": 85,
@@ -3084,14 +3084,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.254254,
+      "alphaCoverage": 0.199726,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3105,19 +3105,19 @@
     "id": "firecab",
     "name": "红色消防车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 3,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/firecab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 66,
-      "width": 390,
-      "height": 416
+      "x": 184,
+      "y": 162,
+      "width": 300,
+      "height": 320
     },
     "normalizedBounds": {
       "x": 184,
@@ -3131,14 +3131,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.572922,
+      "alphaCoverage": 0.339088,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3152,25 +3152,25 @@
     "id": "farmcab",
     "name": "绿色农场车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 4,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/farmcab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 85,
-      "width": 390,
-      "height": 397
+      "x": 184,
+      "y": 178,
+      "width": 300,
+      "height": 304
     },
     "normalizedBounds": {
       "x": 184,
-      "y": 177,
+      "y": 178,
       "width": 300,
-      "height": 305
+      "height": 304
     },
     "baseline": 482,
     "groundLine": 486,
@@ -3178,14 +3178,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.551933,
+      "alphaCoverage": 0.326035,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3199,19 +3199,19 @@
     "id": "rescuecab",
     "name": "白色救援车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 5,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/rescuecab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 95,
-      "y": 66,
-      "width": 389,
-      "height": 416
+      "x": 184,
+      "y": 161,
+      "width": 300,
+      "height": 321
     },
     "normalizedBounds": {
       "x": 184,
@@ -3225,14 +3225,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.550037,
+      "alphaCoverage": 0.32753,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3246,19 +3246,19 @@
     "id": "bulldozercab",
     "name": "推土机车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 6,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/bulldozercab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 82,
-      "width": 390,
-      "height": 400
+      "x": 184,
+      "y": 174,
+      "width": 300,
+      "height": 308
     },
     "normalizedBounds": {
       "x": 184,
@@ -3272,14 +3272,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.531734,
+      "alphaCoverage": 0.314842,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3293,19 +3293,19 @@
     "id": "cranecab",
     "name": "高视野吊车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 7,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/cranecab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 60,
-      "width": 390,
-      "height": 422
+      "x": 184,
+      "y": 157,
+      "width": 300,
+      "height": 325
     },
     "normalizedBounds": {
       "x": 184,
@@ -3319,14 +3319,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.49712,
+      "alphaCoverage": 0.294701,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3340,19 +3340,19 @@
     "id": "miningcab",
     "name": "防护矿山车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 8,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/miningcab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 102,
-      "width": 390,
-      "height": 380
+      "x": 184,
+      "y": 190,
+      "width": 300,
+      "height": 292
     },
     "normalizedBounds": {
       "x": 184,
@@ -3366,14 +3366,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.530376,
+      "alphaCoverage": 0.313202,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3387,19 +3387,19 @@
     "id": "forkcab",
     "name": "紧凑叉车车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 9,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/forkcab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 76,
-      "width": 390,
-      "height": 406
+      "x": 184,
+      "y": 170,
+      "width": 300,
+      "height": 312
     },
     "normalizedBounds": {
       "x": 184,
@@ -3413,14 +3413,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.5373,
+      "alphaCoverage": 0.31778,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3434,25 +3434,25 @@
     "id": "amphicab",
     "name": "泡泡水陆车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 10,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/amphicab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 65,
-      "width": 390,
-      "height": 417
+      "x": 184,
+      "y": 162,
+      "width": 300,
+      "height": 320
     },
     "normalizedBounds": {
       "x": 184,
-      "y": 161,
+      "y": 162,
       "width": 300,
-      "height": 321
+      "height": 320
     },
     "baseline": 482,
     "groundLine": 486,
@@ -3460,14 +3460,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.511253,
+      "alphaCoverage": 0.302898,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3481,19 +3481,19 @@
     "id": "citycab",
     "name": "红色城市车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 11,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/citycab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 50,
-      "width": 390,
-      "height": 432
+      "x": 184,
+      "y": 150,
+      "width": 300,
+      "height": 332
     },
     "normalizedBounds": {
       "x": 184,
@@ -3507,14 +3507,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.520874,
+      "alphaCoverage": 0.30814,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3528,19 +3528,19 @@
     "id": "farmcab2",
     "name": "圆窗农场车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 12,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/farmcab2.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 101,
-      "width": 390,
-      "height": 381
+      "x": 184,
+      "y": 189,
+      "width": 300,
+      "height": 293
     },
     "normalizedBounds": {
       "x": 184,
@@ -3554,14 +3554,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.52948,
+      "alphaCoverage": 0.313007,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3575,19 +3575,19 @@
     "id": "amphicab2",
     "name": "蓝色水陆车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 13,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/amphicab2.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 79,
-      "width": 390,
-      "height": 403
+      "x": 184,
+      "y": 172,
+      "width": 300,
+      "height": 310
     },
     "normalizedBounds": {
       "x": 184,
@@ -3601,14 +3601,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.47493,
+      "alphaCoverage": 0.281113,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3622,19 +3622,19 @@
     "id": "snowcab",
     "name": "暖暖雪地车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 14,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/snowcab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 132,
-      "width": 390,
-      "height": 350
+      "x": 184,
+      "y": 213,
+      "width": 300,
+      "height": 269
     },
     "normalizedBounds": {
       "x": 184,
@@ -3648,14 +3648,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.424805,
+      "alphaCoverage": 0.251225,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3669,19 +3669,19 @@
     "id": "fantasycab",
     "name": "紫色魔法车头",
     "category": "cab",
-    "sourceFile": "v9-workshop-cabs.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 15,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/fantasycab.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 94,
-      "y": 150,
-      "width": 390,
-      "height": 332
+      "x": 184,
+      "y": 227,
+      "width": 300,
+      "height": 255
     },
     "normalizedBounds": {
       "x": 184,
@@ -3695,14 +3695,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.32753,
+      "alphaCoverage": 0.193806,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3716,25 +3716,25 @@
     "id": "hovercab",
     "name": "气垫船驾驶舱",
     "category": "cab",
-    "sourceFile": "transport-hovercab-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/hovercab.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "side-biased",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 25,
-      "y": 23,
-      "width": 263,
-      "height": 277
+      "x": 184,
+      "y": 179,
+      "width": 300,
+      "height": 303
     },
     "normalizedBounds": {
       "x": 184,
-      "y": 166,
+      "y": 179,
       "width": 300,
-      "height": 316
+      "height": 303
     },
     "baseline": 482,
     "groundLine": 486,
@@ -3742,14 +3742,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v11 outline and glossy bubble treatment do not match the v9 cab set.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.542537,
+      "alphaCoverage": 0.262703,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3763,25 +3763,25 @@
     "id": "pilotcab",
     "name": "飞机透明座舱",
     "category": "cab",
-    "sourceFile": "transport-pilotcab-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/pilotcab.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
-    "facing": "left",
-    "projection": "side-biased",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 22,
-      "y": 52,
-      "width": 270,
-      "height": 217
+      "x": 184,
+      "y": 184,
+      "width": 300,
+      "height": 298
     },
     "normalizedBounds": {
       "x": 184,
-      "y": 241,
+      "y": 184,
       "width": 300,
-      "height": 241
+      "height": 298
     },
     "baseline": 482,
     "groundLine": 486,
@@ -3789,14 +3789,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the cabin points left and shows a large nose/end face.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.467179,
+      "alphaCoverage": 0.304752,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3810,25 +3810,25 @@
     "id": "gliderseat",
     "name": "滑翔伞安全座椅",
     "category": "cab",
-    "sourceFile": "transport-gliderseat-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/gliderseat.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
-    "facing": "ambiguous",
-    "projection": "three-quarter",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 54,
-      "y": 23,
-      "width": 205,
-      "height": 277
+      "x": 184,
+      "y": 43,
+      "width": 300,
+      "height": 439
     },
     "normalizedBounds": {
       "x": 184,
-      "y": 77,
+      "y": 43,
       "width": 300,
-      "height": 405
+      "height": 439
     },
     "baseline": 482,
     "groundLine": 486,
@@ -3836,14 +3836,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: this is a perspective seat rather than a strict side-view cab module.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.358118,
+      "alphaCoverage": 0.243118,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3857,25 +3857,25 @@
     "id": "bubblecockpit",
     "name": "救援观察舱",
     "category": "cab",
-    "sourceFile": "transport-bubblecockpit-v11.png",
-    "sourceBatch": "v11",
+    "sourceFile": "canonical-v1/bubblecockpit.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
     "facing": "right",
-    "projection": "side-biased",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 33,
-      "y": 23,
-      "width": 248,
-      "height": 277
+      "x": 184,
+      "y": 56,
+      "width": 300,
+      "height": 426
     },
     "normalizedBounds": {
       "x": 184,
-      "y": 147,
+      "y": 56,
       "width": 300,
-      "height": 335
+      "height": 426
     },
     "baseline": 482,
     "groundLine": 486,
@@ -3883,14 +3883,14 @@
       "x": 484,
       "y": 482
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: v11 outline and glossy bubble treatment do not match the v9 cab set.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.501501,
+      "alphaCoverage": 0.390514,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3904,25 +3904,25 @@
     "id": "shovel",
     "name": "挖掘斗",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 0,
+    "sourceFile": "canonical-v1/shovel.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
     "facing": "right",
-    "projection": "side-biased with bucket interior",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 91,
+      "y": 220,
       "width": 466,
-      "height": 331
+      "height": 220
     },
     "normalizedBounds": {
       "x": 23,
-      "y": 109,
+      "y": 220,
       "width": 466,
-      "height": 331
+      "height": 220
     },
     "baseline": 440,
     "groundLine": 486,
@@ -3930,14 +3930,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the bucket interior/front plane is prominent and perspective-baked.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.299191,
+      "alphaCoverage": 0.20359,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3951,19 +3951,19 @@
     "id": "blade",
     "name": "推土铲",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 1,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/blade.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 41,
-      "width": 363,
-      "height": 430
+      "y": 50,
+      "width": 329,
+      "height": 390
     },
     "normalizedBounds": {
       "x": 23,
@@ -3977,14 +3977,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.267624,
+      "alphaCoverage": 0.220314,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -3998,17 +3998,17 @@
     "id": "crane",
     "name": "起重吊臂",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 2,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/crane.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 115,
+      "y": 158,
       "width": 466,
       "height": 282
     },
@@ -4024,14 +4024,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.238979,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4045,25 +4045,25 @@
     "id": "fork",
     "name": "叉车臂",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 3,
+    "sourceFile": "canonical-v1/fork.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
     "facing": "right",
-    "projection": "three-quarter",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 75,
+      "y": 185,
       "width": 466,
-      "height": 363
+      "height": 255
     },
     "normalizedBounds": {
       "x": 23,
-      "y": 77,
+      "y": 185,
       "width": 466,
-      "height": 363
+      "height": 255
     },
     "baseline": 440,
     "groundLine": 486,
@@ -4071,14 +4071,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: both fork tines and mast depth are visible, creating a three-quarter view.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.255726,
+      "alphaCoverage": 0.171799,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4092,19 +4092,19 @@
     "id": "drill",
     "name": "钻头",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 4,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/drill.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 41,
-      "width": 394,
-      "height": 430
+      "y": 50,
+      "width": 357,
+      "height": 390
     },
     "normalizedBounds": {
       "x": 23,
@@ -4118,14 +4118,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.31567,
+      "alphaCoverage": 0.259636,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4139,19 +4139,19 @@
     "id": "augerdrill",
     "name": "长螺旋钻机",
     "category": "tool",
-    "sourceFile": "tool-auger-drill-v1.png",
-    "sourceBatch": "v1",
+    "sourceFile": "canonical-v1/augerdrill.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 37,
-      "y": 117,
-      "width": 1976,
-      "height": 479
+      "x": 23,
+      "y": 327,
+      "width": 466,
+      "height": 113
     },
     "normalizedBounds": {
       "x": 23,
@@ -4165,14 +4165,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.318456,
+      "alphaCoverage": 0.108982,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4186,17 +4186,17 @@
     "id": "roller",
     "name": "压路滚筒",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 5,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/roller.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 107,
+      "y": 141,
       "width": 466,
       "height": 299
     },
@@ -4212,14 +4212,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.307011,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4233,25 +4233,25 @@
     "id": "plow",
     "name": "农田犁",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 6,
+    "sourceFile": "canonical-v1/plow.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
     "facing": "right",
-    "projection": "three-quarter",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 133,
-      "width": 466,
-      "height": 246
+      "y": 50,
+      "width": 391,
+      "height": 390
     },
     "normalizedBounds": {
       "x": 23,
-      "y": 194,
-      "width": 466,
-      "height": 246
+      "y": 50,
+      "width": 391,
+      "height": 390
     },
     "baseline": 440,
     "groundLine": 486,
@@ -4259,14 +4259,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: three staggered moldboards encode depth and cannot read as strict side projection.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.270512,
+      "alphaCoverage": 0.243809,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4280,17 +4280,17 @@
     "id": "hose",
     "name": "喷水炮",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 7,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/hose.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 136,
+      "y": 200,
       "width": 466,
       "height": 240
     },
@@ -4306,14 +4306,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.236317,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4327,17 +4327,17 @@
     "id": "tow",
     "name": "救援拖钩",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 8,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/tow.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 109,
+      "y": 146,
       "width": 466,
       "height": 294
     },
@@ -4353,14 +4353,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.233444,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4374,19 +4374,19 @@
     "id": "brush",
     "name": "清扫刷",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 9,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/brush.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 59,
-      "width": 466,
-      "height": 394
+      "y": 50,
+      "width": 461,
+      "height": 390
     },
     "normalizedBounds": {
       "x": 23,
@@ -4400,14 +4400,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.382824,
+      "alphaCoverage": 0.375275,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4421,19 +4421,19 @@
     "id": "snowblade",
     "name": "弧形扫雪铲",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 10,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/snowblade.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 55,
-      "width": 466,
-      "height": 403
+      "y": 50,
+      "width": 451,
+      "height": 390
     },
     "normalizedBounds": {
       "x": 23,
@@ -4447,14 +4447,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.287151,
+      "alphaCoverage": 0.269226,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4468,19 +4468,19 @@
     "id": "grabber",
     "name": "液压抓木爪",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 11,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/grabber.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 43,
-      "width": 443,
-      "height": 428
+      "y": 50,
+      "width": 404,
+      "height": 390
     },
     "normalizedBounds": {
       "x": 23,
@@ -4494,14 +4494,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.391865,
+      "alphaCoverage": 0.326035,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4515,25 +4515,25 @@
     "id": "mixer",
     "name": "水泥搅拌筒",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 12,
+    "sourceFile": "canonical-v1/mixer.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
     "facing": "right",
-    "projection": "three-quarter/end visible",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 108,
+      "y": 206,
       "width": 466,
-      "height": 297
+      "height": 234
     },
     "normalizedBounds": {
       "x": 23,
-      "y": 143,
+      "y": 206,
       "width": 466,
-      "height": 297
+      "height": 234
     },
     "baseline": 440,
     "groundLine": 486,
@@ -4541,14 +4541,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "REGENERATE",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Human review: the drum end face and elliptical bands expose a baked perspective view.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.400883,
+      "alphaCoverage": 0.318657,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4562,19 +4562,19 @@
     "id": "hammer",
     "name": "破碎锤",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 13,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/hammer.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 41,
-      "width": 289,
-      "height": 430
+      "y": 50,
+      "width": 262,
+      "height": 390
     },
     "normalizedBounds": {
       "x": 23,
@@ -4588,14 +4588,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.266533,
+      "alphaCoverage": 0.219654,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4609,19 +4609,19 @@
     "id": "wreckingball",
     "name": "工程大摆锤",
     "category": "tool",
-    "sourceFile": "tool-wrecking-ball-v1.png",
-    "sourceBatch": "v1",
+    "sourceFile": "canonical-v1/wreckingball.png",
+    "sourceBatch": "canonical-v1",
     "sourceType": "individual",
     "sourceCell": null,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 57,
-      "y": 7,
-      "width": 1340,
-      "height": 988
+      "x": 23,
+      "y": 96,
+      "width": 466,
+      "height": 344
     },
     "normalizedBounds": {
       "x": 23,
@@ -4635,14 +4635,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.33073,
+      "alphaCoverage": 0.243488,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4656,17 +4656,17 @@
     "id": "liftplatform",
     "name": "高空作业篮",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 14,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/liftplatform.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 127,
+      "y": 182,
       "width": 466,
       "height": 258
     },
@@ -4682,14 +4682,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.229996,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4703,17 +4703,17 @@
     "id": "conveyor",
     "name": "装卸传送臂",
     "category": "tool",
-    "sourceFile": "v9-workshop-tools.png",
-    "sourceBatch": "v9",
-    "sourceType": "sprite-cell",
-    "sourceCell": 15,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/conveyor.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
       "x": 23,
-      "y": 126,
+      "y": 179,
       "width": 466,
       "height": 261
     },
@@ -4729,14 +4729,14 @@
       "x": 23,
       "y": 350
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
       "alphaCoverage": 0.230892,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4750,19 +4750,19 @@
     "id": "lamp",
     "name": "亮亮探照灯",
     "category": "help",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 3,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/lamp.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 20,
-      "y": 107,
-      "width": 256,
-      "height": 175
+      "x": 41,
+      "y": 146,
+      "width": 430,
+      "height": 294
     },
     "normalizedBounds": {
       "x": 41,
@@ -4776,14 +4776,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.34121,
+      "alphaCoverage": 0.361595,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4797,19 +4797,19 @@
     "id": "siren",
     "name": "安全警示灯",
     "category": "help",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 4,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/siren.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 52,
-      "y": 75,
-      "width": 210,
-      "height": 182
+      "x": 67,
+      "y": 112,
+      "width": 378,
+      "height": 328
     },
     "normalizedBounds": {
       "x": 67,
@@ -4823,14 +4823,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.279946,
+      "alphaCoverage": 0.339558,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4844,19 +4844,19 @@
     "id": "bridge",
     "name": "折叠小桥",
     "category": "help",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 5,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/bridge.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 18,
-      "y": 106,
-      "width": 266,
-      "height": 148
+      "x": 41,
+      "y": 201,
+      "width": 430,
+      "height": 239
     },
     "normalizedBounds": {
       "x": 41,
@@ -4870,14 +4870,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.351591,
+      "alphaCoverage": 0.343468,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4891,25 +4891,25 @@
     "id": "rescuebox",
     "name": "蓝色救援物资箱",
     "category": "help",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 6,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/rescuebox.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 47,
-      "y": 91,
-      "width": 238,
-      "height": 169
+      "x": 42,
+      "y": 137,
+      "width": 428,
+      "height": 303
     },
     "normalizedBounds": {
       "x": 42,
-      "y": 136,
+      "y": 137,
       "width": 428,
-      "height": 304
+      "height": 303
     },
     "baseline": 440,
     "groundLine": 486,
@@ -4917,14 +4917,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.347743,
+      "alphaCoverage": 0.420837,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4938,19 +4938,19 @@
     "id": "toolbox",
     "name": "红色随车工具箱",
     "category": "help",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 11,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/toolbox.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 27,
-      "y": 60,
-      "width": 257,
-      "height": 175
+      "x": 41,
+      "y": 147,
+      "width": 430,
+      "height": 293
     },
     "normalizedBounds": {
       "x": 41,
@@ -4964,14 +4964,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.367167,
+      "alphaCoverage": 0.384499,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -4985,19 +4985,19 @@
     "id": "aidkit",
     "name": "白色急救箱",
     "category": "help",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 12,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/aidkit.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 35,
-      "y": 28,
-      "width": 242,
-      "height": 189
+      "x": 41,
+      "y": 104,
+      "width": 430,
+      "height": 336
     },
     "normalizedBounds": {
       "x": 41,
@@ -5011,14 +5011,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.365371,
+      "alphaCoverage": 0.431019,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -5032,19 +5032,19 @@
     "id": "cones",
     "name": "安全路锥架",
     "category": "help",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 13,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/cones.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 14,
-      "y": 25,
-      "width": 295,
-      "height": 192
+      "x": 41,
+      "y": 160,
+      "width": 430,
+      "height": 280
     },
     "normalizedBounds": {
       "x": 41,
@@ -5058,14 +5058,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.366187,
+      "alphaCoverage": 0.291237,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -5079,19 +5079,19 @@
     "id": "step",
     "name": "防滑侧踏板",
     "category": "help",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 14,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/step.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 53,
-      "y": 79,
-      "width": 231,
-      "height": 137
+      "x": 48,
+      "y": 193,
+      "width": 416,
+      "height": 247
     },
     "normalizedBounds": {
       "x": 48,
@@ -5105,14 +5105,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.293695,
+      "alphaCoverage": 0.35651,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -5126,19 +5126,19 @@
     "id": "spare",
     "name": "随车备用轮",
     "category": "help",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 15,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/spare.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 30,
-      "y": 7,
-      "width": 237,
-      "height": 239
+      "x": 88,
+      "y": 100,
+      "width": 337,
+      "height": 340
     },
     "normalizedBounds": {
       "x": 88,
@@ -5152,14 +5152,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.451316,
+      "alphaCoverage": 0.341774,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -5173,19 +5173,19 @@
     "id": "flag",
     "name": "小旗子",
     "category": "decor",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 7,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/flag.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 65,
-      "y": 58,
-      "width": 185,
-      "height": 214
+      "x": 109,
+      "y": 100,
+      "width": 294,
+      "height": 340
     },
     "normalizedBounds": {
       "x": 109,
@@ -5199,14 +5199,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.21025,
+      "alphaCoverage": 0.199894,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -5220,25 +5220,25 @@
     "id": "star",
     "name": "大星星",
     "category": "decor",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 8,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/star.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 53,
-      "y": 46,
-      "width": 196,
-      "height": 186
+      "x": 80,
+      "y": 106,
+      "width": 353,
+      "height": 334
     },
     "normalizedBounds": {
       "x": 80,
-      "y": 105,
+      "y": 106,
       "width": 353,
-      "height": 335
+      "height": 334
     },
     "baseline": 440,
     "groundLine": 486,
@@ -5246,14 +5246,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.194347,
+      "alphaCoverage": 0.236271,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -5267,19 +5267,19 @@
     "id": "eyes",
     "name": "笑脸眼睛",
     "category": "decor",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 9,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/eyes.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 25,
-      "y": 77,
-      "width": 250,
-      "height": 148
+      "x": 41,
+      "y": 185,
+      "width": 430,
+      "height": 255
     },
     "normalizedBounds": {
       "x": 41,
@@ -5293,14 +5293,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.271606,
+      "alphaCoverage": 0.301842,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",
@@ -5314,19 +5314,19 @@
     "id": "pipe",
     "name": "彩虹排气管",
     "category": "decor",
-    "sourceFile": "v10-side-extras.png",
-    "sourceBatch": "v10",
-    "sourceType": "sprite-cell",
-    "sourceCell": 10,
-    "facing": "unknown-human-review",
-    "projection": "unknown-human-review",
-    "lighting": "unknown-human-review",
-    "materialStyle": "unknown-human-review",
+    "sourceFile": "canonical-v1/pipe.png",
+    "sourceBatch": "canonical-v1",
+    "sourceType": "individual",
+    "sourceCell": null,
+    "facing": "right",
+    "projection": "strict-side-orthographic",
+    "lighting": "upper-left-soft",
+    "materialStyle": "canonical-v1-gold-v9",
     "alphaBounds": {
-      "x": 41,
-      "y": 7,
-      "width": 145,
-      "height": 261
+      "x": 162,
+      "y": 100,
+      "width": 189,
+      "height": 340
     },
     "normalizedBounds": {
       "x": 162,
@@ -5340,14 +5340,14 @@
       "x": 256,
       "y": 440
     },
-    "status": "ALIGN_ONLY",
-    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS.",
+    "status": "PASS",
+    "reason": "Technical extraction is clean; projection, facing, lighting and style still require human review before PASS. Approved after user review of the six canonical contact sheets and ten mixed-build tests on 2026-09-01.",
     "automatedChecks": {
-      "alphaCoverage": 0.214609,
+      "alphaCoverage": 0.136791,
       "edgePixelRatio": 0,
       "greenResidueRatio": 0
     },
-    "manualReviewRequired": true,
+    "manualReviewRequired": false,
     "manualReviewFields": [
       "facing",
       "projection",

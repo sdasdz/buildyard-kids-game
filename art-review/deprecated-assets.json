@@ -1,5 +1,689 @@
 [
   {
+    "id": "frame",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 0,
+    "reason": "Replaced by canonical-v1/frame.png."
+  },
+  {
+    "id": "longframe",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 1,
+    "reason": "Replaced by canonical-v1/longframe.png."
+  },
+  {
+    "id": "heavyframe",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 2,
+    "reason": "Replaced by canonical-v1/heavyframe.png."
+  },
+  {
+    "id": "compactchassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 3,
+    "reason": "Replaced by canonical-v1/compactchassis.png."
+  },
+  {
+    "id": "excavatorchassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 4,
+    "reason": "Replaced by canonical-v1/excavatorchassis.png."
+  },
+  {
+    "id": "bulldozerchassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 5,
+    "reason": "Replaced by canonical-v1/bulldozerchassis.png."
+  },
+  {
+    "id": "cranechassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 6,
+    "reason": "Replaced by canonical-v1/cranechassis.png."
+  },
+  {
+    "id": "dumpchassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 7,
+    "reason": "Replaced by canonical-v1/dumpchassis.png."
+  },
+  {
+    "id": "firechassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 8,
+    "reason": "Replaced by canonical-v1/firechassis.png."
+  },
+  {
+    "id": "farmchassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 9,
+    "reason": "Replaced by canonical-v1/farmchassis.png."
+  },
+  {
+    "id": "snowchassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 10,
+    "reason": "Replaced by canonical-v1/snowchassis.png."
+  },
+  {
+    "id": "miningchassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 11,
+    "reason": "Replaced by canonical-v1/miningchassis.png."
+  },
+  {
+    "id": "amphichassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 12,
+    "reason": "Replaced by canonical-v1/amphichassis.png."
+  },
+  {
+    "id": "citychassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 13,
+    "reason": "Replaced by canonical-v1/citychassis.png."
+  },
+  {
+    "id": "rescuechassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 14,
+    "reason": "Replaced by canonical-v1/rescuechassis.png."
+  },
+  {
+    "id": "fantasychassis",
+    "sourceFile": "v9-workshop-chassis.png",
+    "sourceCell": 15,
+    "reason": "Replaced by canonical-v1/fantasychassis.png."
+  },
+  {
+    "id": "hoverframe",
+    "sourceFile": "transport-hoverframe-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/hoverframe.png."
+  },
+  {
+    "id": "airframe",
+    "sourceFile": "transport-airframe-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/airframe.png."
+  },
+  {
+    "id": "gliderframe",
+    "sourceFile": "transport-gliderframe-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/gliderframe.png."
+  },
+  {
+    "id": "pontoonframe",
+    "sourceFile": "transport-pontoonframe-v13.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/pontoonframe.png."
+  },
+  {
+    "id": "utilitybody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 0,
+    "reason": "Replaced by canonical-v1/utilitybody.png."
+  },
+  {
+    "id": "cargo",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 1,
+    "reason": "Replaced by canonical-v1/cargo.png."
+  },
+  {
+    "id": "miningdumpbody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 2,
+    "reason": "Replaced by canonical-v1/miningdumpbody.png."
+  },
+  {
+    "id": "forkliftbody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 3,
+    "reason": "Replaced by canonical-v1/forkliftbody.png."
+  },
+  {
+    "id": "excavatorbase",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 4,
+    "reason": "Replaced by canonical-v1/excavatorbase.png."
+  },
+  {
+    "id": "bulldozerbody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 5,
+    "reason": "Replaced by canonical-v1/bulldozerbody.png."
+  },
+  {
+    "id": "cranebody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 6,
+    "reason": "Replaced by canonical-v1/cranebody.png."
+  },
+  {
+    "id": "bucketbody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 7,
+    "reason": "Replaced by canonical-v1/bucketbody.png."
+  },
+  {
+    "id": "firebody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 8,
+    "reason": "Replaced by canonical-v1/firebody.png."
+  },
+  {
+    "id": "tractorbody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 9,
+    "reason": "Replaced by canonical-v1/tractorbody.png."
+  },
+  {
+    "id": "snowbody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 10,
+    "reason": "Replaced by canonical-v1/snowbody.png."
+  },
+  {
+    "id": "miningbody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 11,
+    "reason": "Replaced by canonical-v1/miningbody.png."
+  },
+  {
+    "id": "tank",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 12,
+    "reason": "Replaced by canonical-v1/tank.png."
+  },
+  {
+    "id": "citybody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 13,
+    "reason": "Replaced by canonical-v1/citybody.png."
+  },
+  {
+    "id": "rescuebody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 14,
+    "reason": "Replaced by canonical-v1/rescuebody.png."
+  },
+  {
+    "id": "fantasybody",
+    "sourceFile": "v9-workshop-bodies.png",
+    "sourceCell": 15,
+    "reason": "Replaced by canonical-v1/fantasybody.png."
+  },
+  {
+    "id": "hoverbody",
+    "sourceFile": "transport-hoverbody-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/hoverbody.png."
+  },
+  {
+    "id": "airbody",
+    "sourceFile": "transport-airbody-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/airbody.png."
+  },
+  {
+    "id": "gliderpod",
+    "sourceFile": "transport-gliderpod-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/gliderpod.png."
+  },
+  {
+    "id": "seaplanebody",
+    "sourceFile": "transport-seaplanebody-v13.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/seaplanebody.png."
+  },
+  {
+    "id": "wheel",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 0,
+    "reason": "Replaced by canonical-v1/wheel.png."
+  },
+  {
+    "id": "orangewheel",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 1,
+    "reason": "Replaced by canonical-v1/orangewheel.png."
+  },
+  {
+    "id": "bluewheel",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 2,
+    "reason": "Replaced by canonical-v1/bluewheel.png."
+  },
+  {
+    "id": "redwheel",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 3,
+    "reason": "Replaced by canonical-v1/redwheel.png."
+  },
+  {
+    "id": "smallwheel",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 4,
+    "reason": "Replaced by canonical-v1/smallwheel.png."
+  },
+  {
+    "id": "farmwheel",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 5,
+    "reason": "Replaced by canonical-v1/farmwheel.png."
+  },
+  {
+    "id": "citywheel",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 6,
+    "reason": "Replaced by canonical-v1/citywheel.png."
+  },
+  {
+    "id": "fantasywheel",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 7,
+    "reason": "Replaced by canonical-v1/fantasywheel.png."
+  },
+  {
+    "id": "track",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 8,
+    "reason": "Replaced by canonical-v1/track.png."
+  },
+  {
+    "id": "miningtrack",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 9,
+    "reason": "Replaced by canonical-v1/miningtrack.png."
+  },
+  {
+    "id": "snowtrack",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 10,
+    "reason": "Replaced by canonical-v1/snowtrack.png."
+  },
+  {
+    "id": "greentrack",
+    "sourceFile": "movement-greentrack-v13.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/greentrack.png."
+  },
+  {
+    "id": "rollerwheel",
+    "sourceFile": "v10-side-special-movement.png",
+    "sourceCell": 0,
+    "reason": "Replaced by canonical-v1/rollerwheel.png."
+  },
+  {
+    "id": "paddlewheel",
+    "sourceFile": "v9-workshop-movement.png",
+    "sourceCell": 13,
+    "reason": "Replaced by canonical-v1/paddlewheel.png."
+  },
+  {
+    "id": "ski",
+    "sourceFile": "movement-ski-v13.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/ski.png."
+  },
+  {
+    "id": "hover",
+    "sourceFile": "movement-hover-v13.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/hover.png."
+  },
+  {
+    "id": "hovercraftskirt",
+    "sourceFile": "transport-hovercraftskirt-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/hovercraftskirt.png."
+  },
+  {
+    "id": "wing",
+    "sourceFile": "transport-wing-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/wing.png."
+  },
+  {
+    "id": "paraglider",
+    "sourceFile": "transport-paraglider-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/paraglider.png."
+  },
+  {
+    "id": "propeller",
+    "sourceFile": "transport-propeller-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/propeller.png."
+  },
+  {
+    "id": "cab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 0,
+    "reason": "Replaced by canonical-v1/cab.png."
+  },
+  {
+    "id": "bubblecab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 1,
+    "reason": "Replaced by canonical-v1/bubblecab.png."
+  },
+  {
+    "id": "lampcab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 2,
+    "reason": "Replaced by canonical-v1/lampcab.png."
+  },
+  {
+    "id": "engine",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 0,
+    "reason": "Replaced by canonical-v1/engine.png."
+  },
+  {
+    "id": "battery",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 1,
+    "reason": "Replaced by canonical-v1/battery.png."
+  },
+  {
+    "id": "suspension",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 2,
+    "reason": "Replaced by canonical-v1/suspension.png."
+  },
+  {
+    "id": "firecab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 3,
+    "reason": "Replaced by canonical-v1/firecab.png."
+  },
+  {
+    "id": "farmcab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 4,
+    "reason": "Replaced by canonical-v1/farmcab.png."
+  },
+  {
+    "id": "rescuecab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 5,
+    "reason": "Replaced by canonical-v1/rescuecab.png."
+  },
+  {
+    "id": "bulldozercab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 6,
+    "reason": "Replaced by canonical-v1/bulldozercab.png."
+  },
+  {
+    "id": "cranecab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 7,
+    "reason": "Replaced by canonical-v1/cranecab.png."
+  },
+  {
+    "id": "miningcab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 8,
+    "reason": "Replaced by canonical-v1/miningcab.png."
+  },
+  {
+    "id": "forkcab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 9,
+    "reason": "Replaced by canonical-v1/forkcab.png."
+  },
+  {
+    "id": "amphicab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 10,
+    "reason": "Replaced by canonical-v1/amphicab.png."
+  },
+  {
+    "id": "citycab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 11,
+    "reason": "Replaced by canonical-v1/citycab.png."
+  },
+  {
+    "id": "farmcab2",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 12,
+    "reason": "Replaced by canonical-v1/farmcab2.png."
+  },
+  {
+    "id": "amphicab2",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 13,
+    "reason": "Replaced by canonical-v1/amphicab2.png."
+  },
+  {
+    "id": "snowcab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 14,
+    "reason": "Replaced by canonical-v1/snowcab.png."
+  },
+  {
+    "id": "fantasycab",
+    "sourceFile": "v9-workshop-cabs.png",
+    "sourceCell": 15,
+    "reason": "Replaced by canonical-v1/fantasycab.png."
+  },
+  {
+    "id": "hovercab",
+    "sourceFile": "transport-hovercab-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/hovercab.png."
+  },
+  {
+    "id": "pilotcab",
+    "sourceFile": "transport-pilotcab-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/pilotcab.png."
+  },
+  {
+    "id": "gliderseat",
+    "sourceFile": "transport-gliderseat-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/gliderseat.png."
+  },
+  {
+    "id": "bubblecockpit",
+    "sourceFile": "transport-bubblecockpit-v11.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/bubblecockpit.png."
+  },
+  {
+    "id": "shovel",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 0,
+    "reason": "Replaced by canonical-v1/shovel.png."
+  },
+  {
+    "id": "blade",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 1,
+    "reason": "Replaced by canonical-v1/blade.png."
+  },
+  {
+    "id": "crane",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 2,
+    "reason": "Replaced by canonical-v1/crane.png."
+  },
+  {
+    "id": "fork",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 3,
+    "reason": "Replaced by canonical-v1/fork.png."
+  },
+  {
+    "id": "drill",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 4,
+    "reason": "Replaced by canonical-v1/drill.png."
+  },
+  {
+    "id": "augerdrill",
+    "sourceFile": "tool-auger-drill-v1.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/augerdrill.png."
+  },
+  {
+    "id": "roller",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 5,
+    "reason": "Replaced by canonical-v1/roller.png."
+  },
+  {
+    "id": "plow",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 6,
+    "reason": "Replaced by canonical-v1/plow.png."
+  },
+  {
+    "id": "hose",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 7,
+    "reason": "Replaced by canonical-v1/hose.png."
+  },
+  {
+    "id": "tow",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 8,
+    "reason": "Replaced by canonical-v1/tow.png."
+  },
+  {
+    "id": "brush",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 9,
+    "reason": "Replaced by canonical-v1/brush.png."
+  },
+  {
+    "id": "snowblade",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 10,
+    "reason": "Replaced by canonical-v1/snowblade.png."
+  },
+  {
+    "id": "grabber",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 11,
+    "reason": "Replaced by canonical-v1/grabber.png."
+  },
+  {
+    "id": "mixer",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 12,
+    "reason": "Replaced by canonical-v1/mixer.png."
+  },
+  {
+    "id": "hammer",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 13,
+    "reason": "Replaced by canonical-v1/hammer.png."
+  },
+  {
+    "id": "wreckingball",
+    "sourceFile": "tool-wrecking-ball-v1.png",
+    "sourceCell": null,
+    "reason": "Replaced by canonical-v1/wreckingball.png."
+  },
+  {
+    "id": "liftplatform",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 14,
+    "reason": "Replaced by canonical-v1/liftplatform.png."
+  },
+  {
+    "id": "conveyor",
+    "sourceFile": "v9-workshop-tools.png",
+    "sourceCell": 15,
+    "reason": "Replaced by canonical-v1/conveyor.png."
+  },
+  {
+    "id": "lamp",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 3,
+    "reason": "Replaced by canonical-v1/lamp.png."
+  },
+  {
+    "id": "siren",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 4,
+    "reason": "Replaced by canonical-v1/siren.png."
+  },
+  {
+    "id": "bridge",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 5,
+    "reason": "Replaced by canonical-v1/bridge.png."
+  },
+  {
+    "id": "rescuebox",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 6,
+    "reason": "Replaced by canonical-v1/rescuebox.png."
+  },
+  {
+    "id": "toolbox",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 11,
+    "reason": "Replaced by canonical-v1/toolbox.png."
+  },
+  {
+    "id": "aidkit",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 12,
+    "reason": "Replaced by canonical-v1/aidkit.png."
+  },
+  {
+    "id": "cones",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 13,
+    "reason": "Replaced by canonical-v1/cones.png."
+  },
+  {
+    "id": "step",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 14,
+    "reason": "Replaced by canonical-v1/step.png."
+  },
+  {
+    "id": "spare",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 15,
+    "reason": "Replaced by canonical-v1/spare.png."
+  },
+  {
+    "id": "flag",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 7,
+    "reason": "Replaced by canonical-v1/flag.png."
+  },
+  {
+    "id": "star",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 8,
+    "reason": "Replaced by canonical-v1/star.png."
+  },
+  {
+    "id": "eyes",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 9,
+    "reason": "Replaced by canonical-v1/eyes.png."
+  },
+  {
+    "id": "pipe",
+    "sourceFile": "v10-side-extras.png",
+    "sourceCell": 10,
+    "reason": "Replaced by canonical-v1/pipe.png."
+  },
+  {
     "id": "hoverframe",
     "sourceFile": "v10-side-transport.png",
     "sourceCell": 8,

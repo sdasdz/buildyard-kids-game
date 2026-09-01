@@ -16,6 +16,7 @@ const hasLock = app.requestSingleInstanceLock();
 if (!hasLock) app.quit();
 
 let mainWindow = null;
+const isSmokeTest = process.env.BUILDYARD_SMOKE_TEST === "1";
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -45,6 +46,7 @@ function createWindow() {
   mainWindow.webContents.on("will-attach-webview", (event) => event.preventDefault());
 
   mainWindow.once("ready-to-show", () => {
+    if (isSmokeTest) return;
     mainWindow.show();
     mainWindow.focus();
   });
@@ -55,7 +57,7 @@ function createWindow() {
 
   mainWindow.loadFile(path.join(__dirname, "app-dist", "index.html"));
 
-  if (process.env.BUILDYARD_SMOKE_TEST === "1") {
+  if (isSmokeTest) {
     mainWindow.webContents.once("did-finish-load", async () => {
       try {
         const result = await mainWindow.webContents.executeJavaScript(`(async () => {
@@ -78,31 +80,31 @@ function createWindow() {
             }, { once: true });
             audio.load();
           });
-          const [sprite, transport, repairedSki, repairedBody, audio] = await Promise.all([
-            loadImage("./assets/v9-workshop-movement.png"),
-            loadImage("./assets/transport-gliderseat-v11.png"),
-            loadImage("./assets/movement-ski-v13.png"),
-            loadImage("./assets/transport-seaplanebody-v13.png"),
+          const [wheel, gliderSeat, ski, seaplaneBody, audio] = await Promise.all([
+            loadImage("./assets/canonical-v1/wheel.png"),
+            loadImage("./assets/canonical-v1/gliderseat.png"),
+            loadImage("./assets/canonical-v1/ski.png"),
+            loadImage("./assets/canonical-v1/seaplanebody.png"),
             loadAudio("./audio/hint-drill.wav")
           ]);
           return {
             title: document.title,
             text: document.body.innerText.slice(0, 500),
             rootChildren: document.querySelector("#root")?.children.length || 0,
-            sprite,
-            transport,
-            repairedSki,
-            repairedBody,
+            wheel,
+            gliderSeat,
+            ski,
+            seaplaneBody,
             audio
           };
         })()`);
         const ok = result.title === "工程车创造营"
           && result.text.includes("小小工程师")
           && result.rootChildren > 0
-          && result.sprite.ok
-          && result.transport.ok
-          && result.repairedSki.ok
-          && result.repairedBody.ok
+          && result.wheel.ok
+          && result.gliderSeat.ok
+          && result.ski.ok
+          && result.seaplaneBody.ok
           && result.audio.ok;
         if (process.env.BUILDYARD_SMOKE_REPORT) {
           fs.writeFileSync(process.env.BUILDYARD_SMOKE_REPORT, JSON.stringify({ ok, ...result }, null, 2), "utf8");

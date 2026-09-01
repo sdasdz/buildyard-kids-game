@@ -37,25 +37,22 @@ test("server-renders the construction vehicle game home", async () => {
   assert.doesNotMatch(html, /Your site is taking shape|Building your site/);
 });
 
-test("ships and wires the normalized v9 workshop sprite sheets", async () => {
+test("ships and wires the complete canonical-v1 part library", async () => {
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
-  const assetNames = [
-    "v9-workshop-chassis.png",
-    "v9-workshop-bodies.png",
-    "v9-workshop-cabs.png",
-    "v9-workshop-tools.png",
-    "v9-workshop-movement.png",
-  ];
+  const manifest = JSON.parse(await readFile(new URL("../art-manifest.json", import.meta.url), "utf8"));
 
-  assert.match(page, /\?v=9\.1/);
+  assert.match(page, /canonical-v1\/\$\{id\}\.png/);
+  assert.match(page, /\?v=canonical-v1/);
+  assert.doesNotMatch(page, /const SPRITES:|const SPRITE_SHEETS:/);
   assert.match(page, /function assembleParts/);
   assert.match(page, /function preparePerformanceBuild/);
   assert.match(page, /const deckY = rootY \+ rootSize \* \.56/);
   assert.match(page, /const groundY = rootY \+ rootSize \* \.84/);
-
-  for (const assetName of assetNames) {
-    assert.match(page, new RegExp(assetName.replaceAll(".", "\\.")));
-    await access(new URL(`../public/assets/${assetName}`, import.meta.url));
+  assert.equal(manifest.approvedVersion, "canonical-v1");
+  assert.equal(manifest.runtimeActivated, true);
+  assert.equal(manifest.canonicalAssets.length, 114);
+  for (const asset of manifest.canonicalAssets) {
+    await access(new URL(`../public/assets/canonical-v1/${asset.id}.png`, import.meta.url));
   }
 });
 
@@ -239,10 +236,10 @@ test("desktop file builds resolve art and narration beside index.html", async ()
   assert.match(page, /backgroundImage: `url\(\$\{resourcePath\(`/);
   assert.match(page, /image\.src = resourcePath\(/);
   assert.match(page, /resourcePath\(`\/audio\/\$\{mission\.id\}\.wav`\)/);
-  assert.match(main, /loadImage\("\.\/assets\/v9-workshop-movement\.png"\)/);
-  assert.match(main, /loadImage\("\.\/assets\/transport-gliderseat-v11\.png"\)/);
-  assert.match(main, /loadImage\("\.\/assets\/movement-ski-v13\.png"\)/);
-  assert.match(main, /loadImage\("\.\/assets\/transport-seaplanebody-v13\.png"\)/);
+  assert.match(main, /loadImage\("\.\/assets\/canonical-v1\/wheel\.png"\)/);
+  assert.match(main, /loadImage\("\.\/assets\/canonical-v1\/gliderseat\.png"\)/);
+  assert.match(main, /loadImage\("\.\/assets\/canonical-v1\/ski\.png"\)/);
+  assert.match(main, /loadImage\("\.\/assets\/canonical-v1\/seaplanebody\.png"\)/);
   assert.match(main, /loadAudio\("\.\/audio\/hint-drill\.wav"\)/);
   assert.match(main, /BUILDYARD_SMOKE_REPORT/);
 });
@@ -253,27 +250,22 @@ test("warehouse includes a long auger drill and a working wrecking-ball module",
 
   assert.match(page, /id: "augerdrill", name: "长螺旋钻机"/);
   assert.match(page, /id: "wreckingball", name: "工程大摆锤"/);
-  assert.match(page, /augerdrill: "tool-auger-drill-v1\.png"/);
-  assert.match(page, /wreckingball: "tool-wrecking-ball-v1\.png"/);
+  assert.match(page, /canonical-v1\/\$\{id\}\.png/);
   assert.match(page, /smash: \{ scene: "⚫💥🧱"/);
   assert.match(page, /"wreckingball"\]\)/);
   assert.match(css, /@keyframes theatre-auger-work/);
   assert.match(css, /@keyframes theatre-wrecking-swing/);
-  await access(new URL("../public/assets/tool-auger-drill-v1.png", import.meta.url));
-  await access(new URL("../public/assets/tool-wrecking-ball-v1.png", import.meta.url));
+  await access(new URL("../public/assets/canonical-v1/augerdrill.png", import.meta.url));
+  await access(new URL("../public/assets/canonical-v1/wreckingball.png", import.meta.url));
 });
 
 test("transport, accessory, and special movement modules share the side-view workshop art direction", async () => {
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
 
-  assert.match(page, /11: "v10-side-extras\.png"/);
-  assert.match(page, /12: "v10-side-transport\.png"/);
-  assert.match(page, /13: "v10-side-special-movement\.png"/);
-  assert.match(page, /rollerwheel:\[13,0\]/);
-  assert.match(page, /ski:\[13,1\]/);
-  assert.match(page, /hover:\[13,2\]/);
-  for (const asset of ["v10-side-extras.png", "v10-side-transport.png", "v10-side-special-movement.png"]) {
-    await access(new URL(`../public/assets/${asset}`, import.meta.url));
+  assert.match(page, /canonical-v1\/\$\{id\}\.png/);
+  assert.doesNotMatch(page, /v10-side-extras|v10-side-transport|v10-side-special-movement/);
+  for (const asset of ["rollerwheel", "ski", "hover", "wing", "paraglider", "propeller"]) {
+    await access(new URL(`../public/assets/canonical-v1/${asset}.png`, import.meta.url));
   }
 });
 
@@ -281,8 +273,7 @@ test("new transport modules are individually cropped and the workshop uses kid-r
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
 
-  assert.match(page, /hoverframe:\[12,8\]/);
-  assert.match(page, /hovercab:\[12,0\]/);
+  assert.match(page, /canonical-v1\/\$\{id\}\.png/);
   assert.match(page, /chassis: \{ label: "车底"/);
   assert.match(page, /move: \{ label: "轮子"/);
   assert.match(page, /cab: \{ label: "车头"/);
@@ -291,27 +282,21 @@ test("new transport modules are individually cropped and the workshop uses kid-r
   assert.match(page, /第 1 步：点一个“车底”/);
   assert.match(css, /V12 kid-first workshop navigation/);
   for (const part of ["hovercab", "pilotcab", "gliderseat", "bubblecockpit", "hoverbody", "airbody", "gliderpod", "hoverframe", "airframe", "gliderframe", "hovercraftskirt", "wing", "paraglider", "propeller"]) {
-    assert.match(page, new RegExp(`${part}: "transport-${part}-v11\\.png"`));
-    await access(new URL(`../public/assets/transport-${part}-v11.png`, import.meta.url));
+    await access(new URL(`../public/assets/canonical-v1/${part}.png`, import.meta.url));
   }
 });
 
 test("problem modules use complete independent RGBA assets without sprite-sheet bleed", async () => {
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
-  const assets = [
-    ["greentrack", "movement-greentrack-v13.png"],
-    ["ski", "movement-ski-v13.png"],
-    ["hover", "movement-hover-v13.png"],
-    ["pontoonframe", "transport-pontoonframe-v13.png"],
-    ["seaplanebody", "transport-seaplanebody-v13.png"],
-  ];
+  const assets = ["greentrack", "ski", "hover", "pontoonframe", "seaplanebody"];
 
-  for (const [part, fileName] of assets) {
-    assert.match(page, new RegExp(`${part}: "${fileName.replaceAll(".", "\\.")}"`));
-    const png = await readFile(new URL(`../public/assets/${fileName}`, import.meta.url));
+  assert.match(page, /canonical-v1\/\$\{id\}\.png/);
+  for (const part of assets) {
+    const fileName = `${part}.png`;
+    const png = await readFile(new URL(`../public/assets/canonical-v1/${fileName}`, import.meta.url));
     assert.equal(png.subarray(1, 4).toString("ascii"), "PNG");
     assert.equal(png[25], 6, `${fileName} must be RGBA rather than a painted checkerboard`);
-    assert.ok(png.readUInt32BE(16) >= 1024);
-    assert.ok(png.readUInt32BE(20) >= 700);
+    assert.equal(png.readUInt32BE(16), 512);
+    assert.equal(png.readUInt32BE(20), 512);
   }
 });

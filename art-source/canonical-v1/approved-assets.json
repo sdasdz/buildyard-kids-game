@@ -1,0 +1,1598 @@
+[
+  {
+    "id": "frame",
+    "name": "短轴基础底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/frame.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 235,
+      "width": 430,
+      "height": 155
+    }
+  },
+  {
+    "id": "longframe",
+    "name": "三轴加长底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/longframe.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 237,
+      "width": 430,
+      "height": 153
+    }
+  },
+  {
+    "id": "heavyframe",
+    "name": "四轴重载底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/heavyframe.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 257,
+      "width": 430,
+      "height": 133
+    }
+  },
+  {
+    "id": "compactchassis",
+    "name": "叉车紧凑底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/compactchassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 70,
+      "width": 430,
+      "height": 320
+    }
+  },
+  {
+    "id": "excavatorchassis",
+    "name": "挖机旋转底盘",
+    "category": "chassis",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/excavatorchassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 276,
+      "width": 430,
+      "height": 114
+    }
+  },
+  {
+    "id": "bulldozerchassis",
+    "name": "推土强化底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/bulldozerchassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 213,
+      "width": 430,
+      "height": 177
+    }
+  },
+  {
+    "id": "cranechassis",
+    "name": "起重支腿底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/cranechassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 208,
+      "width": 430,
+      "height": 182
+    }
+  },
+  {
+    "id": "dumpchassis",
+    "name": "翻斗承载底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/dumpchassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 261,
+      "width": 430,
+      "height": 129
+    }
+  },
+  {
+    "id": "firechassis",
+    "name": "消防红色底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/firechassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 260,
+      "width": 430,
+      "height": 130
+    }
+  },
+  {
+    "id": "farmchassis",
+    "name": "农场绿色底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/farmchassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 256,
+      "width": 430,
+      "height": 134
+    }
+  },
+  {
+    "id": "snowchassis",
+    "name": "雪地蓝色底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/snowchassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 248,
+      "width": 430,
+      "height": 142
+    }
+  },
+  {
+    "id": "miningchassis",
+    "name": "矿山防护底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/miningchassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 266,
+      "width": 430,
+      "height": 124
+    }
+  },
+  {
+    "id": "amphichassis",
+    "name": "水陆密封底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/amphichassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 234,
+      "width": 430,
+      "height": 156
+    }
+  },
+  {
+    "id": "citychassis",
+    "name": "城市维护底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/citychassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 257,
+      "width": 430,
+      "height": 133
+    }
+  },
+  {
+    "id": "rescuechassis",
+    "name": "白色救援底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/rescuechassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 273,
+      "width": 430,
+      "height": 117
+    }
+  },
+  {
+    "id": "fantasychassis",
+    "name": "紫色能量底盘",
+    "category": "chassis",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-chassis.png",
+    "outputFile": "art-source/canonical-v1/fantasychassis.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 281,
+      "width": 430,
+      "height": 109
+    }
+  },
+  {
+    "id": "hoverframe",
+    "name": "气垫船承载骨架",
+    "category": "chassis",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-hoverframe-v11.png",
+    "outputFile": "art-source/canonical-v1/hoverframe.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 292,
+      "width": 430,
+      "height": 98
+    }
+  },
+  {
+    "id": "airframe",
+    "name": "工程飞机机身骨架",
+    "category": "chassis",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-airframe-v11.png",
+    "outputFile": "art-source/canonical-v1/airframe.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 313,
+      "width": 430,
+      "height": 77
+    }
+  },
+  {
+    "id": "gliderframe",
+    "name": "滑翔伞轻型骨架",
+    "category": "chassis",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-gliderframe-v11.png",
+    "outputFile": "art-source/canonical-v1/gliderframe.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 303,
+      "width": 430,
+      "height": 87
+    }
+  },
+  {
+    "id": "pontoonframe",
+    "name": "水陆浮筒底盘",
+    "category": "chassis",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-pontoonframe-v13.png",
+    "outputFile": "art-source/canonical-v1/pontoonframe.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 236,
+      "width": 430,
+      "height": 154
+    }
+  },
+  {
+    "id": "utilitybody",
+    "name": "实体工具车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/utilitybody.png",
+    "normalizedBounds": {
+      "x": 70,
+      "y": 100,
+      "width": 372,
+      "height": 340
+    }
+  },
+  {
+    "id": "cargo",
+    "name": "加长货运车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/cargo.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 259,
+      "width": 430,
+      "height": 181
+    }
+  },
+  {
+    "id": "miningdumpbody",
+    "name": "黑色重载车厢",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/miningdumpbody.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 169,
+      "width": 430,
+      "height": 271
+    }
+  },
+  {
+    "id": "forkliftbody",
+    "name": "叉车配重车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/forkliftbody.png",
+    "normalizedBounds": {
+      "x": 50,
+      "y": 100,
+      "width": 412,
+      "height": 340
+    }
+  },
+  {
+    "id": "excavatorbase",
+    "name": "挖机实体机身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/excavatorbase.png",
+    "normalizedBounds": {
+      "x": 51,
+      "y": 100,
+      "width": 410,
+      "height": 340
+    }
+  },
+  {
+    "id": "bulldozerbody",
+    "name": "推土动力车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/bulldozerbody.png",
+    "normalizedBounds": {
+      "x": 57,
+      "y": 100,
+      "width": 398,
+      "height": 340
+    }
+  },
+  {
+    "id": "cranebody",
+    "name": "起重动力车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/cranebody.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 100,
+      "width": 430,
+      "height": 340
+    }
+  },
+  {
+    "id": "bucketbody",
+    "name": "实体翻斗车厢",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/bucketbody.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 211,
+      "width": 430,
+      "height": 229
+    }
+  },
+  {
+    "id": "firebody",
+    "name": "消防装备车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/firebody.png",
+    "normalizedBounds": {
+      "x": 49,
+      "y": 100,
+      "width": 415,
+      "height": 340
+    }
+  },
+  {
+    "id": "tractorbody",
+    "name": "农场动力车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/tractorbody.png",
+    "normalizedBounds": {
+      "x": 54,
+      "y": 100,
+      "width": 405,
+      "height": 340
+    }
+  },
+  {
+    "id": "snowbody",
+    "name": "扫雪动力车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/snowbody.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 133,
+      "width": 430,
+      "height": 307
+    }
+  },
+  {
+    "id": "miningbody",
+    "name": "矿山防护车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/miningbody.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 189,
+      "width": 430,
+      "height": 251
+    }
+  },
+  {
+    "id": "tank",
+    "name": "密封水箱车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/tank.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 123,
+      "width": 430,
+      "height": 317
+    }
+  },
+  {
+    "id": "citybody",
+    "name": "城市维护车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/citybody.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 174,
+      "width": 430,
+      "height": 266
+    }
+  },
+  {
+    "id": "rescuebody",
+    "name": "白色救援车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/rescuebody.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 141,
+      "width": 430,
+      "height": 299
+    }
+  },
+  {
+    "id": "fantasybody",
+    "name": "紫色奇想车身",
+    "category": "body",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-bodies.png",
+    "outputFile": "art-source/canonical-v1/fantasybody.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 140,
+      "width": 430,
+      "height": 300
+    }
+  },
+  {
+    "id": "hoverbody",
+    "name": "气垫船工程舱",
+    "category": "body",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-hoverbody-v11.png",
+    "outputFile": "art-source/canonical-v1/hoverbody.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 267,
+      "width": 430,
+      "height": 173
+    }
+  },
+  {
+    "id": "airbody",
+    "name": "工程飞机机身",
+    "category": "body",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-airbody-v11.png",
+    "outputFile": "art-source/canonical-v1/airbody.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 273,
+      "width": 430,
+      "height": 167
+    }
+  },
+  {
+    "id": "gliderpod",
+    "name": "滑翔伞设备舱",
+    "category": "body",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-gliderpod-v11.png",
+    "outputFile": "art-source/canonical-v1/gliderpod.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 229,
+      "width": 430,
+      "height": 211
+    }
+  },
+  {
+    "id": "seaplanebody",
+    "name": "水上救援机身",
+    "category": "body",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-seaplanebody-v13.png",
+    "outputFile": "art-source/canonical-v1/seaplanebody.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 293,
+      "width": 430,
+      "height": 147
+    }
+  },
+  {
+    "id": "wheel",
+    "name": "黄心越野轮",
+    "category": "move",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "outputFile": "art-source/canonical-v1/wheel.png",
+    "normalizedBounds": {
+      "x": 93,
+      "y": 166,
+      "width": 327,
+      "height": 320
+    }
+  },
+  {
+    "id": "orangewheel",
+    "name": "橙心工程轮",
+    "category": "move",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "outputFile": "art-source/canonical-v1/orangewheel.png",
+    "normalizedBounds": {
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
+    }
+  },
+  {
+    "id": "bluewheel",
+    "name": "蓝心救援轮",
+    "category": "move",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "outputFile": "art-source/canonical-v1/bluewheel.png",
+    "normalizedBounds": {
+      "x": 94,
+      "y": 166,
+      "width": 324,
+      "height": 320
+    }
+  },
+  {
+    "id": "redwheel",
+    "name": "红心消防轮",
+    "category": "move",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "outputFile": "art-source/canonical-v1/redwheel.png",
+    "normalizedBounds": {
+      "x": 94,
+      "y": 166,
+      "width": 325,
+      "height": 320
+    }
+  },
+  {
+    "id": "smallwheel",
+    "name": "黄色小轮",
+    "category": "move",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "outputFile": "art-source/canonical-v1/smallwheel.png",
+    "normalizedBounds": {
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
+    }
+  },
+  {
+    "id": "farmwheel",
+    "name": "绿色农场轮",
+    "category": "move",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "outputFile": "art-source/canonical-v1/farmwheel.png",
+    "normalizedBounds": {
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
+    }
+  },
+  {
+    "id": "citywheel",
+    "name": "蓝色城市轮",
+    "category": "move",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "outputFile": "art-source/canonical-v1/citywheel.png",
+    "normalizedBounds": {
+      "x": 98,
+      "y": 166,
+      "width": 317,
+      "height": 320
+    }
+  },
+  {
+    "id": "fantasywheel",
+    "name": "紫色星星轮",
+    "category": "move",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "outputFile": "art-source/canonical-v1/fantasywheel.png",
+    "normalizedBounds": {
+      "x": 97,
+      "y": 166,
+      "width": 319,
+      "height": 320
+    }
+  },
+  {
+    "id": "track",
+    "name": "黄色工程履带",
+    "category": "move",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "outputFile": "art-source/canonical-v1/track.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 264,
+      "width": 430,
+      "height": 222
+    }
+  },
+  {
+    "id": "miningtrack",
+    "name": "黑色矿山履带",
+    "category": "move",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "outputFile": "art-source/canonical-v1/miningtrack.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 269,
+      "width": 430,
+      "height": 217
+    }
+  },
+  {
+    "id": "snowtrack",
+    "name": "蓝色雪地履带",
+    "category": "move",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "outputFile": "art-source/canonical-v1/snowtrack.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 267,
+      "width": 430,
+      "height": 219
+    }
+  },
+  {
+    "id": "greentrack",
+    "name": "绿色越野履带",
+    "category": "move",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "movement-greentrack-v13.png",
+    "outputFile": "art-source/canonical-v1/greentrack.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 291,
+      "width": 430,
+      "height": 195
+    }
+  },
+  {
+    "id": "rollerwheel",
+    "name": "宽幅压路滚筒",
+    "category": "move",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "v10-side-special-movement.png",
+    "outputFile": "art-source/canonical-v1/rollerwheel.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 204,
+      "width": 430,
+      "height": 282
+    }
+  },
+  {
+    "id": "paddlewheel",
+    "name": "水陆桨轮",
+    "category": "move",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-movement.png",
+    "outputFile": "art-source/canonical-v1/paddlewheel.png",
+    "normalizedBounds": {
+      "x": 85,
+      "y": 166,
+      "width": 342,
+      "height": 320
+    }
+  },
+  {
+    "id": "ski",
+    "name": "雪地滑橇",
+    "category": "move",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "movement-ski-v13.png",
+    "outputFile": "art-source/canonical-v1/ski.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 391,
+      "width": 430,
+      "height": 95
+    }
+  },
+  {
+    "id": "hover",
+    "name": "紫色悬浮垫",
+    "category": "move",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "movement-hover-v13.png",
+    "outputFile": "art-source/canonical-v1/hover.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 362,
+      "width": 430,
+      "height": 124
+    }
+  },
+  {
+    "id": "hovercraftskirt",
+    "name": "气垫船气囊",
+    "category": "move",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-hovercraftskirt-v11.png",
+    "outputFile": "art-source/canonical-v1/hovercraftskirt.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 397,
+      "width": 430,
+      "height": 89
+    }
+  },
+  {
+    "id": "wing",
+    "name": "工程飞机机翼",
+    "category": "move",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-wing-v11.png",
+    "outputFile": "art-source/canonical-v1/wing.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 362,
+      "width": 430,
+      "height": 124
+    }
+  },
+  {
+    "id": "paraglider",
+    "name": "救援滑翔伞翼",
+    "category": "move",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-paraglider-v11.png",
+    "outputFile": "art-source/canonical-v1/paraglider.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 221,
+      "width": 430,
+      "height": 265
+    }
+  },
+  {
+    "id": "propeller",
+    "name": "航空螺旋桨",
+    "category": "move",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-propeller-v11.png",
+    "outputFile": "art-source/canonical-v1/propeller.png",
+    "normalizedBounds": {
+      "x": 112,
+      "y": 166,
+      "width": 289,
+      "height": 320
+    }
+  },
+  {
+    "id": "cab",
+    "name": "驾驶室",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/cab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 133,
+      "width": 300,
+      "height": 349
+    }
+  },
+  {
+    "id": "bubblecab",
+    "name": "泡泡驾驶舱",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/bubblecab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 192,
+      "width": 300,
+      "height": 290
+    }
+  },
+  {
+    "id": "lampcab",
+    "name": "探险驾驶室",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/lampcab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 160,
+      "width": 300,
+      "height": 322
+    }
+  },
+  {
+    "id": "engine",
+    "name": "轰隆动力机",
+    "category": "help",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/engine.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 122,
+      "width": 430,
+      "height": 318
+    }
+  },
+  {
+    "id": "battery",
+    "name": "闪电电池箱",
+    "category": "help",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/battery.png",
+    "normalizedBounds": {
+      "x": 50,
+      "y": 100,
+      "width": 412,
+      "height": 340
+    }
+  },
+  {
+    "id": "suspension",
+    "name": "弹簧减震器",
+    "category": "help",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/suspension.png",
+    "normalizedBounds": {
+      "x": 85,
+      "y": 100,
+      "width": 343,
+      "height": 340
+    }
+  },
+  {
+    "id": "firecab",
+    "name": "红色消防车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/firecab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 162,
+      "width": 300,
+      "height": 320
+    }
+  },
+  {
+    "id": "farmcab",
+    "name": "绿色农场车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/farmcab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 177,
+      "width": 300,
+      "height": 305
+    }
+  },
+  {
+    "id": "rescuecab",
+    "name": "白色救援车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/rescuecab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 161,
+      "width": 300,
+      "height": 321
+    }
+  },
+  {
+    "id": "bulldozercab",
+    "name": "推土机车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/bulldozercab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 174,
+      "width": 300,
+      "height": 308
+    }
+  },
+  {
+    "id": "cranecab",
+    "name": "高视野吊车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/cranecab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 157,
+      "width": 300,
+      "height": 325
+    }
+  },
+  {
+    "id": "miningcab",
+    "name": "防护矿山车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/miningcab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 190,
+      "width": 300,
+      "height": 292
+    }
+  },
+  {
+    "id": "forkcab",
+    "name": "紧凑叉车车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/forkcab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 170,
+      "width": 300,
+      "height": 312
+    }
+  },
+  {
+    "id": "amphicab",
+    "name": "泡泡水陆车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/amphicab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 161,
+      "width": 300,
+      "height": 321
+    }
+  },
+  {
+    "id": "citycab",
+    "name": "红色城市车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/citycab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 150,
+      "width": 300,
+      "height": 332
+    }
+  },
+  {
+    "id": "farmcab2",
+    "name": "圆窗农场车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/farmcab2.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 189,
+      "width": 300,
+      "height": 293
+    }
+  },
+  {
+    "id": "amphicab2",
+    "name": "蓝色水陆车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/amphicab2.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 172,
+      "width": 300,
+      "height": 310
+    }
+  },
+  {
+    "id": "snowcab",
+    "name": "暖暖雪地车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/snowcab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 213,
+      "width": 300,
+      "height": 269
+    }
+  },
+  {
+    "id": "fantasycab",
+    "name": "紫色魔法车头",
+    "category": "cab",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-cabs.png",
+    "outputFile": "art-source/canonical-v1/fantasycab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 227,
+      "width": 300,
+      "height": 255
+    }
+  },
+  {
+    "id": "hovercab",
+    "name": "气垫船驾驶舱",
+    "category": "cab",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-hovercab-v11.png",
+    "outputFile": "art-source/canonical-v1/hovercab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 179,
+      "width": 300,
+      "height": 303
+    }
+  },
+  {
+    "id": "pilotcab",
+    "name": "飞机透明座舱",
+    "category": "cab",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-pilotcab-v11.png",
+    "outputFile": "art-source/canonical-v1/pilotcab.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 184,
+      "width": 300,
+      "height": 298
+    }
+  },
+  {
+    "id": "gliderseat",
+    "name": "滑翔伞安全座椅",
+    "category": "cab",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-gliderseat-v11.png",
+    "outputFile": "art-source/canonical-v1/gliderseat.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 43,
+      "width": 300,
+      "height": 439
+    }
+  },
+  {
+    "id": "bubblecockpit",
+    "name": "救援观察舱",
+    "category": "cab",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "transport-bubblecockpit-v11.png",
+    "outputFile": "art-source/canonical-v1/bubblecockpit.png",
+    "normalizedBounds": {
+      "x": 184,
+      "y": 56,
+      "width": 300,
+      "height": 426
+    }
+  },
+  {
+    "id": "shovel",
+    "name": "挖掘斗",
+    "category": "tool",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/shovel.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 220,
+      "width": 466,
+      "height": 220
+    }
+  },
+  {
+    "id": "blade",
+    "name": "推土铲",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/blade.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 329,
+      "height": 390
+    }
+  },
+  {
+    "id": "crane",
+    "name": "起重吊臂",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/crane.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 158,
+      "width": 466,
+      "height": 282
+    }
+  },
+  {
+    "id": "fork",
+    "name": "叉车臂",
+    "category": "tool",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/fork.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 185,
+      "width": 466,
+      "height": 255
+    }
+  },
+  {
+    "id": "drill",
+    "name": "钻头",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/drill.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 357,
+      "height": 390
+    }
+  },
+  {
+    "id": "augerdrill",
+    "name": "长螺旋钻机",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "tool-auger-drill-v1.png",
+    "outputFile": "art-source/canonical-v1/augerdrill.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 327,
+      "width": 466,
+      "height": 113
+    }
+  },
+  {
+    "id": "roller",
+    "name": "压路滚筒",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/roller.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 141,
+      "width": 466,
+      "height": 299
+    }
+  },
+  {
+    "id": "plow",
+    "name": "农田犁",
+    "category": "tool",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/plow.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 391,
+      "height": 390
+    }
+  },
+  {
+    "id": "hose",
+    "name": "喷水炮",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/hose.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 200,
+      "width": 466,
+      "height": 240
+    }
+  },
+  {
+    "id": "tow",
+    "name": "救援拖钩",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/tow.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 146,
+      "width": 466,
+      "height": 294
+    }
+  },
+  {
+    "id": "brush",
+    "name": "清扫刷",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/brush.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 461,
+      "height": 390
+    }
+  },
+  {
+    "id": "snowblade",
+    "name": "弧形扫雪铲",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/snowblade.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 451,
+      "height": 390
+    }
+  },
+  {
+    "id": "grabber",
+    "name": "液压抓木爪",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/grabber.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 404,
+      "height": 390
+    }
+  },
+  {
+    "id": "mixer",
+    "name": "水泥搅拌筒",
+    "category": "tool",
+    "sourceKind": "regenerated-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/mixer.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 206,
+      "width": 466,
+      "height": 234
+    }
+  },
+  {
+    "id": "hammer",
+    "name": "破碎锤",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/hammer.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 50,
+      "width": 262,
+      "height": 390
+    }
+  },
+  {
+    "id": "wreckingball",
+    "name": "工程大摆锤",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "tool-wrecking-ball-v1.png",
+    "outputFile": "art-source/canonical-v1/wreckingball.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 96,
+      "width": 466,
+      "height": 344
+    }
+  },
+  {
+    "id": "liftplatform",
+    "name": "高空作业篮",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/liftplatform.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 182,
+      "width": 466,
+      "height": 258
+    }
+  },
+  {
+    "id": "conveyor",
+    "name": "装卸传送臂",
+    "category": "tool",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v9-workshop-tools.png",
+    "outputFile": "art-source/canonical-v1/conveyor.png",
+    "normalizedBounds": {
+      "x": 23,
+      "y": 179,
+      "width": 466,
+      "height": 261
+    }
+  },
+  {
+    "id": "lamp",
+    "name": "亮亮探照灯",
+    "category": "help",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/lamp.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 146,
+      "width": 430,
+      "height": 294
+    }
+  },
+  {
+    "id": "siren",
+    "name": "安全警示灯",
+    "category": "help",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/siren.png",
+    "normalizedBounds": {
+      "x": 67,
+      "y": 112,
+      "width": 378,
+      "height": 328
+    }
+  },
+  {
+    "id": "bridge",
+    "name": "折叠小桥",
+    "category": "help",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/bridge.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 201,
+      "width": 430,
+      "height": 239
+    }
+  },
+  {
+    "id": "rescuebox",
+    "name": "蓝色救援物资箱",
+    "category": "help",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/rescuebox.png",
+    "normalizedBounds": {
+      "x": 42,
+      "y": 136,
+      "width": 428,
+      "height": 304
+    }
+  },
+  {
+    "id": "toolbox",
+    "name": "红色随车工具箱",
+    "category": "help",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/toolbox.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 147,
+      "width": 430,
+      "height": 293
+    }
+  },
+  {
+    "id": "aidkit",
+    "name": "白色急救箱",
+    "category": "help",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/aidkit.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 104,
+      "width": 430,
+      "height": 336
+    }
+  },
+  {
+    "id": "cones",
+    "name": "安全路锥架",
+    "category": "help",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/cones.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 160,
+      "width": 430,
+      "height": 280
+    }
+  },
+  {
+    "id": "step",
+    "name": "防滑侧踏板",
+    "category": "help",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/step.png",
+    "normalizedBounds": {
+      "x": 48,
+      "y": 193,
+      "width": 416,
+      "height": 247
+    }
+  },
+  {
+    "id": "spare",
+    "name": "随车备用轮",
+    "category": "help",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/spare.png",
+    "normalizedBounds": {
+      "x": 88,
+      "y": 100,
+      "width": 337,
+      "height": 340
+    }
+  },
+  {
+    "id": "flag",
+    "name": "小旗子",
+    "category": "decor",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/flag.png",
+    "normalizedBounds": {
+      "x": 109,
+      "y": 100,
+      "width": 294,
+      "height": 340
+    }
+  },
+  {
+    "id": "star",
+    "name": "大星星",
+    "category": "decor",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/star.png",
+    "normalizedBounds": {
+      "x": 80,
+      "y": 105,
+      "width": 353,
+      "height": 335
+    }
+  },
+  {
+    "id": "eyes",
+    "name": "笑脸眼睛",
+    "category": "decor",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/eyes.png",
+    "normalizedBounds": {
+      "x": 41,
+      "y": 185,
+      "width": 430,
+      "height": 255
+    }
+  },
+  {
+    "id": "pipe",
+    "name": "彩虹排气管",
+    "category": "decor",
+    "sourceKind": "aligned-active-approved",
+    "legacySourceFile": "v10-side-extras.png",
+    "outputFile": "art-source/canonical-v1/pipe.png",
+    "normalizedBounds": {
+      "x": 162,
+      "y": 100,
+      "width": 189,
+      "height": 340
+    }
+  }
+]

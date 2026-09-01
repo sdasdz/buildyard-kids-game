@@ -8,44 +8,43 @@
     },
     {
       "name": "SPRITES",
-      "line": 197,
-      "role": "Maps part IDs to 4x4 sprite-sheet cells."
+      "line": null,
+      "role": "Removed from the active runtime; legacy atlases are deprecated on disk."
     },
     {
       "name": "SPRITE_SHEETS",
-      "line": 228,
-      "role": "Maps numeric sheet keys to source files."
+      "line": null,
+      "role": "Removed from the active runtime; legacy atlases are deprecated on disk."
     },
     {
       "name": "PART_IMAGE_ASSETS",
-      "line": 239,
-      "role": "Maps part IDs to individual PNG files and overrides SPRITES at runtime."
+      "line": 200,
+      "role": "Maps every active part ID to canonical-v1/{id}.png."
     },
     {
       "name": "spriteStyle",
-      "line": 277,
-      "role": "Selects individual PNG first; otherwise renders a 4x4 sprite cell. The two paths currently align differently."
+      "line": 218,
+      "role": "Renders only canonical-v1 individual PNGs."
     },
     {
       "name": "RecoloredPartArt",
-      "line": 328,
-      "role": "Uses the same individual-first source priority for recoloring."
+      "line": 262,
+      "role": "Recolors the same canonical 512x512 PNG used by every other view."
     },
     {
       "name": "assembleParts",
-      "line": 805,
+      "line": 727,
       "role": "Applies runtime category placement, sizing, layering and rear-tool flip behavior."
     }
   ],
   "effectivePriority": [
-    "PART_IMAGE_ASSETS individual PNG",
-    "SPRITES sprite-cell"
+    "canonical-v1 individual PNG only"
   ],
   "counts": {
     "active": 114,
-    "individual": 21,
-    "spriteCell": 93,
-    "deprecated": 19
+    "individual": 114,
+    "spriteCell": 0,
+    "deprecated": 133
   },
-  "finding": "Runtime currently has two alignment paths: individual PNG uses centered contain while sprite cells use atlas positioning. Phase one records this and does not alter gameplay code."
+  "finding": "Runtime, recoloring, garage previews and mission rendering now share one canonical-v1 PNG path per part."
 }

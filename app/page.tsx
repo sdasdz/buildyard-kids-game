@@ -194,74 +194,15 @@ const PARTS: PartDef[] = [
   { id: "pipe", name: "彩虹排气管", icon: "♨", category: "decor", tags: [], w: 70, h: 92 },
 ];
 
-const SPRITES: Record<string, [number, number]> = {
-  frame:[6,0], longframe:[6,1], heavyframe:[6,2], compactchassis:[6,3],
-  excavatorchassis:[6,4], bulldozerchassis:[6,5], cranechassis:[6,6], dumpchassis:[6,7],
-  firechassis:[6,8], farmchassis:[6,9], snowchassis:[6,10], miningchassis:[6,11],
-  amphichassis:[6,12], citychassis:[6,13], rescuechassis:[6,14], fantasychassis:[6,15],
-  hoverframe:[12,8], airframe:[12,9], gliderframe:[12,10], pontoonframe:[12,11],
-  utilitybody:[7,0], cargo:[7,1], miningdumpbody:[7,2], forkliftbody:[7,3],
-  excavatorbase:[7,4], bulldozerbody:[7,5], cranebody:[7,6], bucketbody:[7,7],
-  firebody:[7,8], tractorbody:[7,9], snowbody:[7,10], miningbody:[7,11],
-  tank:[7,12], citybody:[7,13], rescuebody:[7,14], fantasybody:[7,15],
-  hoverbody:[12,4], airbody:[12,5], gliderpod:[12,6], seaplanebody:[12,7],
-  cab:[8,0], bubblecab:[8,1], lampcab:[8,2], firecab:[8,3],
-  farmcab:[8,4], rescuecab:[8,5], bulldozercab:[8,6], cranecab:[8,7],
-  miningcab:[8,8], forkcab:[8,9], amphicab:[8,10], citycab:[8,11],
-  farmcab2:[8,12], amphicab2:[8,13], snowcab:[8,14], fantasycab:[8,15],
-  hovercab:[12,0], pilotcab:[12,1], gliderseat:[12,2], bubblecockpit:[12,3],
-  shovel:[9,0], blade:[9,1], crane:[9,2], fork:[9,3],
-  drill:[9,4], roller:[9,5], plow:[9,6], hose:[9,7],
-  tow:[9,8], brush:[9,9], snowblade:[9,10], grabber:[9,11],
-  mixer:[9,12], hammer:[9,13], liftplatform:[9,14], conveyor:[9,15],
-  wheel:[10,0], orangewheel:[10,1], bluewheel:[10,2], redwheel:[10,3],
-  smallwheel:[10,4], farmwheel:[10,5], citywheel:[10,6], fantasywheel:[10,7],
-  track:[10,8], miningtrack:[10,9], snowtrack:[10,10], greentrack:[10,11],
-  rollerwheel:[13,0], paddlewheel:[10,13], ski:[13,1], hover:[13,2],
-  hovercraftskirt:[12,12], wing:[12,13], paraglider:[12,14], propeller:[12,15],
-  engine:[11,0], battery:[11,1], suspension:[11,2], lamp:[11,3],
-  siren:[11,4], bridge:[11,5], rescuebox:[11,6], flag:[11,7],
-  star:[11,8], eyes:[11,9], pipe:[11,10], toolbox:[11,11],
-  aidkit:[11,12], cones:[11,13], step:[11,14], spare:[11,15],
-};
-
-const SPRITE_SHEETS: Record<number, string> = {
-  6: "v9-workshop-chassis.png",
-  7: "v9-workshop-bodies.png",
-  8: "v9-workshop-cabs.png",
-  9: "v9-workshop-tools.png",
-  10: "v9-workshop-movement.png",
-  11: "v10-side-extras.png",
-  12: "v10-side-transport.png",
-  13: "v10-side-special-movement.png",
-};
-
-const PART_IMAGE_ASSETS: Record<string, string> = {
-  augerdrill: "tool-auger-drill-v1.png",
-  wreckingball: "tool-wrecking-ball-v1.png",
-  hovercab: "transport-hovercab-v11.png",
-  pilotcab: "transport-pilotcab-v11.png",
-  gliderseat: "transport-gliderseat-v11.png",
-  bubblecockpit: "transport-bubblecockpit-v11.png",
-  hoverbody: "transport-hoverbody-v11.png",
-  airbody: "transport-airbody-v11.png",
-  gliderpod: "transport-gliderpod-v11.png",
-  seaplanebody: "transport-seaplanebody-v13.png",
-  hoverframe: "transport-hoverframe-v11.png",
-  airframe: "transport-airframe-v11.png",
-  gliderframe: "transport-gliderframe-v11.png",
-  pontoonframe: "transport-pontoonframe-v13.png",
-  hovercraftskirt: "transport-hovercraftskirt-v11.png",
-  wing: "transport-wing-v11.png",
-  paraglider: "transport-paraglider-v11.png",
-  propeller: "transport-propeller-v11.png",
-  greentrack: "movement-greentrack-v13.png",
-  ski: "movement-ski-v13.png",
-  hover: "movement-hover-v13.png",
-};
+// Every active part is rendered from the same approved, pre-aligned 512x512
+// canonical PNG path. Legacy atlas and per-batch mappings remain on disk only
+// and are listed in art-review/deprecated-assets.json.
+const PART_IMAGE_ASSETS: Record<string, string> = Object.fromEntries(
+  PARTS.map(({ id }) => [id, `canonical-v1/${id}.png`]),
+);
 
 function hasPartArt(id: string) {
-  return Boolean(SPRITES[id] || PART_IMAGE_ASSETS[id]);
+  return Boolean(PART_IMAGE_ASSETS[id]);
 }
 
 // The hosted game lives at the site root, while the Windows edition is opened
@@ -275,19 +216,12 @@ function resourcePath(path: string) {
 }
 
 function spriteStyle(id: string): React.CSSProperties | undefined {
-  if (PART_IMAGE_ASSETS[id]) return {
-    backgroundImage: `url(${resourcePath(`/assets/${PART_IMAGE_ASSETS[id]}?v=1`)})`,
+  const imageAsset = PART_IMAGE_ASSETS[id];
+  if (!imageAsset) return undefined;
+  return {
+    backgroundImage: `url(${resourcePath(`/assets/${imageAsset}?v=canonical-v1`)})`,
     backgroundPosition: "center",
     backgroundSize: "contain",
-  };
-  const sprite = SPRITES[id];
-  if (!sprite) return undefined;
-  const index = sprite[1];
-  const col = index % 4;
-  const row = Math.floor(index / 4);
-  return {
-    backgroundImage: `url(${resourcePath(`/assets/${SPRITE_SHEETS[sprite[0]]}?v=9.1`)})`,
-    backgroundPosition: `${col * 33.333}% ${row * 33.333}%`,
   };
 }
 
@@ -330,9 +264,8 @@ function RecoloredPartArt({ id, color, accent, pattern, category }: { id: string
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const sprite = SPRITES[id];
     const imageAsset = PART_IMAGE_ASSETS[id];
-    if (!canvas || (!sprite && !imageAsset)) return;
+    if (!canvas || !imageAsset) return;
     const context = canvas.getContext("2d", { willReadFrequently: true });
     if (!context) return;
     const cacheKey = `${id}:${color}:${accent}:${pattern}`;
@@ -347,18 +280,7 @@ function RecoloredPartArt({ id, color, accent, pattern, category }: { id: string
     image.onload = () => {
       if (cancelled) return;
       context.clearRect(0, 0, canvas.width, canvas.height);
-      if (imageAsset) {
-        const fit = Math.min(canvas.width / image.naturalWidth, canvas.height / image.naturalHeight);
-        const width = image.naturalWidth * fit;
-        const height = image.naturalHeight * fit;
-        context.drawImage(image, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height);
-      } else if (sprite) {
-        const sourceWidth = image.naturalWidth / 4;
-        const sourceHeight = image.naturalHeight / 4;
-        const col = sprite[1] % 4;
-        const row = Math.floor(sprite[1] / 4);
-        context.drawImage(image, col * sourceWidth, row * sourceHeight, sourceWidth, sourceHeight, 0, 0, canvas.width, canvas.height);
-      }
+      context.drawImage(image, 0, 0, canvas.width, canvas.height);
       const pixels = context.getImageData(0, 0, canvas.width, canvas.height);
       const hueBins = new Array(36).fill(0) as number[];
 
@@ -405,7 +327,7 @@ function RecoloredPartArt({ id, color, accent, pattern, category }: { id: string
       recolorCache.set(cacheKey, pixels);
       context.putImageData(pixels, 0, 0);
     };
-    image.src = resourcePath(imageAsset ? `/assets/${imageAsset}?v=1` : `/assets/${SPRITE_SHEETS[sprite![0]]}?v=9.1`);
+    image.src = resourcePath(`/assets/${imageAsset}?v=canonical-v1`);
     return () => { cancelled = true; };
   }, [accent, category, color, id, pattern]);
 
