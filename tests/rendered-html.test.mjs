@@ -84,7 +84,8 @@ test("adding a part preserves every already-positioned instance", async () => {
   assert.ok(start >= 0 && end > start);
   assert.match(addPart, /const existing = new Map\(compatible\.map/);
   assert.match(addPart, /const suggested = new Map\(arranged\.map/);
-  assert.match(addPart, /return next\.map\(\(part\) => existing\.get\(part\.uid\) \|\| suggested\.get\(part\.uid\) \|\| part\)/);
+  assert.match(addPart, /const merged = next\.map\(\(part\) => existing\.get\(part\.uid\) \|\| suggested\.get\(part\.uid\) \|\| part\)/);
+  assert.match(addPart, /return refreshAssemblyConnections\(merged\)/);
   assert.doesNotMatch(addPart, /CORE_CATEGORIES/);
 });
 
@@ -179,9 +180,39 @@ test("story library exposes 100 missions and does not trap new players in one th
   assert.match(page, /const ALL_EVENT_SEEDS = \[\.\.\.EVENT_SEEDS, \.\.\.EXTRA_EVENT_SEEDS\]/);
   assert.match(page, /unlocked: 3/);
   assert.match(page, /unlocked: Math\.max\(3,/);
-  assert.match(page, /recent: \[\.\.\.s\.recent\.slice\(-9\), chosen\.id\]/);
-  assert.match(page, /item\.theme !== mission\?\.theme/);
+  assert.match(page, /recent: \[\.\.\.s\.recent\.slice\(-14\), chosen\.id\]/);
+  assert.match(page, /recentTraits: \[\.\.\.s\.recentTraits\.slice\(-5\)/);
+  assert.match(page, /trait\.action === item\.voiceKey/);
   assert.match(page, /当前可选 \{availableMissions\.length\} \/ 共 \{MISSIONS\.length\} 个故事/);
+});
+
+test("assembly uses an explicit connection graph and preserves garage layouts", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+
+  assert.match(page, /mountedTo\?: string/);
+  assert.match(page, /mountSlot\?: MountSlot/);
+  assert.match(page, /function refreshAssemblyConnections/);
+  assert.match(page, /function buildConnectionGraph/);
+  assert.match(page, /connectedFunctionTags/);
+  assert.match(page, /data-mounted-to=\{p\.mountedTo \|\| undefined\}/);
+  assert.match(page, /🔗 已连接/);
+  assert.match(page, /setParts\(refreshAssemblyConnections\(car\.parts\)\)/);
+  assert.doesNotMatch(page, /setParts\(assembleParts\(car\.parts/);
+});
+
+test("mission theatre selects the real action and has distinct transport and tool motion", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  assert.match(page, /const performanceAction = mission\?\.voiceKey/);
+  assert.match(page, /type TransportMode = "ground"\s*\|\s*"tracked"\s*\|\s*"snow"\s*\|\s*"water"\s*\|\s*"hover"\s*\|\s*"air"/);
+  assert.match(page, /function getMovementProfile/);
+  assert.match(page, /movementProfile\.motion/);
+  assert.match(page, /④ \{mission \? `\$\{mission\.character\}开心地说谢谢`/);
+  for (const mode of ["water", "tracked", "snow", "hover"]) assert.match(css, new RegExp(`\\.theatre-stage\\.mode-${mode}`));
+  for (const motion of ["theatre-bucket-scoop", "theatre-fork-lift", "theatre-blade-push", "theatre-tow-pull-v14", "theatre-brush-spin", "theatre-mixer-turn", "theatre-bridge-open"]) {
+    assert.match(css, new RegExp(`@keyframes ${motion}`));
+  }
 });
 
 test("missions provide precise briefings and play in a dedicated story theatre", async () => {

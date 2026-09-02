@@ -13,6 +13,7 @@ type PartDef = {
   h: number;
 };
 type PartColorMode = "auto" | "primary" | "secondary" | "wheels" | "custom" | "original";
+type MountSlot = "body" | "cab" | "mobility" | "front-tool" | "rear-tool" | "deck-tool" | "boom-tool" | "accessory" | "decor";
 type Part = PartDef & {
   uid: string;
   x: number;
@@ -25,7 +26,10 @@ type Part = PartDef & {
   // Kept only so vehicles saved by the previous version still open correctly.
   colorMode?: PartColorMode;
   color?: string;
+  mountedTo?: string;
+  mountSlot?: MountSlot;
 };
+type MissionTrait = { theme: string; action: string; character: string };
 type Mission = {
   id: string;
   theme: string;
@@ -49,6 +53,7 @@ type SaveData = {
   stars: number;
   completed: string[];
   recent: string[];
+  recentTraits: MissionTrait[];
   unlocked: number;
   garage: { id: string; name: string; date: string; parts: Part[]; paint: Paint }[];
   tutorialSeen: boolean;
@@ -357,6 +362,13 @@ const ACTION_EFFECT: Record<string, { scene: string; label: string }> = {
   fork: { scene: "📦⬆️", label: "货叉稳稳托起箱子送上货架" },
 };
 
+const FUNCTION_NAMES: Record<string, string> = {
+  dig: "挖掘工具", lift: "举升工具", carry: "运输车厢", drill: "钻孔工具", smash: "大摆锤",
+  roll: "压路滚筒", push: "推铲", tow: "拖救工具", farm: "农田工具", clear: "清障工具",
+  water: "喷水工具", clean: "清扫工具", snow: "除雪工具", rough: "越野移动部件", bridge: "架桥设备",
+  light: "照明设备", fire: "消防喷水设备", mix: "搅拌设备", rescue: "救援设备", fork: "货叉",
+};
+
 const ACTION_GUIDE: Record<string, {
   tool: string;
   objective: string;
@@ -635,6 +647,7 @@ const DEFAULT_SAVE: SaveData = {
   stars: 0,
   completed: [],
   recent: [],
+  recentTraits: [],
   unlocked: 3,
   garage: [],
   tutorialSeen: false,
@@ -651,6 +664,8 @@ function safeLoad(): SaveData {
       ...parsed,
       unlocked: Math.max(3, Number(parsed.unlocked) || 0),
       garage: Array.isArray(parsed.garage) ? parsed.garage : [],
+      recent: Array.isArray(parsed.recent) ? parsed.recent : [],
+      recentTraits: Array.isArray(parsed.recentTraits) ? parsed.recentTraits : [],
     };
   } catch {
     return DEFAULT_SAVE;
@@ -698,18 +713,39 @@ function newPart(def: PartDef, index: number): Part {
 
 type AssemblyAnchor = { x: number; y: number; size: number };
 
-type TransportMode = "ground" | "hover" | "air";
+type TransportMode = "ground" | "tracked" | "snow" | "water" | "hover" | "air";
+type MovementProfile = { mode: TransportMode; label: string; icon: string; motion: string };
+type ConnectionEdge = { childUid: string; parentUid: string; slot: MountSlot; connected: boolean };
 
 const ROUND_MOVES = new Set(["wheel", "orangewheel", "bluewheel", "redwheel", "smallwheel", "farmwheel", "citywheel", "fantasywheel", "rollerwheel", "paddlewheel"]);
 const WIDE_MOVES = new Set(["track", "miningtrack", "snowtrack", "greentrack", "ski", "hover", "hovercraftskirt"]);
 const AIR_MOVES = new Set(["wing", "paraglider", "propeller"]);
+const TRACK_MOVES = new Set(["track", "miningtrack", "snowtrack", "greentrack"]);
+const WATER_MOVES = new Set(["paddlewheel", "hovercraftskirt"]);
 const BOOM_TOOLS = new Set(["shovel", "crane", "liftplatform", "conveyor", "wreckingball"]);
 const DECK_TOOLS = new Set(["mixer", "hose"]);
 const REAR_TOOLS = new Set(["tow", "plow"]);
+function getMovementProfile(input: Part[]): MovementProfile {
+  if (input.some((part) => AIR_MOVES.has(part.id) || ["airframe", "gliderframe", "seaplanebody"].includes(part.id))) {
+    return { mode: "air", label: "飞行模式", icon: "✈️", motion: "螺旋桨和机翼带着整车平稳飞行" };
+  }
+  if (input.some((part) => ["hoverframe", "hoverbody", "hovercab", "hovercraftskirt", "hover"].includes(part.id))) {
+    return { mode: "hover", label: "气垫模式", icon: "🌬️", motion: "气垫贴着水面轻轻起伏前进" };
+  }
+  if (input.some((part) => WATER_MOVES.has(part.id) || ["pontoonframe", "amphichassis"].includes(part.id))) {
+    return { mode: "water", label: "水上模式", icon: "🌊", motion: "浮筒保持水平，桨轮推动车辆前进" };
+  }
+  if (input.some((part) => part.id === "ski")) {
+    return { mode: "snow", label: "雪地模式", icon: "❄️", motion: "滑橇沿雪面滑行，车身保持稳定" };
+  }
+  if (input.some((part) => TRACK_MOVES.has(part.id))) {
+    return { mode: "tracked", label: "履带模式", icon: "⛓️", motion: "履带贴住地面连续滚动" };
+  }
+  return { mode: "ground", label: "车轮模式", icon: "🛞", motion: "所有车轮沿同一条地面线转动" };
+}
+
 function getTransportMode(input: Part[]): TransportMode {
-  if (input.some((part) => AIR_MOVES.has(part.id) || ["airframe", "gliderframe"].includes(part.id))) return "air";
-  if (input.some((part) => ["hoverframe", "hoverbody", "hovercab", "hovercraftskirt"].includes(part.id))) return "hover";
-  return "ground";
+  return getMovementProfile(input).mode;
 }
 
 function movementBottomRatio(id: string) {
@@ -722,6 +758,80 @@ function toolMountKind(id: string) {
   if (DECK_TOOLS.has(id)) return "deck";
   if (REAR_TOOLS.has(id)) return "rear";
   return "front";
+}
+
+function mountSlotForPart(part: Part): MountSlot | undefined {
+  if (part.category === "body") return "body";
+  if (part.category === "cab") return "cab";
+  if (part.category === "move") return "mobility";
+  if (part.category === "help") return "accessory";
+  if (part.category === "decor") return "decor";
+  if (part.category !== "tool") return undefined;
+  const kind = toolMountKind(part.id);
+  return kind === "rear" ? "rear-tool" : kind === "deck" ? "deck-tool" : kind === "boom" ? "boom-tool" : "front-tool";
+}
+
+function allowedMountParents(part: Part, input: Part[]) {
+  const chassis = input.filter((candidate) => candidate.category === "chassis");
+  const bodies = input.filter((candidate) => candidate.category === "body");
+  const cabs = input.filter((candidate) => candidate.category === "cab");
+  if (part.category === "body" || part.category === "move") return chassis;
+  if (part.category === "cab") return [...bodies, ...chassis];
+  if (part.category === "tool" || part.category === "help") return [...bodies, ...chassis];
+  if (part.category === "decor") return [...bodies, ...cabs, ...chassis];
+  return [];
+}
+
+function mountDistance(child: Part, parent: Part) {
+  const childWidth = child.w * child.scale;
+  const childHeight = child.h * child.scale;
+  const parentWidth = parent.w * parent.scale;
+  const parentHeight = parent.h * parent.scale;
+  return Math.hypot(
+    child.x + childWidth / 2 - (parent.x + parentWidth / 2),
+    child.y + childHeight / 2 - (parent.y + parentHeight / 2),
+  );
+}
+
+function isNearMount(child: Part, parent: Part) {
+  const parentSpan = Math.max(parent.w * parent.scale, parent.h * parent.scale);
+  const childSpan = Math.min(child.w * child.scale, child.h * child.scale);
+  return mountDistance(child, parent) <= parentSpan * 1.18 + childSpan * .38;
+}
+
+function refreshAssemblyConnections(input: Part[], force = false): Part[] {
+  const ids = new Set(input.map((part) => part.uid));
+  const arranged = input.map((part) => {
+    if (part.category === "chassis") {
+      const root = { ...part };
+      delete root.mountedTo;
+      delete root.mountSlot;
+      return root;
+    }
+    const slot = mountSlotForPart(part);
+    if (!slot) return part;
+    const candidates = allowedMountParents(part, input).filter((parent) => parent.uid !== part.uid);
+    const current = part.mountedTo && ids.has(part.mountedTo) ? candidates.find((parent) => parent.uid === part.mountedTo) : undefined;
+    const nearest = [...candidates].sort((a, b) => mountDistance(part, a) - mountDistance(part, b))[0];
+    const parent = current && (force || isNearMount(part, current)) ? current : nearest;
+    if (!parent || (!force && !isNearMount(part, parent))) {
+      const loose = { ...part };
+      delete loose.mountedTo;
+      delete loose.mountSlot;
+      return loose;
+    }
+    return { ...part, mountedTo: parent.uid, mountSlot: slot };
+  });
+  return arranged;
+}
+
+function buildConnectionGraph(input: Part[]): ConnectionEdge[] {
+  const byUid = new Map(input.map((part) => [part.uid, part]));
+  return input.flatMap((part) => {
+    if (!part.mountedTo || !part.mountSlot) return [];
+    const parent = byUid.get(part.mountedTo);
+    return parent ? [{ childUid: part.uid, parentUid: parent.uid, slot: part.mountSlot, connected: isNearMount(part, parent) }] : [];
+  });
 }
 
 function assembleParts(input: Part[], width = 900, height = 600, anchor?: AssemblyAnchor): Part[] {
@@ -743,7 +853,7 @@ function assembleParts(input: Part[], width = 900, height = 600, anchor?: Assemb
   const wheelCount = Math.max(1, input.filter((p) => p.category === "move" && ROUND_MOVES.has(p.id)).length);
   let wheelNo = 0;
   let wideMoveNo = 0;
-  return input.map((part) => {
+  const arranged = input.map((part) => {
     const n = counts[part.category] || 0;
     counts[part.category] = n + 1;
     let x = rootX;
@@ -855,6 +965,7 @@ function assembleParts(input: Part[], width = 900, height = 600, anchor?: Assemb
     }
     return { ...part, x, y, w: size, h: size, rotate, flip, scale: 1, z: layer + n };
   });
+  return refreshAssemblyConnections(arranged, true);
 }
 
 function preparePerformanceBuild(input: Part[], _action: string): Part[] {
@@ -950,11 +1061,14 @@ export default function Home() {
   const assemblyRoot = parts.find((p) => p.category === "chassis");
   const stickerHostUid = [...parts].filter((part) => part.category === "body").sort((a, b) => b.z - a.z)[0]?.uid;
   const garageDeleteCar = save.garage.find((car) => car.id === garageDeleteId);
-  const performanceAction = mission?.needs[0] || [...parts].reverse().find((p) => p.category === "tool")?.tags[0] || "drive";
-  const performanceParts = useMemo(() => preparePerformanceBuild(parts, performanceAction), [parts, performanceAction]);
-  const performanceMode = getTransportMode(performanceParts);
+  const performanceAction = mission?.voiceKey || [...parts].reverse().find((p) => p.category === "tool")?.tags[0] || "drive";
+  const performanceParts = useMemo(() => preparePerformanceBuild(refreshAssemblyConnections(parts), performanceAction), [parts, performanceAction]);
+  const movementProfile = useMemo(() => getMovementProfile(performanceParts), [performanceParts]);
+  const performanceMode = movementProfile.mode;
   const performanceScale = 1;
   const performanceVariant = performanceParts.some((part) => part.id === "paraglider") ? "glider" : performanceMode;
+  const connectionGraph = useMemo(() => buildConnectionGraph(refreshAssemblyConnections(parts)), [parts]);
+  const connectedPartUids = useMemo(() => new Set(connectionGraph.filter((edge) => edge.connected).map((edge) => edge.childUid)), [connectionGraph]);
 
   const showResult = (next: { ok: boolean; missing: string[]; reason?: string }) => {
     setPerformanceRun((run) => run + 1);
@@ -969,14 +1083,32 @@ export default function Home() {
 
   const pickMission = () => {
     const pool = availableMissions;
-    const fresh = pool.filter((m) => !save.recent.includes(m.id) && !save.completed.includes(m.id));
-    const candidates = fresh.length ? fresh : pool.filter((m) => !save.recent.includes(m.id));
-    const differentTheme = candidates.filter((item) => item.theme !== mission?.theme);
-    const drawPool = differentTheme.length ? differentTheme : (candidates.length ? candidates : pool);
+    const unseen = pool.filter((item) => !save.completed.includes(item.id));
+    const unseenAndRecentSafe = unseen.filter((item) => !save.recent.includes(item.id));
+    const recentSafe = pool.filter((item) => !save.recent.includes(item.id));
+    const candidates = unseenAndRecentSafe.length ? unseenAndRecentSafe : recentSafe.length ? recentSafe : unseen.length ? unseen : pool;
+    const traits = save.recentTraits.slice(-5);
+    const scored = candidates.map((item) => {
+      let penalty = item.theme === mission?.theme ? 10 : 0;
+      penalty += item.voiceKey === mission?.voiceKey ? 12 : 0;
+      traits.forEach((trait, index) => {
+        const weight = index + 1;
+        if (trait.theme === item.theme) penalty += weight * 3;
+        if (trait.action === item.voiceKey) penalty += weight * 4;
+        if (trait.character === item.character) penalty += weight;
+      });
+      return { item, penalty };
+    });
+    const bestPenalty = Math.min(...scored.map((entry) => entry.penalty));
+    const drawPool = scored.filter((entry) => entry.penalty === bestPenalty).map((entry) => entry.item);
     const chosen = drawPool[Math.floor(Math.random() * drawPool.length)];
     if (!chosen) return;
     setMission(chosen);
-    setSave((s) => ({ ...s, recent: [...s.recent.slice(-9), chosen.id] }));
+    setSave((s) => ({
+      ...s,
+      recent: [...s.recent.slice(-14), chosen.id],
+      recentTraits: [...s.recentTraits.slice(-5), { theme: chosen.theme, action: chosen.voiceKey, character: chosen.character }],
+    }));
     setScreen("mission");
     setTimeout(() => playMissionNarration(chosen, false, voice), 250);
   };
@@ -1028,7 +1160,8 @@ export default function Home() {
       // Adding a module must never reassemble work the child has already placed.
       // Use auto-layout only to suggest positions for the genuinely new part (and
       // an automatically supplied frame); every existing instance stays verbatim.
-      return next.map((part) => existing.get(part.uid) || suggested.get(part.uid) || part);
+      const merged = next.map((part) => existing.get(part.uid) || suggested.get(part.uid) || part);
+      return refreshAssemblyConnections(merged);
     });
     setSelected(item.uid);
     if (mountedAtStation) {
@@ -1058,7 +1191,7 @@ export default function Home() {
   const deleteSelected = () => {
     if (!selected) return;
     pushHistory();
-    setParts((all) => all.filter((p) => p.uid !== selected));
+    setParts((all) => refreshAssemblyConnections(all.filter((p) => p.uid !== selected)));
     setSelected(null);
   };
 
@@ -1135,6 +1268,7 @@ export default function Home() {
     } : p));
   };
   const onPointerUp = () => {
+    setParts((current) => refreshAssemblyConnections(current));
     dragging.current = null;
     if (tutorial === 2) setTutorial(3);
   };
@@ -1149,19 +1283,23 @@ export default function Home() {
       showResult({ ok: true, missing: [] });
       return;
     }
-    const tags = new Set(parts.flatMap((p) => p.tags));
-    const functionTags = new Set(parts.filter((p) => ["body", "move", "tool", "help"].includes(p.category)).flatMap((p) => p.tags));
-    const missing = (mission?.needs || []).filter((n) => !functionTags.has(n));
+    const normalizedParts = refreshAssemblyConnections(parts);
+    const graph = buildConnectionGraph(normalizedParts);
+    const connectedUids = new Set(graph.filter((edge) => edge.connected).map((edge) => edge.childUid));
+    const tags = new Set(normalizedParts.flatMap((p) => p.tags));
+    const allFunctionTags = new Set(normalizedParts.filter((p) => ["body", "move", "tool", "help"].includes(p.category)).flatMap((p) => p.tags));
+    const connectedFunctionTags = new Set(normalizedParts.filter((p) => p.category === "chassis" || connectedUids.has(p.uid)).flatMap((p) => p.tags));
+    const missing = (mission?.needs || []).filter((n) => !allFunctionTags.has(n));
     if (!tags.has("chassis")) return showResult({ ok: false, missing, reason: "先装一副底盘，车身、轮子和工具才有牢固的安装位置。" });
     if (!tags.has("body")) return showResult({ ok: false, missing, reason: "还需要一个结实的车身，让零件们有地方坐好。" });
     if (!tags.has("move")) return showResult({ ok: false, missing, reason: "车车还没有会走路的轮子或履带呢！" });
     if (!tags.has("cab")) return showResult({ ok: false, missing, reason: "装上一间驾驶室，工程师才能安全地开车。" });
     if (missing.length) return showResult({ ok: false, missing, reason: mission?.hint });
-    const root = parts.find((p) => p.category === "chassis")!;
-    const rootCenter = { x: root.x + root.w / 2, y: root.y + root.h / 2 };
-    const connected = parts.filter((p) => p.uid !== root.uid && (p.category === "move" || p.tags.some((t) => mission?.needs.includes(t))))
-      .every((p) => Math.hypot(p.x + p.w / 2 - rootCenter.x, p.y + p.h / 2 - rootCenter.y) < root.w * 1.65);
-    if (!connected) return showResult({ ok: false, missing, reason: "有零件离车身太远啦，点一下“自动拼好”，让连接座咔嗒扣上。" });
+    const structuralLoose = normalizedParts.find((p) => ["body", "cab", "move"].includes(p.category) && !connectedUids.has(p.uid));
+    if (structuralLoose) return showResult({ ok: false, missing: [], reason: `${structuralLoose.name}还没有靠近车底，拖到参考框附近，看到绿色“已连接”就可以啦。` });
+    const disconnectedNeed = (mission?.needs || []).find((need) => !connectedFunctionTags.has(need));
+    if (disconnectedNeed) return showResult({ ok: false, missing: [disconnectedNeed], reason: `需要的${FUNCTION_NAMES[disconnectedNeed] || "作业工具"}已经选好了，但还没有装到车上。把它拖到车身附近再试一次吧。` });
+    setParts(normalizedParts);
     showResult({ ok: true, missing: [] });
     const wasNew = mission && !save.completed.includes(mission.id);
     if (mission) {
@@ -1329,7 +1467,7 @@ export default function Home() {
       <header className="performance-header">
         <button onClick={() => { setResult(null); setScreen("build"); }}>‹ 返回拼装</button>
         <div><small>{mission ? `${theme.icon} ${mission.theme}` : "🛞 创意试车场"}</small><b>{mission?.title || "我的工程车试车"}</b></div>
-        <span className="performance-status">{result.ok ? "任务演出" : "检查时间"}</span>
+        <span className="performance-status">{result.ok ? `${movementProfile.icon} ${movementProfile.label}` : "检查时间"}</span>
       </header>
 
       <section key={performanceRun} className={`theatre-stage mode-${performanceMode} variant-${performanceVariant} action-${performanceAction} ${result.ok ? "is-playing" : "is-paused"}`} aria-label="任务动画舞台">
@@ -1339,6 +1477,7 @@ export default function Home() {
           <span>{mission?.icon || "🤩"}</span>
           <div><small>现场任务</small><b>{mission?.objective || "让你的创意工程车完成一次试运行。"}</b></div>
         </div>
+        <div className="theatre-motion-badge"><span>{movementProfile.icon}</span><div><b>{movementProfile.label}</b><small>{movementProfile.motion}</small></div></div>
         <div className="theatre-ground"><i/><i/><i/><i/></div>
 
         <div className="theatre-work-zone">
@@ -1351,7 +1490,7 @@ export default function Home() {
         <div className="theatre-character"><span>{result.ok ? mission?.icon || "🤩" : "🐣"}</span><b>{result.ok ? "太棒啦！" : "我们再检查一下"}</b></div>
 
         {result.ok ? <div className="theatre-captions" aria-live="polite">
-          <span>① 到达现场</span><span>② 停稳并开始作业</span><span>③ {mission?.success || "顺利完成试车"}</span>
+          <span>① 到达现场</span><span>② {ACTION_EFFECT[performanceAction]?.label || "车辆开始工作"}</span><span>③ {mission?.success || "顺利完成试车"}</span><span>④ {mission ? `${mission.character}开心地说谢谢` : "试车员竖起大拇指"}</span>
         </div> : <div className="theatre-check-card"><span>🧰</span><div><small>这次没有扣分</small><b>{result.reason}</b><p>回到原来的作品继续修改，位置和涂装都会保留。</p></div></div>}
       </section>
 
@@ -1378,7 +1517,7 @@ export default function Home() {
     <header className="simple-header"><button onClick={() => setScreen("home")}>‹ 回家</button><span>我的工程车库</span><span className="star-count">⭐ {save.stars}</span></header>
     <div className="garage-title"><div><span>🏠</span><h1>我的车车收藏</h1><p>每一辆都是独一无二的作品！</p></div><button className="primary" onClick={() => { setMission(null); startBuild("free"); }}>＋ 再造一辆</button></div>
     <section className="garage-grid">
-      {save.garage.length ? save.garage.map((car) => <article key={car.id} className="car-card" onClick={() => { setParts(assembleParts(car.parts, 900, 600)); setPaint(car.paint); setMission(null); setMode("free"); setScreen("build"); }}>
+      {save.garage.length ? save.garage.map((car) => <article key={car.id} className="car-card" onClick={() => { setParts(refreshAssemblyConnections(car.parts)); setPaint(car.paint); setMission(null); setMode("free"); setScreen("build"); }}>
         <button className="car-delete" aria-label={`删除 ${car.name}`} title="删除这辆车" onClick={(event) => { event.stopPropagation(); setGarageDeleteId(car.id); }}>🗑️<span>删除</span></button>
         <div className="car-thumb">{buildPreview(car.parts, car.paint, true)}</div><h3>{car.name}</h3><p>{car.parts.length} 个零件 · {car.date}</p>
       </article>) : <div className="empty-garage"><span>🚜</span><h2>车库还空空的</h2><p>去创造第一辆工程车吧！</p></div>}
@@ -1404,7 +1543,7 @@ export default function Home() {
         <div className="parts-grid">{PARTS.filter((p) => p.category === category).map((p) => <button key={p.id} className="part-card" onClick={() => addPart(p)}>{["augerdrill", "wreckingball"].includes(p.id) && <small className="new-tool-badge">新工具</small>}<span className={`mini-part ${hasPartArt(p.id) ? "has-art" : `part-${p.category}`}`}>{hasPartArt(p.id) ? <span className="part-art" style={spriteStyle(p.id)}/> : p.icon}</span><b>{p.name}</b><i>＋</i></button>)}</div>
       </aside>
       <section className="canvas-wrap">
-        <div className="canvas-info"><span>{moveWhole ? "🚚 现在拖一下，就能搬动整辆车" : "☝ 现在一次移动一个零件"}</span><span>已经放了 {parts.length} 个</span></div>
+        <div className="canvas-info"><span>{moveWhole ? "🚚 现在拖一下，就能搬动整辆车" : "☝ 现在一次移动一个零件"}</span><span className="connection-pill">🔗 已连接 {connectionGraph.filter((edge) => edge.connected).length} 个</span><span>已经放了 {parts.length} 个</span></div>
         <div className={`build-canvas pattern-${paint.pattern} finish-${paint.finish}`} ref={canvasRef} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp} onWheel={wheel}>
           {snap && assemblyRoot && <div aria-hidden="true" className="rig-guide" style={{ left: assemblyRoot.x, top: assemblyRoot.y, width: assemblyRoot.w * assemblyRoot.scale, height: assemblyRoot.h * assemblyRoot.scale }}>
             <span className="rig-guide-note">参考位置，也可以自己摆</span>
@@ -1418,7 +1557,7 @@ export default function Home() {
           </div>}
           <div className="horizon"><span>☁</span><span>☁</span></div><div className="ground-line"/>
           {!parts.length && <div className="canvas-empty"><span>👈</span><b>第 1 步：点一个“车底”</b><small>然后再选车身、车头和轮子</small></div>}
-          {parts.map((p) => <div key={p.uid} data-part-id={p.id} data-category={p.category} onPointerDown={(e) => onPointerDown(e, p)} className={`part part-${p.category} part-id-${p.id} ${hasPartArt(p.id) ? "with-art" : ""} ${selected === p.uid ? "selected" : ""}`} style={{
+          {parts.map((p) => <div key={p.uid} data-part-id={p.id} data-category={p.category} data-mounted-to={p.mountedTo || undefined} onPointerDown={(e) => onPointerDown(e, p)} className={`part part-${p.category} part-id-${p.id} ${hasPartArt(p.id) ? "with-art" : ""} ${connectedPartUids.has(p.uid) ? "connected" : "loose"} ${selected === p.uid ? "selected" : ""}`} style={{
             left: p.x, top: p.y, width: p.w * p.scale, height: p.h * p.scale,
             transform: `rotate(${p.rotate}deg) scaleX(${p.flip ? -1 : 1})`, zIndex: p.z,
             "--part-layer": p.z,
